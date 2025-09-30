@@ -1,0 +1,286 @@
+/* Import at the top of CSS */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@500&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@600;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+
+
+
+/* 🌍 Global Styles */
+* {
+    font-family: 'Inter', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ✨ Hero + highlight text */
+.hero-d1,
+.hero-d2,
+.hero-d3,
+.about-title {
+    font-family: 'Kalam', cursive; /* creative / arty touch */
+}
+
+/* Optional: adjust body text for readability */
+body {
+    font-size: 1rem; 
+    line-height: 1.6;  
+    color: #222; 
+    margin: 0;
+    padding: 0;
+    background-color: #1995AD;
+}
+
+.bg-image {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  /* transition: all 0.3s ease; */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.25rem 2rem !important;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  /* background: #C4DFE6 !important; */
+  background: #A1D6E2 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .navbar-item {
+  font-family: "Kalam", cursive;
+  color: #153847 !important;
+  font-size: 2.0rem;
+  font-weight: 500;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.nav-link {
+  /* font-family: "Kalam", cursive; */
+  color: #153847 !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Shrink navbar on scroll (partial) */
+.navbar.shrink {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9); /* slightly transparent */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Navbar at bottom of hero: only show toggler */
+.navbar.shrink-only-toggler .navbar-collapse {
+  display: none !important;
+}
+
+.navbar-toggler {
+  z-index: 1100;
+}
+
+.hero-d1 {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 1.0px;
+  color: #2c6780;
+  font-size: clamp(3rem, 5vw, 9rem);
+  opacity: 0; /* start invisible */ 
+  transform: translateY(20px); /* slight rise effect */
+  transition: opacity 3s ease, transform 3s ease, font-size 4s ease;
+}
+
+.hero-d1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-d1.shrink {
+  font-size: clamp(2rem, 6vw, 4rem); 
+  opacity: 0;
+  transform: translateY(-35vh);
+}
+
+
+  
+/* Hide hero text if JS hasn’t run */
+/* .no-js .hero-d2,
+.no-js .hero-d3 {
+  display: none;  
+} */
+
+/* .no-js .hero-d2,
+.no-js .hero-d3 {
+  opacity: 0;
+  transform: translateY(7vh) scale(0.85);
+} */
+
+/* Base state */
+  .hero-d2, .hero-d3 {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.0px;
+  color: #2c6780;
+  font-size: clamp(2.5rem, 4.5vw, 6rem);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(7vh) scale(0.85);
+  transition: opacity 4s ease, transform 4s ease, visibility 0s linear 4s;
+}
+
+/* Show with staggered delay */
+.hero-d2.show, .hero-d3.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(0.8);
+  transition: opacity 4s ease, transform 4s ease, visibility 0s linear 0s;
+}
+
+
+.hero-subtext {
+  color: rgb(12, 29, 44);
+  font-size: 0.9rem;   /* smaller than hero title */
+  opacity: 0.8;        /* softer look */
+  font-style: italic;  /* optional */
+}
+
+/* Change to make the title and text animate seperately */
+.about-intro {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  max-width: 70vw;   /* default width on desktop/laptop */
+  margin: 0 auto;
+  padding: 8vh 5vw;
+  /* opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 4s ease, transform 4s ease;  */
+}
+
+/* Keep but split into two ans add extra */
+/* .about-intro.visible {
+  opacity: 1;
+  transform: scale(1);
+} */
+
+/* Added extra lines at end */
+.about-intro .about-title,
+.about-intro .about-text {
+  font-family: "Kalam", cursive;
+  color: white;
+  /* opacity: 0;   
+  transform: translateY(4vh); 
+  transition: opacity 1s ease, transform 1s ease;  */
+}
+
+/* NEW Title animates in first */
+.about-title.visible {
+  opacity: 1;
+  transform: scale(1);
+  /* transform: translateY(0);
+  transition-delay: 0.2s; */
+}
+
+/* keep as is */
+.about-title {
+  font-size: clamp(2rem, 4.5vw, 5rem); 
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 5.0s ease, transform 5.0s ease;
+}
+
+/* keep as is */
+.about-text {
+  font-size: clamp(1.2rem, 3.0vw, 3rem);
+  line-height: 1.6;
+  font-weight: 250;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 10.0s ease, transform 10.0s ease;
+}
+
+/* NEW Text animates in second */
+.about-text.visible {
+  opacity: 1;
+  transform: scale(1);
+  /* transform: translateY(0);
+  transition-delay: 0.6s; */
+}
+
+
+/* keep as is */
+@media (max-width: 768px) {
+  .about-intro {
+    max-width: 90vw; /* wider for small screens */
+  }
+}
+
+
+
+.card {
+  /* background-color: #F2F2F2; */
+  background-color: #F1F1F2;
+  border-radius: 0.75rem; /* softer rounded corners */
+  overflow: hidden;       /* ensures carousel images follow the rounded shape */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  border: none; /* optional: removes Bootstrap’s default border */
+}
+
+.card-title {
+  /* font-family: "Kalam", cursive; */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #153847;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.card img {
+  border-radius: 0; /* keeps images flush with card edges */
+}
+
+
+.carousel-img {
+  height: 600px;        /* pick a size that looks good */
+  width: 100%;
+  object-fit: contain;  /* keeps full image visible */
+  background-color: #000; /* optional, gives black bars around if needed */
+}
+
+
+/* Softer carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 70% 70%; /* slightly smaller arrows */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%; /* round buttons */
+  background: rgba(56, 127, 158, 0.2); /* soft tint (match your theme color) */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(56, 127, 158, 0.4); /* stronger tint on hover */
+}
+

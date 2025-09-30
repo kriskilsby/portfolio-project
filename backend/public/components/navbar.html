@@ -1,0 +1,41 @@
+<!-- information contained in the navigation bar of the webpage, including links to different sections and a search form. It uses Bootstrap classes for styling and responsiveness. -->
+<!-- Navbar over hero -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">KrisKilsby</a>
+
+                    <!-- Hamburger toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Links + search -->
+                    <div class="collapse navbar-collapse" id="navbarLinks">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Profile</a></li>
+
+                            <!-- <li class="nav-item"><a class="nav-link" href="#">Projects</a></li> -->
+                            <!-- Projects dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Projects
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                    <li><a class="dropdown-item" href="/stork-app">Stork Project</a></li>
+                                    <li><a class="dropdown-item" href="/hotel-app">Hotel Project [coming soon]</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item"><a class="nav-link" href="https://kriskilsby.com/">kriskilsby.com</a></li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>

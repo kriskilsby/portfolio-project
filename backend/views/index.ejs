@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html lang="en" class=""no-js>
+<head>
+    <%- include ('components/head') %>
+</head>
+
+<!-- <div id="head-placeholder"></div> -->
+
+<body>
+    <header>
+        <!-- Background image -->
+        <div class="bg-image vh-100 w-100"
+            style="
+            background-image: url('/images/cromer-hero.webp');
+            background-size: cover;
+            background-position: center;
+            position: relative;">
+        
+            <!-- Navbar over hero -->
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">KrisKilsby</a> -->
+
+                    <!-- Hamburger toggler -->
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+                    <span class="navbar-toggler-icon"></span>
+                    </button> -->
+
+                    <!-- Links + search -->
+                    <!-- <div class="collapse navbar-collapse" id="navbarLinks">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Profile</a></li> -->
+
+                            <!-- <li class="nav-item"><a class="nav-link" href="#">Projects</a></li> -->
+                            <!-- Projects dropdown -->
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Projects
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                    <li><a class="dropdown-item" href="/stork-app">Stork Project</a></li>
+                                    <li><a class="dropdown-item" href="/hotel-app">Hotel Project [coming soon]</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item"><a class="nav-link" href="https://kriskilsby.com/">kriskilsby.com</a></li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav> -->
+
+            <!-- <div id="navbar-placeholder"></div> -->
+            <%- include ('components/navbar') %>
+
+
+            <!-- Optional hero text in the middle -->
+            <div class="d-flex h-100 justify-content-center align-items-center flex-column text-white">
+                <h1 class="hero-d1">Welcome to my portfolio</h1>
+                <h2 class="hero-d2">My journey into</h2>
+                <h2 class="hero-d3">Computer Science</h2>
+            </div>
+
+            <!-- Photo credit bottom-right -->
+            <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <p class="hero-subtext mb-0">Photo of Cromer, Norfolk, UK</p>
+            </div>
+        </div>
+    </header> 
+
+    <section class="about-intro text-center py-5">
+        <div class="container-fluid">
+            <h2 class="about-title">Engaging & Personal</h2>
+            <p class="about-text">
+                I love turning tricky data problems into tools that feel simple, intuitive, and engaging. Want to know more about me? 
+                The cards below share my background, job experiences, and my MSc Computer Science journey.
+            </p>
+        </div>
+    </section>
+
+    
+    
+    
+    <!-- <div class="container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+                Column
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+                Column
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+                Column
+            </div>
+        </div>
+    </div> -->
+<!-- 
+    <div class="container my-4">
+        <div id="kkexample" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#kkexample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#kkexample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#kkexample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="/images/impl-hero-top.png" class="d-block w-100 carousel-img" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/impl-filtering.jpg" class="d-block w-100 carousel-img" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>                    
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/impl-animation.jpg" class="d-block w-100 carousel-img" alt="Slide 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the Third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#kkexample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#kkexample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div> -->
+
+    <!-- Card section with carousels -->
+    <section class="container my-4">
+        <div class="row">
+            <!-- First card -->
+            <!-- <div class="col-12 col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div id="kkexample1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="/images/kk-photo-1.webp" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/images/kk-photo-2.webp" class="d-block w-100" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/images/kk-photo-3.webp" class="d-block w-100" alt="Slide 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#kkexample1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#kkexample1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+                    <div class="card-body text-center">
+                    <h5 class="card-title">Kris Kilsby - My Profile</h5>
+                    <p class="card-text">
+                        Learn a little about who I am, where I am from, what I enjoy doing, and what experiences I have gained.
+                    </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- #################################################################### -->
+
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div id="kkexample1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <% 
+                        const slides = [
+                        { file: 'kk-photo-1', alt: 'Slide 1' },
+                        { file: 'kk-photo-2', alt: 'Slide 2' },
+                        { file: 'kk-photo-3', alt: 'Slide 3' }
+                        ]; 
+                        slides.forEach((slide, index) => { 
+                        %>
+                        <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                            <picture>
+                            <source 
+                                srcset="
+                                /images/responsive/<%= slide.file %>-400.webp 400w,
+                                /images/responsive/<%= slide.file %>-800.webp 800w,
+                                /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                /images/responsive/<%= slide.file %>-1600.webp 1600w
+                                "
+                                sizes="(max-width: 576px) 100vw, 
+                                        (max-width: 768px) 50vw,
+                                        (max-width: 1200px) 40vw, 
+                                        30vw"
+                                type="image/webp"
+                            >
+                            <source 
+                                srcset="
+                                /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                /images/responsive/<%= slide.file %>-1600.jpg 1600w
+                                "
+                                 sizes="(max-width: 576px) 100vw, 
+                                        (max-width: 768px) 50vw,
+                                        (max-width: 1200px) 40vw, 
+                                        30vw"
+                                type="image/jpeg"
+                            >
+                            <img 
+                                src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                class="d-block w-100" 
+                                alt="<%= slide.alt %>" 
+                                loading="lazy"
+                            >
+                            </picture>
+                        </div>
+                        <% }) %>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#kkexample1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#kkexample1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+
+                    <div class="card-body text-center">
+                    <h5 class="card-title">Kris Kilsby - My Profile</h5>
+                    <p class="card-text">
+                        Learn a little about who I am, where I am from, what I enjoy doing, and what experiences I have gained.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- #################################################################### -->
+
+
+
+
+            <!-- Second card -->
+            <div class="col-12 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div id="kkexample2" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="/images/info-vis-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/stork-1.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/database-min-01.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#kkexample2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#kkexample2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                </div>
+                <div class="card-body text-center">
+                <h5 class="card-title">MSc Computer Science</h5>
+                <p class="card-text">
+                    A description about the course I am currently studying, the modules I have completed, and the skills I have gained.  
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="row">
+            <!-- Third card -->
+            <div class="col-12 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div id="kkexample3" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="/images/stork-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/stork-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/stork-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#kkexample3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#kkexample3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                </div>
+                <div class="card-body text-center">
+                <h5 class="card-title">Stork Migration Explorer</h5>
+                <p class="card-text">
+                    A little detail about why I did this project and what it meant to me. Ideally it needs to be around two lines of words.
+                </p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Fourth card -->
+            <div class="col-12 col-md-6 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div id="kkexample4" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="/images/hotel-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/hotel-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/hotel-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/hotel-4.webp" class="d-block w-100" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/hotel-5.webp" class="d-block w-100" alt="Slide 5">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#kkexample4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#kkexample4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                </div>
+                <div class="card-body text-center">
+                <h5 class="card-title">Group Project - The Crown Hotel</h5>
+                <p class="card-text">
+                    A short description of the Crown Hotel and confirm it was a group project, coded with.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div id="footer-placeholder"></div> -->
+    <%- include ('components/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- <script>
+        document.documentElement.classList.remove("no-js");
+    </script> -->
+
+</body>
+</html>
