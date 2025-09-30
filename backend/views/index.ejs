@@ -2,80 +2,68 @@
 <!-- <html lang="en"> -->
 <html lang="en" class=""no-js>
 <head>
+    <!-- Add Head component -->
     <%- include ('components/head') %>
 </head>
 
-<!-- <div id="head-placeholder"></div> -->
-
 <body>
-    <header>
-        <!-- Background image -->
-        <div class="bg-image vh-100 w-100"
-            style="
-            background-image: url('/images/cromer-hero.webp');
-            background-size: cover;
-            background-position: center;
-            position: relative;">
-        
-            <!-- Navbar over hero -->
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">KrisKilsby</a> -->
+    <header>    
+        <!-- Hero Section -->
+        <div class="bg-hero-img position-relative vh-100 w-100 overflow-hidden m-0 p-0">
 
-                    <!-- Hamburger toggler -->
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
-                    <span class="navbar-toggler-icon"></span>
-                    </button> -->
+            <!-- Responsive hero image -->
+            <picture>
+                <source 
+                srcset="
+                    /images/responsive/cromer-hero-400.webp 400w,
+                    /images/responsive/cromer-hero-800.webp 800w,
+                    /images/responsive/cromer-hero-1200.webp 1200w,
+                    /images/responsive/cromer-hero-1600.webp 1600w,
+                    /images/responsive/cromer-hero-2400.webp 2400w
+                "
+                sizes="100vw"
+                type="image/webp">
+                <source 
+                srcset="
+                    /images/responsive/cromer-hero-400.jpg 400w,
+                    /images/responsive/cromer-hero-800.jpg 800w,
+                    /images/responsive/cromer-hero-1200.jpg 1200w,
+                    /images/responsive/cromer-hero-1600.jpg 1600w,
+                    /images/responsive/cromer-hero-2400.jpg 2400w
+                "
+                sizes="100vw"
+                type="image/jpeg">
+                <img 
+                    src="/images/responsive/cromer-hero-1600.jpg" 
+                    alt="View of Cromer, Norfolk, UK" 
+                    class="w-100 h-100 object-fit-cover d-block"
+                    style="display:block;">
+            </picture>
 
-                    <!-- Links + search -->
-                    <!-- <div class="collapse navbar-collapse" id="navbarLinks">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link active" href="#">Profile</a></li> -->
+            <!-- Overlay content (navbar + text) -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-between text-white">
 
-                            <!-- <li class="nav-item"><a class="nav-link" href="#">Projects</a></li> -->
-                            <!-- Projects dropdown -->
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" 
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Projects
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-                                    <li><a class="dropdown-item" href="/stork-app">Stork Project</a></li>
-                                    <li><a class="dropdown-item" href="/hotel-app">Hotel Project [coming soon]</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                                </ul>
-                            </li>
-                            
-                            <li class="nav-item"><a class="nav-link" href="https://kriskilsby.com/">kriskilsby.com</a></li>
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav> -->
+                <!-- Navbar -->
+                <%- include ('components/navbar') %>
 
-            <!-- <div id="navbar-placeholder"></div> -->
-            <%- include ('components/navbar') %>
-
-
-            <!-- Optional hero text in the middle -->
-            <div class="d-flex h-100 justify-content-center align-items-center flex-column text-white">
+                <!-- Centered hero text -->
+                <div class="d-flex flex-column justify-content-center align-items-center flex-grow-1 text-center">
                 <h1 class="hero-d1">Welcome to my portfolio</h1>
                 <h2 class="hero-d2">My journey into</h2>
                 <h2 class="hero-d3">Computer Science</h2>
+                </div>
+
+                <!-- Photo credit -->
+                <div class="p-3 text-start">
+                <p class="hero-subtext mb-0">Photo of Cromer, Norfolk, UK</p>
+                </div>
             </div>
 
-            <!-- Photo credit bottom-right -->
-            <div class="position-absolute bottom-0 start-0 p-3 text-white">
-                <p class="hero-subtext mb-0">Photo of Cromer, Norfolk, UK</p>
-            </div>
         </div>
+
     </header> 
 
+    <!-- Intro section under hero -->
     <section class="about-intro text-center py-5">
         <div class="container-fluid">
             <h2 class="about-title">Engaging & Personal</h2>
@@ -85,67 +73,6 @@
             </p>
         </div>
     </section>
-
-    
-    
-    
-    <!-- <div class="container overflow-hidden">
-        <div class="row gx-5">
-            <div class="col">
-                <div class="p-3 border bg-light">Custom column padding</div>
-                Column
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Custom column padding</div>
-                Column
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light">Custom column padding</div>
-                Column
-            </div>
-        </div>
-    </div> -->
-<!-- 
-    <div class="container my-4">
-        <div id="kkexample" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#kkexample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#kkexample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#kkexample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="/images/impl-hero-top.png" class="d-block w-100 carousel-img" alt="Slide 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="/images/impl-filtering.jpg" class="d-block w-100 carousel-img" alt="Slide 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>                    
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="/images/impl-animation.jpg" class="d-block w-100 carousel-img" alt="Slide 3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the Third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#kkexample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#kkexample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div> -->
 
     <!-- Card section with carousels -->
     <section class="container my-4">
