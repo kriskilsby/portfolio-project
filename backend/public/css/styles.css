@@ -73,6 +73,7 @@ body {
     padding: 0 !important;
     height: 100%;
     background-color: #1995AD;
+    /* background-color: #F1F1F2; */
     /* background-color: #A1D6E2; */
 }
 
@@ -200,6 +201,7 @@ body {
   max-width: 70vw;   /* default width on desktop/laptop */
   margin: 0 auto;
   padding: 8vh 5vw;
+  /* background-color: #1995AD; */
   /* opacity: 0;
   transform: scale(0.85);
   transition: opacity 4s ease, transform 4s ease;  */
@@ -269,27 +271,63 @@ body {
 .card {
   /* background-color: #F2F2F2; */
   background-color: #F1F1F2;
-  border-radius: 0.75rem; /* softer rounded corners */
+  /* background-color: #1995AD; */
+  border-radius: 0.50rem; /* softer rounded corners */
   overflow: hidden;       /* ensures carousel images follow the rounded shape */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* subtle shadow */
   border: none; /* optional: removes Bootstrap’s default border */
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  border-top: 4px solid #1995AD;
+  opacity: 0; 
+  transform: translateY(40px); 
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
+
+/* When scrolled into view */ 
+.card.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Optional accent line at top of each card */ 
+/* .card::before { 
+  content: ""; 
+  display: block; 
+  height: 4px; 
+  width: 100%; 
+  background: linear-gradient(to right, #1995AD, #A1D6E2); 
+} */
+
 
 .card-title {
   /* font-family: "Kalam", cursive; */
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #153847;
+  margin-bottom: 0.5rem;
 }
 
 .card-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.5;
 }
 
 .card img {
   border-radius: 0; /* keeps images flush with card edges */
+  width: 100%;
+  /* height: 60vh; */
+  object-fit: cover;
 }
 
 
@@ -307,19 +345,53 @@ body {
   background-size: 70% 70%; /* slightly smaller arrows */
 }
 
+/* Smaller, cleaner arrow icons */ 
+.carousel-control-prev-icon, 
+.carousel-control-next-icon { 
+  background-size: 70% 70%; 
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 3rem;
   height: 3rem;
   border-radius: 50%; /* round buttons */
-  background: rgba(56, 127, 158, 0.2); /* soft tint (match your theme color) */
+  /* background: rgba(56, 127, 158, 0.2);  */
   top: 50%;
   transform: translateY(-50%);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(5px);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background: rgba(56, 127, 158, 0.4); /* stronger tint on hover */
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(56,127,158,0.4);
+  transition: background-color 0.3s ease;
+}
+.carousel-indicators .active {
+  background-color: #1995AD;
+}
+
+/* Overlay gradient for better caption readability */ 
+.carousel-item::before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: linear-gradient(to bottom, rgba(0,0,0,0.10), rgba(0,0,0,0.20)); 
+  z-index: 1; 
+} 
+
+.carousel-caption { 
+  z-index: 2; 
 }
 

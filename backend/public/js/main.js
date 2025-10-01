@@ -73,6 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   textObserver.observe(aboutText);
 
+  const cards = document.querySelectorAll(".card"); 
 
+  const cardObserver = new IntersectionObserver((entries) => { 
+    entries.forEach(entry => { 
+      // toggle .visible depending on whether card is in viewport
+      entry.target.classList.toggle("visible", entry.isIntersecting);
+    });
+  }, { threshold: 0.5, rootMargin: "0px 0px -10% 0px" }); // triggers when 25% of card is visible
+
+  cards.forEach((card, index) => {
+    cardObserver.observe(card);
+    card.style.transitionDelay = `${index * 0.2}s`; // staggered entrance
+  });
 
 });
