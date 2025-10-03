@@ -29,19 +29,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll-based animations
   window.addEventListener("scroll", () => {
-    if (window.scrollY > window.innerHeight - 100) navbar.classList.add("scrolled");
-    else navbar.classList.remove("scrolled");
+    const scrollY = window.scrollY;
 
-    if (window.scrollY > 50) heroD1.classList.add("shrink");
-    else heroD1.classList.remove("shrink");
+    // Shrink hero D1 once user scrolls past 50px
+    if(scrollY > 50) {
+      heroD1.classList.add("shrink");
+    } else {
+      heroD1.classList.remove("shrink");
+    }
 
-    if (window.scrollY > 100) {
+    // Only add navbar background once hero is passed
+    if (window.scrollY > window.innerHeight - 100) {
+      navbar.classList.add("scrolled");
+    }else {
+      navbar.classList.remove("scrolled");
+    }
+
+    // Removed below code to shrink D1 into navbar
+    // if (window.scrollY > 50) heroD1.classList.add("shrink");
+    // else heroD1.classList.remove("shrink");
+    // Removed below code to shrink D1 into navbar
+
+    
+    // Removed below code to stop the navbar chanign colour too early
+    // Shrink hero once user scrolls past 50px
+    // if(scrollY > 50) {
+    //   heroD1.classList.add("shrink");
+    //   navbar.classList.add("scrolled"); // keeps navbar styling consistent
+    // } else {
+    //   heroD1.classList.remove("shrink");
+    //   navbar.classList.remove("scrolled");
+    // }
+    // Removed above code to stop the navbar chanign colour too early
+
+
+    // Added back below code to make d2 & d3 not independent
+    if (window.scrollY > 50) {
       heroD2.classList.add("show");
       heroD3.classList.add("show");
     } else {
       heroD2.classList.remove("show");
       heroD3.classList.remove("show");
     }
+    // added back above code to make d2 & d3 not independent
+    // if (window.scrollY > 50) {
+    //   heroD2.classList.add("show");
+    // } else {
+    //   heroD2.classList.remove("show");
+    // }
+
+    // if (window.scrollY > 50) {
+    //   heroD3.classList.add("show");
+    // } else {
+    //   heroD3.classList.remove("show");
+    // }
+
   });
 
   // About section reveal

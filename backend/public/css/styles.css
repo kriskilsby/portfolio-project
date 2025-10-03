@@ -135,22 +135,35 @@ body {
   color: #2c6780;
   font-size: clamp(3rem, 5vw, 9rem);
   opacity: 0; /* start invisible */ 
-  transform: translateY(20px); /* slight rise effect */
-  transition: opacity 3s ease, transform 3s ease, font-size 4s ease;
+  transform: translateY(20px) scale(1); /* slight rise effect */
+  transition: opacity 1.5s ease, transform 1.5s ease, font-size 0.5s ease;
 }
 
 .hero-d1.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .hero-d1.shrink {
-  font-size: clamp(2rem, 6vw, 4rem); 
+  /* font-size: clamp(2rem, 6vw, 4rem); 
   opacity: 0;
-  transform: translateY(-35vh);
+  transform: translateY(-35vh); */
+  font-size: clamp(1.2rem, 3vw, 1.8rem); /* fits nicely with navbar */
+  transform: translateY(0) scale(0.85);   /* slight shrink + settle */
+  opacity: 1;                              /* stays visible */
+  transition: 
+    font-size 0.5s ease, 
+    transform 0.5s ease, 
+    opacity 0.3s ease;
 }
 
-
+/* Optional: adjust for mobile screens */
+@media (max-width: 768px) {
+  .hero-d1.shrink {
+    font-size: clamp(1rem, 4vw, 1.4rem);  /* smaller on small screens */
+    transform: translateY(0) scale(0.8);  /* slightly more shrink */
+  }
+}
   
 /* Hide hero text if JS hasn’t run */
 /* .no-js .hero-d2,
@@ -174,16 +187,16 @@ body {
   font-size: clamp(2.5rem, 4.5vw, 6rem);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(7vh) scale(0.85);
-  transition: opacity 4s ease, transform 4s ease, visibility 0s linear 4s;
+  transform: translateY(10vh) scale(1.00);
+  transition: opacity 3s ease-out 1s, transform 3s ease-out, visibility 0s linear 3s;
 }
 
 /* Show with staggered delay */
 .hero-d2.show, .hero-d3.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0) scale(0.8);
-  transition: opacity 4s ease, transform 4s ease, visibility 0s linear 0s;
+  transform: translateY(0) scale(0.75);
+  transition: opacity 3s ease-out 1s, transform 3s ease-out, visibility 0s linear 0s;
 }
 
 
