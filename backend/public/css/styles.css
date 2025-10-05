@@ -23,44 +23,9 @@ html {
     box-sizing: border-box;
 }
 
-/* ✨ Hero + highlight text */
-.hero-d1,
-.hero-d2,
-.hero-d3,
-.about-title {
-    font-family: 'Kalam', cursive; /* creative / arty touch */
-    margin-top: 0;
-}
-
 .position-relative.vh-100 {
     height: 100vh; /* already vh-100, but this ensures no rounding issues */
     min-height: 100vh;
-}
-
-.bg-hero-img {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    display: block;
-}
-
-.bg-hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;   /* this makes the image crop, not squash */
-    display: block;
-}
-
-
-.bg-hero-img h1,
-.bg-hero-img h2,
-.bg-hero-img h3 {
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -81,11 +46,21 @@ body {
   margin-bottom: 20px;
 }
 
+/* -------------------------------------- */
+/* Navbar specific styles */
+/* -------------------------------------- */
+
 .navbar {
   /* transition: all 0.3s ease; */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   padding: 0.25rem 2rem !important;
   z-index: 1000;
+}
+
+/* Mobile menu open state */
+.navbar.open {
+  background-color: rgba(0, 0, 0, 0.85); /* dark, semi-transparent */
+  color: #fff; /* menu text white for contrast */
 }
 
 .navbar.scrolled {
@@ -101,6 +76,68 @@ body {
   font-weight: 500;
   transition: font-size 0.3s ease, color 0.3s ease;
 }
+
+/* kk new for d1-slot  */
+/* .navbar-d1-slot {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  height: 100%;        
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 3vw, 1.8rem); 
+  line-height: 1;        
+  width: auto;          
+} */
+
+/* kk new for d1-slot  */
+.navbar-d1-slot {
+  display: inline-block;
+  padding: 0 1rem;
+  opacity: 0;              /* hidden initially */
+  transition: opacity 1.4s ease;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  color: #153847 !important;
+  font-size: 2.0rem;
+  font-weight: 500;
+}
+/* kk new for d1-slot  */
+.navbar-d1-slot.visible {
+  opacity: 1;
+}
+
+/* kk new for d1-slot  */
+/* @media (max-width: 768px) {
+  .navbar-d1-slot {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+} */
+
+/* to fully remove the d1-slot on smaller screens */
+@media (max-width: 768px) {
+  .navbar-d1-slot {
+    display: none;
+  }
+}
+
+/* kk new for d1-navbar  */
+/* .hero-d1-navbar {
+  opacity: 0;
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 3vw, 1.8rem); 
+  display: inline-block;
+  transition: opacity 0.5s ease;
+}
+.hero-d1-navbar.visible {
+  opacity: 1;
+} */
+
 
 .nav-link {
   /* font-family: "Kalam", cursive; */
@@ -126,6 +163,45 @@ body {
   z-index: 1100;
 }
 
+/* -------------------------------------- */
+/* Hero specific styles */
+/* -------------------------------------- */
+
+/* ✨ Hero + highlight text */
+.hero-d1,
+.hero-d2,
+.hero-d3,
+.about-title {
+    font-family: 'Kalam', cursive; /* creative / arty touch */
+    margin-top: 0;
+}
+
+.bg-hero-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+}
+
+.bg-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* this makes the image crop, not squash */
+    display: block;
+}
+
+.bg-hero-img h1,
+.bg-hero-img h2,
+.bg-hero-img h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* kk edit check  */
 .hero-d1 {
   font-family: "Kalam", cursive;
   font-weight: 400;
@@ -137,6 +213,7 @@ body {
   opacity: 0; /* start invisible */ 
   transform: translateY(20px) scale(1); /* slight rise effect */
   transition: opacity 1.5s ease, transform 1.5s ease, font-size 0.5s ease;
+  /* transition: opacity 2.0s ease, transform 2.0s ease, font-size 1.0s ease; */
 }
 
 .hero-d1.visible {
@@ -157,6 +234,16 @@ body {
     opacity 0.3s ease;
 }
 
+/* kk new for d1 text in navbar */
+/* 🔑 Override ONLY when inside navbar */
+.navbar .hero-d1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-align: left; /* optional: makes it align with brand text instead of centered */
+}
+
 /* Optional: adjust for mobile screens */
 @media (max-width: 768px) {
   .hero-d1.shrink {
@@ -165,18 +252,6 @@ body {
   }
 }
   
-/* Hide hero text if JS hasn’t run */
-/* .no-js .hero-d2,
-.no-js .hero-d3 {
-  display: none;  
-} */
-
-/* .no-js .hero-d2,
-.no-js .hero-d3 {
-  opacity: 0;
-  transform: translateY(7vh) scale(0.85);
-} */
-
 /* Base state */
   .hero-d2, .hero-d3 {
   font-family: "Kalam", cursive;
@@ -206,6 +281,11 @@ body {
   opacity: 0.8;        /* softer look */
   font-style: italic;  /* optional */
 }
+
+
+/* -------------------------------------- */
+/* About Intro specific styles */
+/* -------------------------------------- */
 
 /* Change to make the title and text animate seperately */
 .about-intro {
@@ -279,7 +359,9 @@ body {
   }
 }
 
-
+/* -------------------------------------- */
+/* Bootstrap Card specific styles */
+/* -------------------------------------- */
 
 .card {
   /* background-color: #F2F2F2; */
@@ -291,9 +373,12 @@ body {
   border: none; /* optional: removes Bootstrap’s default border */
   /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   border-top: 4px solid #1995AD;
-  opacity: 0; 
+  /* opacity: 0; 
   transform: translateY(40px); 
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; */
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 /* When scrolled into view */ 
@@ -311,16 +396,6 @@ body {
 .card-body {
   padding: 1.5rem;
 }
-
-/* Optional accent line at top of each card */ 
-/* .card::before { 
-  content: ""; 
-  display: block; 
-  height: 4px; 
-  width: 100%; 
-  background: linear-gradient(to right, #1995AD, #A1D6E2); 
-} */
-
 
 .card-title {
   /* font-family: "Kalam", cursive; */
@@ -343,6 +418,9 @@ body {
   object-fit: cover;
 }
 
+/* -------------------------------------- */
+/* Bootstrap Carousel specific styles */
+/* -------------------------------------- */
 
 .carousel-img {
   height: 600px;        /* pick a size that looks good */
