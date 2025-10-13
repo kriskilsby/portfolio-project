@@ -7,7 +7,11 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
   margin: 0 !important;
@@ -17,7 +21,12 @@ html {
 
 /* 🌍 Global Styles */
 * {
-    font-family: 'Inter', sans-serif; 
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Source Sans 3', sans-serif; */
+    /* font-family: 'Nunito Sans', sans-serif; */
+    /* font-family: 'IBM Plex Sans', sans-serif;  */
+    /* font-family: 'Open Sans', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,7 +40,7 @@ html {
 
 /* Optional: adjust body text for readability */
 body {
-    font-size: 1rem; 
+    font-size: 1.1rem; 
     line-height: 1.6;  
     color: #222; 
     margin: 0 !important;
@@ -486,3 +495,274 @@ body {
   z-index: 2; 
 }
 
+/* Maintain consistent carousel image aspect ratio */
+.carousel-inner {
+  aspect-ratio: 16 / 9; /* Adjust to your preferred ratio (e.g. 4/3 or 1/1 for square) */
+  overflow: hidden;     /* Ensures no overflow if cropping occurs */
+}
+
+/* Ensure images fill the frame without stretching */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Crops edges rather than squashing image */
+  object-position: center; /* Keeps focal point centred */
+  display: block;
+}
+
+
+/* -------------------------------------- */
+/* About Intro specific styles */
+/* -------------------------------------- */
+
+/* Change to make the title and text animate seperately */
+.profile-intro {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  max-width: 70vw;   /* default width on desktop/laptop */
+  margin: 0 auto;
+  padding: 8vh 5vw;
+}
+
+/* .profile-container {
+  margin-top: 20vh !important;
+} */
+
+/* Keep but split into two ans add extra */
+/* .about-intro.visible {
+  opacity: 1;
+  transform: scale(1);
+} */
+
+/* Added extra lines at end */
+.profile-intro .profile-title,
+.profile-intro .profile-text {
+  font-family: "Kalam", cursive;
+  color: white;
+  /* opacity: 0;   
+  transform: translateY(4vh); 
+  transition: opacity 1s ease, transform 1s ease;  */
+}
+
+/* NEW Title animates in first */
+.profile-title.visible {
+  opacity: 1;
+  transform: scale(1);
+  /* transform: translateY(0);
+  transition-delay: 0.2s; */
+}
+
+/* keep as is */
+.profile-title {
+  font-size: clamp(3rem, 4.5vw, 5rem); 
+  /* margin-bottom: 1rem; */
+  opacity: 1;
+  transform: scale(0.85);
+  transition: opacity 5.0s ease, transform 5.0s ease;
+}
+
+/* keep as is */
+.profile-text {
+  font-size: clamp(1.8rem, 3.0vw, 3rem);
+  line-height: 1.6;
+  font-weight: 250;
+  opacity: 1;
+  transform: scale(0.85);
+  transition: opacity 10.0s ease, transform 10.0s ease;
+}
+
+/* NEW Text animates in second */
+.profile-text.visible {
+  opacity: 1;
+  transform: scale(1);
+  /* transform: translateY(0);
+  transition-delay: 0.6s; */
+}
+
+
+/* keep as is */
+@media (max-width: 768px) {
+  .profile-intro {
+    max-width: 90vw; /* wider for small screens */
+  }
+}
+
+/* -------------------------------------- */
+/* Accordion specific styles */
+/* -------------------------------------- */
+/* keep */
+/* Main text styling */
+.accordion-section h2,
+.accordion-section p {
+  color: #222;
+}
+/* keep */
+/* Accordion button (header) default style - closed */
+.accordion-button {
+  background-color: #1995AD;
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+/* keep */
+/* Accordion button when expanded (open) */
+.accordion-button:not(.collapsed) {
+  background-color: #1995AD; /* stays same when open */
+  /* color: white !important; */
+}
+/* keep */
+/* Closed: white chevron */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+/* keep */
+/* Open: black chevron */
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+/* keep */
+/* Accordion body styling (opened section) */
+.accordion-body {
+  background-color: #e0f0f7; /* light background in keeping with #1995AD */
+  color: #222;
+  font-size: 1.1rem; /* optional, slightly smaller than heading */
+  line-height: 1.6;
+  padding: 1rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  /* border: 1px dashed red; */
+}
+
+/* keep */
+/* Optional: border radius and spacing */
+.accordion-item {
+  border: none; /* remove default border */
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+/* Optional: shadow for the accordion for visual separation */
+.accordion-item .accordion-button {
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+/* remove */
+/* Responsive: On small screens, center the image above text */
+@media (max-width: 768px) {
+  .accordion-img {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1rem auto !important;
+    max-width: 200px;
+  }
+}
+
+/* remove */
+.accordion-img img {
+  width: clamp(200px, 35%, 400px);
+  height: auto;
+  float: right;
+  display: block;
+  margin: 0 0 0.5rem 1rem;
+}
+
+
+/* added and keep */
+/* Image inside accordion */
+.accordion-body picture {
+  flex-shrink: 0;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  max-width: 400px;
+}
+
+/* keep */
+.accordion-body picture img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+/* added and keep */
+/* Responsive layout */
+@media (max-width: 768px) {
+  .accordion-body {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .accordion-body picture {
+    margin: 0 auto 1rem auto;
+    max-width: 70%;
+    float: right; /* new added from old */
+  }
+}
+
+/* new keep */
+.contact-info a {
+  color: #1995AD;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0.25rem;
+}
+/* new keep */
+.contact-info a:hover {
+  text-decoration: underline;
+}
+/* new keep */
+.contact-info {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.accordion-body ul {
+  margin-left: 1rem; /* keep a bit of indentation */
+  padding-left: 1rem;
+}
+
+.accordion-body li {
+  margin-bottom: 0.25rem; /* tighten spacing */
+  color: #222; /* match your text colour */
+  line-height: 1.5;
+}
+
+/* For accordion bullett icons */
+.icon-accent {
+  color: #1995AD;
+}
+
+.accordion-button .date {
+    /* font-size: 0.9rem; */
+    font-weight: inherit; /* inherit bold from parent button */
+    color: white !important; /* make it white like the rest of the button */
+    padding-right: 2rem; /* push it away from the arrow */
+      /* font-weight: bold; */
+    font-size: 1.1rem;
+}
+
+.accordion-item.UEA .accordion-body li {
+  margin-bottom: 1rem;
+}
+
+.accord-h6 {
+  padding-bottom: 0.5rem;
+}
+
+.accordion-body > picture img.img-fluid {
+  margin-left: 3rem;
+}
+
+.accordion-body.d-flex.photo {
+  padding-right: 0;
+}
+
+
+.link-card h5 {
+  font-size: 1.2rem;
+}
+
+.link-card p {
+  font-size: 1rem;
+}

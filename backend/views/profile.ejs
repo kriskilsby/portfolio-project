@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html lang="en" class="no-js">
+
+<head>
+    <!-- Add Head component -->
+    <%- include ('components/head') %>
+</head>
+
+<body class="<%= page %>">
+    <!-- <body> -->
+    <header>
+        <!-- Navbar -->
+        <%- include ('components/navbar') %>
+
+            <section class="profile-header text-center pt-5 pb-2 bg-light mt-5">
+                <picture>
+                    <!-- WebP sources -->
+                    <source srcset="
+              /images/responsive/personal-06-400.webp   400w,
+              /images/responsive/personal-06-800.webp   800w,
+              /images/responsive/personal-06-1200.webp 1200w
+            " sizes="(max-width: 576px) 40vw,
+                        (max-width: 992px) 25vw,
+                        160px" type="image/webp" />
+
+                    <!-- JPEG fallback -->
+                    <source srcset="
+              /images/responsive/personal-06-400.jpg   400w,
+              /images/responsive/personal-06-800.jpg   800w,
+              /images/responsive/personal-06-1200.jpg 1200w
+            " sizes="(max-width: 576px) 40vw,
+                        (max-width: 992px) 25vw,
+                        160px" type="image/jpeg" />
+
+                    <!-- Default image -->
+                    <img src="/images/responsive/personal-06-800.jpg"
+                        class="rounded-circle mb-3 shadow-sm img-fluid" alt="Kristopher Kilsby portrait" width="160"
+                        height="160" loading="eager" />
+                </picture>
+
+                <h1 class="fw-bold">Kristopher Kilsby</h1>
+                <p class="lead text-muted px-1">
+                    MSc Computing Science | Web Development | Data Analysis | Data
+                    Visualisation
+                </p>
+                <!-- Contact links -->
+                <p class="contact-info mt-2 mb-0">
+                    <a href="mailto:kris.kilsby@gmail.com"><strong>kriskilsby@gmail.com</strong></a> |
+                    <a href="https://www.linkedin.com/in/kriskilsby" target="_blank"
+                        rel="noopener"><strong>LinkedIn.com/in/kriskilsby</strong></a>
+                </p>
+            </section>
+    </header>
+
+    <!-- Intro section under hero -->
+    <section class="profile-intro text-center mt-5 py-0">
+        <div class="profile-container container-fluid mt-0">
+            <h2 class="profile-title mt-0">Welcome</h2>
+            <p class="profile-text">
+                Explore my portfolio — from web development projects and data
+                visualisation tools, to examples of professional analytical work,
+                reimagined through modern web technologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Entire Accordion Section -->
+    <section class="accordion-section bg-light py-5">
+        <div class="container">
+            <!-- Personal Profile Section -->
+            <h2>Personal Profile</h2>
+            <p>A brief overview of who I am and what I bring to my work.</p>
+            <div class="accordion" id="personalAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="personalHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#personalCollapseOne" aria-expanded="true"
+                            aria-controls="personalCollapseOne">
+                            Overview
+                        </button>
+                    </h2>
+                    <div id="personalCollapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="personalHeadingOne" data-bs-parent="#personalAccordion">
+                        <div
+                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-center">
+                            <picture class="accordion-img order-md-2 ms-md-4 mb-3 mb-md-0">
+                                <!-- WebP sources -->
+                                <source srcset="
+                      /images/responsive/personal-04-c-400.webp   400w,
+                      /images/responsive/personal-04-c-800.webp   800w,
+                      /images/responsive/personal-04-c-1200.webp 1200w
+                    " sizes="(max-width: 576px) 60vw,
+                                            (max-width: 992px) 35vw,
+                                            400px" type="image/webp" />
+
+                                <!-- JPEG fallback -->
+                                <source srcset="
+                      /images/responsive/personal-04-c-400.jpg   400w,
+                      /images/responsive/personal-04-c-800.jpg   800w,
+                      /images/responsive/personal-04-c-1200.jpg 1200w
+                    " sizes="(max-width: 576px) 60vw,
+                                            (max-width: 992px) 35vw,
+                                            400px" type="image/jpeg" />
+
+                                <!-- Default image -->
+                                <img src="/images/responsive/personal-04-c-800.jpg"
+                                    class="img-fluid rounded shadow-sm" alt="Kristopher Kilsby portrait" loading="lazy"
+                                    style="max-width: 400px; height: auto" />
+                            </picture>
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>
+                                    I am a recent MSc Computing Science graduate with a strong
+                                    interest in applying technology to solve real-world
+                                    problems. My background combines experience in project
+                                    delivery, data analysis, and technical support with a
+                                    creative approach to design and usability. I enjoy working
+                                    across different areas of computing, from developing
+                                    practical tools and workflows to exploring web and software
+                                    development. Adaptable and eager to learn, I bring
+                                    persistence, attention to detail, and a willingness to take
+                                    on new challenges.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <h2 class="mt-5">Skills Profile</h2>
+            <p>Overview of my computing, analytical, and technical skills.</p>
+            <div class="accordion" id="skillsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="skillsHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#skillsCollapseOne" aria-expanded="true" aria-controls="skillsCollapseOne">
+                            Computing & Technical Skills
+                        </button>
+                    </h2>
+                    <div id="skillsCollapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="skillsHeadingOne" data-bs-parent="#skillsAccordion">
+                        <div
+                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-start">
+                            
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/computing.png" alt="Learning icon"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>
+                                    I have worked extensively with Python and SQL on academic 
+                                    projects where I cleaned, analysed, and visualised GPS 
+                                    movement data. One of my key projects was the Stork Movement 
+                                    Explorer, a web-based mapping tool built using JavaScript, 
+                                    Leaflet, and Express. It connects backend clustering processes 
+                                    with an interactive front-end map.
+                                </p>
+                                <p>
+                                    I am also highly experienced in Microsoft Excel, having created 
+                                    a range of reporting dashboards, including an automated competency 
+                                    database now used across NPS and the Norse Group. These tools 
+                                    combine advanced formulas, VBA automation, and SharePoint integration 
+                                    to make reporting more efficient and accessible.  
+                                </p>
+
+                                <!-- Project showcase -->
+                                <div class="project-showcase mt-4 text-center text-md-start">
+                                    <div class="d-flex flex-wrap justify-content-center gap-3">
+
+                                        <!-- Project Card 1 -->
+                                        <div class="card shadow-sm border-0 rounded-5" style="max-width: 480px;">
+                                            <!-- <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
+                                            <div class="card-body d-flex flex-column align-items-center text-center">
+                                                <h5 class="card-title mb-2">Stork Movement Explorer</h5>
+                                                <p class="card-text small text-muted mb-3">
+                                                    A web-based mapping tool for exploring GPS movement data,
+                                                    integrating backend clustering with an interactive Leaflet map.
+                                                </p>
+                                                <!-- Button container -->
+                                                <div class="d-flex justify-content-center flex-wrap gap-2">
+                                                    <a href="https://yourprojectlink.com" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
+                                                        View Project
+                                                    </a>
+                                                    <a href="https://github.com/yourgithubrepo" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
+                                                        View on GitHub
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Project Card 2 -->
+                                        <div class="card shadow-sm border-0 rounded-5" style="max-width: 480px;">
+                                            <!-- <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
+                                            <div class="card-body d-flex flex-column align-items-center text-center">
+                                                <h5 class="card-title mb-2">Competency Database</h5>
+                                                <p class="card-text small text-muted mb-3">
+                                                An automated reporting dashboard built in Excel and VBA,
+                                                used across NPS and the Norse Group to track staff competencies.
+                                                </p>
+                                                <!-- Button container -->
+                                                <div class="d-flex justify-content-center flex-wrap gap-2">
+                                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                                        View Project
+                                                    </a>
+                                                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                                                        View on GitHub
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End project showcase -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="skillsHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#skillsCollapseTwo" aria-expanded="false" aria-controls="skillsCollapseTwo">
+                            Data Analysis & Reporting
+                        </button>
+                    </h2>
+                    <div id="skillsCollapseTwo" class="accordion-collapse collapse" aria-labelledby="skillsHeadingTwo"
+                        data-bs-parent="#skillsAccordion">
+                        <div
+                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-center">
+
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/data-analysis.png" alt="Data analysis icon"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>
+                                    Designed and implemented reporting solutions that turn
+                                    complicated datasets into actionable insights. Examples
+                                    include a resource analysis suite at NPS and interactive
+                                    dashboards for MSc research data. Experienced in creating
+                                    data workflows with Power Query, VBA, and custom scripts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="skillsHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#skillsCollapseThree" aria-expanded="false"
+                            aria-controls="skillsCollapseThree">
+                            Communication & Teamwork
+                        </button>
+                    </h2>
+                    <div id="skillsCollapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="skillsHeadingThree" data-bs-parent="#skillsAccordion">
+                        <div
+                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-center">
+
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/teamwork.png" alt="Teamwork icon"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>
+                                    Collaborated with cross-departmental stakeholders at NPS,
+                                    ensuring resource and competency data was reliable and
+                                    accessible. Presented project progress to clients and
+                                    councils during my role as Project Coordinator at Anglian
+                                    Building Products. Adaptable in explaining technical
+                                    processes to non-technical audiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="skillsHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#skillsCollapseFour" aria-expanded="false"
+                            aria-controls="skillsCollapseFour">
+                            Independence & Initiative
+                        </button>
+                    </h2>
+                    <div id="skillsCollapseFour" class="accordion-collapse collapse" aria-labelledby="skillsHeadingFour"
+                        data-bs-parent="#skillsAccordion">
+                        <div
+                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-center">
+
+                             <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/initiative.png" alt="Initiative icon"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>
+                                    Set up the Competency Database at NPS independently, from
+                                    requirements gathering to implementation. Managed personal
+                                    research and development during MSc Computing Science,
+                                    balancing multiple projects and deadlines.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="skillsHeadingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#skillsCollapseFive" aria-expanded="false"
+                            aria-controls="skillsCollapseFive">
+                            Adaptability & Learning
+                        </button>
+                    </h2>
+                    <div id="skillsCollapseFive" class="accordion-collapse collapse" aria-labelledby="skillsHeadingFive"
+                        data-bs-parent="#skillsAccordion">
+                        <div
+                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-center">
+
+                              <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/learning.png" alt="Learning icon"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>
+                                    Quick to learn new technologies, demonstrated by moving from
+                                    Excel-based process automation into full-stack web
+                                    development during my MSc. Always looking for opportunities
+                                    to expand technical knowledge, including recent exploration
+                                    of cloud platforms and data pipelines.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience Section -->
+            <h2 class="mt-5">Work Experience</h2>
+            <p>Professional roles and responsibilities.</p>
+            <div class="accordion" id="workAccordion">
+                <!-- Work Item: NPS Norse Group -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeadingOne">
+                        <!-- <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#workCollapseOne" aria-expanded="true" aria-controls="workCollapseOne">
+                        Project Delivery Coordinator, NPS (Norse Group) | Oct 2020 - Present
+                    </button> -->
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#workCollapseOne" aria-expanded="true"
+                            aria-controls="workCollapseOne">
+                            <span class="flex-grow-1 text-start">Project Delivery Coordinator, NPS (Norse Group)</span>
+                            <span class="date text-white text-end ms-3">Oct 2020 - Present</span>
+                        </button>
+                    </h2>
+                    <div id="workCollapseOne" class="accordion-collapse collapse show" aria-labelledby="workHeadingOne"
+                        data-bs-parent="#workAccordion">
+                        <div class="accordion-body d-flex flex-column flex-md-row align-items-center">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/norse-logo3.png" alt="NPS Norse Group Logo" class="img-fluid"
+                                    style="max-height: 200px; width: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Collect, analyse, and
+                                        report on project resource data.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Designed Excel-based
+                                        Competency Database with automated
+                                        dashboards.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Maintain Standard
+                                        Templates Library.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Provide technical support
+                                        across Excel, VBA, Power Query,
+                                        SharePoint.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item: Anglian Building Products -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeadingAnglian">
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#workCollapseAnglian" aria-expanded="false"
+                            aria-controls="workCollapseAnglian">
+                            <span class="flex-grow-1 text-start">Project Coordinator, Anglian Building Products (Anglian
+                                Windows Ltd)</span>
+                            <span class="date text-white text-end ms-3">Jan 2007 – Oct 2020</span>
+                        </button>
+                    </h2>
+
+                    <div id="workCollapseAnglian" class="accordion-collapse collapse"
+                        aria-labelledby="workHeadingAnglian" data-bs-parent="#workAccordion">
+                        <div class="accordion-body d-flex flex-column flex-md-row align-items-start">
+                            <!-- Company Logo -->
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/anglian-logo.png" alt="Anglian Building Products Logo"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <!-- Role Details -->
+                            <div class="accordion-text flex-fill text-start">
+                                <h5 class="fw-bold mt-0">Full-time · 13 years 10 months</h5>
+
+                                <!-- Role 1 -->
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-1">Project Coordinator</h6>
+                                    <p class="text-muted small mb-1">
+                                        Aug 2019 – Oct 2020 · 1 years 2 months
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Planned and monitored
+                                            project delivery.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Reported progress and
+                                            issues to management and
+                                            stakeholders.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Ensured all product
+                                            was delivered in line with forecast
+                                            and project requirements.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Role 2 -->
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-1">Contract Support Team Leader</h6>
+                                    <p class="text-muted small mb-1">
+                                        Apr 2017 – Aug 2019 · 2 years 5 months
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Led and managed the
+                                            Contract Support Team for the
+                                            northern region.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Monitored contracts
+                                            against regional forecasts.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Provided operational
+                                            and financial information to
+                                            management.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Role 3 -->
+                                <div>
+                                    <h6 class="fw-bold mb-1">Regional Planner</h6>
+                                    <p class="text-muted small mb-1">
+                                        May 2008 – Mar 2017 · 8 years 11 months
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Managed production
+                                            planning for windows and doors in
+                                            line with forecast.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Maintained address
+                                            and customer records in Microsoft
+                                            Dynamics AX.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Liaised with clients,
+                                            suppliers, and internal teams.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Processed purchase
+                                            orders and subcontractor invoices.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Role 4 -->
+                                <div>
+                                    <h6 class="fw-bold mb-1">
+                                        Temporary Planning Administrator, (OSR Recruitment)
+                                    </h6>
+                                    <p class="text-muted small mb-1">
+                                        Jan 2007 – Apr 2008 · 1 year 4 months
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Provided office
+                                            support and administration.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Assisted with the
+                                            manufacture of windows and doors, in
+                                            line with site requirements.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item: Norfolk Constabulary -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeadingPolice">
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#workCollapsePolice" aria-expanded="true"
+                            aria-controls="workCollapsePolice">
+                            <span class="flex-grow-1 text-start">Police Officer, Norfolk Constabulary</span>
+                            <span class="date text-white text-end ms-3">Nov 2005 - Nov 2006</span>
+                        </button>
+                    </h2>
+                    <div id="workCollapsePolice" class="accordion-collapse collapse" aria-labelledby="workHeadingPolice"
+                        data-bs-parent="#workAccordion">
+                        <div class="accordion-body d-flex flex-column flex-md-row align-items-center">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/police-logo.png" alt="Norfolk Police Logo" class="img-fluid"
+                                    style="max-height: 200px; width: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Plan and conduct suspect
+                                        Interviews.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Communicate effectively
+                                        with a wide range of people.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Writing witness
+                                        statements.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Respond appropriately to
+                                        emergency situations.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Portray a professional
+                                        manner to both colleagues and the
+                                        public.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item: Anglian Building Products -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeadingRBS">
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#workCollapseRBS" aria-expanded="false"
+                            aria-controls="workCollapseRBS">
+                            <span class="flex-grow-1 text-start">Marketing Assistant, Royal Bank of Scotland</span>
+                            <span class="date text-white text-end ms-3">Nov 2003 – Oct 2005</span>
+                        </button>
+                    </h2>
+
+                    <div id="workCollapseRBS" class="accordion-collapse collapse" aria-labelledby="workHeadingRBS"
+                        data-bs-parent="#workAccordion">
+                        <div class="accordion-body d-flex flex-column flex-md-row align-items-start">
+                            <!-- Company Logo -->
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/rbs-logo.png" alt="Royal Bank of Scotland Logo"
+                                    class="img-fluid" style="max-width: 200px; height: auto" />
+                            </picture>
+
+                            <!-- Role Details -->
+                            <div class="accordion-text flex-fill text-start">
+                                <h5 class="fw-bold mt-0">Full-time · 2 years</h5>
+
+                                <!-- Role 1 -->
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-1">Marketing Assistant</h6>
+                                    <p class="text-muted small mb-1">
+                                        Aug 2004 - Oct 2005 · 1 years 3 months
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Events organisation,
+                                            including transport & accommodation.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Producing and
+                                            illustrating marketing and sales figures.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Management and
+                                            allocation of the departments pool cars.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>General
+                                            administration.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Role 2 -->
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-1">Salesperson</h6>
+                                    <p class="text-muted small mb-1">
+                                        Nov 2003 - Aug 2004 · 9 months
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Worked on the sales
+                                            desk at The One Account mortgage business of the RBS Group.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item: St John Ambulance -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeadingStJohn">
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#workCollapseStJohn" aria-expanded="true"
+                            aria-controls="workCollapseStJohn">
+                            <span class="flex-grow-1 text-start">Business & Marketing Assistant, St John
+                                Ambulance</span>
+                            <span class="date text-white text-end ms-3">Jun 2001 - Jun 2002</span>
+                        </button>
+                    </h2>
+                    <div id="workCollapseStJohn" class="accordion-collapse collapse" aria-labelledby="workHeadingStJohn"
+                        data-bs-parent="#workAccordion">
+                        <div class="accordion-body d-flex flex-column flex-md-row align-items-center">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/stjohn-logo.png" alt="St John Ambulance Logo" class="img-fluid"
+                                    style="max-height: 200px; width: auto" />
+                            </picture>
+
+                            <div class="accordion-text flex-fill text-center text-md-start">
+                                <p>University of Derby, BA Marketing Work Experience.</p>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Assisting the marketing
+                                        manager and Sales Team, to generate commercial income,
+                                        for investment in the charitable objectives of St. John Ambulance.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>To have specific
+                                        responsibilities for projects, including; Designing the course brochure,
+                                        Evaluation Form & promotional leaflets; Planning & Conducting a Research
+                                        Campaign; &
+                                        promoting First Aid within schools.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End of work section -->
+            </div>
+
+            <!-- Education Section -->
+            <h2 class="mt-5">Education & Qualifications</h2>
+            <div class="accordion" id="educationAccordion">
+                <!-- Education Item: UEA -->
+                <div class="accordion-item UEA">
+                    <h2 class="accordion-header" id="eduHeadingUEA">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#eduCollapseUEA" aria-expanded="false"
+                            aria-controls="#eduCollapseUEA">
+                            <span class="flex-grow-1 text-start">MSc Computing Science, University of East Anglia</span>
+                            <span class="date text-white text-end ms-3">Sept 2023 - Sept 2025</span>
+                        </button>
+
+                    </h2>
+                    
+                    <div id="eduCollapseUEA" class="accordion-collapse collapse show" aria-labelledby="eduHeadingUEA"
+                        data-bs-parent="#educationAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/uea-logo.png" alt="University of East Anglia Logo"
+                                    class="img-fluid" style="max-height: 200px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="fw-bold mb-1">Master of Computing Science</h6>
+                            <p class="text-muted small mb-1">
+                                Grade Distinction | Sept 2023 - Sept 2025
+                            </p>
+                            <p>
+                                A postgraduate programme focused on advanced computing techniques, programming,
+                                data science, and software engineering principles. Awarded Distinction overall.
+                            </p>
+                            <ul class="list-unstyled mb-0">
+                                <li><strong>CMP-7000A Applications Programming</strong> – Distinction (74%)<br>
+                                    Practical introduction to software engineering and Python through full game
+                                    development.
+                                </li>
+                                <li class="mt-2"><strong>CMP-7022B Information Visualisation</strong> – Distinction
+                                    (78%)<br>
+                                    Techniques for summarising, visualising, and interpreting complex data effectively.
+                                </li>
+                                <li class="mt-2"><strong>CMP-7023B Data Mining</strong> – Distinction (80%)<br>
+                                    Methods and algorithms for knowledge discovery, clustering, and classification using
+                                    Python.
+                                </li>
+                                <li class="mt-2"><strong>CMP-7030Y Research Methods</strong> – Distinction (84%)<br>
+                                    Professional skills, ethics, and research practices in computer science.
+                                </li>
+                                <li class="mt-2"><strong>CMP-7003B Web Development</strong> – Distinction (84%)<br>
+                                    Design and implementation of full-stack web applications using HTML, CSS,
+                                    JavaScript, and server technologies.
+                                </li>
+                                <li class="mt-2"><strong>CMP-7025A Database Manipulation</strong> – Distinction
+                                    (84%)<br>
+                                    Relational database design and programming using SQL and Python integration.
+                                </li>
+                                <li class="mt-2"><strong>CMP-7039X Dissertation</strong> – Distinction (81%)<br>
+                                    Independent research project developing the <em>Stork Movement Explorer</em> web
+                                    application.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- Education Item: Derby Uni -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="eduHeadingDerbyUni">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#eduCollapseDerbyUni" aria-expanded="false"
+                            aria-controls="eduCollapseDerbyUni">
+                            <span class="flex-grow-1 text-start">University of Derby</span>
+                            <span class="date text-white text-end ms-3">Sept 1998 - Jun 2003</span>
+                        </button>
+
+                    </h2>
+
+                    <div id="eduCollapseDerbyUni" class="accordion-collapse collapse"
+                        aria-labelledby="eduHeadingDerbyUni" data-bs-parent="#educationAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/derbyuni-logo.png" alt="University of Derby Logo"
+                                    class="img-fluid" style="max-height: 200px; width: auto" />
+                            </picture>
+
+                            <!-- Course Marketing -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-1">BA (Hons) Marketing</h6>
+                                <p class="text-muted small mb-1">
+                                    Grade 2:1 | Sep 2000 – Jun 2003
+                                </p>
+                                 <p>
+                                    Developed strong analytical, strategic, and communication skills through coursework and a year in
+                                    industry, focusing on applying marketing theory to real-world organisational challenges.
+                                </p>
+                                <ul class="list-unstyled ms-2">
+
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Studied consumer behaviour, 
+                                        market research, and strategic planning.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Applied quantitative and qualitative 
+                                        methods for data-driven marketing insights.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Enhanced presentation, teamwork, 
+                                        and project management abilities.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Disseration was on 
+                                        the success of internal marketing at St. John Ambulance, 
+                                        where I spent a year in industry.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Course Bus Management -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-1">HND Business Management</h6>
+                                <p class="text-muted small mb-1">
+                                    Grade Pass | Sep 1998 – Jun 2000
+                                </p>
+                                <p>
+                                    Provided a foundation in business operations and management principles, complementing later marketing and analytical studies.
+                                </p>
+                                <ul class="list-unstyled ms-2">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Explored finance, organisational behaviour, and business strategy.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Developed understanding of operations management and leadership.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Built confidence in professional communication and teamwork.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Completed projects linking theory to real-world case studies.
+                                    </li>
+                                </ul>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item: A Level -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="eduHeadingALevel">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#eduCollapseALevel" aria-expanded="false"
+                            aria-controls="#eduCollapseALevel">
+                            <span class="flex-grow-1 text-start">Chesterfield College</span>
+                            <span class="date text-white text-end ms-3">Sept 1994 - Jun 1996</span>
+                        </button>
+
+                    </h2>
+                    
+                    <div id="eduCollapseALevel" class="accordion-collapse collapse" aria-labelledby="eduHeadingALevel"
+                        data-bs-parent="#educationAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/chessy-logo.png" alt="Chesterfield College Logo"
+                                    class="img-fluid" style="max-height: 200px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="fw-bold mb-1">A-level Graphic Design</h6>
+                            <p class="text-muted small mb-1">
+                                Grade E | Sept 1994 - Jun 1996
+                            </p>
+                            <p>
+                                Studied A-Level Graphic Design with an emphasis on hand-rendered artwork, layout, and typographic design. 
+                                The course focused on traditional illustration, photography, and print-based projects, developing 
+                                creative and technical skills before the widespread use of digital tools.
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Studied typography, colour theory, and layout design fundamentals.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Gained practical experience in print production and reprographics.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Developed skills in illustration, photography, and concept sketching.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Introduced to early digital design using Macintosh and Adobe software.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Explored visual communication, branding, and design history.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Education Item: GCSE -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="eduHeadingGCSE">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#eduCollapseGCSE" aria-expanded="false"
+                            aria-controls="#eduCollapseGCSE">
+                            <span class="flex-grow-1 text-start">Highfields School, Matlock</span>
+                            <span class="date text-white text-end ms-3">Sept 1992 - Jun 1994</span>
+                        </button>
+
+                    </h2>
+                    
+                    <div id="eduCollapseGCSE" class="accordion-collapse collapse" aria-labelledby="eduHeadingGCSE"
+                        data-bs-parent="#educationAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/highfields-logo.png" alt="Highfields School Matlock Logo"
+                                    class="img-fluid" style="max-height: 200px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="fw-bold mb-1">GCSE's</h6>
+                            <p class="text-muted small mb-1">
+                                8 x GCSE's Grade C & above | Sept 1992 - Jun 1994
+                            </p>
+                            <p>
+                                Achieved eight GCSEs at grades C and above, including English, Mathematics, and Dual Science. 
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>               
+
+            <!-- End of education section -->
+            </div>
+            
+            <!-- Hobbies Section -->
+            <h2 class="mt-5">Hobbies & Other Information</h2>
+            <div class="accordion" id="hobbiesAccordion">
+
+                <!-- Bouldering -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="hobbyHeadingBouldering">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#hobbyCollapseBouldering" aria-expanded="false"
+                            aria-controls="hobbyCollapseBouldering">
+                            <span class="flex-grow-1 text-start">Bouldering</span>
+                            <!-- <span class="date text-white text-end ms-3">Jul 2022 - Ongoing</span> -->
+                        </button>
+
+                    </h2>
+                    
+                    <div id="hobbyCollapseBouldering" class="accordion-collapse collapse show" aria-labelledby="hobbyHeadingBouldering"
+                        data-bs-parent="#hobbiesAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/bouldering1.webp" alt="Bouldering at Highball Climbing Centre"
+                                    class="img-fluid" style="max-height: 300px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="accord-h6 fw-bold mb-1">Bouldering at Highball, Norwich</h6>
+                            <!-- <p class="text-muted small mb-1">
+                                Grade Distinction | Sept 2023 - Sept 2025
+                            </p> -->
+                            <p>
+                                Each week after work, I join a group of colleagues from Norse at Highball Climbing Centre in Norwich for a
+                                bouldering session — often followed by a well-earned coffee and cake!
+                            </p>
+                            <p>
+                                Bouldering offers a mix of social connection, physical challenge, and problem-solving. It helps build stamina,
+                                focus, and a positive mindset, while providing a real sense of achievement with every climb.
+                            </p>
+                            <p>
+                                I’ve found it a great way to improve both physical and mental well-being. Staying positive and committing to
+                                the climb has taught me that you can often achieve more than you think.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wildlife Photography section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="hobbyHeadingPhoto">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#hobbyCollapsePhoto" aria-expanded="false"
+                            aria-controls="hobbyCollapsePhoto">
+                            <span class="flex-grow-1 text-start">Wildlife Photography</span>
+                            <!-- <span class="date text-white text-end ms-3">Jul 2022 - Ongoing</span> -->
+                        </button>
+
+                    </h2>               
+
+                    <div id="hobbyCollapsePhoto" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingPhoto"
+                        data-bs-parent="#hobbiesAccordion">
+                        <div class="accordion-body">
+
+                            <div class="accordion-body d-flex photo flex-column flex-md-row align-items-center justify-content-between">
+                                <!-- Text content (left side) -->
+                                <div class="flex-grow-1 me-md-4">
+                                    <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                    <h6 class="accord-h6 fw-bold mb-1">Local Photography</h6>
+                                    <!-- <p class="text-muted small mb-1">
+                                        Grade Distinction | Sept 2023 - Sept 2025
+                                    </p> -->
+                                    <p>
+                                        For many years I have enjoyed photography, with a particular interest in wildlife and bird photography.
+                                        I often visit nature reserves across Norfolk and Suffolk to capture moments of natural behaviour and seasonal changes.
+                                    </p>
+
+                                    <p>
+                                        I’m particularly drawn to photographing migratory species such as storks, cranes, and waders, combining my technical curiosity in movement data
+                                        with visual storytelling through imagery. I often use early morning light to emphasise atmosphere and texture.
+                                    </p>
+
+                                    <p>
+                                        Photography has also encouraged me to explore digital editing and organisation tools such as Adobe Lightroom and Photoshop,
+                                        where I enjoy refining colour balance and composition while maintaining a natural aesthetic.
+                                    </p>
+                                </div>
+
+                                <!-- Carousel (right side) -->
+                                <div id="photoCarouselSmall"
+                                        class="carousel slide order-md-2 ms-md-4 mb-3 mb-md-0"
+                                        data-bs-ride="carousel" data-bs-interval="4000"
+                                        style="max-width: 450px; flex-shrink: 0;">
+
+                                    <div class="carousel-inner rounded-3 shadow-sm" style="height: 300px;">
+                                        <div class="carousel-item active">
+                                        <img src="/images/logos/photography1.webp" class="d-block w-100 h-100 img-fluid"
+                                            alt="Wildlife photo 1" style="object-fit: cover;">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="/images/logos/photography2.webp" class="d-block w-100 h-100 img-fluid"
+                                            alt="Wildlife photo 2" style="object-fit: cover;">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="/images/logos/photography3.webp" class="d-block w-100 h-100 img-fluid"
+                                            alt="Wildlife photo 3" style="object-fit: cover;">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="/images/logos/photography4.webp" class="d-block w-100 h-100 img-fluid"
+                                            alt="Wildlife photo 4" style="object-fit: cover;">
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#photoCarouselSmall" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                            data-bs-target="#photoCarouselSmall" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+
+                <!-- Director section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="hobbyHeadingDirector">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#hobbyCollapseDirector" aria-expanded="false"
+                            aria-controls="hobbyCollapseDirector">
+                            <span class="flex-grow-1 text-start">Director - East Hills Residents Association</span>
+                            <!-- <span class="date text-white text-end ms-3">Jul 2022 - Ongoing</span> -->
+                        </button>
+
+                    </h2>               
+
+                    <div id="hobbyCollapseDirector" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingDirector"
+                        data-bs-parent="#hobbiesAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/brownco-logo.png" alt="Brown & Co Logo"
+                                    class="img-fluid" style="max-height: 50px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="accord-h6 fw-bold mb-1">East Hills Residents Association Ltd </h6>
+                            <!-- <p class="text-muted small mb-1">
+                                Grade Distinction | Sept 2023 - Sept 2025
+                            </p> -->
+                            <p>
+                                I'm a Director of the East Hills Residents’ Association Ltd, which is 
+                                responsible for managing four residential blocks and leaseholder interests. 
+                                The association is managed by Brown & Co, Norwich.
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+
+                 <!-- PCbuild section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="hobbyHeadingPCbuild">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#hobbyCollapsePCbuild" aria-expanded="false"
+                            aria-controls="hobbyCollapsePCbuild">
+                            <span class="flex-grow-1 text-start">Building Personal Computers</span>
+                            <!-- <span class="date text-white text-end ms-3">Jul 2022 - Ongoing</span> -->
+                        </button>
+
+                    </h2>               
+
+                    <div id="hobbyCollapsePCbuild" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingPCbuild"
+                        data-bs-parent="#hobbiesAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/pc-icon.png" alt="Image description"
+                                    class="img-fluid" style="max-height: 200px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="accord-h6 fw-bold mb-1">Building Personal Computers</h6>
+                            <!-- <p class="text-muted small mb-1">
+                                Grade Distinction | Sept 2023 - Sept 2025
+                            </p> -->
+                            <p>
+                                For over two decades I've been building my own personal computers. 
+                                After spending time delicately selecting all of the suitable parts, 
+                                its time to put it all together in the right order, 
+                                which feels very much like building a Lego or Meccano set. 
+                            </p>
+                        </div>
+                    </div>
+                </div>       
+                
+                <!-- Driving section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="hobbyHeadingDriving">
+
+                        <button class="accordion-button d-flex justify-content-between" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#hobbyCollapseDriving" aria-expanded="false"
+                            aria-controls="hobbyCollapseDriving">
+                            <span class="flex-grow-1 text-start">Driving Licence</span>
+                            <!-- <span class="date text-white text-end ms-3">Jul 2022 - Ongoing</span> -->
+                        </button>
+
+                    </h2>               
+
+                    <div id="hobbyCollapseDriving" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingDriving"
+                        data-bs-parent="#hobbiesAccordion">
+                        <div class="accordion-body">
+                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                                <img src="/images/logos/car-icon.png" alt="Image description"
+                                    class="img-fluid" style="max-height: 200px; width: auto" />
+                            </picture>
+                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                            <h6 class="accord-h6 fw-bold mb-1">Driving Licence</h6>
+                            <!-- <p class="text-muted small mb-1">
+                                Grade Distinction | Sept 2023 - Sept 2025
+                            </p> -->
+                            <p>
+                                I hold a full UK driving licence.
+                            </p>
+                        </div>
+                    </div>
+                </div>                
+                
+                <!-- End of hobbies accordion -->
+            </div>
+        
+            <!-- End of <div> for entire accordion section -->
+        </div>
+        <!-- End of <section> for entire accordion section -->
+    </section>
+
+    <!-- <div id="footer-placeholder"></div> -->
+    <%- include ('components/footer') %>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+
+        <!-- <script>
+        document.documentElement.classList.remove("no-js");
+    </script> -->
+</body>
+
+</html>
