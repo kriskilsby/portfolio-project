@@ -56,8 +56,8 @@
     <!-- Intro section under hero -->
     <section class="profile-intro text-center mt-5 py-0">
         <div class="profile-container container-fluid mt-0">
-            <h2 class="profile-title mt-0">Welcome</h2>
-            <p class="profile-text">
+            <h2 class="profile-title reveal-text mt-0">Welcome</h2>
+            <p class="profile-text reveal-text">
                 Explore my portfolio — from web development projects and data
                 visualisation tools, to examples of professional analytical work,
                 reimagined through modern web technologies.
@@ -67,7 +67,8 @@
 
     <!-- Entire Accordion Section -->
     <section class="accordion-section bg-light py-5">
-        <div class="container">
+        <!-- <div class="container"> -->
+        <div class="container px-2 px-md-3">
             <!-- Personal Profile Section -->
             <h2>Personal Profile</h2>
             <p>A brief overview of who I am and what I bring to my work.</p>
@@ -140,10 +141,9 @@
                     </h2>
                     <div id="skillsCollapseOne" class="accordion-collapse collapse show"
                         aria-labelledby="skillsHeadingOne" data-bs-parent="#skillsAccordion">
-                        <div
-                            class="accordion-body d-flex flex-column flex-md-row align-items-center align-items-md-start">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
                             
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/computing.png" alt="Learning icon"
                                     class="img-fluid" style="max-width: 200px; height: auto" />
                             </picture>
@@ -167,48 +167,55 @@
 
                                 <!-- Project showcase -->
                                 <div class="project-showcase mt-4 text-center text-md-start">
-                                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                                    <!-- <div class="d-flex flex-wrap justify-content-center gap-3"> -->
+                                    <div class="row justify-content-center g-3">
 
                                         <!-- Project Card 1 -->
-                                        <div class="card shadow-sm border-0 rounded-5" style="max-width: 480px;">
-                                            <!-- <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
-                                            <div class="card-body d-flex flex-column align-items-center text-center">
-                                                <h5 class="card-title mb-2">Stork Movement Explorer</h5>
-                                                <p class="card-text small text-muted mb-3">
-                                                    A web-based mapping tool for exploring GPS movement data,
-                                                    integrating backend clustering with an interactive Leaflet map.
-                                                </p>
-                                                <!-- Button container -->
-                                                <div class="d-flex justify-content-center flex-wrap gap-2">
-                                                    <a href="https://yourprojectlink.com" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
-                                                        View Project
-                                                    </a>
-                                                    <a href="https://github.com/yourgithubrepo" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
-                                                        View on GitHub
-                                                    </a>
+                                        <!-- <div class="card shadow-sm border-0 rounded-5" style="max-width: 480px;"> -->
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="card shadow-sm border-0 rounded-5 h-100">
+                                                <!-- <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
+                                                <div class="card-body d-flex flex-column align-items-center text-center">
+                                                    <h5 class="card-title mb-2">Stork Movement Explorer</h5>
+                                                    <p class="card-text small text-muted mb-3">
+                                                        A web-based mapping tool for exploring GPS movement data,
+                                                        integrating backend clustering with an interactive Leaflet map.
+                                                    </p>
+                                                    <!-- Button container -->
+                                                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                                                        <a href="https://yourprojectlink.com" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
+                                                            View Project
+                                                        </a>
+                                                        <a href="https://github.com/yourgithubrepo" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
+                                                            View on GitHub
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </div>    
                                         </div>
 
                                         <!-- Project Card 2 -->
-                                        <div class="card shadow-sm border-0 rounded-5" style="max-width: 480px;">
-                                            <!-- <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
-                                            <div class="card-body d-flex flex-column align-items-center text-center">
-                                                <h5 class="card-title mb-2">Competency Database</h5>
-                                                <p class="card-text small text-muted mb-3">
-                                                An automated reporting dashboard built in Excel and VBA,
-                                                used across NPS and the Norse Group to track staff competencies.
-                                                </p>
-                                                <!-- Button container -->
-                                                <div class="d-flex justify-content-center flex-wrap gap-2">
-                                                    <a href="#" class="btn btn-outline-primary btn-sm">
-                                                        View Project
-                                                    </a>
-                                                    <a href="#" class="btn btn-outline-secondary btn-sm">
-                                                        View on GitHub
-                                                    </a>
+                                        <!-- <div class="card shadow-sm border-0 rounded-5" style="max-width: 480px;"> -->
+                                        <div class="col-12 col-md-6 col-xl-6">
+                                            <div class="card shadow-sm border-0 rounded-5 h-100">
+                                                <!-- <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
+                                                <div class="card-body d-flex flex-column align-items-center text-center">
+                                                    <h5 class="card-title mb-2">Competency Database</h5>
+                                                    <p class="card-text small text-muted mb-3">
+                                                    An automated reporting dashboard built in Excel and VBA,
+                                                    used across NPS and the Norse Group to track staff competencies.
+                                                    </p>
+                                                    <!-- Button container -->
+                                                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                                                        <a href="#" class="btn btn-outline-primary btn-sm">
+                                                            View Project
+                                                        </a>
+                                                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                                                            View on GitHub
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </div>    
                                         </div>
 
                                     </div>
@@ -329,7 +336,7 @@
                                     class="img-fluid" style="max-width: 200px; height: auto" />
                             </picture>
 
-                            <div class="accordion-text flex-fill text-center text-md-start">
+                            <div class="accordion-text flex-fill text-center text-lg-start">
                                 <p>
                                     Quick to learn new technologies, demonstrated by moving from
                                     Excel-based process automation into full-stack web
@@ -350,25 +357,26 @@
                 <!-- Work Item: NPS Norse Group -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="workHeadingOne">
-                        <!-- <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#workCollapseOne" aria-expanded="true" aria-controls="workCollapseOne">
-                        Project Delivery Coordinator, NPS (Norse Group) | Oct 2020 - Present
-                    </button> -->
+
                         <button class="accordion-button d-flex justify-content-between" type="button"
                             data-bs-toggle="collapse" data-bs-target="#workCollapseOne" aria-expanded="true"
                             aria-controls="workCollapseOne">
-                            <span class="flex-grow-1 text-start">Project Delivery Coordinator, NPS (Norse Group)</span>
+                            <span class="flex-grow-1 text-start">Project Delivery Coordinator, Norse Group</span>
                             <span class="date text-white text-end ms-3">Oct 2020 - Present</span>
                         </button>
                     </h2>
                     <div id="workCollapseOne" class="accordion-collapse collapse show" aria-labelledby="workHeadingOne"
                         data-bs-parent="#workAccordion">
-                        <div class="accordion-body d-flex flex-column flex-md-row align-items-center">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/norse-logo3.png" alt="NPS Norse Group Logo" class="img-fluid"
                                     style="max-height: 200px; width: auto" />
                             </picture>
 
-                            <div class="accordion-text flex-fill text-center text-md-start">
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">Project Delivery Coordinator</h4>
+                                <h6 class="text-muted mb-3">Full-time | Oct 2020 - Present</h6>
+                                <h5 class="fw-bold mb-4">Norse Group (NPS)</h5>
                                 <ul class="list-unstyled">
                                     <li>
                                         <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Collect, analyse, and
@@ -400,31 +408,33 @@
                         <button class="accordion-button d-flex justify-content-between" type="button"
                             data-bs-toggle="collapse" data-bs-target="#workCollapseAnglian" aria-expanded="false"
                             aria-controls="workCollapseAnglian">
-                            <span class="flex-grow-1 text-start">Project Coordinator, Anglian Building Products (Anglian
-                                Windows Ltd)</span>
+                            <span class="flex-grow-1 text-start">Project Coordinator, Anglian Building Products</span>
                             <span class="date text-white text-end ms-3">Jan 2007 – Oct 2020</span>
                         </button>
                     </h2>
 
                     <div id="workCollapseAnglian" class="accordion-collapse collapse"
                         aria-labelledby="workHeadingAnglian" data-bs-parent="#workAccordion">
-                        <div class="accordion-body d-flex flex-column flex-md-row align-items-start">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
                             <!-- Company Logo -->
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/anglian-logo.png" alt="Anglian Building Products Logo"
                                     class="img-fluid" style="max-width: 200px; height: auto" />
                             </picture>
 
                             <!-- Role Details -->
-                            <div class="accordion-text flex-fill text-start">
-                                <h5 class="fw-bold mt-0">Full-time · 13 years 10 months</h5>
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h5 class="fw-bold mt-2 mb-1">Anglian Building Products (Anglian Windows Ltd)</h5>
+                                <h5 class="text-muted mb-4">Full-time · 13 years 10 months</h5>
 
                                 <!-- Role 1 -->
                                 <div class="mb-4">
-                                    <h6 class="fw-bold mb-1">Project Coordinator</h6>
-                                    <p class="text-muted small mb-1">
+                                    <h4 class="fw-bold mb-2 mt-2">Project Coordinator</h4>
+                                    <h6 class="text-muted mb-3">Aug 2019 – Oct 2020 · 1 years 2 months</h6>
+                                    <!-- <h6 class="fw-bold mb-1">Project Coordinator</h6> -->
+                                    <!-- <p class="text-muted small mb-1">
                                         Aug 2019 – Oct 2020 · 1 years 2 months
-                                    </p>
+                                    </p> -->
                                     <ul class="list-unstyled ms-2">
                                         <li>
                                             <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Planned and monitored
@@ -445,10 +455,12 @@
 
                                 <!-- Role 2 -->
                                 <div class="mb-4">
-                                    <h6 class="fw-bold mb-1">Contract Support Team Leader</h6>
+                                     <h4 class="fw-bold mb-2 mt-2">Contract Support Team Leader</h4>
+                                    <h6 class="text-muted mb-3">Apr 2017 – Aug 2019 · 2 years 5 months</h6>                                   
+                                    <!-- <h6 class="fw-bold mb-1">Contract Support Team Leader</h6>
                                     <p class="text-muted small mb-1">
                                         Apr 2017 – Aug 2019 · 2 years 5 months
-                                    </p>
+                                    </p> -->
                                     <ul class="list-unstyled ms-2">
                                         <li>
                                             <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Led and managed the
@@ -468,11 +480,13 @@
                                 </div>
 
                                 <!-- Role 3 -->
-                                <div>
-                                    <h6 class="fw-bold mb-1">Regional Planner</h6>
+                                <div class="mb-4">
+                                    <h4 class="fw-bold mb-2 mt-2">Regional Planner</h4>
+                                    <h6 class="text-muted mb-3">May 2008 – Mar 2017 · 8 years 11 months</h6>                                   
+                                    <!-- <h6 class="fw-bold mb-1">Regional Planner</h6>
                                     <p class="text-muted small mb-1">
                                         May 2008 – Mar 2017 · 8 years 11 months
-                                    </p>
+                                    </p> -->
                                     <ul class="list-unstyled ms-2">
                                         <li>
                                             <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Managed production
@@ -496,13 +510,15 @@
                                 </div>
 
                                 <!-- Role 4 -->
-                                <div>
-                                    <h6 class="fw-bold mb-1">
+                                <div class="mb-4">
+                                    <h4 class="fw-bold mb-2 mt-2">Temporary Planning Administrator <h5 class="fw-bold mt-2 mb-1">(OSR Recruitment)</h5></h4>
+                                    <h6 class="text-muted mb-3">Jan 2007 – Apr 2008 · 1 year 4 months</h6>                                   
+                                    <!-- <h6 class="fw-bold mb-1">
                                         Temporary Planning Administrator, (OSR Recruitment)
                                     </h6>
                                     <p class="text-muted small mb-1">
                                         Jan 2007 – Apr 2008 · 1 year 4 months
-                                    </p>
+                                    </p> -->
                                     <ul class="list-unstyled ms-2">
                                         <li>
                                             <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Provided office
@@ -532,13 +548,18 @@
                     </h2>
                     <div id="workCollapsePolice" class="accordion-collapse collapse" aria-labelledby="workHeadingPolice"
                         data-bs-parent="#workAccordion">
-                        <div class="accordion-body d-flex flex-column flex-md-row align-items-center">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/police-logo.png" alt="Norfolk Police Logo" class="img-fluid"
                                     style="max-height: 200px; width: auto" />
                             </picture>
 
-                            <div class="accordion-text flex-fill text-center text-md-start">
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+
+                                <h4 class="fw-bold mb-2 mt-2">Police Officer</h4>
+                                <h6 class="text-muted mb-3">Full Time | Nov 2005 - Nov 2006</h6>
+                                <h5 class="fw-bold mb-4">Norfolk Constabulary</h5>
+
                                 <ul class="list-unstyled">
                                     <li>
                                         <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Plan and conduct suspect
@@ -580,23 +601,29 @@
 
                     <div id="workCollapseRBS" class="accordion-collapse collapse" aria-labelledby="workHeadingRBS"
                         data-bs-parent="#workAccordion">
-                        <div class="accordion-body d-flex flex-column flex-md-row align-items-start">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
                             <!-- Company Logo -->
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/rbs-logo.png" alt="Royal Bank of Scotland Logo"
                                     class="img-fluid" style="max-width: 200px; height: auto" />
                             </picture>
 
                             <!-- Role Details -->
-                            <div class="accordion-text flex-fill text-start">
-                                <h5 class="fw-bold mt-0">Full-time · 2 years</h5>
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h5 class="fw-bold mt-2 mb-1">Royal Bank of Scotland</h5>
+                                <h5 class="text-muted mb-4">Full-time · 2 years</h5>
+                                <!-- <h5 class="text-muted mt-2 mb-4">Full-time · 2 years</h5> -->
 
                                 <!-- Role 1 -->
                                 <div class="mb-4">
-                                    <h6 class="fw-bold mb-1">Marketing Assistant</h6>
+                                    <h4 class="fw-bold mb-2 mt-2">Marketing Assistant</h4>
+                                    <h6 class="text-muted mb-3">Aug 2004 - Oct 2005 · 1 years 3 months</h6>
+                                    <!-- <h5 class="fw-bold mb-2">Royal Bank of Scotland</h5> -->
+
+                                    <!-- <h6 class="fw-bold mb-1">Marketing Assistant</h6>
                                     <p class="text-muted small mb-1">
                                         Aug 2004 - Oct 2005 · 1 years 3 months
-                                    </p>
+                                    </p> -->
                                     <ul class="list-unstyled ms-2">
                                         <li>
                                             <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Events organisation,
@@ -618,11 +645,14 @@
                                 </div>
 
                                 <!-- Role 2 -->
-                                <div class="mb-4">
-                                    <h6 class="fw-bold mb-1">Salesperson</h6>
+                                <div class="mb-4 mt-4">
+                                    <h4 class="fw-bold mb-2 mt-2">Mortgage Salesperson</h4>
+                                    <h6 class="text-muted mb-3">Nov 2003 - Aug 2004 · 9 months</h6>
+                                    <!-- <h5 class="fw-bold mb-2">Royal Bank of Scotland</h5>                                    -->
+                                    <!-- <h6 class="fw-bold mb-1">Salesperson</h6>
                                     <p class="text-muted small mb-1">
                                         Nov 2003 - Aug 2004 · 9 months
-                                    </p>
+                                    </p> -->
                                     <ul class="list-unstyled ms-2">
                                         <li>
                                             <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Worked on the sales
@@ -648,14 +678,18 @@
                     </h2>
                     <div id="workCollapseStJohn" class="accordion-collapse collapse" aria-labelledby="workHeadingStJohn"
                         data-bs-parent="#workAccordion">
-                        <div class="accordion-body d-flex flex-column flex-md-row align-items-center">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <!-- <div class="accordion-body d-flex flex-column flex-md-row align-items-center"> -->
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/stjohn-logo.png" alt="St John Ambulance Logo" class="img-fluid"
                                     style="max-height: 200px; width: auto" />
                             </picture>
 
-                            <div class="accordion-text flex-fill text-center text-md-start">
-                                <p>University of Derby, BA Marketing Work Experience.</p>
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">Business & Marketing Assistant</h4>
+                                <h6 class="text-muted mb-3">Full Time | Jun 2001 - Jun 2002</h6>
+                                <h5 class="fw-bold mb-4">University of Derby, BA Marketing Work Experience.</h5>
+                                <!-- <p>University of Derby, BA Marketing Work Experience.</p> -->
                                 <ul class="list-unstyled">
                                     <li>
                                         <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Assisting the marketing
@@ -696,49 +730,56 @@
                     
                     <div id="eduCollapseUEA" class="accordion-collapse collapse show" aria-labelledby="eduHeadingUEA"
                         data-bs-parent="#educationAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <!-- <div class="accordion-body"> -->
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <!-- <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0"> -->
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/uea-logo.png" alt="University of East Anglia Logo"
                                     class="img-fluid" style="max-height: 200px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="fw-bold mb-1">Master of Computing Science</h6>
-                            <p class="text-muted small mb-1">
-                                Grade Distinction | Sept 2023 - Sept 2025
-                            </p>
-                            <p>
-                                A postgraduate programme focused on advanced computing techniques, programming,
-                                data science, and software engineering principles. Awarded Distinction overall.
-                            </p>
-                            <ul class="list-unstyled mb-0">
-                                <li><strong>CMP-7000A Applications Programming</strong> – Distinction (74%)<br>
-                                    Practical introduction to software engineering and Python through full game
-                                    development.
-                                </li>
-                                <li class="mt-2"><strong>CMP-7022B Information Visualisation</strong> – Distinction
-                                    (78%)<br>
-                                    Techniques for summarising, visualising, and interpreting complex data effectively.
-                                </li>
-                                <li class="mt-2"><strong>CMP-7023B Data Mining</strong> – Distinction (80%)<br>
-                                    Methods and algorithms for knowledge discovery, clustering, and classification using
-                                    Python.
-                                </li>
-                                <li class="mt-2"><strong>CMP-7030Y Research Methods</strong> – Distinction (84%)<br>
-                                    Professional skills, ethics, and research practices in computer science.
-                                </li>
-                                <li class="mt-2"><strong>CMP-7003B Web Development</strong> – Distinction (84%)<br>
-                                    Design and implementation of full-stack web applications using HTML, CSS,
-                                    JavaScript, and server technologies.
-                                </li>
-                                <li class="mt-2"><strong>CMP-7025A Database Manipulation</strong> – Distinction
-                                    (84%)<br>
-                                    Relational database design and programming using SQL and Python integration.
-                                </li>
-                                <li class="mt-2"><strong>CMP-7039X Dissertation</strong> – Distinction (81%)<br>
-                                    Independent research project developing the <em>Stork Movement Explorer</em> web
-                                    application.
-                                </li>
-                            </ul>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">MSc Computing Science</h4>
+                                <h6 class="text-muted mb-3">Grade Distinction | Sept 2023 - Sept 2025</h6>
+                                <h5 class="fw-bold mb-4">University of East Anglia</h5>
+                                
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <!-- <h6 class="fw-bold mb-1">Master of Computing Science</h6>
+                                <p class="text-muted small mb-1">Grade Distinction | Sept 2023 - Sept 2025</p> -->
+                                <p>
+                                    A postgraduate programme focused on advanced computing techniques, programming,
+                                    data science, and software engineering principles. Awarded Distinction overall.
+                                </p>
+                                <ul class="list-unstyled mb-0">
+                                    <li><strong>CMP-7000A Applications Programming</strong> – Distinction (74%)<br>
+                                        Practical introduction to software engineering and Python through full game
+                                        development.
+                                    </li>
+                                    <li class="mt-2"><strong>CMP-7022B Information Visualisation</strong> – Distinction
+                                        (78%)<br>
+                                        Techniques for summarising, visualising, and interpreting complex data effectively.
+                                    </li>
+                                    <li class="mt-2"><strong>CMP-7023B Data Mining</strong> – Distinction (80%)<br>
+                                        Methods and algorithms for knowledge discovery, clustering, and classification using
+                                        Python.
+                                    </li>
+                                    <li class="mt-2"><strong>CMP-7030Y Research Methods</strong> – Distinction (84%)<br>
+                                        Professional skills, ethics, and research practices in computer science.
+                                    </li>
+                                    <li class="mt-2"><strong>CMP-7003B Web Development</strong> – Distinction (84%)<br>
+                                        Design and implementation of full-stack web applications using HTML, CSS,
+                                        JavaScript, and server technologies.
+                                    </li>
+                                    <li class="mt-2"><strong>CMP-7025A Database Manipulation</strong> – Distinction
+                                        (84%)<br>
+                                        Relational database design and programming using SQL and Python integration.
+                                    </li>
+                                    <li class="mt-2"><strong>CMP-7039X Dissertation</strong> – Distinction (81%)<br>
+                                        Independent research project developing the <em>Stork Movement Explorer</em> web
+                                        application.
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -747,80 +788,91 @@
                 <!-- Education Item: Derby Uni -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="eduHeadingDerbyUni">
-
                         <button class="accordion-button d-flex justify-content-between" type="button"
                             data-bs-toggle="collapse" data-bs-target="#eduCollapseDerbyUni" aria-expanded="false"
                             aria-controls="eduCollapseDerbyUni">
                             <span class="flex-grow-1 text-start">University of Derby</span>
                             <span class="date text-white text-end ms-3">Sept 1998 - Jun 2003</span>
                         </button>
-
                     </h2>
 
                     <div id="eduCollapseDerbyUni" class="accordion-collapse collapse"
                         aria-labelledby="eduHeadingDerbyUni" data-bs-parent="#educationAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <!-- <div class="accordion-body"> -->
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+    
+                            <!-- <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0"> -->
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/derbyuni-logo.png" alt="University of Derby Logo"
                                     class="img-fluid" style="max-height: 200px; width: auto" />
                             </picture>
 
-                            <!-- Course Marketing -->
-                            <div class="mb-4">
-                                <h6 class="fw-bold mb-1">BA (Hons) Marketing</h6>
-                                <p class="text-muted small mb-1">
-                                    Grade 2:1 | Sep 2000 – Jun 2003
-                                </p>
-                                 <p>
-                                    Developed strong analytical, strategic, and communication skills through coursework and a year in
-                                    industry, focusing on applying marketing theory to real-world organisational challenges.
-                                </p>
-                                <ul class="list-unstyled ms-2">
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <!-- Course Marketing -->
+                                <div class="mb-5">
+                                    <h4 class="fw-bold mb-2 mt-2">BA (Hons) Marketing</h4>
+                                    <h6 class="text-muted mb-3">Grade 2:1 | Sep 2000 – Jun 2003</h6>
+                                    <h5 class="fw-bold mb-4">University of Derby</h5>
 
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Studied consumer behaviour, 
-                                        market research, and strategic planning.
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Applied quantitative and qualitative 
-                                        methods for data-driven marketing insights.
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Enhanced presentation, teamwork, 
-                                        and project management abilities.
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Disseration was on 
-                                        the success of internal marketing at St. John Ambulance, 
-                                        where I spent a year in industry.
-                                    </li>
-                                </ul>
+                                    <!-- <h6 class="fw-bold mb-1">BA (Hons) Marketing</h6>
+                                    <p class="text-muted small mb-1">
+                                        Grade 2:1 | Sep 2000 – Jun 2003
+                                    </p> -->
+                                    <p>
+                                        Developed strong analytical, strategic, and communication skills through coursework and a year in
+                                        industry, focusing on applying marketing theory to real-world organisational challenges.
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Studied consumer behaviour, 
+                                            market research, and strategic planning.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Applied quantitative and qualitative 
+                                            methods for data-driven marketing insights.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Enhanced presentation, teamwork, 
+                                            and project management abilities.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Disseration was on 
+                                            the success of internal marketing at St. John Ambulance, 
+                                            where I spent a year in industry.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Course Bus Management -->
+                                <div class="mb-4">
+                                    <h4 class="fw-bold mb-2 mt-2">HND Business Management</h4>
+                                    <h6 class="text-muted mb-3">Grade Pass | Sep 1998 – Jun 2000</h6>
+                                    <h5 class="fw-bold mb-4">University of Derby</h5> 
+
+                                    <!-- <h6 class="fw-bold mb-1">HND Business Management</h6>
+                                    <p class="text-muted small mb-1">
+                                        Grade Pass | Sep 1998 – Jun 2000
+                                    </p> -->
+                                    <p>
+                                        Provided a foundation in business operations and management principles, complementing later marketing and analytical studies.
+                                    </p>
+                                    <ul class="list-unstyled ms-2">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Explored finance, organisational behaviour, and business strategy.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Developed understanding of operations management and leadership.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Built confidence in professional communication and teamwork.
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Completed projects linking theory to real-world case studies.
+                                        </li>
+                                    </ul>
+                                </div>  
                             </div>
-
-                            <!-- Course Bus Management -->
-                            <div class="mb-4">
-                                <h6 class="fw-bold mb-1">HND Business Management</h6>
-                                <p class="text-muted small mb-1">
-                                    Grade Pass | Sep 1998 – Jun 2000
-                                </p>
-                                <p>
-                                    Provided a foundation in business operations and management principles, complementing later marketing and analytical studies.
-                                </p>
-                                <ul class="list-unstyled ms-2">
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Explored finance, organisational behaviour, and business strategy.
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Developed understanding of operations management and leadership.
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Built confidence in professional communication and teamwork.
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Completed projects linking theory to real-world case studies.
-                                    </li>
-                                </ul>
-                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -840,38 +892,46 @@
                     
                     <div id="eduCollapseALevel" class="accordion-collapse collapse" aria-labelledby="eduHeadingALevel"
                         data-bs-parent="#educationAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <!-- <div class="accordion-body"> -->
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/chessy-logo.png" alt="Chesterfield College Logo"
                                     class="img-fluid" style="max-height: 200px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="fw-bold mb-1">A-level Graphic Design</h6>
-                            <p class="text-muted small mb-1">
-                                Grade E | Sept 1994 - Jun 1996
-                            </p>
-                            <p>
-                                Studied A-Level Graphic Design with an emphasis on hand-rendered artwork, layout, and typographic design. 
-                                The course focused on traditional illustration, photography, and print-based projects, developing 
-                                creative and technical skills before the widespread use of digital tools.
-                            </p>
-                            <ul class="list-unstyled ms-2">
-                                <li>
-                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Studied typography, colour theory, and layout design fundamentals.
-                                </li>
-                                <li>
-                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Gained practical experience in print production and reprographics.
-                                </li>
-                                <li>
-                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Developed skills in illustration, photography, and concept sketching.
-                                </li>
-                                <li>
-                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Introduced to early digital design using Macintosh and Adobe software.
-                                </li>
-                                <li>
-                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Explored visual communication, branding, and design history.
-                                </li>
-                            </ul>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">A-level Graphic Design</h4>
+                                <h6 class="text-muted mb-3">Grade E | Sept 1994 - Jun 1996</h6>
+                                <h5 class="fw-bold mb-4">Chesterfield College</h5>
+
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <!-- <h6 class="fw-bold mb-1">A-level Graphic Design</h6>
+                                <p class="text-muted small mb-1">
+                                    Grade E | Sept 1994 - Jun 1996
+                                </p> -->
+                                <p>
+                                    Studied A-Level Graphic Design with an emphasis on hand-rendered artwork, layout, and typographic design. 
+                                    The course focused on traditional illustration, photography, and print-based projects, developing 
+                                    creative and technical skills before the widespread use of digital tools.
+                                </p>
+                                <ul class="list-unstyled ms-2">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Studied typography, colour theory, and layout design fundamentals.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Gained practical experience in print production and reprographics.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Developed skills in illustration, photography, and concept sketching.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Introduced to early digital design using Macintosh and Adobe software.
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Explored visual communication, branding, and design history.
+                                    </li>
+                                </ul>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -891,20 +951,26 @@
                     
                     <div id="eduCollapseGCSE" class="accordion-collapse collapse" aria-labelledby="eduHeadingGCSE"
                         data-bs-parent="#educationAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/highfields-logo.png" alt="Highfields School Matlock Logo"
                                     class="img-fluid" style="max-height: 200px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="fw-bold mb-1">GCSE's</h6>
-                            <p class="text-muted small mb-1">
-                                8 x GCSE's Grade C & above | Sept 1992 - Jun 1994
-                            </p>
-                            <p>
-                                Achieved eight GCSEs at grades C and above, including English, Mathematics, and Dual Science. 
-                                
-                            </p>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">8 x GCSE's</h4>
+                                <h6 class="text-muted mb-3">Grade C & above | Sept 1992 - Jun 1994</h6>
+                                <h5 class="fw-bold mb-4">Highfields School</h5>                           
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <!-- <h6 class="fw-bold mb-1">GCSE's</h6>
+                                <p class="text-muted small mb-1">
+                                    8 x GCSE's Grade C & above | Sept 1992 - Jun 1994
+                                </p> -->
+                                <p>
+                                    Achieved eight GCSEs at grades C and above, including English, Mathematics, and Dual Science. 
+                                    
+                                </p>
+                            </div>   
                         </div>
                     </div>
                 </div>               
@@ -931,28 +997,36 @@
                     
                     <div id="hobbyCollapseBouldering" class="accordion-collapse collapse show" aria-labelledby="hobbyHeadingBouldering"
                         data-bs-parent="#hobbiesAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <!-- <div class="accordion-body"> -->
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <!-- <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0"> -->
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/bouldering1.webp" alt="Bouldering at Highball Climbing Centre"
                                     class="img-fluid" style="max-height: 300px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="accord-h6 fw-bold mb-1">Bouldering at Highball, Norwich</h6>
-                            <!-- <p class="text-muted small mb-1">
-                                Grade Distinction | Sept 2023 - Sept 2025
-                            </p> -->
-                            <p>
-                                Each week after work, I join a group of colleagues from Norse at Highball Climbing Centre in Norwich for a
-                                bouldering session — often followed by a well-earned coffee and cake!
-                            </p>
-                            <p>
-                                Bouldering offers a mix of social connection, physical challenge, and problem-solving. It helps build stamina,
-                                focus, and a positive mindset, while providing a real sense of achievement with every climb.
-                            </p>
-                            <p>
-                                I’ve found it a great way to improve both physical and mental well-being. Staying positive and committing to
-                                the climb has taught me that you can often achieve more than you think.
-                            </p>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">Bouldering</h4>
+                                    <h6 class="text-muted mb-3">Grade Novice | July 2022 - present</h6>
+                                    <h5 class="fw-bold mb-4">Highball, Norwich, UK</h5>
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <!-- <h6 class="accord-h6 fw-bold mb-1">Bouldering at Highball, Norwich</h6> -->
+                                <!-- <p class="text-muted small mb-1">
+                                    Grade Distinction | Sept 2023 - Sept 2025
+                                </p> -->
+                                <p>
+                                    Each week after work, I join a group of colleagues from Norse at Highball Climbing Centre in Norwich for a
+                                    bouldering session — often followed by a well-earned coffee and cake!
+                                </p>
+                                <p>
+                                    Bouldering offers a mix of social connection, physical challenge, and problem-solving. It helps build stamina,
+                                    focus, and a positive mindset, while providing a real sense of achievement with every climb.
+                                </p>
+                                <p>
+                                    I’ve found it a great way to improve both physical and mental well-being. Staying positive and committing to
+                                    the climb has taught me that you can often achieve more than you think.
+                                </p>
+                            </div>   
                         </div>
                     </div>
                 </div>
@@ -978,23 +1052,28 @@
                                 <!-- Text content (left side) -->
                                 <div class="flex-grow-1 me-md-4">
                                     <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                                    <h6 class="accord-h6 fw-bold mb-1">Local Photography</h6>
+                                    <h4 class="fw-bold mb-2 mt-2">Photography</h4>
+                                    <h6 class="text-muted mb-3">Grade Hobbyist | Apr 2016 - present</h6>
+                                    <h5 class="fw-bold mb-4">Norfolk, Suffolk, and beyond</h5>                                        
                                     <!-- <p class="text-muted small mb-1">
                                         Grade Distinction | Sept 2023 - Sept 2025
                                     </p> -->
                                     <p>
-                                        For many years I have enjoyed photography, with a particular interest in wildlife and bird photography.
-                                        I often visit nature reserves across Norfolk and Suffolk to capture moments of natural behaviour and seasonal changes.
+                                        My passion for photography began with a fascination for the night sky. I bought a Dobsonian telescope and later a camera, 
+                                        hoping to capture the stars and planets I’d been observing. Over time, I started using binoculars too — initially for stargazing, 
+                                        but gradually my focus shifted from the sky to the natural world around me.
                                     </p>
 
                                     <p>
-                                        I’m particularly drawn to photographing migratory species such as storks, cranes, and waders, combining my technical curiosity in movement data
-                                        with visual storytelling through imagery. I often use early morning light to emphasise atmosphere and texture.
+                                        Visiting nature reserves across Norfolk and Suffolk with my wife soon became a favourite pastime, 
+                                        and I found myself drawn to photographing birds and wildlife. After investing in a telephoto lens, 
+                                        I was completely hooked. From elegant Marsh Harriers and Great Crested Grebes, to rare visitors like Cranes, Bee-eaters, 
+                                        and Glossy Ibis, I love capturing both the familiar and the unexpected moments nature offers.
                                     </p>
 
                                     <p>
-                                        Photography has also encouraged me to explore digital editing and organisation tools such as Adobe Lightroom and Photoshop,
-                                        where I enjoy refining colour balance and composition while maintaining a natural aesthetic.
+                                        I process and organise my images using Canon’s Digital Photo Professional 4 software, 
+                                        where I enjoy bringing out detail and atmosphere, while keeping the scene true to how it was experienced.
                                     </p>
                                 </div>
 
@@ -1058,21 +1137,27 @@
 
                     <div id="hobbyCollapseDirector" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingDirector"
                         data-bs-parent="#hobbiesAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/brownco-logo.png" alt="Brown & Co Logo"
                                     class="img-fluid" style="max-height: 50px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="accord-h6 fw-bold mb-1">East Hills Residents Association Ltd </h6>
-                            <!-- <p class="text-muted small mb-1">
-                                Grade Distinction | Sept 2023 - Sept 2025
-                            </p> -->
-                            <p>
-                                I'm a Director of the East Hills Residents’ Association Ltd, which is 
-                                responsible for managing four residential blocks and leaseholder interests. 
-                                The association is managed by Brown & Co, Norwich.
-                            </p>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <h4 class="fw-bold mb-1 mt-2">Director</h6>
+                                <h6 class="text-muted mb-3">Active - Oct 2018 - present</h6>
+		                        <h5 class="fw-bold mb-4">East Hills Residents Association Ltd</h5>
+                                <!-- <p class="text-muted small mb-1">
+                                    Grade Distinction | Sept 2023 - Sept 2025
+                                </p> -->
+                                <p>
+                                    Director of the East Hills Residents’ Association Ltd, 
+                                    overseeing four residential blocks. Brown & Co, Norwich, 
+                                    manage the estate under the board’s direction.
+                                </p>
+                            </div>    
                         </div>
                     </div>
                 </div> 
@@ -1092,22 +1177,28 @@
 
                     <div id="hobbyCollapsePCbuild" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingPCbuild"
                         data-bs-parent="#hobbiesAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/pc-icon.png" alt="Image description"
                                     class="img-fluid" style="max-height: 200px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="accord-h6 fw-bold mb-1">Building Personal Computers</h6>
-                            <!-- <p class="text-muted small mb-1">
-                                Grade Distinction | Sept 2023 - Sept 2025
-                            </p> -->
-                            <p>
-                                For over two decades I've been building my own personal computers. 
-                                After spending time delicately selecting all of the suitable parts, 
-                                its time to put it all together in the right order, 
-                                which feels very much like building a Lego or Meccano set. 
-                            </p>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">Building Personal Computers</h4>
+                                <h6 class="text-muted mb-3">Grade Hobbyist | May 2004 - present</h6>
+                                <h5 class="fw-bold mb-4">Homes around Norfolk</h5>
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <!-- <h6 class="accord-h6 fw-bold mb-1">Building Personal Computers</h6> -->
+                                <!-- <p class="text-muted small mb-1">
+                                    Grade Distinction | Sept 2023 - Sept 2025
+                                </p> -->
+                                <p>
+                                    For over twenty years, I’ve been building my own PCs. I love the process, 
+                                    from choosing the perfect motherboard and CPU, to connecting the components
+                                    in just the right order. It’s a bit like building a Lego or Meccano set, but with circuits, 
+                                    cooling fans, and that first satisfying boot-up at the end. 
+                                </p>
+                            </div>    
                         </div>
                     </div>
                 </div>       
@@ -1127,19 +1218,27 @@
 
                     <div id="hobbyCollapseDriving" class="accordion-collapse collapse" aria-labelledby="hobbyHeadingDriving"
                         data-bs-parent="#hobbiesAccordion">
-                        <div class="accordion-body">
-                            <picture class="accordion-img order-md-2 ms-md-3 mb-3 mb-md-0">
+                        <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                            <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
                                 <img src="/images/logos/car-icon.png" alt="Image description"
                                     class="img-fluid" style="max-height: 200px; width: auto" />
                             </picture>
-                            <!-- <p><strong>Grade:</strong> Distinction</p> -->
-                            <h6 class="accord-h6 fw-bold mb-1">Driving Licence</h6>
-                            <!-- <p class="text-muted small mb-1">
-                                Grade Distinction | Sept 2023 - Sept 2025
-                            </p> -->
-                            <p>
-                                I hold a full UK driving licence.
-                            </p>
+
+                            <div class="accordion-text flex-fill text-center text-lg-start">
+                                <h4 class="fw-bold mb-2 mt-2">UK Driving Licence</h4>
+                                <h6 class="text-muted mb-4">Level Full | April 1995 - present</h6>
+                                <!-- <h5 class="fw-bold mb-4">Add info</h5> -->
+
+                                <!-- <p><strong>Grade:</strong> Distinction</p> -->
+                                <!-- <h6 class="accord-h6 fw-bold mb-1">Driving Licence</h6> -->
+                                <!-- <p class="text-muted small mb-1">
+                                    Grade Distinction | Sept 2023 - Sept 2025
+                                </p> -->
+                                <p>
+                                    I hold a full UK driving licence from 1995, which includes the pre-1997 
+                                    entitlements for towing and minibus use, something newer licences no longer offer.
+                                </p>
+                            </div>    
                         </div>
                     </div>
                 </div>                

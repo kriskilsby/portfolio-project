@@ -649,16 +649,7 @@ body {
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
 }
 
-/* remove */
-/* Responsive: On small screens, center the image above text */
-@media (max-width: 768px) {
-  .accordion-img {
-    float: none !important;
-    display: block;
-    margin: 0 auto 1rem auto !important;
-    max-width: 200px;
-  }
-}
+
 
 /* remove */
 .accordion-img img {
@@ -666,7 +657,7 @@ body {
   height: auto;
   float: right;
   display: block;
-  margin: 0 0 0.5rem 1rem;
+  /* margin: 0 0 0.5rem 1rem; */
 }
 
 
@@ -674,7 +665,7 @@ body {
 /* Image inside accordion */
 .accordion-body picture {
   flex-shrink: 0;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   margin-bottom: 0.5rem;
   max-width: 400px;
 }
@@ -686,9 +677,20 @@ body {
   border-radius: 0.25rem;
 }
 
+/* ################ to remove below ########################## */
+/* Responsive: On small screens, center the image above text */
+/* @media (max-width: 768px) {
+  .accordion-img {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1rem auto !important;
+    max-width: 200px;
+  }
+} */
+
 /* added and keep */
 /* Responsive layout */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .accordion-body {
     flex-direction: column !important;
     text-align: center;
@@ -696,7 +698,76 @@ body {
   .accordion-body picture {
     margin: 0 auto 1rem auto;
     max-width: 70%;
-    float: right; /* new added from old */
+    float: right; 
+  }
+} */
+/* ################ to remove above ########################## */
+/* ################ to remove below ########################## */
+/* Responsive: On small screens, stack vertically and center image */
+/* @media (max-width: 992px) {
+  .accordion-body {
+    flex-direction: column !important;
+    text-align: center;
+    align-items: center; 
+  }
+
+  .accordion-body picture.accordion-img {
+    order: -1;
+    float: none !important;
+    margin: 0 auto 1rem auto !important;
+    max-width: 70%;
+  }
+
+  .accordion-text {
+    width: 100%;
+  }
+} */
+/* ################ to remove above ########################## */
+
+.accordion-body > picture img.img-fluid {
+  margin-left: 3rem;
+}
+
+.accordion-body.d-flex.photo {
+  padding-right: 0;
+}
+
+/* Accordion image responsive tweaks */
+.accordion-img img {
+  max-height: 200px;
+  width: auto;
+}
+
+/* On smaller screens (<992px), ensure image and text stack neatly */
+@media (max-width: 991.98px) {
+  .accordion-img {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .accordion-body {
+    flex-direction: column !important;
+    align-items: center; /* centers child elements */
+    text-align: center;
+    padding-left: 1rem !important;  /* tighten side spacing */
+    padding-right: 1rem !important;
+  }
+
+  .accordion-body picture {
+    display: block;
+    margin: 0 auto 1rem auto;
+    max-width: 70%;
+  }
+
+  /* Keep accordion width visually balanced on small screens */
+  .accordion-item {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+  }
+
+  .accordion-body > picture img.img-fluid {
+  margin-left: 0;
   }
 }
 
@@ -750,15 +821,6 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.accordion-body > picture img.img-fluid {
-  margin-left: 3rem;
-}
-
-.accordion-body.d-flex.photo {
-  padding-right: 0;
-}
-
-
 .link-card h5 {
   font-size: 1.2rem;
 }
@@ -766,3 +828,86 @@ body {
 .link-card p {
   font-size: 1rem;
 }
+
+
+/* -------------------------------------- */
+/* Profile file js specific styles */
+/* -------------------------------------- */
+/* Base state */
+/* .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3.6s ease, transform 3.6s ease;
+} */
+
+/* When revealed */
+/* .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+/* ===== Text fade & slide ===== */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(30px) scale(0.85);
+  transition: opacity 3.0s ease, transform 3.0s ease;
+}
+
+.profile-text.reveal-text {
+  /* delay profile-text after title */
+  transform: translateY(30px) scale(0.85);
+  transition: opacity 3.0s ease 1.0s, transform 3.0s ease 1.0s;
+}
+
+.reveal-text.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ===== Button jiggle ===== */
+/* .reveal-button {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+} */
+
+/* .reveal-button.visible {
+  animation: jiggle 0.6s ease;
+} */
+
+/* Jiggle keyframes */
+/* @keyframes jiggle {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-3px); }
+  50%  { transform: translateX(3px); }
+  75%  { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+} */
+/* ===== Button jiggle ===== */
+
+/* ===== Button Fade & scale on scroll ===== */
+/* .reveal-button {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+} */
+
+/* .reveal-button.visible {
+  opacity: 1;
+  transform: scale(1);
+} */
+/* ===== Button Fade & scale on scroll ===== */
+
+/* ===== Button Slide from bottom ===== */
+.reveal-button {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 3.6s ease, transform 3.6s ease;
+}
+
+.reveal-button.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Button Slide from bottom ===== */
