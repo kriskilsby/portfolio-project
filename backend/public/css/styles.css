@@ -46,9 +46,10 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     height: 100%;
-    background-color: #1995AD;
     /* background-color: #F1F1F2; */
     /* background-color: #A1D6E2; */
+    /* background-color: #1995AD; */
+    background-color: #f8f9fa;
 }
 
 .bg-image {
@@ -300,10 +301,10 @@ body {
 .about-intro {
   font-family: "Kalam", cursive;
   text-align: center;
-  max-width: 70vw;   /* default width on desktop/laptop */
+  max-width: 100vw;   /* default width on desktop/laptop */
   margin: 0 auto;
   padding: 8vh 5vw;
-  /* background-color: #1995AD; */
+  background-color: #1995AD;
   /* opacity: 0;
   transform: scale(0.85);
   transition: opacity 4s ease, transform 4s ease;  */
@@ -350,6 +351,10 @@ body {
   opacity: 0;
   transform: scale(0.85);
   transition: opacity 10.0s ease, transform 10.0s ease;
+  max-width: 1210px;
+	text-align: center !important;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* NEW Text animates in second */
@@ -374,8 +379,9 @@ body {
 
 .card {
   /* background-color: #F2F2F2; */
-  background-color: #F1F1F2;
   /* background-color: #1995AD; */
+  /* background-color: #F1F1F2; */
+  background-color: #e0f0f7;
   border-radius: 0.50rem; /* softer rounded corners */
   overflow: hidden;       /* ensures carousel images follow the rounded shape */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* subtle shadow */
@@ -418,6 +424,7 @@ body {
   font-size: 1.1rem;
   color: #555;
   line-height: 1.5;
+  margin-bottom: 0 !important;
 }
 
 .card img {
@@ -430,6 +437,11 @@ body {
 /* -------------------------------------- */
 /* Bootstrap Carousel specific styles */
 /* -------------------------------------- */
+
+.carousel-section {
+  margin-top: 8vh !important;
+  margin-bottom: 8vh !important;
+}
 
 .carousel-img {
   height: 600px;        /* pick a size that looks good */
@@ -516,17 +528,24 @@ body {
 /* -------------------------------------- */
 
 /* Change to make the title and text animate seperately */
-.profile-intro {
-  font-family: "Kalam", cursive;
-  text-align: center;
-  max-width: 70vw;   /* default width on desktop/laptop */
-  margin: 0 auto;
-  padding: 8vh 5vw;
+
+.profile-header {
+  padding-top: 8vh !important;
+  padding-bottom: 5vh !important;
 }
 
-/* .profile-container {
-  margin-top: 20vh !important;
-} */
+.profile-intro {
+  background-color: #1995AD;
+  font-family: "Kalam", cursive;
+  text-align: center !important;
+  max-width: 100vw;   /* default width on desktop/laptop */
+  margin: 0 auto;
+  padding: 5vh 5vw !important;
+}
+
+.profile-container {
+  text-align: center !important;
+}
 
 /* Keep but split into two ans add extra */
 /* .about-intro.visible {
@@ -566,9 +585,13 @@ body {
   font-size: clamp(1.8rem, 3.0vw, 3rem);
   line-height: 1.6;
   font-weight: 250;
+  max-width: 1250px;
   opacity: 1;
   transform: scale(0.85);
   transition: opacity 10.0s ease, transform 10.0s ease;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* NEW Text animates in second */
@@ -590,6 +613,12 @@ body {
 /* -------------------------------------- */
 /* Accordion specific styles */
 /* -------------------------------------- */
+
+.accordion-section {
+  margin-top: 8vh !important;
+  margin-bottom: 10vh !important;
+}
+
 /* keep */
 /* Main text styling */
 .accordion-section h2,
@@ -821,6 +850,10 @@ body {
   padding-bottom: 0.5rem;
 }
 
+.card-showcase{
+  background-color: #F1F1F2;
+}
+
 .link-card h5 {
   font-size: 1.2rem;
 }
@@ -911,3 +944,447 @@ body {
 }
 
 /* ===== Button Slide from bottom ===== */
+
+
+/* -------------------------------------- */
+/* Footer specific styles */
+/* -------------------------------------- */
+
+/* Footer base */
+/* checked keep */
+.footer {
+  /* position: relative; */
+  position: absolute;
+  margin-top: 0 !important;
+  /* width: 100vw; */
+  /* aspect-ratio: 4 / 1; */
+  /* aspect-ratio: 2.62 / 1; */
+  /* min-height: 300px; */
+  /* min-height: auto; */
+  /* background-color: #f8f9fa !important; */
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+/* kk last change  */
+/* ############################################################################# */
+/* .footer-wrapper {
+  background-size: cover;
+  width: 100%;
+  min-height: 917px;
+  margin: 0;
+} */
+
+/* .footer-container { */
+  /* position: relative; */
+  /* position: absolute !important;
+  width: 100%; */
+  /* min-height: 917px;  */
+  /* height: 100%; */
+/* } */
+/* ############################################################################# */
+/* 1. Clear the Outer Wrapper (.footer-wrapper) */
+.footer-wrapper {
+    /* Keep width, margin, and padding to control the outer box */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    /* REMOVE: background-image, background-size, background-position, min-height */
+}
+
+/* 2. Apply Background to the Inner Container (.footer-container) */
+/* .footer-container {
+    background-image: url('/images/responsive/footer-image2-2400.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%; 
+    min-height: 917px; 
+    position: relative;
+    background-color: transparent; 
+} */
+
+/* Global reset for clean edge-to-edge layout */
+/* body, html {
+    margin: 0;
+    padding: 0;
+} */
+/* ############################################################################# */
+/* ------------------------------------------------ */
+/* A. CORE STYLES AND JPG FALLBACK (STANDARD CSS) */
+/* ------------------------------------------------ */
+.footer-container {
+    /* Set ALL structural and behavior properties ONCE */
+    /* padding-bottom: 38.2%; */
+    /* padding-bottom: 80%; */
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 93.75%;
+    
+    width: 100%; 
+    /* min-height: 917px;  */
+    position: relative;
+    background-color: transparent; 
+    overflow: hidden;
+    /* Set ALL critical background properties ONCE */
+    
+
+    /* Mobile First Default: The smallest JPG for all users */
+    background-image: url('/images/footer/footer-800-mobile.jpg');
+}
+
+.footer-content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Optional: Use Flexbox/Grid to vertically center or align content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    /* justify-content: center; */
+    /* Add some padding to prevent the content from touching the very bottom edge */
+    padding-bottom: 20px; /* Adjust as needed */
+    padding-top: 20px;
+}
+
+/* You may need to adjust the padding on .footer-content .container to control inner spacing */
+.footer-content.container {
+    padding-top: 00px;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------------------ */
+/* B. JPG RESPONSIVENESS (Changing only the source) */
+/* ------------------------------------------------ */
+
+/* Small Tablets (600px and wider) - Load 800.jpg */
+@media (min-width: 576px) {
+    .footer-container {
+        /* padding-bottom: 60.0%; */
+        background-image: url('/images/footer/footer-1200-mobile.jpg');
+    }
+}
+
+/* Standard Tablets/Small Laptops (768px and wider) - Load 1200.jpg */
+@media (min-width: 768px) {
+    .footer-container {
+        padding-bottom: 38.16%;
+        background-image: url('/images/footer/footer-1200.jpg');
+    }
+}
+
+/* Medium Desktops (1200px and wider) - Load 1600.jpg */
+@media (min-width: 1200px) {
+    .footer-container {
+        background-image: url('/images/footer/footer-1600.jpg');
+    }
+}
+
+/* Hi-Res/Large Desktops (1600px and wider) - Load 2400.jpg */
+@media (min-width: 1600px) {
+    .footer-container {
+        background-image: url('/images/footer/footer-2400.jpg');
+    }
+}
+
+/* ULTRA HD (1920px and wider) - Load 3842x1468 */
+@media (min-width: 1920px) {
+    .footer-container {
+        background-image: url('/images/footer/footer-3840.jpg');
+    }
+}
+
+/* ------------------------------------------------ */
+/* C. WEBP OPTIMIZATION (Overrides the JPG paths above) */
+/* ------------------------------------------------ */
+@supports (background-image: url('data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQIEuhoP0lSgoEAA') ) {
+    
+    /* Default WebP (Mobile First - 0px and up) */
+    .footer-container {
+        padding-bottom: 93.75%;
+        background-image: url('/images/footer/footer-800-mobile.webp');
+    }
+
+       /* Small Tablets (600px and wider) - Loads 800px image */
+    @media (min-width: 576px) {
+        .footer-container {
+            /* padding-bottom: 70.0%; */
+            background-image: url('/images/footer/footer-1200-mobile.webp');
+        }
+    }
+
+    /* Standard Tablets/Small Laptops (768px and wider) - Loads 1200px image */
+    @media (min-width: 768px) {
+        .footer-container {
+            padding-bottom: 38.16%;
+            background-image: url('/images/footer/footer-1200.webp');
+        }
+    }
+
+     /* Medium Desktops (1200px and wider) - Loads 1600px image */
+    /* @media (min-width: 992px) {
+        .footer-container {
+            padding-bottom: 50.0%;
+            background-image: url('/images/responsive/footer-image2-1600.webp');
+        }
+    } */
+
+    /* Medium Desktops (1200px and wider) - Loads 1600px image */
+    @media (min-width: 1200px) {
+        .footer-container {
+            /* padding-bottom: 38.2%; */
+            background-image: url('/images/footer/footer-1600.webp');
+        }
+    }
+
+    /* Hi-Res Screens (WebP for screens 2200px and wider) */
+    @media (min-width: 1600px) {
+        .footer-container {
+            background-image: url('/images/footer/footer-2400.webp');
+        }
+    }
+
+    /* ULTRA HD (1920px and wider) */
+    @media (min-width: 1920px) {
+        .footer-container {
+            background-image: url('/images/footer/footer-3840.webp');
+        }
+    }
+}
+/* ############################################################################# */
+
+/* Background image is now naturally sized */
+/* .footer-bg img.footer-img {
+  display: block;
+  width: 100vw;  
+  height: auto;  
+  max-width: none; 
+  object-fit: none; 
+  position: relative; 
+  z-index: -1;
+} */
+
+/* removed details */
+/* checked added */
+/* .footer-bg { */
+  /* remove absolute positioning */
+  /* display: block;
+  width: 100%;
+} */
+
+/* removed details */
+/* Responsive background image */
+/* .footer-bg img {
+  width: 100%;
+  height: auto; 
+  display: block;   */
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: -1; */
+/* } */
+
+/* content added  */
+/* Footer image */
+/* .footer-bg img.footer-img {
+  display: block;
+  width: 100vw;    
+  height: auto;    
+  object-fit: cover; 
+  max-width: none;
+} */
+
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  /* width: 100%; */
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.footer-bg picture,
+.footer-bg img.footer-img {
+  /* width: 100%; */
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* checked keep */
+/* Overlay for readability */
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  background: 
+    linear-gradient(
+    rgb(10 10 10 / 0%) 0%,  
+    rgb(10 10 10 / 25%) 75%, 
+    rgb(10 10 10 / 100%) 100%   
+  );
+  pointer-events: none;
+  z-index: 0;  
+}
+
+/* .footer .container {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+} */
+
+/* checked keep */
+/* Footer content sits in top 25–35% */
+.footer-content {
+  /* position: relative;
+  z-index: 1;
+  padding-top: 5%;  */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0rem 1rem;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+/* Keep text readable over the gradient */
+.footer .row {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+
+
+/* Optional: Slight fade-in effect for footer content */
+.footer .footer-brand,
+.footer .nav-link,
+.footer .footer-tagline,
+.footer .small {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.footer .footer-brand:hover,
+.footer .nav-link:hover {
+  opacity: 0.85;
+}
+
+/* keep details */
+/* Brand styling (matches navbar aesthetic) */
+.footer-brand {
+  font-family: "Kalam", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+.footer-brand:hover {
+  color: #e0e0e0 !important;
+}
+
+/* keep details */
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Footer nav links */
+.footer .nav-link {
+  font-size: 0.9rem;
+  color: #f8f9fa;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.footer .nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Responsive scaling */
+@media (max-width: 767.98px) {
+  .footer-brand {
+    font-size: 1.6rem;
+  }
+  .footer-tagline {
+    font-size: 0.85rem;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+.footer a.nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;  
+}
+
+.footer-contact-links a {
+  color: rgba(255, 255, 255, 0.95) !important; /* soft white */
+  text-decoration: none;
+  opacity: 0.95;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: opacity 0.6s ease, text-decoration 0.6s ease;
+}
+
+/* .footer-contact-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  color: #ffffff; 
+} */
+
+/* added content */
+/* Navigation links */
+.footer-nav .nav-link,
+.footer-copy {
+  color: #f8f9fa !important;
+  opacity: 0.85;
+}
+
+/* added content */
+.footer-nav .nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* added content */
+/* Contact links */
+.footer-contact-links a {
+  color: #fff;
+}
+
+/* Optional: automatic, softly tinted divider between links */
+/* .footer-contact-links p a + a::before {
+  content: "|";
+  margin: 0 0.6em;
+  color: rgba(255, 255, 255, 0.6);
+} */
+
+/* keep content */
+.footer-divider {
+  border: none;                     /* remove default border */
+  height: 2px !important;                      /* thin line */
+  background: whitesmoke !important; /* subtle white line */
+  margin: 1.5rem 0;                   /* vertical spacing */
+  opacity: 0.4;                     /* slightly transparent */
+}

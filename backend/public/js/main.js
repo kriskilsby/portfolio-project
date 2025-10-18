@@ -276,6 +276,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('DOMContentLoaded', handleAccordionLayout);
   window.addEventListener('resize', handleAccordionLayout);
 
+  document.getElementById("year").textContent = new Date().getFullYear();
+
 });
 
 
