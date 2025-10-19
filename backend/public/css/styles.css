@@ -945,27 +945,32 @@ body {
 
 /* ===== Button Slide from bottom ===== */
 
+/* ############################################################################# */
 
 /* -------------------------------------- */
 /* Footer specific styles */
 /* -------------------------------------- */
 
+/* ############################################################################# */
+
+
 /* Footer base */
-/* checked keep */
-.footer {
+/* KK remove this has no effect - .footer-wrapper now works instead */
+/* .footer { */
   /* position: relative; */
-  position: absolute;
-  margin-top: 0 !important;
+  /* position: absolute;
+  margin-top: 0 !important; */
   /* width: 100vw; */
   /* aspect-ratio: 4 / 1; */
   /* aspect-ratio: 2.62 / 1; */
   /* min-height: 300px; */
   /* min-height: auto; */
   /* background-color: #f8f9fa !important; */
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  overflow: hidden;
-}
+  /* color: #fff; */
+  /* font-family: "Open Sans", sans-serif; */
+  /* overflow: hidden;
+} */
+
 
 /* kk last change  */
 /* ############################################################################# */
@@ -984,16 +989,9 @@ body {
   /* height: 100%; */
 /* } */
 /* ############################################################################# */
-/* 1. Clear the Outer Wrapper (.footer-wrapper) */
-.footer-wrapper {
-    /* Keep width, margin, and padding to control the outer box */
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    
-    /* REMOVE: background-image, background-size, background-position, min-height */
-}
 
+
+/* kk removed as already in code below  */
 /* 2. Apply Background to the Inner Container (.footer-container) */
 /* .footer-container {
     background-image: url('/images/responsive/footer-image2-2400.jpg');
@@ -1015,50 +1013,306 @@ body {
 /* ------------------------------------------------ */
 /* A. CORE STYLES AND JPG FALLBACK (STANDARD CSS) */
 /* ------------------------------------------------ */
+
+/* kk working code keep  */
+/* Category A - Overall footer class */
+.footer-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* kk working code keep  */
+/* Category B - Holds all footer content including overlay */
 .footer-container {
-    /* Set ALL structural and behavior properties ONCE */
-    /* padding-bottom: 38.2%; */
-    /* padding-bottom: 80%; */
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     padding-bottom: 93.75%;
-    
     width: 100%; 
-    /* min-height: 917px;  */
     position: relative;
     background-color: transparent; 
     overflow: hidden;
-    /* Set ALL critical background properties ONCE */
-    
-
-    /* Mobile First Default: The smallest JPG for all users */
-    background-image: url('/images/footer/footer-800-mobile.jpg');
 }
 
+/* kk working code keep  */
+/* Category C - Holds all written footer content */
 .footer-content-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* Optional: Use Flexbox/Grid to vertically center or align content */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center; 
-    /* justify-content: center; */
-    /* Add some padding to prevent the content from touching the very bottom edge */
-    padding-bottom: 20px; /* Adjust as needed */
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 
+/* kk working code keep  */
+/* Category D - Container for all written footer content */
 /* You may need to adjust the padding on .footer-content .container to control inner spacing */
 .footer-content.container {
-    padding-top: 00px;
-    padding-bottom: 10px;
+    display: grid;
+    /* DEFINES THREE ROWS: Top (auto), Empty Middle (1fr), Bottom (auto) */
+    grid-template-rows: auto 1fr auto; 
+    /* Columns remain the same for horizontal alignment */
+    grid-template-columns: 1fr 1fr 1fr; 
+    height: 100%; 
+    width: 100%;
+    max-width: 90vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0vh;
+    padding-left: 2.0vw;
+    padding-right: 2.0vw;
+
 }
+
+/* kk working code keep  */
+/* --- Placement of Top Element --- */
+.footer-brand-area {
+    grid-row: 1 / 2; /* Place in the first row */
+    grid-column: 1 / -1; /* Span all columns */
+    /* Add any top/bottom margin here for spacing from the top edge */
+}
+
+/* kk working code keep  */
+/* --- Placement of Bottom Element --- */
+.footer-content-bottom-area {
+    grid-row: 3 / 4; /* Place in the third row */
+    grid-column: 1 / -1; /* Span all columns */
+    /* Padding is already handled by the container padding */
+}
+
+/* kk working code keep  */
+/* keep details */
+/* Brand styling (matches navbar aesthetic) */
+.footer-brand {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  /* font-size: 4vw; */
+  font-size: 10.5vw;
+  font-weight: 500;
+  color: #ffffff !important;
+  /* transition: color 0.3s ease; */
+  transition: opacity 1.6s ease, text-decoration 1.6s ease;
+}
+.footer-brand:hover {
+  color: #e0e0e0 !important;
+  opacity: 0.75;
+}
+
+.footer-brand .footer-tagline {
+  text-align: inherit;
+  /* margin: 0; */
+}
+
+/* keep details */
+.footer-tagline {
+  /* font-size: 0.9rem; */
+  /* font-size: 1.6vw; */
+  font-size: 3.3vw;
+  font-weight: 400;
+  line-height: 0.0;
+  /* margin-right: 2.0vw; */
+  /* color: #cccccc; */
+  color: #ffffff !important;
+  opacity: 0.75;
+}
+
+.footer-tagline:hover {
+  color: #e0e0e0 !important;
+  opacity: 1.00;
+}
+
+/* kk keep this works */
+/* Overlay for readability */
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  background: 
+    linear-gradient(
+    rgb(10 10 10 / 50%) 0%,
+    rgb(10 10 10 / 30%) 30%,
+    rgb(10 10 10 / 0%) 50%,  
+    rgb(10 10 10 / 15%) 70%, 
+    rgb(10 10 10 / 100%) 100%   
+  );
+  pointer-events: none;
+  z-index: 0;  
+}
+
+
+/* ------------------------------------------------ */
+/* Footer brand and tagline responsiveness */
+/* ------------------------------------------------ */
+
+/* Small Tablets (600px and wider) */
+@media (min-width: 576px) {
+  .footer-brand {
+    font-size: 8.64vw;
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+}
+  .footer-tagline {
+    font-size: 2.7vw;
+    font-weight: 400;
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+/* Standard Tablets/Small Laptops (768px and wider)*/
+@media (min-width: 768px) {
+  .footer-brand {
+    font-size: 6.40vw;
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    font-size: 2.0vw;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+  /* .footer-overlay {
+    background: 
+      linear-gradient(
+      rgb(10 10 10 / 50%) 0%,
+      rgb(10 10 10 / 30%) 30%,
+      rgb(10 10 10 / 0%) 50%,  
+      rgb(10 10 10 / 15%) 70%, 
+      rgb(10 10 10 / 100%) 100%   
+    );
+  } */
+}
+
+/* Next size up (992px and wider) */
+@media (min-width: 992px) {
+   .footer-brand {
+    font-size: 5.12vw;
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    font-size: 1.6vw;
+    opacity: 0.80;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+  /* .footer-overlay {
+    background: 
+      linear-gradient(
+      rgb(10 10 10 / 50%) 0%,
+      rgb(10 10 10 / 30%) 30%,
+      rgb(10 10 10 / 0%) 50%,  
+      rgb(10 10 10 / 15%) 70%, 
+      rgb(10 10 10 / 100%) 100% 
+    );
+  } */
+}
+
+/* Medium Desktops (1200px and wider) */
+@media (min-width: 1200px) {
+   .footer-brand {
+    font-size: 5.12vw;
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    font-size: 1.6vw;
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+  /* .footer-overlay {
+    background: 
+      linear-gradient(
+      rgb(10 10 10 / 50%) 0%,
+      rgb(10 10 10 / 30%) 30%,
+      rgb(10 10 10 / 0%) 50%,  
+      rgb(10 10 10 / 15%) 70%, 
+      rgb(10 10 10 / 100%) 100% 
+    );
+  } */
+}
+
+/* Hi-Res/Large Desktops (1600px and wider)*/
+@media (min-width: 1600px) {
+    .footer-brand {
+    font-size: 4.48vw;
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    font-size: 1.4vw;
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+  /* .footer-overlay {
+    background: 
+      linear-gradient(
+      rgb(10 10 10 / 50%) 0%,
+      rgb(10 10 10 / 30%) 30%,
+      rgb(10 10 10 / 0%) 50%,  
+      rgb(10 10 10 / 15%) 70%, 
+      rgb(10 10 10 / 100%) 100% 
+    );
+  } */
+}
+
+/* ULTRA HD (1920px and wider) */
+@media (min-width: 1920px) {
+    .footer-brand {
+    font-size: 3.2vw;
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    font-size: 1.0vw;
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+  /* .footer-overlay {
+    background: 
+      linear-gradient(
+      rgb(10 10 10 / 50%) 0%,
+      rgb(10 10 10 / 30%) 30%,
+      rgb(10 10 10 / 0%) 50%,  
+      rgb(10 10 10 / 15%) 70%, 
+      rgb(10 10 10 / 100%) 100% 
+    );
+  } */
+}
+
+
 
 /* ------------------------------------------------ */
 /* B. JPG RESPONSIVENESS (Changing only the source) */
@@ -1160,7 +1414,61 @@ body {
 }
 /* ############################################################################# */
 
-/* Background image is now naturally sized */
+/* ------------------------------------------------ */
+/* Working code */
+/* ------------------------------------------------ */
+
+
+
+/* kk does work */
+/* Footer contact links */
+.footer-contact-links a {
+  color: rgba(255, 255, 255, 0.95) !important; /* soft white */
+  text-decoration: none;
+  opacity: 0.95;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: opacity 0.6s ease, text-decoration 0.6s ease;
+}
+
+/* kk this works */
+/* Footer navigation links and copyright detail */
+.footer-nav .nav-link,
+.footer-copy {
+  color: #f8faf8 !important;
+  opacity: 0.75;
+  /* font-size: 1.5vw; */
+}
+
+/* kk this works */
+/* Hpver over footer navigation links  */
+.footer-nav .nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* kk this works */
+/* footer divider line */
+.footer-divider {
+  border: none;                     
+  height: 2px !important;                      
+  background: whitesmoke !important; 
+  margin: 1.5rem 0;                   
+  opacity: 0.4;                     
+}
+
+
+
+
+
+/* ############################################################################# */
+
+/* ------------------------------------------------ */
+/* NOT WORKING CODE TO BE REMOVED */
+/* ------------------------------------------------ */
+
+/* kk does not exist anymore or work  */
 /* .footer-bg img.footer-img {
   display: block;
   width: 100vw;  
@@ -1171,7 +1479,7 @@ body {
   z-index: -1;
 } */
 
-/* removed details */
+/* kk does not exist anymore or work  */
 /* checked added */
 /* .footer-bg { */
   /* remove absolute positioning */
@@ -1179,7 +1487,7 @@ body {
   width: 100%;
 } */
 
-/* removed details */
+/* kk does not exist anymore or work  */
 /* Responsive background image */
 /* .footer-bg img {
   width: 100%;
@@ -1194,7 +1502,7 @@ body {
   z-index: -1; */
 /* } */
 
-/* content added  */
+/* kk does not exist anymore or work  */
 /* Footer image */
 /* .footer-bg img.footer-img {
   display: block;
@@ -1204,44 +1512,25 @@ body {
   max-width: none;
 } */
 
-.footer-bg {
+/* kk does not exist anymore or work  */
+/* .footer-bg {
   position: absolute;
   inset: 0;
-  /* width: 100%; */
   width: 100vw;
   height: 100%;
   overflow: hidden;
   z-index: -1;
-}
+} */
 
-.footer-bg picture,
+/* kk does not exist anymore or work  */
+/* .footer-bg picture,
 .footer-bg img.footer-img {
-  /* width: 100%; */
   position: absolute;
   width: 100vw;
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-
-/* checked keep */
-/* Overlay for readability */
-.footer-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;  
-  background: 
-    linear-gradient(
-    rgb(10 10 10 / 0%) 0%,  
-    rgb(10 10 10 / 25%) 75%, 
-    rgb(10 10 10 / 100%) 100%   
-  );
-  pointer-events: none;
-  z-index: 0;  
-}
+} */
 
 /* .footer .container {
   max-width: 100%;
@@ -1250,79 +1539,52 @@ body {
 } */
 
 /* checked keep */
-/* Footer content sits in top 25–35% */
-.footer-content {
-  /* position: relative;
-  z-index: 1;
-  padding-top: 5%;  */
-  /* position: absolute; */
+/* kk this does not seem to be doing much but should keep for now  */
+/* .footer-content {
   top: 0;
   left: 0;
   width: 100%;
   padding: 0rem 1rem;
   z-index: 2;
-}
+} */
 
-
-
-
-
-
-
+/* does not work anymore */
 /* Keep text readable over the gradient */
-.footer .row {
+/* .footer .row {
   align-items: flex-start;
   justify-content: center;
-}
+} */
 
-
-
-
+/* does not work anymore */
 /* Optional: Slight fade-in effect for footer content */
-.footer .footer-brand,
+/* .footer .footer-brand,
 .footer .nav-link,
 .footer .footer-tagline,
 .footer .small {
   transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.footer .footer-brand:hover,
+} */
+/* does not work anymore */
+/* .footer .footer-brand:hover,
 .footer .nav-link:hover {
   opacity: 0.85;
-}
+} */
 
-/* keep details */
-/* Brand styling (matches navbar aesthetic) */
-.footer-brand {
-  font-family: "Kalam", cursive;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #ffffff !important;
-  transition: color 0.3s ease;
-}
-.footer-brand:hover {
-  color: #e0e0e0 !important;
-}
-
-/* keep details */
-.footer-tagline {
-  font-size: 0.9rem;
-  color: #cccccc;
-}
-
+/* does not work anymore */
 /* Footer nav links */
-.footer .nav-link {
+/* .footer .nav-link {
   font-size: 0.9rem;
   color: #f8f9fa;
   opacity: 0.85;
   transition: opacity 0.2s;
-}
-.footer .nav-link:hover {
+} */
+/* does not work anymore */
+/* .footer .nav-link:hover {
   opacity: 1;
   text-decoration: underline;
-}
+} */
 
 /* Responsive scaling */
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
   .footer-brand {
     font-size: 1.6rem;
   }
@@ -1332,20 +1594,12 @@ body {
   .footer {
     text-align: center;
   }
-}
+} */
 
-.footer a.nav-link {
+/* does not work anymore */
+/* .footer a.nav-link {
   color: rgba(255, 255, 255, 0.95) !important;  
-}
-
-.footer-contact-links a {
-  color: rgba(255, 255, 255, 0.95) !important; /* soft white */
-  text-decoration: none;
-  opacity: 0.95;
-  font-weight: 400;
-  font-size: 1rem;
-  transition: opacity 0.6s ease, text-decoration 0.6s ease;
-}
+} */
 
 /* .footer-contact-links a:hover {
   opacity: 1;
@@ -1353,25 +1607,11 @@ body {
   color: #ffffff; 
 } */
 
-/* added content */
-/* Navigation links */
-.footer-nav .nav-link,
-.footer-copy {
-  color: #f8f9fa !important;
-  opacity: 0.85;
-}
-
-/* added content */
-.footer-nav .nav-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/* added content */
+/* kk this does not works - have more specific css */
 /* Contact links */
-.footer-contact-links a {
+/* .footer-contact-links a {
   color: #fff;
-}
+} */
 
 /* Optional: automatic, softly tinted divider between links */
 /* .footer-contact-links p a + a::before {
@@ -1380,11 +1620,4 @@ body {
   color: rgba(255, 255, 255, 0.6);
 } */
 
-/* keep content */
-.footer-divider {
-  border: none;                     /* remove default border */
-  height: 2px !important;                      /* thin line */
-  background: whitesmoke !important; /* subtle white line */
-  margin: 1.5rem 0;                   /* vertical spacing */
-  opacity: 0.4;                     /* slightly transparent */
-}
+
