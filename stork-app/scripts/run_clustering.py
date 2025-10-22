@@ -136,13 +136,24 @@ def run_clustering(method='kmeans', params={}):
     selected_years = params.get('selected_years', [])
     selected_birds = params.get('selected_birds', [])
 
+    #################################################################################
+    ############## ORIGINAL CHANGED FOR LIVE VERSION TO REDUCE LOAD #################
+    # ---- Map setting to max sample count ----
+    # max_samples_map = {
+    #     1: 15000,  # Low
+    #     2: 30000,  # Medium
+    #     3: 45000   # High
+    # }
+    # max_samples = max_samples_map.get(sample_rate_setting, 30000)
+    #################################################################################
+
     # ---- Map setting to max sample count ----
     max_samples_map = {
-        1: 15000,  # Low
-        2: 30000,  # Medium
-        3: 45000   # High
+        1: 3000,  # Low
+        2: 60000,  # Medium
+        3: 12000   # High
     }
-    max_samples = max_samples_map.get(sample_rate_setting, 30000)
+    max_samples = max_samples_map.get(sample_rate_setting, 6000)
 
     # ---- Build SQL filters ----
     if interval_minutes > 0:

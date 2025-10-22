@@ -1,5 +1,5 @@
-# Start Portfolio
-Start-Process powershell -ArgumentList '-NoExit','-Command','npm run app'
+# 1. Activate the Python virtual environment
+& "$PSScriptRoot\venv\Scripts\Activate.ps1"
 
-# Start Stork app
-Start-Process powershell -ArgumentList '-NoExit','-Command','.\run-stork.ps1'
+# 2. Start the combined backend + Stork app server
+npm run app
