@@ -3,15 +3,24 @@ import pandas as pd
 import numpy as np
 from io import StringIO
 from tqdm import tqdm
+import os
+from pathlib import Path
+from dotenv import load_dotenv
 
-# Connect to the database
-conn = psycopg2.connect(
-    dbname="stork_migration_data",
-    user="postgres",
-    password="Firetrap77",
-    host="localhost",
-    port="5432"
-)
+# --- Load Environment Variables ---
+env_path = Path(__file__).resolve().parents[2] / '.env'
+load_dotenv(dotenv_path=env_path)
+
+DB_CONFIG = {
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "host": os.getenv("DB_HOST"),
+    "port": os.getenv("DB_PORT"),
+    "database": os.getenv("DB_NAME"),
+}
+
+conn = psycopg2.connect(**DB_CONFIG)
+
 conn.autocommit = True
 
 # Haversine distance (meters)

@@ -7,17 +7,26 @@ import matplotlib.colors as mcolors
 import numpy as np
 import time
 from sklearn.metrics import silhouette_score, adjusted_rand_score
+import os
+from pathlib import Path
+from dotenv import load_dotenv
 
 start_time = time.time()
 
-# Connect to the PostgreSQL database
-conn = psycopg2.connect(
-    user='postgres',
-    password='Firetrap77',
-    host='localhost',
-    port='5432',
-    database='stork_migration_data'
-)
+# --- Load Environment Variables ---
+env_path = Path(__file__).resolve().parents[2] / '.env'
+load_dotenv(dotenv_path=env_path)
+
+
+DB_CONFIG = {
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "host": os.getenv("DB_HOST"),
+    "port": os.getenv("DB_PORT"),
+    "database": os.getenv("DB_NAME"),
+}
+
+conn = psycopg2.connect(**DB_CONFIG)
 
 # Set search_path to schema migration_data
 cur = conn.cursor()
