@@ -150,7 +150,7 @@ def run_clustering(method='kmeans', params={}):
     # ---- Map setting to max sample count ----
     max_samples_map = {
         1: 3000,  # Low
-        2: 60000,  # Medium
+        2: 6000,  # Medium
         3: 12000   # High
     }
     max_samples = max_samples_map.get(sample_rate_setting, 6000)
