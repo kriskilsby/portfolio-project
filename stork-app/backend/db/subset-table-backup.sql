@@ -53,6 +53,11 @@ CREATE TABLE migration_data.stork_data_subset (
     record_id bigint NOT NULL
 );
 
+-- Delete rn column added in error
+ALTER TABLE migration_data.stork_data_subset
+DROP COLUMN IF EXISTS rn;
+
+
 
 ALTER TABLE migration_data.stork_data_subset OWNER TO postgres;
 
