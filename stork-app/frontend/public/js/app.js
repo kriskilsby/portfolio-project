@@ -2211,7 +2211,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("logsOutput").textContent = "";
 
     const timerDisplay = document.getElementById("clustering-timer");
-    timerDisplay.textContent = "Running... (please wait, this may take several minutes)";
+    timerDisplay.textContent = "Running please wait...";
     const startTime = performance.now(); // Start timer
 
     // Collect form values

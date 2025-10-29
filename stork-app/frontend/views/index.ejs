@@ -195,7 +195,7 @@
                       <select id="method" name="method" class="form-select">
                         <option value="kmeans">KMeans</option>
                         <option value="dbscan">DBSCAN</option>
-                        <option value="hdbscan">HDBSCAN</option>
+                        <option value="hdbscan" selected>HDBSCAN</option>
                       </select>
                     </div>
                   
@@ -332,9 +332,9 @@
                       </label>
                       <select id="decimal_places" name="decimal_places" class="form-select">
                         <option value="-1">Standard (full)</option>
-                        <option value="3" selected>3 (≈111m)</option>
+                        <option value="3">3 (≈111m)</option>
                         <option value="4">4 (≈11m)</option>
-                        <option value="5">5 (≈1.1m)</option>
+                        <option value="5" selected>5 (≈1.1m)</option>
                       </select>
                     </div>
 
@@ -350,9 +350,9 @@
                       <select id="interval_minutes" name="interval_minutes" class="form-select">
                         <option value="0">0 min</option>
                         <option value="1">1 min</option>
-                        <option value="5">5 min</option>
+                        <option value="5" selected>5 min</option>
                         <option value="10">10 min</option>
-                        <option value="15" selected>15 min</option>
+                        <option value="15">15 min</option>
                         <option value="20">20 min</option>
                         <option value="30">30 min</option>
                       </select>
@@ -373,9 +373,9 @@
                        <label for="sample_rate" class="form-label fw-bold deferred-tooltip"
                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                         data-title-html="Limits how many GPS points are used to draw the map.
-                          <strong>High</strong>: Up to 12,000 points (more detail, slower),
-                          <strong>Medium</strong>: Up to 6,000 points (balanced),
-                          <strong>Low</strong>: Up to 3,000 points (faster, less detail).">
+                          <strong>High</strong>: Up to 15,000 points (more detail, slower),
+                          <strong>Medium</strong>: Up to 10,000 points (balanced),
+                          <strong>Low</strong>: Up to 5,000 points (faster, less detail).">
                         <span class="method-label-text">GPS Point Limit</span>
                       </label>                     
                       <select id="sample_rate" name="sample_rate" class="form-select">
@@ -421,7 +421,7 @@
 
                     <!-- Use Interval Minutes -->
                     <div class="d-flex flex-sm-row flex-column align-items-start">
-                      <input class="form-check-input me-1" type="checkbox" name="use_interval_mins" id="use_interval_mins" checked>
+                      <input class="form-check-input me-1" type="checkbox" name="use_interval_mins" id="use_interval_mins">
                       <label class="form-label fw-bold deferred-tooltip ms-sm-2"
                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                         data-title-html="Include the time interval (in minutes) between points as a feature.
@@ -454,7 +454,7 @@
 
                     <!-- Use Year -->
                     <div class="d-flex flex-sm-row flex-column align-items-start">
-                      <input class="form-check-input me-1" type="checkbox" name="use_year" id="use_year" checked>
+                      <input class="form-check-input me-1" type="checkbox" name="use_year" id="use_year">
                       <label class="form-label fw-bold deferred-tooltip ms-sm-2"
                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                         data-title-html="Use the year each data point was collected.
@@ -465,7 +465,7 @@
 
                     <!-- Use Month -->
                     <div class="d-flex flex-sm-row flex-column align-items-start">                      
-                      <input class="form-check-input me-1" type="checkbox" name="use_month" id="use_month" checked>
+                      <input class="form-check-input me-1" type="checkbox" name="use_month" id="use_month">
                       <label class="form-label fw-bold deferred-tooltip ms-sm-2"
                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                         data-title-html="Use the month of each data point to detect seasonal patterns.
@@ -476,7 +476,7 @@
 
                     <!-- Use Scaling -->
                     <div class="d-flex flex-sm-row flex-column align-items-start">                      
-                      <input class="form-check-input me-1" type="checkbox" name="use_scaling" id="use_scaling">
+                      <input class="form-check-input me-1" type="checkbox" name="use_scaling" id="use_scaling" checked>
                       <label class="form-label fw-bold deferred-tooltip ms-sm-2"
                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                         data-title-html="Apply standard scaling to all features (zero mean, unit variance).
@@ -794,19 +794,21 @@
               data-title-html="Lists all clusters with their year, associated individual, total GPS points, and average location.">
               <h3 class="card-title mb-2 mt-2">Cluster Records by Individual & Year</h3>
             </label>
-            <table id="clusterTable" class="display nowrap" style="width:100%">
-              <thead>
-                <tr>
-                  <th>Individual</th>
-                  <th>Cluster</th>
-                  <th>Year</th>
-                  <th>Total Points</th>
-                  <th>Avg Latitude</th>
-                  <th>Avg Longitude</th>
-                  <th>Map Link</th>     
-                </tr>
-              </thead>
-            </table>
+            <div class="table-responsive">
+              <table id="clusterTable" class="display nowrap" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>Individual</th>
+                    <th>Cluster</th>
+                    <th>Year</th>
+                    <th>Total Points</th>
+                    <th>Avg Latitude</th>
+                    <th>Avg Longitude</th>
+                    <th>Map Link</th>     
+                  </tr>
+                </thead>
+              </table>
+            </div>  
           </div>
         </div>
       </section>

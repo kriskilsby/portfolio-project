@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const { spawn } = require('child_process');
 const path = require('path');
+const os = require('os');
 
 // kk updated to allow body parser 
 router.use(express.json());
@@ -14,7 +15,15 @@ router.post('/', (req, res) => {
   const pythonWorkingDir = path.join(__dirname, '../../');
   const paramsStr = JSON.stringify(params);
 
+  // Dynamically determine the Python interpreter path
+  const pythonPath =
+    os.platform() === 'win32'
+      // ? path.join(process.cwd(), 'venv', 'Scripts', 'python.exe') // Local Windows path
+      ? path.join(__dirname, '../../../venv/Scripts/python.exe')
+      : '/root/portfolio/venv/bin/python';                        // Server Linux path
+
   console.log('[DEBUG] Running python script with:');
+  console.log('  pythonPath:', pythonPath);
   console.log('  method:', method);
   // console.log('  params:', params);
   console.log('  params:', JSON.stringify(params, null, 2));  // Nicely formatted
@@ -28,11 +37,14 @@ router.post('/', (req, res) => {
   console.log('  cwd:', pythonWorkingDir);
 
   // const python = spawn('python3', [scriptPath, method, paramsStr], {
-  const python = spawn(
-    'C:\\Users\\krist\\OneDrive\\UEA Folder\\Dissertation\\stork_project\\venv\\Scripts\\python.exe', 
-    [scriptPath, method, paramsStr], 
-    { cwd: pythonWorkingDir }
-  );
+  // const python = spawn(
+  //   'C:\\Users\\krist\\OneDrive\\UEA Folder\\Dissertation\\stork_project\\venv\\Scripts\\python.exe', 
+  //   [scriptPath, method, paramsStr], 
+  //   { cwd: pythonWorkingDir }
+  // );
+
+  // Spawn the Python process
+  const python = spawn(pythonPath, [scriptPath, method, paramsStr], { cwd: pythonWorkingDir });
 
   let result = '';
   let errorOutput = '';
@@ -69,7 +81,7 @@ router.post('/', (req, res) => {
   });
 });
 
-
 module.exports = router;
+
 
 

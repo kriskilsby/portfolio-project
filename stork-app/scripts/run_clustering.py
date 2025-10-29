@@ -149,11 +149,11 @@ def run_clustering(method='kmeans', params={}):
 
     # ---- Map setting to max sample count ----
     max_samples_map = {
-        1: 3000,  # Low
-        2: 60000,  # Medium
-        3: 12000   # High
+        1: 5000,  # Low
+        2: 10000,  # Medium
+        3: 15000   # High
     }
-    max_samples = max_samples_map.get(sample_rate_setting, 6000)
+    max_samples = max_samples_map.get(sample_rate_setting, 10000)
 
     # ---- Build SQL filters ----
     if interval_minutes > 0:

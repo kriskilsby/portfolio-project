@@ -768,6 +768,7 @@ background #CBCAE8 */
   padding: 0rem 1rem 1rem 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow-x: auto;
 }
 
 /* Setup for the summary table card */

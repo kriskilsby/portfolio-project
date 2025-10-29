@@ -368,11 +368,11 @@ body {
 
 
 /* keep as is */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .about-intro {
-    max-width: 90vw; /* wider for small screens */
+    max-width: 90vw; 
   }
-}
+} */
 
 /* -------------------------------------- */
 /* Bootstrap Card specific styles */
@@ -605,11 +605,11 @@ body {
 
 
 /* keep as is */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .profile-intro {
-    max-width: 90vw; /* wider for small screens */
+    max-width: 90vw; 
   }
-}
+} */
 
 /* -------------------------------------- */
 /* Accordion specific styles */
