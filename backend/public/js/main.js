@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (isIndexPage) {
     // Dynamic scroll-based background
     window.addEventListener("scroll", () => {
-      if (window.scrollY > window.innerHeight - 100) {
+      // if (window.scrollY > window.innerHeight - 100) { // Original condition after scrolling almost full viewport
+      if (window.scrollY > 0) {  // Show background as soon as user scrolls down
         navbar.classList.add("scrolled");
       } else {
         navbar.classList.remove("scrolled");

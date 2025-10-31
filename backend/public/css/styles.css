@@ -6,11 +6,11 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@600;700&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
@@ -22,11 +22,11 @@ html {
 /* 🌍 Global Styles */
 * {
     /* font-family: 'Inter', sans-serif; */
-    font-family: 'Poppins', sans-serif;
     /* font-family: 'Source Sans 3', sans-serif; */
     /* font-family: 'Nunito Sans', sans-serif; */
     /* font-family: 'IBM Plex Sans', sans-serif;  */
     /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -79,83 +79,23 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar-brand, .navbar-item {
+/* .navbar-brand {
   font-family: "Kalam", cursive;
   color: #153847 !important;
-  font-size: 2.0rem;
+  font-size: clamp(1.4rem, 1.6vw + 0.5rem, 2.0rem);
   font-weight: 500;
   transition: font-size 0.3s ease, color 0.3s ease;
-}
-
-/* kk new for d1-slot  */
-/* .navbar-d1-slot {
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  height: 100%;        
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-  font-family: "Kalam", cursive;
-  font-weight: 400;
-  font-size: clamp(1.2rem, 3vw, 1.8rem); 
-  line-height: 1;        
-  width: auto;          
 } */
 
-/* kk new for d1-slot  */
-.navbar-d1-slot {
-  display: inline-block;
-  padding: 0 1rem;
-  opacity: 0;              /* hidden initially */
-  transition: opacity 1.4s ease;
-  vertical-align: middle;
-  text-align: center;
-  font-family: "Kalam", cursive;
+
+
+
+/* .nav-link {
   color: #153847 !important;
-  font-size: 2.0rem;
-  font-weight: 500;
-}
-/* kk new for d1-slot  */
-.navbar-d1-slot.visible {
-  opacity: 1;
-}
-
-/* kk new for d1-slot  */
-/* @media (max-width: 768px) {
-  .navbar-d1-slot {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-  }
-} */
-
-/* to fully remove the d1-slot on smaller screens */
-@media (max-width: 768px) {
-  .navbar-d1-slot {
-    display: none;
-  }
-}
-
-/* kk new for d1-navbar  */
-/* .hero-d1-navbar {
-  opacity: 0;
-  font-family: "Kalam", cursive;
-  font-weight: 400;
-  font-size: clamp(1.2rem, 3vw, 1.8rem); 
-  display: inline-block;
-  transition: opacity 0.5s ease;
-}
-.hero-d1-navbar.visible {
-  opacity: 1;
-} */
-
-
-.nav-link {
-  /* font-family: "Kalam", cursive; */
-  color: #153847 !important;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 0.9vw + 0.4rem, 1.3rem);
   font-weight: 500;
   transition: font-size 0.3s ease, color 0.3s ease;
-}
+} */
 
 /* Shrink navbar on scroll (partial) */
 .navbar.shrink {
@@ -172,6 +112,109 @@ body {
 .navbar-toggler {
   z-index: 1100;
 }
+
+
+/* Smooth responsive scaling for brand + links */
+.navbar-brand,
+.navbar-d1-slot {
+  font-family: "Kalam", cursive;
+  color: #153847 !important;
+   font-size: clamp(1.4rem, 1.2vw + 0.4rem, 1.6rem); /* slightly larger than nav links */
+  font-weight: 500;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* kk new for d1-slot  */
+.navbar-d1-slot {
+  display: inline-block;
+  padding: 0 1rem;
+  opacity: 0;              /* hidden initially */
+  transition: opacity 1.4s ease;
+  vertical-align: middle;
+  text-align: center;
+  /* font-family: "Kalam", cursive;
+  color: #153847 !important; */
+  /* font-size: 2.0rem; */
+  /* font-size: clamp(1.4rem, 1.2vw + 0.4rem, 1.8rem); */
+  /* font-weight: 500; */
+}
+/* kk new for d1-slot  */
+.navbar-d1-slot.visible {
+  opacity: 1;
+}
+
+/* to fully remove the d1-slot on smaller screens */
+@media (max-width: 768px) {
+  .navbar-d1-slot {
+    display: none;
+  }
+}
+
+.nav-link, .navbar-item {
+  font-family: 'Poppins', sans-serif; /* global style */
+  color: #153847 !important;
+   font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.3rem); /* proportional to brand */
+  font-weight: 500;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* -------------------------
+   Optional: smooth hover effects
+   ------------------------- */
+.nav-link:hover,
+.navbar-item:hover {
+  color: #0f2c36 !important; /* slightly darker shade on hover */
+}
+
+/* Adjust padding only where needed */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0.25rem 1rem !important;
+  }
+}
+
+/* Prevent search bar collapse */
+.navbar .form-control {
+  min-width: 140px;
+  flex: 1 1 auto;
+}
+@media (max-width: 1200px) {
+  .navbar .form-control {
+    min-width: 100px;
+  }
+}
+
+/* Dropdown visual consistency */
+.dropdown-menu {
+  background-color: rgba(179, 224, 236, 0.95) !important; /* slightly lighter than #A1D6E2 */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* gentle edge definition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 12rem;
+  backdrop-filter: blur(6px); /* optional, adds nice soft look */
+}
+
+.dropdown-item {
+  color: #153847 !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #153847 !important;
+}
+
+/* Consistent mobile navbar + dropdown backgrounds */
+@media (max-width: 992px) {
+  .navbar,
+  .navbar.open,
+  .navbar .dropdown-menu {
+    background-color: rgba(161, 214, 226, 0.95) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+
 
 /* -------------------------------------- */
 /* Hero specific styles */
@@ -707,53 +750,6 @@ body {
   border-radius: 0.25rem;
 }
 
-/* ################ to remove below ########################## */
-/* Responsive: On small screens, center the image above text */
-/* @media (max-width: 768px) {
-  .accordion-img {
-    float: none !important;
-    display: block;
-    margin: 0 auto 1rem auto !important;
-    max-width: 200px;
-  }
-} */
-
-/* added and keep */
-/* Responsive layout */
-/* @media (max-width: 768px) {
-  .accordion-body {
-    flex-direction: column !important;
-    text-align: center;
-  }
-  .accordion-body picture {
-    margin: 0 auto 1rem auto;
-    max-width: 70%;
-    float: right; 
-  }
-} */
-/* ################ to remove above ########################## */
-/* ################ to remove below ########################## */
-/* Responsive: On small screens, stack vertically and center image */
-/* @media (max-width: 992px) {
-  .accordion-body {
-    flex-direction: column !important;
-    text-align: center;
-    align-items: center; 
-  }
-
-  .accordion-body picture.accordion-img {
-    order: -1;
-    float: none !important;
-    margin: 0 auto 1rem auto !important;
-    max-width: 70%;
-  }
-
-  .accordion-text {
-    width: 100%;
-  }
-} */
-/* ################ to remove above ########################## */
-
 .accordion-body > picture img.img-fluid {
   margin-left: 3rem;
 }
@@ -867,19 +863,6 @@ body {
 /* -------------------------------------- */
 /* Profile file js specific styles */
 /* -------------------------------------- */
-/* Base state */
-/* .reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 3.6s ease, transform 3.6s ease;
-} */
-
-/* When revealed */
-/* .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-} */
-
 
 /* ===== Text fade & slide ===== */
 .reveal-text {
@@ -899,39 +882,6 @@ body {
   transform: translateY(0) scale(1);
 }
 
-/* ===== Button jiggle ===== */
-/* .reveal-button {
-  transform: translateY(0);
-  transition: transform 0.3s ease;
-} */
-
-/* .reveal-button.visible {
-  animation: jiggle 0.6s ease;
-} */
-
-/* Jiggle keyframes */
-/* @keyframes jiggle {
-  0%   { transform: translateX(0); }
-  25%  { transform: translateX(-3px); }
-  50%  { transform: translateX(3px); }
-  75%  { transform: translateX(-3px); }
-  100% { transform: translateX(0); }
-} */
-/* ===== Button jiggle ===== */
-
-/* ===== Button Fade & scale on scroll ===== */
-/* .reveal-button {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-} */
-
-/* .reveal-button.visible {
-  opacity: 1;
-  transform: scale(1);
-} */
-/* ===== Button Fade & scale on scroll ===== */
-
 /* ===== Button Slide from bottom ===== */
 .reveal-button {
   opacity: 0;
@@ -944,73 +894,12 @@ body {
   transform: translateY(0);
 }
 
-/* ===== Button Slide from bottom ===== */
-
-/* ############################################################################# */
 
 /* -------------------------------------- */
 /* Footer specific styles */
 /* -------------------------------------- */
 
-/* ############################################################################# */
 
-
-/* Footer base */
-/* KK remove this has no effect - .footer-wrapper now works instead */
-/* .footer { */
-  /* position: relative; */
-  /* position: absolute;
-  margin-top: 0 !important; */
-  /* width: 100vw; */
-  /* aspect-ratio: 4 / 1; */
-  /* aspect-ratio: 2.62 / 1; */
-  /* min-height: 300px; */
-  /* min-height: auto; */
-  /* background-color: #f8f9fa !important; */
-  /* color: #fff; */
-  /* font-family: "Open Sans", sans-serif; */
-  /* overflow: hidden;
-} */
-
-
-/* kk last change  */
-/* ############################################################################# */
-/* .footer-wrapper {
-  background-size: cover;
-  width: 100%;
-  min-height: 917px;
-  margin: 0;
-} */
-
-/* .footer-container { */
-  /* position: relative; */
-  /* position: absolute !important;
-  width: 100%; */
-  /* min-height: 917px;  */
-  /* height: 100%; */
-/* } */
-/* ############################################################################# */
-
-
-/* kk removed as already in code below  */
-/* 2. Apply Background to the Inner Container (.footer-container) */
-/* .footer-container {
-    background-image: url('/images/responsive/footer-image2-2400.jpg');
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    width: 100%; 
-    min-height: 917px; 
-    position: relative;
-    background-color: transparent; 
-} */
-
-/* Global reset for clean edge-to-edge layout */
-/* body, html {
-    margin: 0;
-    padding: 0;
-} */
-/* ############################################################################# */
 /* ------------------------------------------------ */
 /* A. CORE STYLES AND JPG FALLBACK (STANDARD CSS) */
 /* ------------------------------------------------ */
@@ -1479,159 +1368,5 @@ body {
         }
     }
 }
-/* ############################################################################# */
-
-
-
-
-
-
-/* ############################################################################# */
-
-/* ------------------------------------------------ */
-/* NOT WORKING CODE TO BE REMOVED */
-/* ------------------------------------------------ */
-
-/* kk does not exist anymore or work  */
-/* .footer-bg img.footer-img {
-  display: block;
-  width: 100vw;  
-  height: auto;  
-  max-width: none; 
-  object-fit: none; 
-  position: relative; 
-  z-index: -1;
-} */
-
-/* kk does not exist anymore or work  */
-/* checked added */
-/* .footer-bg { */
-  /* remove absolute positioning */
-  /* display: block;
-  width: 100%;
-} */
-
-/* kk does not exist anymore or work  */
-/* Responsive background image */
-/* .footer-bg img {
-  width: 100%;
-  height: auto; 
-  display: block;   */
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  max-height: 100%;
-  object-fit: contain;
-  z-index: -1; */
-/* } */
-
-/* kk does not exist anymore or work  */
-/* Footer image */
-/* .footer-bg img.footer-img {
-  display: block;
-  width: 100vw;    
-  height: auto;    
-  object-fit: cover; 
-  max-width: none;
-} */
-
-/* kk does not exist anymore or work  */
-/* .footer-bg {
-  position: absolute;
-  inset: 0;
-  width: 100vw;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-} */
-
-/* kk does not exist anymore or work  */
-/* .footer-bg picture,
-.footer-bg img.footer-img {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
-
-/* .footer .container {
-  max-width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-} */
-
-/* checked keep */
-/* kk this does not seem to be doing much but should keep for now  */
-/* .footer-content {
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0rem 1rem;
-  z-index: 2;
-} */
-
-/* does not work anymore */
-/* Keep text readable over the gradient */
-/* .footer .row {
-  align-items: flex-start;
-  justify-content: center;
-} */
-
-/* does not work anymore */
-/* Optional: Slight fade-in effect for footer content */
-/* .footer .footer-brand,
-.footer .nav-link,
-.footer .footer-tagline,
-.footer .small {
-  transition: opacity 0.6s ease, transform 0.6s ease;
-} */
-/* does not work anymore */
-/* .footer .footer-brand:hover,
-.footer .nav-link:hover {
-  opacity: 0.85;
-} */
-
-/* does not work anymore */
-/* Footer nav links */
-/* .footer .nav-link {
-  font-size: 0.9rem;
-  color: #f8f9fa;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-} */
-/* does not work anymore */
-/* .footer .nav-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-} */
-
-/* Responsive scaling */
-/* @media (max-width: 767.98px) {
-  .footer-brand {
-    font-size: 1.6rem;
-  }
-  .footer-tagline {
-    font-size: 0.85rem;
-  }
-  .footer {
-    text-align: center;
-  }
-} */
-
-/* does not work anymore */
-/* .footer a.nav-link {
-  color: rgba(255, 255, 255, 0.95) !important;  
-} */
-
-
-
-/* kk this does not works - have more specific css */
-/* Contact links */
-/* .footer-contact-links a {
-  color: #fff;
-} */
-
 
 
