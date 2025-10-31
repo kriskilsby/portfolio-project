@@ -204,16 +204,27 @@ body {
 }
 
 /* Consistent mobile navbar + dropdown backgrounds */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .navbar,
   .navbar.open,
   .navbar .dropdown-menu {
-    background-color: rgba(161, 214, 226, 0.95) !important;
+  
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+} */
+
+/* Mobile: only show background when hamburger is opened */
+@media (max-width: 992px) {
+  .navbar.open {
+    background-color: rgba(161, 214, 226, 0.95) !important; /* visible backdrop */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar.open .dropdown-menu {
+    background-color: rgba(161, 214, 226, 0.95) !important;
+  }
 }
-
-
 
 
 /* -------------------------------------- */
