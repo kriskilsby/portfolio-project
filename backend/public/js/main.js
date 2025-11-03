@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     textObserver.observe(el);
   });
 
-// ===== Observer for buttons (jiggle) =====
+  // ===== Observer for buttons (jiggle) =====
   const buttonObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -278,6 +278,43 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('resize', handleAccordionLayout);
 
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ----------------------------------------------------------------------
+  // ###########  SEARCH FACILITY HANDLING  ###########
+  // ----------------------------------------------------------------------
+
+  const params = new URLSearchParams(window.location.search);
+  const query = params.get("q");
+  if (!query) return;
+
+  const regex = new RegExp(query, "gi");
+
+  // Loop over visible text nodes and highlight matches
+  // document.querySelectorAll("body *:not(script):not(style)").forEach(el => {
+  //   if (el.children.length === 0 && el.textContent.match(regex)) {
+  //     el.innerHTML = el.textContent.replace(regex, match => `<mark>${match}</mark>`);
+  //   }
+  // });
+
+  // Replace text content with highlighted spans
+  document.querySelectorAll('body *:not(script):not(style)').forEach(el => {
+    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+      const text = el.textContent;
+      if (text.match(regex)) {
+        el.innerHTML = text.replace(regex, match => `<mark>${match}</mark>`);
+      }
+    }
+  });
+
+  // Scroll to first match
+  // const first = document.querySelector("mark");
+  // if (first) first.scrollIntoView({ behavior: "smooth", block: "center" });
+
+   // Scroll to first highlighted item
+  const firstHighlight = document.querySelector('mark');
+  if (firstHighlight) {
+    firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 
 });
 
