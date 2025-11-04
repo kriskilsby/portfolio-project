@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  
   // === Profile script animation ===
   // Select the elements you want to animate
   // const revealElements = document.querySelectorAll(
