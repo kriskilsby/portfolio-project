@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stork Migration Data Visualisation</title>
 
+     <!-- <%- include ('components/head') %> -->
     <!-- CSS -->
     <link rel="stylesheet" href="/stork-app/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/stork-app/css/stork_styles.css" />
@@ -15,6 +16,9 @@
     <!-- Include DataTables + Buttons CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+
+    <!-- Add portfolio navbar styles -->
+    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
 
   </head>
 
@@ -52,11 +56,14 @@
       </div>
     </nav> -->
 
+    <!-- Navbar -->
+    <%- include ('components/navbar') %>
+
     <!-- Main Content -->
     <main>
 
-      <div class="container">
-        <section id="hero-top" class="text-center py-5 position-relative">
+      <div class="container mt-1 pt-5">
+        <section id="hero-top" class="text-center py-5 position-relative mt-4">
           
             <h1 class="display-2 fw-bold mb-3">Stork Movement Explorer</h1>
             <p class="display-6" style="opacity: 0.9;">Interactive tool to cluster and map Stork movement data.</p>
@@ -838,7 +845,7 @@
             </table> -->
 
       <!-- kk updated section below ################## -->
-      <section id="summary-table-section" class="container my-4 mb-1 mt-2">
+      <section id="summary-table-section" class="container my-4 mb-5 mt-2">
         <div class="main-card card shadow-sm border-0 rounded">
           <div id="summary-table-card" class="card-body">
             <label for="summary-table-card-title" class="form-label fw-bold deferred-tooltip"
@@ -923,22 +930,15 @@
       <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     </main>
-
-    <!-- Footer -->
-    <!-- <footer>
-      <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="index.html">Further Details</a>
-        <a href="index.html">Contact</a>
-        <a href="index.html">About</a>
-      </div>
-    </footer> -->
-
     
     <!-- Core Libraries -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script> -->
+    <!-- Bootstrap JS (same version as portfolio) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-cVKIPhG81rKjQnQZ0p3pJ7ujlA2eYxN1fM9C9+8ABSTP4rM1UksdQRVvoxMfooAo" 
+        crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <!-- Plugins -->
@@ -952,13 +952,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
 
     <!-- Highcharts -->
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
     <!-- Your App (must come last so it can use everything above) -->
     <script type="module" src="/stork-app/js/app.js"></script>
-    
+
+    <!-- Portfolio navbar functionality -->
+    <script src="/js/main.js"></script>
+  
+    <%- include ('components/footer') %>
 
   </body>
 </html>

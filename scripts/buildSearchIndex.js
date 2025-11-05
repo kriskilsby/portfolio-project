@@ -1,3 +1,4 @@
+// scripts/buildSearchIndex.js
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
@@ -79,15 +80,44 @@ foldersToIndex.forEach(folder => {
 
     // Build URL
     let url = '';
-    if (normalizedPath.includes('backend/views')) {
+
+    // if (normalizedPath.includes('backend/views')) {
+    //   const pageName = path.basename(normalizedPath, '.ejs');
+    //   url = '/' + (pageName === 'index' ? '' : pageName);
+    // } else {
+    //   const relativePath = path.relative(
+    //     path.join(__dirname, '../stork-app/frontend/views'),
+    //     filePath
+    //   ).replace(/\\/g, '/').replace('.ejs', '');
+    //   url = '/stork-app/' + relativePath;
+    // }
+
+    if (normalizedPath.includes('/backend/views/')) {
       const pageName = path.basename(normalizedPath, '.ejs');
       url = '/' + (pageName === 'index' ? '' : pageName);
-    } else {
-      const relativePath = path.relative(
+    } else if (normalizedPath.includes('/stork-app/frontend/views/')) {
+      // Build relative path inside stork-app views
+      let relative = path.relative(
         path.join(__dirname, '../stork-app/frontend/views'),
         filePath
       ).replace(/\\/g, '/').replace('.ejs', '');
-      url = '/stork-app/' + relativePath;
+
+      // If the file is 'index' or ends with '/index', strip the trailing '/index'
+      // so '/stork-app/index' -> '/stork-app' and '/stork-app/foo/index' -> '/stork-app/foo'
+      if (relative === 'index') {
+        url = '/stork-app';
+      } else {
+        // remove trailing '/index' if present
+        relative = relative.replace(/\/index$/, '');
+        url = '/stork-app/' + relative;
+      }
+
+      // ensure no double-slashes or trailing slash
+      url = url.replace(/\/+/g, '/').replace(/\/$/, '') || '/stork-app';
+    } else {
+      // fallback - use filename
+      const pageName = path.basename(normalizedPath, '.ejs');
+      url = '/' + pageName;
     }
 
     index.push({ title, url, text });

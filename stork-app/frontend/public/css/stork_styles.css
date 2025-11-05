@@ -1,4 +1,572 @@
 
+    
+    /* ======================================================
+
+          PORTFOLIO NAVBAR SECTION & FOOTER STYLES (IMPORTED)
+
+    ========================================================= */
+
+    /* -------------------------------------- */
+/* Navbar specific styles */
+/* -------------------------------------- */
+
+.navbar {
+  /* transition: all 0.3s ease; */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.25rem 2rem !important;
+  z-index: 1001;
+}
+
+/* Mobile menu open state */
+.navbar.open {
+  background-color: rgba(0, 0, 0, 0.85); /* dark, semi-transparent */
+  color: #fff; /* menu text white for contrast */
+}
+
+.navbar.scrolled {
+  /* background: #C4DFE6 !important; */
+  background: #A1D6E2 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Shrink navbar on scroll (partial) */
+.navbar.shrink {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9); /* slightly transparent */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Navbar at bottom of hero: only show toggler */
+.navbar.shrink-only-toggler .navbar-collapse {
+  display: none !important;
+}
+
+.navbar-toggler {
+  z-index: 1100;
+}
+
+/* Smooth responsive scaling for brand + links */
+.navbar-brand,
+.navbar-d1-slot {
+  font-family: "Kalam", cursive;
+  color: #153847 !important;
+   font-size: clamp(1.4rem, 1.2vw + 0.4rem, 1.6rem); /* slightly larger than nav links */
+  font-weight: 500;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* kk new for d1-slot  */
+.navbar-d1-slot {
+  display: inline-block;
+  padding: 0 1rem;
+  opacity: 0;              /* hidden initially */
+  transition: opacity 1.4s ease;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+/* kk new for d1-slot  */
+.navbar-d1-slot.visible {
+  opacity: 1;
+}
+
+/* to fully remove the d1-slot on smaller screens */
+@media (max-width: 768px) {
+  .navbar-d1-slot {
+    display: none;
+  }
+}
+
+.nav-link, .navbar-item {
+  font-family: 'Poppins', sans-serif; /* global style */
+  color: #153847 !important;
+   font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.3rem); /* proportional to brand */
+  font-weight: 500;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* -------------------------
+   Optional: smooth hover effects
+   ------------------------- */
+.nav-link:hover,
+.navbar-item:hover {
+  color: #0f2c36 !important; /* slightly darker shade on hover */
+}
+
+/* Adjust padding only where needed */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0.25rem 1rem !important;
+  }
+}
+
+/* Prevent search bar collapse */
+.navbar .form-control {
+  min-width: 140px;
+  flex: 1 1 auto;
+}
+@media (max-width: 1200px) {
+  .navbar .form-control {
+    min-width: 100px;
+  }
+}
+
+/* Dropdown visual consistency */
+.dropdown-menu {
+  background-color: rgba(179, 224, 236, 0.95) !important; /* slightly lighter than #A1D6E2 */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* gentle edge definition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 12rem;
+  backdrop-filter: blur(6px); /* optional, adds nice soft look */
+}
+
+.dropdown-item {
+  color: #153847 !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #153847 !important;
+}
+
+
+/* Mobile: only show background when hamburger is opened */
+@media (max-width: 992px) {
+  .navbar.open {
+    background-color: rgba(161, 214, 226, 0.95) !important; /* visible backdrop */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar.open .dropdown-menu {
+    background-color: rgba(161, 214, 226, 0.95) !important;
+  }
+}
+
+/* -------------------------------------- */
+/* Footer specific styles */
+/* -------------------------------------- */
+
+
+/* ------------------------------------------------ */
+/* A. CORE STYLES AND JPG FALLBACK (STANDARD CSS) */
+/* ------------------------------------------------ */
+
+/* kk working code keep  */
+/* Category A - Overall footer class */
+.footer-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* kk working code keep  */
+/* Category B - Holds all footer content including overlay */
+.footer-container {
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 93.75%;
+    width: 100%; 
+    position: relative;
+    background-color: transparent; 
+    overflow: hidden;
+}
+
+/* kk working code keep  */
+/* Category C - Holds all written footer content */
+.footer-content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* kk working code keep  */
+/* Category D - Container for all written footer content */
+/* You may need to adjust the padding on .footer-content .container to control inner spacing */
+.footer-content.container {
+    display: grid;
+    /* DEFINES THREE ROWS: Top (auto), Empty Middle (1fr), Bottom (auto) */
+    grid-template-rows: auto 1fr auto; 
+    /* Columns remain the same for horizontal alignment */
+    grid-template-columns: 1fr 1fr 1fr; 
+    height: 100%; 
+    width: 100%;
+    max-width: 90vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0vh;
+    padding-left: 2.0vw;
+    padding-right: 2.0vw;
+
+}
+
+/* kk working code keep  */
+/* --- Placement of Top Element --- */
+.footer-brand-area {
+    grid-row: 1 / 2; /* Place in the first row */
+    grid-column: 1 / -1; /* Span all columns */
+    /* Add any top/bottom margin here for spacing from the top edge */
+}
+
+/* kk working code keep  */
+/* --- Placement of Bottom Element --- */
+.footer-content-bottom-area {
+    grid-row: 3 / 4; /* Place in the third row */
+    grid-column: 1 / -1; /* Span all columns */
+    /* Padding is already handled by the container padding */
+}
+
+/* kk working code keep  */
+/* keep details */
+/* Brand styling (matches navbar aesthetic) */
+.footer-brand {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  display: block;
+  font-size: clamp(48px, 8vw, 70px);
+  font-weight: 500;
+  color: #ffffff !important;
+  /* transition: color 0.3s ease; */
+  transition: opacity 1.6s ease, text-decoration 1.6s ease;
+}
+.footer-brand:hover {
+  color: #e0e0e0 !important;
+  opacity: 0.75;
+}
+
+.footer-brand .footer-tagline {
+  text-align: inherit;
+  /* margin: 0; */
+}
+
+/* keep details */
+.footer-tagline {
+  font-size: clamp(15px, 2.5vw, 22px);
+  font-weight: 400;
+  line-height: 0.0;
+  color: #ffffff !important;
+  opacity: 0.75;
+}
+
+.footer-tagline:hover {
+  color: #e0e0e0 !important;
+  opacity: 1.00;
+}
+
+/* kk keep this works */
+/* Overlay for readability */
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  background: 
+    linear-gradient(
+    rgb(10 10 10 / 50%) 0%,
+    rgb(10 10 10 / 30%) 30%,
+    rgb(10 10 10 / 0%) 50%,  
+    rgb(10 10 10 / 15%) 70%, 
+    rgb(10 10 10 / 100%) 100%   
+  );
+  pointer-events: none;
+  z-index: 0;  
+}
+
+/* ------------------------------------------------ */
+/* Working code */
+/* ------------------------------------------------ */
+
+/* kk does work */
+/* Footer contact links */
+.footer-contact-links a {
+  color: rgba(255, 255, 255, 0.95) !important; /* soft white */
+  text-decoration: none;
+  opacity: 0.80;
+  font-weight: 400;
+  /* font-size: 3.3vw; */
+  font-size: clamp(18px, 2.4vw, 26px);
+  line-height: 1.6;
+  transition: opacity 0.6s ease, text-decoration 0.6s ease;
+}
+
+/* kk this works */
+/* Footer navigation links and copyright detail */
+.footer-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important; /* soft white */
+  text-decoration: none;
+  opacity: 0.80;
+  font-weight: 400;
+  /* font-size: 3.3vw; */
+  font-size: clamp(18px, 2.4vw, 26px);
+  line-height: 1.6;
+  transition: opacity 0.6s ease, text-decoration 0.6s ease;
+}
+
+/* kk this works */
+/* Hpver over footer navigation links  */
+.footer-nav .nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* kk this works */
+/* footer divider line */
+.footer-divider {
+  border: none;                     
+  height: 2px !important;                      
+  background: whitesmoke !important; 
+  margin: 0.5rem 0 1.0rem 0;                   
+  opacity: 0.45;                     
+}
+
+/* Ensure the .footer-copy text is centered by default */
+.footer-copy, 
+.footer-photo-credit{
+  text-align: center; 
+  color: #f8faf8 !important;
+  font-size: clamp(12px, 1.5vw, 18px);
+  opacity: 0.45;
+  font-style: italic; 
+}
+
+.footer-contact-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  color: #ffffff; 
+}
+
+/* Optional: automatic, softly tinted divider between links */
+.footer-contact-links p a + a::before {
+  content: "|";
+  margin: 0 0.6em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ------------------------------------------------ */
+/* Footer brand, links and tagline responsiveness */
+/* ------------------------------------------------ */
+
+/* Small Tablets (600px and wider) */
+@media (min-width: 576px) {
+  .footer-brand {
+    /* font-size: 8.64vw; */
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+}
+  .footer-tagline {
+    /* font-size: 2.7vw; */
+    font-weight: 400;
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+/* Standard Tablets/Small Laptops (768px and wider)*/
+@media (min-width: 768px) {
+  .footer-brand {
+    /* font-size: 6.40vw; */
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    /* font-size: 2.0vw; */
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+/* Next size up (992px and wider) */
+@media (min-width: 992px) {
+   .footer-brand {
+    /* font-size: 5.12vw; */
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    /* font-size: 1.6vw; */
+    opacity: 0.80;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+/* Medium Desktops (1200px and wider) */
+@media (min-width: 1200px) {
+   .footer-brand {
+    /* font-size: 4.48vw; */
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    /* font-size: 1.4vw; */
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+/* Hi-Res/Large Desktops (1600px and wider)*/
+@media (min-width: 1600px) {
+    .footer-brand {
+    /* font-size: 3.84vw; */
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    /* font-size: 1.2vw; */
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+/* ULTRA HD (1920px and wider) */
+@media (min-width: 1920px) {
+    .footer-brand {
+    /* font-size: 3.2vw; */
+    opacity: 1.00;
+    }
+  .footer-brand:hover {
+  opacity: 0.75;
+  }
+  .footer-tagline {
+    /* font-size: 1.0vw; */
+    opacity: 0.75;
+  }
+  .footer-tagline:hover {
+    opacity: 1.00;
+  }
+}
+
+
+
+/* ------------------------------------------------ */
+/* B. JPG RESPONSIVENESS (Changing only the source) */
+/* ------------------------------------------------ */
+
+/* Small Tablets (600px and wider) - Load 800.jpg */
+@media (min-width: 576px) {
+    .footer-container {
+        /* padding-bottom: 60.0%; */
+        background-image: url('/images/footer/footer-1200-mobile.jpg');
+    }
+}
+
+/* Standard Tablets/Small Laptops (768px and wider) - Load 1200.jpg */
+@media (min-width: 768px) {
+    .footer-container {
+        padding-bottom: 38.16%;
+        background-image: url('/images/footer/footer-1200.jpg');
+    }
+}
+
+/* Medium Desktops (1200px and wider) - Load 1600.jpg */
+@media (min-width: 1200px) {
+    .footer-container {
+        background-image: url('/images/footer/footer-1600.jpg');
+    }
+}
+
+/* Hi-Res/Large Desktops (1600px and wider) - Load 2400.jpg */
+@media (min-width: 1600px) {
+    .footer-container {
+        background-image: url('/images/footer/footer-2400.jpg');
+    }
+}
+
+/* ULTRA HD (1920px and wider) - Load 3842x1468 */
+@media (min-width: 1920px) {
+    .footer-container {
+        background-image: url('/images/footer/footer-3840.jpg');
+    }
+}
+
+/* ------------------------------------------------ */
+/* C. WEBP OPTIMIZATION (Overrides the JPG paths above) */
+/* ------------------------------------------------ */
+@supports (background-image: url('data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQIEuhoP0lSgoEAA') ) {
+    
+    /* Default WebP (Mobile First - 0px and up) */
+    .footer-container {
+        padding-bottom: 93.75%;
+        background-image: url('/images/footer/footer-800-mobile.webp');
+    }
+
+       /* Small Tablets (600px and wider) - Loads 800px image */
+    @media (min-width: 576px) {
+        .footer-container {
+            /* padding-bottom: 70.0%; */
+            background-image: url('/images/footer/footer-1200-mobile.webp');
+        }
+    }
+
+    /* Standard Tablets/Small Laptops (768px and wider) - Loads 1200px image */
+    @media (min-width: 768px) {
+        .footer-container {
+            padding-bottom: 38.16%;
+            background-image: url('/images/footer/footer-1200.webp');
+        }
+    }
+
+    /* Medium Desktops (1200px and wider) - Loads 1600px image */
+    @media (min-width: 1200px) {
+        .footer-container {
+            /* padding-bottom: 38.2%; */
+            background-image: url('/images/footer/footer-1600.webp');
+        }
+    }
+
+    /* Hi-Res Screens (WebP for screens 2200px and wider) */
+    @media (min-width: 1600px) {
+        .footer-container {
+            background-image: url('/images/footer/footer-2400.webp');
+        }
+    }
+
+    /* ULTRA HD (1920px and wider) */
+    @media (min-width: 1920px) {
+        .footer-container {
+            background-image: url('/images/footer/footer-3840.webp');
+        }
+    }
+}
+    
+    /* ======================================================
+
+          ORIGINAL STORK APP STYLES SECTION
+
+    ========================================================= */    
+    
     /* ======================================
 
           MEDIA QUERIES SECTION
@@ -429,60 +997,7 @@ background #CBCAE8 */
 
     ====================================== */
 
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-
-  .fixed-nav-bar {
-    background-color: #3C3B3A;
-    color: #F9F9F9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  .navbar-brand {
-    color: #fff !important;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  .nav-link {
-    color: #f8f9fa !important;
-  }
-  .nav-link:hover {
-    color: #ffc107 !important; /* yellow on hover */
-  }
-
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }  
+  /* all removed old not used  */
 
 
     /* ======================================
@@ -499,6 +1014,7 @@ background #CBCAE8 */
   /* border-radius: 8px; */
   border-radius: 1rem !important;
   margin-bottom: 0 !important;
+  z-index: 0 !important;
 }
 
 #map {
@@ -506,6 +1022,10 @@ background #CBCAE8 */
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 0.75rem;
+}
+
+.leaflet-control-container {
+  z-index: 400 !important; /* default is 800, lower keeps it below navbar */
 }
 
 /* Optional: give a max-width to prevent map overflow on huge screens */
@@ -683,30 +1203,7 @@ background #CBCAE8 */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* ################## ORIGINAL CLEAR ALL BUTTON CODE ###################### */
-/* Clear All Filters color scheme
-.btn-custom-warning {
-  background-color: #C66489 !important;
-  color: #fff !important;
-  border: 1px solid #C66489 !important;
-}
 
-#clearAllFilters {
-  white-space: normal; 
-  width: 100%; 
-  min-height: 2.4rem;
-  height: auto;
-  padding: 0.375rem 0.75rem; 
-  text-align: center;
-}
-
-.btn-custom-warning:hover,
-.btn-custom-warning:focus {
-  background-color: #9e3a60 !important;
-  border-color: #9e3a60 !important;
-  color: #fff !important;
-} */
-/* ################## ORIGINAL CLEAR ALL BUTTON CODE ###################### */
 
 .btn-custom-warning {
   background-color: #726FB4 !important;
@@ -760,6 +1257,9 @@ background #CBCAE8 */
    Sections & Table Cards
 ------------------------------ */
 
+#summary-table-section {
+  margin-bottom: 10vh !important;
+}
 
 /* Setup for the main table card */
   #table-card {
