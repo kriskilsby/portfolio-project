@@ -23,6 +23,13 @@ router.get('/profile', (req, res) => {
   res.render('profile', { page: 'profile', title: 'My Profile' });
 });
 
+
+// Temporary test page (for modal debugging) NOW REMOVED
+// router.get('/doesthiswork', (req, res) => {
+//   res.render('doesthiswork', { page: 'doesthiswork', title: 'doesthiswork' });
+// });
+
+
 // ------------------------
 // Search route
 // ------------------------

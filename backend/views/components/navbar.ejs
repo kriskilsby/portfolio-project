@@ -3,13 +3,6 @@
             <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top"> -->
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top <%= page !== 'index' ? 'scrolled' : '' %>">
                 <div class="container-fluid">
-                    <!-- <a class="navbar-brand" href="#">KrisKilsby</a> -->
-
-                    <!-- Reserve slot for D1 -->
-                     <!-- <div class="navbar-d1-slot"></div> -->
-                     <!-- <span class="navbar-d1-slot">
-                          <span class="hero-d1-navbar">Welcome to my portfolio</span>
-                     </span> -->
 
                      <a class="navbar-brand" href="/">
                         KrisKilsby
@@ -46,10 +39,6 @@
                             
                             <li class="nav-item"><a class="nav-link" href="https://kriskilsby.com/">kriskilsby.com</a></li>
                         </ul>
-                        <!-- <form class="d-flex ms-auto" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form> -->
 
                         <form class="d-flex ms-auto" role="search" action="/search" method="get">
                             <input class="form-control me-2" type="search" name="q" placeholder="Search" required>

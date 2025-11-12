@@ -777,7 +777,9 @@ function updateClusterDataTable(filteredPoints) {
     ],
     pageLength: 25,
     scrollY: '400px',
-    scrollCollapse: true
+    scrollCollapse: true,
+    responsive: true,
+    scrollX: false
   });
 }
 

@@ -162,6 +162,22 @@ body {
   }
 }
 
+/* ✅ Option 2 tweak: gently scale down navbar spacing before hamburger */
+@media (max-width: 1100px) and (min-width: 992px) {
+  .navbar-nav {
+    gap: 0.25rem; /* reduce spacing between nav links */
+  }
+
+  .navbar .form-control {
+    min-width: 80px; /* let the input shrink slightly */
+  }
+
+  .navbar .btn {
+    padding: 0.25rem 0.5rem; /* slightly smaller button */
+    font-size: 0.9rem;
+  }
+}
+
 /* Dropdown visual consistency */
 .dropdown-menu {
   background-color: rgba(179, 224, 236, 0.95) !important; /* slightly lighter than #A1D6E2 */
@@ -434,6 +450,7 @@ body {
 
 .card-body {
   padding: 1.5rem;
+  position: relative;
 }
 
 .card-title {
@@ -478,13 +495,10 @@ body {
 /* Softer carousel controls */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-size: 70% 70%; /* slightly smaller arrows */
-}
-
-/* Smaller, cleaner arrow icons */ 
-.carousel-control-prev-icon, 
-.carousel-control-next-icon { 
-  background-size: 70% 70%; 
+  background-size: 90% 90%; /* slightly smaller arrows */
+  color: #000;
+  filter: invert(0.8) drop-shadow(0 0 1px rgba(0,0,0,0.4));
+  /* background-color: #000; */
 }
 
 .carousel-control-prev,
@@ -496,14 +510,19 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: background 0.3s ease, transform 0.3s ease;
-  backdrop-filter: blur(5px);
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
+  /* background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.25); */
+  background: rgba(0, 0, 0, 0.3); /* brighter, more opaque */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* lighter border */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); /* adds subtle contrast on light images */
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -534,7 +553,8 @@ body {
 /* Maintain consistent carousel image aspect ratio */
 .carousel-inner {
   aspect-ratio: 16 / 9; /* Adjust to your preferred ratio (e.g. 4/3 or 1/1 for square) */
-  overflow: hidden;     /* Ensures no overflow if cropping occurs */
+  /*overflow: hidden;      Ensures no overflow if cropping occurs */
+  overflow: visible; /* allow button to be visible and clickable */
 }
 
 /* Ensure images fill the frame without stretching */
@@ -545,6 +565,42 @@ body {
   object-position: center; /* Keeps focal point centred */
   display: block;
 }
+
+/* Individual indicators */
+.carousel-indicators [data-bs-target] {
+  width: 50px;                         /* wider for better proportion */
+  height: 6px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.55); /* subtle off-white base */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Active indicator — gentle gradient and higher contrast */
+.carousel-indicators .active {
+  background: linear-gradient(90deg, #7FA6B8 0%, #A4C4D4 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 80px;                         /* slightly longer to show activity */
+  height: 8px;
+  opacity: 1;
+}
+
+/* Carousel indicators container */
+.carousel-indicators {
+  bottom: 0px;                        /* spacing from image bottom */
+  background: rgba(0, 0, 0, 0.25);     /* soft translucent bar */
+  border-radius: 20px;                 /* rounded container */
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;                            /* space between indicators */
+}
+
+.carousel-item .btn {
+  z-index: 10;
+}
+
 
 
 /* -------------------------------------- */

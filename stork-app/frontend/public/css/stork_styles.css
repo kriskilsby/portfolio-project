@@ -49,13 +49,20 @@
 /* Smooth responsive scaling for brand + links */
 .navbar-brand,
 .navbar-d1-slot {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", cursive !important;
   color: #153847 !important;
-   font-size: clamp(1.4rem, 1.2vw + 0.4rem, 1.6rem); /* slightly larger than nav links */
-  font-weight: 500;
-  transition: font-size 0.3s ease, color 0.3s ease;
+  font-size: clamp(1.4rem, 1.2vw + 0.4rem, 1.6rem) !important; /* slightly larger than nav links */
+  font-weight: 500 !important;
+  transition: font-size 0.3s ease, color 0.3s ease !important;
+  /* margin-right: 1rem !important; */
+  /* padding-top: .3125rem !important;
+  padding-bottom: .3125rem !important; */
 }
 
+.navbar-brand {
+  margin-right: 1rem !important;
+}
+ 
 /* kk new for d1-slot  */
 .navbar-d1-slot {
   display: inline-block;
@@ -79,11 +86,11 @@
 }
 
 .nav-link, .navbar-item {
-  font-family: 'Poppins', sans-serif; /* global style */
+  font-family: 'Poppins', sans-serif !important; /* global style */
   color: #153847 !important;
-   font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.3rem); /* proportional to brand */
-  font-weight: 500;
-  transition: font-size 0.3s ease, color 0.3s ease;
+   font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.3rem) !important; /* proportional to brand */
+  font-weight: 500 !important;
+  transition: font-size 0.3s ease, color 0.3s ease !important;
 }
 
 /* -------------------------
@@ -560,6 +567,26 @@
         }
     }
 }
+
+
+/* -------------------------------------- */
+/* Accordion specific styles */
+/* -------------------------------------- */
+
+.stork-accordion-section {
+    padding-top: 6vh !important;
+    padding-bottom: 4vh !important;
+}
+
+/* Accordion button (header) default style - closed */
+.accordion-button {
+  background-color: #1995AD !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 1.3rem !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125) !important;
+}
+
     
     /* ======================================================
 
@@ -699,14 +726,28 @@
 
 h6.legend-label-text {
   margin-left: 1rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
 }
 
 
 body {
     /* font-family: 'Inter', sans-serif; */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #F9F9F9 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
   }
+
+html, body {
+  overflow-x: hidden;
+}
+
+.leaflet-container {
+  width: 100% !important;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 
   main {
     background-color: #F9F9F9 !important;
@@ -749,14 +790,25 @@ h5.form-top-h5 {
 }
 
 h5.form-h5 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h3.card-title {
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  font-weight: 600;
 }
 
 span.form-h5 {
   padding-left: -5px;
+}
+
+span.method-label-text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 #kmeans-params, #dbscan-params, #hdbscan-params {
@@ -764,6 +816,7 @@ span.form-h5 {
 }
 
 p.form-p {
+  font-size: clamp(1.0rem, 2.5vw, 1.1rem);
   margin-top: 0;
   margin-left: 2rem;
   padding-right: 2rem;
@@ -778,6 +831,13 @@ p.filterform-p {
 
 .filter-label-text {
   font-size: 1.2rem;
+}
+
+.select2-search__field {
+  margin-top: 5px !important;
+  /* padding-bottom: 10px !important; */
+  margin-bottom: 5px !important;
+  min-height: 25px !important;
 }
 
     /* ======================================
@@ -854,7 +914,7 @@ background #CBCAE8 */
   width: 5rem;
   font-size: 0.9rem;
   line-height: normal; 
-  transition: opacity 0.3s ease, filter 0.3s ease; 
+  transition: opacity 0.3s ease, filter 0.3s ease !important; 
   opacity: 1;  
   cursor: pointer; 
 }
@@ -1008,10 +1068,7 @@ background #CBCAE8 */
 
 #map {
   min-height: 600px;
-  /* height: 700px; */
   width: 100%;
-  /* border: 1px solid #ccc; */
-  /* border-radius: 8px; */
   border-radius: 1rem !important;
   margin-bottom: 0 !important;
   z-index: 0 !important;
@@ -1121,11 +1178,11 @@ background #CBCAE8 */
 
 
 .btn, .form-select, .form-control {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
 }
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
 }
 
 
@@ -1236,6 +1293,7 @@ background #CBCAE8 */
   margin-bottom: 1px !important; 
   text-align: center !important;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 /* Filter time-slot buttons */  
 .uniform-btn-wide {
@@ -1245,6 +1303,7 @@ background #CBCAE8 */
   margin-bottom: 1px !important;
   text-align: center !important;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
     /* ======================================
@@ -1456,44 +1515,44 @@ background #CBCAE8 */
 /* Button group consistency */
 .btn-group .btn {
   border-radius: 0.5rem !important;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-  margin: 0 10px;
+  font-size: 0.9rem !important;
+  padding: 0.4rem 0.8rem !important;
+  margin: 0 10px !important;
 }
 
 /* Dropdown style */
 #largeThreshold {
-  border-radius: 0.5rem;
-  background-color: #fdfdfd; /* same off-white as tables */
-  border: 1px solid #ccc;
-  color: #3A2F51;
+  border-radius: 0.5rem !important;
+  background-color: #fdfdfd !important; /* same off-white as tables */
+  border: 1px solid #ccc !important;
+  color: #3A2F51 !important;
 }
 
 /* Hover/active states */
 .btn-outline-primary:hover,
 .btn-outline-success:hover,
 .btn-outline-info:hover {
-  opacity: 0.9;
+  opacity: 0.9 !important;
 }
 
 .metric-toggle {
-  background-color: #6c5ce7; /* vivid purple */
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.2s ease;
+  background-color: #6c5ce7 !important; /* vivid purple */
+  color: #fff !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  transition: background-color 0.2s ease !important;
 }
 
 .metric-toggle:hover {
-  background-color: #5a4bd1; /* darker on hover */
-  color: #fff;
+  background-color: #5a4bd1 !important; /* darker on hover */
+  color: #fff !important;
 }
 
 .metric-toggle.active {
-  background-color: #3A2F51; /* your SME deep purple */
-  color: #fff;
-  box-shadow: 0 0 0 0.2rem rgba(58, 47, 81, 0.4); /* subtle glow */
+  background-color: #3A2F51 !important; /* your SME deep purple */
+  color: #fff !important;
+  box-shadow: 0 0 0 0.2rem rgba(58, 47, 81, 0.4) !important; /* subtle glow */
 }
 
 /* -----------------------------
@@ -1501,23 +1560,54 @@ background #CBCAE8 */
 ------------------------------ */
 
 .chart-value-toggle {
-  background-color: #fff;         
-  color: #4B0082;                
-  border: 2px solid #4B0082;     
-  font-weight: 600;
-  transition: all 0.2s ease-in-out;
+  background-color: #fff !important;         
+  color: #4B0082 !important;                
+  border: 2px solid #4B0082 !important;     
+  font-weight: 600 !important;
+  transition: all 0.2s ease-in-out !important;
 }
 
 .chart-value-toggle:hover {
-  background-color: #4B0082;
-  color: #fff;                    
+  background-color: #4B0082 !important;
+  color: #fff !important;                    
 }
 
 .chart-value-toggle.active {
-  background-color: #4B0082;
-  color: #fff;
+  background-color: #4B0082 !important;
+  color: #fff !important;
 }
 
+    /* ======================================
+
+        STORK APP NAVBAR FIXES SECTION
+
+    ====================================== */
+
+/* Fix navbar stacking & scroll behavior specific to Stork app */
+/* Navbar always on top */
+.navbar.fixed-top {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000 !important;
+  /* padding-bottom: 0 !important;
+  padding-top: 0 !important; */
+}
+
+/* Prevent content overlap under navbar */
+main {
+  margin-top: 70px;
+}
+
+/* Keep map + controls below */
+#map {
+  z-index: 0 !important;
+  position: relative;
+}
+.leaflet-control-container {
+  z-index: 400 !important;
+}
 
 
 
@@ -1533,3 +1623,5 @@ background #CBCAE8 */
 .hide {
   display: none !important;
 }
+
+

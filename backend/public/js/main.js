@@ -2,14 +2,31 @@
 console.log("Portfolio script loaded");
 
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("✅ DOM ready for modal via show.bs.modal");
   // Remove no-js class if present
   document.documentElement.classList.remove("no-js");
 
   const navbar = document.querySelector(".navbar");
-  const isIndexPage = document.body.classList.contains("index");
+   const navbarSlot = document.querySelector(".navbar-d1-slot");
+  const hamburger = document.querySelector(".navbar-toggler");
+
+  // Detect if this is the homepage of the portfolio
+  // const isIndexPage = document.body.classList.contains("index");
+  const isPortfolioIndex = document.body.classList.contains("index");
+
+  // Detect if we're inside the Stork app
+  const isStorkApp = window.location.pathname.startsWith("/stork-app");
+
+  // === Navbar behaviour ===
+  if (isStorkApp) {
+    // Always show navbar background, no scroll effects
+    navbar.classList.add("scrolled");
+  } 
 
   // --- Navbar background fix ---
-  if (isIndexPage) {
+  // if (isIndexPage) {
+    else if (isPortfolioIndex) {
+    // Portfolio homepage scroll behaviour
     const updateNavbarBackground = () => {
       if (window.scrollY > window.innerHeight - 100) {
         navbar.classList.add("scrolled");
@@ -21,12 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavbarBackground();
     window.addEventListener("scroll", updateNavbarBackground);
   } else {
+    // Other portfolio pages (always show navbar)
     navbar.classList.add("scrolled");
   }
   // --- End Navbar fix ---
 
-  const navbarSlot = document.querySelector(".navbar-d1-slot");
-  const hamburger = document.querySelector(".navbar-toggler");
+ 
 
   // Detect if this is the homepage
   // const isIndexPage = document.body.classList.contains("index");
@@ -40,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const aboutText = document.querySelector(".about-text");
 
   // === Navbar background behaviour ===
-  if (isIndexPage) {
+  // if (isIndexPage) {
+  if (isPortfolioIndex) {
     // Dynamic scroll-based background
     window.addEventListener("scroll", () => {
       // if (window.scrollY > window.innerHeight - 100) { // Original condition after scrolling almost full viewport
@@ -56,7 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // === HERO + ABOUT ANIMATION (only for index page) ===
-  if (isIndexPage && heroD1 && heroD2 && heroD3 && aboutIntro) {
+  // if (isIndexPage && heroD1 && heroD2 && heroD3 && aboutIntro) {
+  if (isPortfolioIndex && heroD1 && heroD2 && heroD3 && aboutIntro) {
     heroD1.classList.add("visible");
     heroD2.classList.remove("show");
     heroD3.classList.remove("show");
@@ -75,9 +94,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const HERO_OPACITY_FADE = 1;
       const NAV_FADE_START = 0.8;
       const NAV_FADE_END = 0.9;
+      const SCROLL_TRIGGER_TOP = 150; // adjust as needed
 
       const handleScroll = () => {
         const scrollY = window.scrollY;
+
+        if (scrollY > SCROLL_TRIGGER_TOP) {
+          // Past threshold: stop calculations, lock hero/navbar state
+          heroD1.style.transform = `translateY(${-travelY}px) scale(${minScale})`;
+          heroD1.style.opacity = 0;
+          navbarSlot.style.opacity = 1;
+          // D2/D3 should stay visible
+          heroD2.classList.add("show");
+          heroD3.classList.add("show");
+          return;
+        }
+
+
         let progress = Math.min((scrollY / TRIGGER_DISTANCE) * 1.2, 1);
         const easedProgress = Math.pow(progress, EASE_POWER);
 
@@ -158,33 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.toggle("open");
     });
   }
-
-  
-  // === Profile script animation ===
-  // Select the elements you want to animate
-  // const revealElements = document.querySelectorAll(
-  //   '.profile-title, .profile-text, .accordion-button'
-  // );
-
-  // // Add the 'reveal' class to all selected elements
-  // revealElements.forEach(el => el.classList.add('reveal'));
-
-  // // Set up the Intersection Observer
-  // const observerOptions = {
-  //   threshold: 0.1, // trigger when 20% of element is visible
-  // };
-
-  // const observer = new IntersectionObserver((entries, observer) => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add('visible'); // triggers CSS animation
-  //       observer.unobserve(entry.target);       // animate once only
-  //     }
-  //   });
-  // }, observerOptions);
-
-  // // Observe each element
-  // revealElements.forEach(el => observer.observe(el));
 
   // Elements
   const textElements = document.querySelectorAll('.profile-title, .profile-text');
@@ -284,38 +290,94 @@ document.addEventListener("DOMContentLoaded", () => {
   // ###########  SEARCH FACILITY HANDLING  ###########
   // ----------------------------------------------------------------------
 
+  console.log("🔍 Running search highlight logic");
   const params = new URLSearchParams(window.location.search);
   const query = params.get("q");
-  if (!query) return;
 
-  const regex = new RegExp(query, "gi");
+  if (!query) {
+    console.log("ℹ️ No search query found — continuing without highlights.");
+  } else {
+    console.log(`🔎 Highlighting search term: "${query}"`);
+    const regex = new RegExp(query, "gi");
 
-  // Loop over visible text nodes and highlight matches
-  // document.querySelectorAll("body *:not(script):not(style)").forEach(el => {
-  //   if (el.children.length === 0 && el.textContent.match(regex)) {
-  //     el.innerHTML = el.textContent.replace(regex, match => `<mark>${match}</mark>`);
-  //   }
-  // });
-
-  // Replace text content with highlighted spans
-  document.querySelectorAll('body *:not(script):not(style)').forEach(el => {
-    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-      const text = el.textContent;
-      if (text.match(regex)) {
-        el.innerHTML = text.replace(regex, match => `<mark>${match}</mark>`);
+    // Replace text content with highlighted spans
+    document.querySelectorAll('body *:not(script):not(style)').forEach(el => {
+      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+        const text = el.textContent;
+        if (text.match(regex)) {
+          el.innerHTML = text.replace(regex, match => `<mark>${match}</mark>`);
+        }
       }
+    });
+
+    // Scroll to first match
+    const firstHighlight = document.querySelector('mark');
+    if (firstHighlight) {
+      firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  }
+
+
+  // ----------------------------------------------------------------------
+  // ###########  BOOTSTRAP MODAL IMAGE HANDLING  ###########
+  // ----------------------------------------------------------------------
+  
+  const imageModalEl = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('imageModalLabel');
+
+  if (!imageModalEl || !modalImage || !modalTitle) {
+    console.error('❌ Modal elements not found in DOM');
+    return;
+  }
+
+  const preloadImage = (url) => new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = url;
   });
 
-  // Scroll to first match
-  // const first = document.querySelector("mark");
-  // if (first) first.scrollIntoView({ behavior: "smooth", block: "center" });
+  const handleModalClick = async (e) => {
+    const btn = e.target.closest('.modal-enlarge-btn');
+    if (!btn) return;
 
-   // Scroll to first highlighted item
-  const firstHighlight = document.querySelector('mark');
-  if (firstHighlight) {
-    firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+    const src = btn.dataset.imageSrc;
+    const alt = btn.dataset.imageAlt || 'Expanded image';
+    if (!src) return;
+
+    console.log('🖼️ Enlarge button clicked:', src);
+
+    try {
+      const loadedImg = await preloadImage(src);
+      modalImage.src = loadedImg.src;
+      modalImage.alt = alt;
+      modalTitle.textContent = alt;
+
+      // Apply inert to all siblings outside modal for accessibility
+      const siblings = Array.from(document.body.children).filter(el => el !== imageModalEl);
+      siblings.forEach(el => el.setAttribute('inert', ''));
+
+      const modalInstance = bootstrap.Modal.getInstance(imageModalEl) || new bootstrap.Modal(imageModalEl);
+
+      // Remove inert when modal closes
+      const removeInert = () => {
+        siblings.forEach(el => el.removeAttribute('inert'));
+        imageModalEl.removeEventListener('hidden.bs.modal', removeInert);
+      };
+      imageModalEl.addEventListener('hidden.bs.modal', removeInert);
+
+      modalInstance.show();
+      console.log('🔔 Modal opened successfully');
+    } catch (err) {
+      console.error('❌ Failed to load image:', src, err);
+    }
+  };
+
+  document.body.addEventListener('click', handleModalClick);
+
+  console.log('🛠️ Modal handler installed and ready');
+
 
 });
 

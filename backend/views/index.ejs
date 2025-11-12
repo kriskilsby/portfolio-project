@@ -82,217 +82,353 @@
             <!-- First card -->
             <div class="col-12 col-md-6 mb-4">
                 <div class="card border-0 shadow-sm">
-                    <div id="kkprofile" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <!-- <div id="kkprofile" class="carousel carousel-dark slide" data-bs-ride="carousel"> -->
+                    <div id="kkprofile" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kkprofile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kkprofile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kkprofile" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
                         <div class="carousel-inner">
                             <% 
-                            const slides = [
-                            { file: 'kk-photo-1', alt: 'Slide 1' },
-                            { file: 'kk-photo-2', alt: 'Slide 2' },
-                            { file: 'kk-photo-3', alt: 'Slide 3' }
+                            const slideskk = [
+                            { file: 'kk-photo-1', alt: 'First image of Kris Kilsby' },
+                            { file: 'kk-photo-2', alt: 'Second image of Kris Kilsby' },
+                            { file: 'kk-photo-3', alt: 'Third image of Kris Kilsby' }
                             ]; 
-                            slides.forEach((slide, index) => { 
+                            slideskk.forEach((slide, index) => { 
                             %>
-                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                                    <picture>
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.webp 400w,
-                                        /images/responsive/<%= slide.file %>-800.webp 800w,
-                                        /images/responsive/<%= slide.file %>-1200.webp 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.webp 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.webp 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/webp"
-                                    >
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.jpg 400w,
-                                        /images/responsive/<%= slide.file %>-800.jpg 800w,
-                                        /images/responsive/<%= slide.file %>-1200.jpg 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.jpg 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.jpg 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/jpeg"
-                                    >
-                                    <img 
-                                        src="/images/responsive/<%= slide.file %>-800.jpg" 
-                                        class="d-block w-100" 
-                                        alt="<%= slide.alt %>" 
-                                        loading="<%= index === 0 ? 'eager' : 'lazy' %>"
-                                    >
-                                    </picture>
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>    
                                 </div>
                             <% }) %>
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#kkprofile" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#kkprofile" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
                     </div>
 
                     <div class="card-body text-center position-relative">
+                        <a href="/profile" class="stretched-link" aria-label="View full profile page"></a>
                         <h5 class="card-title">Kris Kilsby - My Profile</h5>
                         <p class="card-text">
                             Learn a little about who I am, where I am from, what I enjoy doing, and what experiences I have gained.
                         </p>
-                        <a href="/profile" class="stretched-link" aria-label="View full profile page"></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Second card -->
+                <!-- Second card -->
+                <!-- <div class="col-12 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div id="kkMSc" class="carousel carousel-dark  carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <% 
+                                const slides2 = [
+                                { file: 'info-vis-1', alt: 'Slide 1' },
+                                { file: 'stork-1', alt: 'Slide 2' },
+                                { file: 'database-min-01', alt: 'Slide 3' }
+                                ]; 
+                                slides2.forEach((slide, index) => { 
+                                %>
+                                    <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+                                    </div>
+                                <% }) %>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#kkMSc" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#kkMSc" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="card-body text-center position-relative">
+                            <a href="profile#eduCollapseUEA" class="stretched-link" aria-label="View MSc Computing Science in profile"></a>
+                            <h5 class="card-title">MSc Computing Science</h5>
+                            <p class="card-text">
+                                A description about the course I have been studying, the modules I have completed, and the skills I have gained.  
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        
             <div class="col-12 col-md-6 mb-4">
                 <div class="card border-0 shadow-sm">
-                    <div id="kkexample2" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div id="kkMSc" class="carousel carousel-dark  carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
                         <div class="carousel-inner">
                             <% 
-                            const slides2 = [
-                            { file: 'info-vis-1', alt: 'Slide 1' },
-                            { file: 'stork-1', alt: 'Slide 2' },
-                            { file: 'database-min-01', alt: 'Slide 3' }
+                            const slidesMSc = [
+                            { file: 'info-vis-1', alt: 'Information Visualisation module final project' },
+                            { file: 'stork-1', alt: 'Stork movement data map for dissertation project' },
+                            { file: 'database-min-01', alt: 'Database Schema Diagram for Database Manipulation module' }
                             ]; 
-                            slides2.forEach((slide, index) => { 
+                            slidesMSc.forEach((slide, index) => { 
                             %>
-                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                                    <picture>
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.webp 400w,
-                                        /images/responsive/<%= slide.file %>-800.webp 800w,
-                                        /images/responsive/<%= slide.file %>-1200.webp 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.webp 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.webp 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/webp"
-                                    >
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.jpg 400w,
-                                        /images/responsive/<%= slide.file %>-800.jpg 800w,
-                                        /images/responsive/<%= slide.file %>-1200.jpg 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.jpg 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.jpg 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/jpeg"
-                                    >
-                                    <img 
-                                        src="/images/responsive/<%= slide.file %>-800.jpg" 
-                                        class="d-block w-100" 
-                                        alt="<%= slide.alt %>" 
-                                        loading="<%= index === 0 ? 'eager' : 'lazy' %>"
-                                    >
-                                    </picture>
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                            <source 
+                                                srcset="
+                                                /images/responsive/<%= slide.file %>-400.webp 400w,
+                                                /images/responsive/<%= slide.file %>-800.webp 800w,
+                                                /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                                /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                                /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                                "
+                                                sizes="(max-width: 576px) 100vw, 
+                                                        (max-width: 768px) 80vw,
+                                                        (max-width: 1200px) 45vw, 
+                                                        30vw"
+                                                type="image/webp"
+                                            >
+                                            <source 
+                                                srcset="
+                                                /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                                /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                                /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                                /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                                /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                                "
+                                                sizes="(max-width: 576px) 100vw, 
+                                                        (max-width: 768px) 80vw,
+                                                        (max-width: 1200px) 45vw, 
+                                                        30vw"
+                                                type="image/jpeg"
+                                            >
+                                            <img 
+                                                src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                                class="d-block w-100" 
+                                                alt="<%= slide.alt %>" 
+                                                loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                            >
+                                        </picture>
+
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>
                                 </div>
                             <% }) %>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#kkexample2" data-bs-slide="prev">
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#kkMSc" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#kkexample2" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#kkMSc" data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body text-center position-relative">
+                        <a href="profile#eduCollapseUEA" class="stretched-link" aria-label="View MSc Computing Science in profile"></a>
                         <h5 class="card-title">MSc Computing Science</h5>
                         <p class="card-text">
                             A description about the course I have been studying, the modules I have completed, and the skills I have gained.  
                         </p>
-                        <!-- <a href="/stork-app"  target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="View full profile page"></a> -->
-                        <a href="profile#eduCollapseUEA" class="stretched-link" aria-label="View MSc Computing Science in profile"></a>
-
-                    </div>
+                    </div>                     
                 </div>
             </div>
         </div>
-        
 
         <!-- Second row -->
         <div class="row">
             <!-- Third card -->
             <div class="col-12 col-md-6 mb-4">
                 <div class="card border-0 shadow-sm">
-                    <div id="kkexample3" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div id="kkStork" class="carousel carousel-dark carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kkStork" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kkStork" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kkStork" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
                          <div class="carousel-inner">
                             <% 
-                            const slides3 = [
-                            { file: 'stork-1', alt: 'Slide 1' },
-                            { file: 'stork-2', alt: 'Slide 2' },
-                            { file: 'stork-3', alt: 'Slide 3' }
+                            const slidesStork = [
+                            { file: 'stork-1', alt: 'Stork App user interface' },
+                            { file: 'stork-2', alt: 'Filter and map section of App' },
+                            { file: 'stork-3', alt: 'DataTables and Highcharts section' }
                             ]; 
-                            slides3.forEach((slide, index) => { 
+                            slidesStork.forEach((slide, index) => { 
                             %>
-                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                                    <picture>
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.webp 400w,
-                                        /images/responsive/<%= slide.file %>-800.webp 800w,
-                                        /images/responsive/<%= slide.file %>-1200.webp 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.webp 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.webp 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/webp"
-                                    >
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.jpg 400w,
-                                        /images/responsive/<%= slide.file %>-800.jpg 800w,
-                                        /images/responsive/<%= slide.file %>-1200.jpg 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.jpg 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.jpg 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/jpeg"
-                                    >
-                                    <img 
-                                        src="/images/responsive/<%= slide.file %>-800.jpg" 
-                                        class="d-block w-100" 
-                                        alt="<%= slide.alt %>" 
-                                        loading="<%= index === 0 ? 'eager' : 'lazy' %>"
-                                    >
-                                    </picture>
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+
+                                       <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>    
                                 </div>
                             <% }) %>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#kkexample3" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#kkStork" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#kkexample3" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#kkStork" data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-                    <div class="card-body text-center">
+                    <!-- <div class="card-body text-center">
                         <h5 class="card-title">Stork Migration Explorer</h5>
                         <p class="card-text">
-                            A little detail about why I did this project and what it meant to me. Ideally it needs to be around two lines of words.
+                            My MSc Computing Science dissertation project — an interactive tool for exploring stork movement data.
                         </p>
-                        <a href="/stork-app"  target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="View full profile page"></a>
+                        <a href="/stork-app"  target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="View the Stork App"></a>
+                    </div> -->
+
+                    <div class="card-body text-center position-relative">
+                        <a href="/stork-app" target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="View the Stork App"></a>
+                        <h5 class="card-title">Stork Migration Explorer</h5>
+                        <p class="card-text">
+                            My MSc Computing Science dissertation project — an interactive tool for exploring stork movement data.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -300,70 +436,88 @@
             <!-- Fourth card -->
             <div class="col-12 col-md-6 mb-4">
                 <div class="card border-0 shadow-sm">
-                    <div id="kkexample4" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div id="kkHotel" class="carousel carousel-dark carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kkHotel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kkHotel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kkHotel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#kkHotel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#kkHotel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
                          <div class="carousel-inner">
                             <% 
-                            const slides4 = [
-                            { file: 'hotel-1', alt: 'Slide 1' },
-                            { file: 'hotel-2', alt: 'Slide 2' },
-                            { file: 'hotel-3', alt: 'Slide 3' },
-                            { file: 'hotel-4', alt: 'Slide 4' },
-                            { file: 'hotel-5', alt: 'Slide 5' }
+                            const slidesHotel = [
+                            { file: 'hotel-1', alt: 'Hero section of the fictional Crown Hotel website' },
+                            { file: 'hotel-2', alt: 'Room details and booking page for the fictional Crown Hotel' },
+                            { file: 'hotel-3', alt: 'Contact page of the fictional Crown Hotel website' },
+                            { file: 'hotel-4', alt: 'Facilities and amenities section of the fictional Crown Hotel' },
+                            { file: 'hotel-5', alt: 'Local area information section of the fictional Crown Hotel' }
                             ]; 
-                            slides4.forEach((slide, index) => { 
+                            slidesHotel.forEach((slide, index) => { 
                             %>
-                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                                    <picture>
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.webp 400w,
-                                        /images/responsive/<%= slide.file %>-800.webp 800w,
-                                        /images/responsive/<%= slide.file %>-1200.webp 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.webp 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.webp 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/webp"
-                                    >
-                                    <source 
-                                        srcset="
-                                        /images/responsive/<%= slide.file %>-400.jpg 400w,
-                                        /images/responsive/<%= slide.file %>-800.jpg 800w,
-                                        /images/responsive/<%= slide.file %>-1200.jpg 1200w,
-                                        /images/responsive/<%= slide.file %>-1600.jpg 1600w,
-                                        /images/responsive/<%= slide.file %>-2400.jpg 2400w
-                                        "
-                                        sizes="(max-width: 576px) 100vw, 
-                                                (max-width: 768px) 80vw,
-                                                (max-width: 1200px) 45vw, 
-                                                30vw"
-                                        type="image/jpeg"
-                                    >
-                                    <img 
-                                        src="/images/responsive/<%= slide.file %>-800.jpg" 
-                                        class="d-block w-100" 
-                                        alt="<%= slide.alt %>" 
-                                        loading="<%= index === 0 ? 'eager' : 'lazy' %>"
-                                    >
-                                    </picture>
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+
+                                       <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>    
                                 </div>
                             <% }) %>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#kkexample4" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#kkHotel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#kkexample4" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#kkHotel" data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title">Group Project - The Crown Hotel</h5>
                         <p class="card-text">
-                            A short description of the Crown Hotel and confirm it was a group project, 
-                            coded with lots of lovely software packages.
+                            A group project for Website Development, where we built a fictional hotel booking and staff management web application.
                         </p>
                     </div>
                 </div>
@@ -372,16 +526,84 @@
 
     </section>
 
+    <!-- <section style="background: yellow; min-height: 200px;">
+        
+        <div class="container-fluid position-relative">
+                <h2 class="test-title" style="color: black; font-size: 2rem;">Is This Showing?</h2>
+            <button 
+            type="button" 
+            class="btn btn-dark position-absolute top-0 end-0 m-3 modal-enlarge-btn"
+            data-image-src="/images/responsive/stork-1-1200.jpg"
+            data-image-alt="Stork Movement Data Map Slide 2"
+            aria-label="View large image of Stork Movement Data Map Slide 2">
+            <i class="bi bi-arrows-fullscreen"></i>
+            </button>
+        </div> 
+        
+    </section> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Image Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="" id="modalImage" class="img-fluid w-100" alt="Enlarged view">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap bundle (with Popper) -->
+    <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Your modal logic -->
+    <!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('✅ DOM fully loaded for modal test');
+
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        if (!imageModal || !modalImage) {
+        console.error('❌ imageModal or modalImage not found in DOM');
+        return;
+        }
+
+        console.log('✅ Found modal elements, attaching listener...');
+
+        imageModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget;
+        const src = button?.getAttribute('data-image-src');
+        const alt = button?.getAttribute('data-image-alt') || 'Expanded image';
+
+        console.log('🖼️ Modal triggered with src:', src);
+        modalImage.src = src;
+        modalImage.alt = alt;
+        });
+    });
+    </script> -->
+
+
     <!-- <div id="footer-placeholder"></div> -->
     <%- include ('components/footer') %>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="/js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
+    
+    <!-- <script src="/js/main.js"></script> -->
 
     <!-- <script>
         document.documentElement.classList.remove("no-js");
     </script> -->
+
+
 
 </body>
 </html>
