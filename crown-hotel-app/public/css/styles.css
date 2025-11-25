@@ -1,0 +1,287 @@
+/* Global Styles */
+* {
+    font-family: 'Roboto', serif;
+}
+
+/* Hero Image - Responsive Sizes */
+#home {
+    background: url('/crown-hotel/resources/hero/hero_small.webp') center/cover no-repeat;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #home {
+        background-image: url('/crown-hotel/resources/hero/hero_medium.webp');
+    }
+}
+
+@media (min-width: 1200px) {
+    #home {
+        background-image: url('/crown-hotel/resources/hero/hero_large.webp');
+    }
+}
+
+@media (min-width: 1600px) {
+    #home {
+        background-image: url('/crown-hotel/resources/hero/hero_ultrasize.webp');
+    }
+}
+
+@media (min-width: 2560px) {
+    #home {
+        background-image: url('/crown-hotel/resources/hero/hero_4k.webp');
+    }
+}
+
+@media (min-width: 3840px) {
+    #home {
+        background-image: url('/crown-hotel/resources/hero/hero_max.webp');
+    }
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    color: #516054;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: #253026 !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #516054 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #253026 !important;
+    transform: scale(1.05);
+}
+
+/* Active Nav Links */
+.navbar-nav .nav-link.active {
+    background-color: #A4436B;
+    padding: 0.25rem 0.5rem;
+    margin-top: 0.25rem;
+    color: #ffffff !important;
+    border-radius: 10px;
+}
+
+/* Dropdown Menu */
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 1;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 0.9;
+    margin-top: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hide Dropdown Arrow */
+.navbar .dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Active Dropdown Item */
+.navbar .dropdown-menu a.dropdown-item.active {
+    background-color: #A4436B !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    font-weight: bolder;
+}
+
+/* Book Now Link */
+.navbar .book-now {
+    color: #8C375D !important;
+}
+
+/* Card Hover Effect */
+.card {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Titles */
+#about,
+#services h2 {
+    color: #516054;
+}
+
+#services h3 {
+    color: #b65646;
+}
+
+/* Contact Us Form */
+#contact-background {
+    background-color: #f8f9fa;
+  }
+  
+  @keyframes fadeInSlow {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  #contactForm {
+    animation: fadeInSlow 1.5s ease-in-out;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: #A4436B;
+    box-shadow: 0 0 0 0.2rem rgba(164, 67, 107, 0.25);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact h1::before {
+    content: '\2709\fe0f';
+    margin-right: 0.5rem;
+  }
+
+  
+/* Booking Form */
+#booking .container {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Footer */
+.bg-hotel-green {
+    background-color: #253026;
+    color: white;
+}
+
+/* Room Page */
+.learn-more-link {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.book-now-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    border: 1px solid #1c1c1c;
+    color: #1c1c1c;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+.book-now-btn:hover {
+    background-color: #b65646;
+    color: #fff;
+}
+
+/* Room Images */
+.carousel-inner {
+    height: 420px;
+}
+
+.carousel-inner img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Room Price */
+.room-price {
+    font-style: italic;
+    color: #b65646;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+/* Hero Overlay Text */
+.hero-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .hero-script {
+        font-size: 3.5rem;
+    }
+}
+
+/* Hero Button */
+.btn-hero {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-hero:hover {
+    background: #fff;
+    color: #A4436B;
+}
+
+/* Sticky Navbar Padding */
+body {
+    padding-top: 80px;
+}
+
+/* Weather Box Hover */
+.weather-box:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content { /* wrap all content above footer in this div */
+  flex: 1;
+  background-color: #f8f9fa;
+}

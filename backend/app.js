@@ -1,12 +1,21 @@
 const express = require('express');
 const path = require('path');
 
+
+// ----------------------------
+// Routers and apps
+// ----------------------------
+
+
 // Portfolio routers
 const indexRouter = require('./routes/index');
 
 // Stork app routers
 const storkCluster = require('../stork-app/frontend/routes/cluster');
 const storkMetadata = require('../stork-app/frontend/routes/metadata');
+
+// Crown Hotel app (Node/Express project)
+const crownHotelApp = require('../crown-hotel-app/server');
 
 const app = express();
 
@@ -20,13 +29,9 @@ const portfolioViews = path.join(__dirname, 'views');
 const storkAppPath = path.join(__dirname, '../stork-app/frontend');
 const storkViews = path.join(storkAppPath, 'views');
 
-// EJS setup for Portfolio
-// app.set('views', path.join(__dirname, 'views'));
-
 // Register *both* the portfolio and Stork view folders
 // This allows includes like <%- include('components/navbar') %> to work in either app
 app.set('views', [portfolioViews, storkViews]);
-
 app.set('view engine', 'ejs');
 
 
@@ -44,6 +49,15 @@ app.use('/stork-app', express.static(storkPublic));
 
 
 // ----------------------------
+// Mount Crown Hotel app
+// ----------------------------
+app.use('/crown-hotel', crownHotelApp);   // All Crown Hotel routes are now under /crown-hotel
+
+// app.use('/', crownHotelApp);   // Mount Crown Hotel at root
+
+
+
+// ----------------------------
 // Stork App Setup
 // ----------------------------
 
@@ -52,13 +66,7 @@ app.use('/stork-app/api/cluster', storkCluster);
 app.use('/stork-app/api/metadata', storkMetadata);
 
 
-// Route to render Stork index.ejs
-// app.get('/stork-app', (req, res) => {
-//   res.render(path.join(storkViews, 'index.ejs'));
-// });
-// app.get('/stork-app', (req, res) => {
-//   res.render('index', { page: 'stork-app' });
-// });
+
 // Main Stork page
 app.get('/stork-app', (req, res) => {
   res.render(path.join(storkViews, 'index.ejs'), { page: 'stork-app' });
@@ -78,6 +86,8 @@ app.use('/', indexRouter);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Homepage running at http://localhost:${PORT}`);
+  console.log(`Crown Hotel available at http://localhost:${PORT}/`);
+  console.log(`Stork App available at http://localhost:${PORT}/stork-app`);
 });
 
 

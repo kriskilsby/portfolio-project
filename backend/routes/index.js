@@ -24,6 +24,17 @@ router.get('/profile', (req, res) => {
 });
 
 
+// Crownhotel launch page
+router.get('/launch-hotel', (req, res) => {
+  res.render('launch-hotel', { page: 'launch-hotel', title: 'Launch Hotel App' });
+});
+
+
+// Crownhotel launch page
+// router.get('/crown-hotel', (req, res) => {
+//   res.render('crown-hotel', { page: 'index', title: 'Crown Hotel Website' });
+// });
+
 // Temporary test page (for modal debugging) NOW REMOVED
 // router.get('/doesthiswork', (req, res) => {
 //   res.render('doesthiswork', { page: 'doesthiswork', title: 'doesthiswork' });

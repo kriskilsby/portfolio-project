@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html lang="en" class="no-js">
+
+<head>
+    <!-- Add Head component -->
+    <%- include ('components/head') %>
+    <title>Crown Hotel App Connection</title>
+</head>
+
+<body class="<%= page %>">
+  <!-- <body> -->
+  <header>
+      <!-- Navbar -->
+      <%- include ('components/navbar') %>
+  </header>
+
+  <div class="container px-0 px-md-0 mb-2">
+    <div class="hotel-links row g-3">
+      <!-- Project Card 1 -->
+      <div class="col-12 col-md-6 col-xl-6 py-md-2">
+        <div class="card-showcase shadow-sm border-0 rounded-5 h-100">
+          <div class="card-body link-card d-flex flex-column text-center">
+            <h5 class="card-title mb-2">View Crown Hotel Public Website</h5>
+            <p class="card-text small text-muted mb-3">
+                The public-facing website provides a demonstration, of how guests interact with 
+                the Crown Hotel online. It includes example pages for browsing rooms, viewing 
+                hotel information, and navigating the booking process. The interface replicates 
+                a modern hotel website, and showcases the visual design, and guest-facing user 
+                experience of the system.
+            </p>
+            <!-- Button container -->
+            <div class="mt-auto d-flex justify-content-center flex-wrap gap-2 pt-3">
+                <a href="/crown-hotel"  target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm me-2" 
+                    aria-label="View full profile page">
+                    <strong>Start Website</strong>
+                </a>
+                <a href="https://github.com/kriskilsby/portfolio-project" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm"
+                    aria-label="View project on GitHub">
+                    <strong>View on GitHub</strong>
+                </a>
+            </div>
+          </div>
+        </div>   
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="col-12 col-md-6 col-xl-6">
+        <div class="card-showcase shadow-sm border-0 rounded-5 h-100">
+          <div class="card-body link-card d-flex flex-column text-center">
+            <h5 class="card-title mb-2">Access Crown Hotel Staff Applications</h5>
+            <p class="card-text small text-muted mb-3">
+                The staff application suite simulates the internal tools used by hotel employees, 
+                including reception, housekeeping, and management. Each module demonstrates key 
+                operational features such as booking management, room allocation, cleaning workflows, 
+                and daily activity tracking. The interfaces are interconnected to simulate how different 
+                staff roles, collaborate through digital hotel systems.
+            </p>
+
+            <!-- Demo Buttons -->
+            <div class="mt-auto d-flex justify-content-center flex-wrap gap-2 pt-3">
+              <button type="button" class="btn btn-outline-primary btn-sm launch-hotel-btn" data-target="/crown-hotel/staff/reception/demo"><strong>Reception Portal</strong></button>
+              <button type="button" class="btn btn-outline-dark btn-sm launch-hotel-btn" data-target="/crown-hotel/staff/housekeeping/demo"><strong>Housekeeping App</strong></button>
+              <button type="button" class="btn btn-outline-success btn-sm launch-hotel-btn" data-target="/crown-hotel/staff/management/demo"><strong>Management Dashboard</strong></button>
+            </div>
+
+            <!-- Demo Login Animation Overlay -->
+            <div id="demoLoginOverlay" class="demo-login-overlay d-none">
+              <div class="demo-login-box">
+                <h5 class="mb-3">Signing in…</h5>
+                <div class="demo-field">
+                  <label>Username</label>
+                  <div id="demoUserType" class="demo-input"></div>
+                </div>
+                <div class="demo-field mt-2">
+                  <label>Password</label>
+                  <div id="demoPassType" class="demo-input"></div>
+                </div>
+                <div class="demo-spinner mt-3"></div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- NEW SECTION BELOW -->
+  <section class="hotel-accordion-section bg-light">
+    <div class="container px-2 px-md-3">
+      <!-- hotel-app Overview Section -->
+      <h2 class="px-3 mb-2">Crown Hotel App Overview</h2>
+      <p class="px-3 mb-4">
+        Explore the details below to learn more about the Crown Hotel project and its implementation. 
+        This is a demonstration website and is not intended to represent a real hotel.
+      </p>
+
+      <!-- Technology Stack Overview -->
+      <div class="tech-stack-summary px-3 mb-4 ms-2">
+        <h5 class="fw-semibold mb-3">Technology Stack</h5>
+        <ul class="list-inline small mb-0 ms-2">
+          <li class="list-inline-item mb-1"><strong>Frontend:</strong> JavaScript, EJS, HTML5, CSS (Bootstrap 5), DataTables</li><br>
+          <li class="list-inline-item mb-1"><strong>Backend:</strong> Node.js with Express and NPM, PostgreSQL</li><br>
+          <li class="list-inline-item"><strong>Version Control & Tools:</strong> GitHub, VS Code</li>
+        </ul>
+      </div>
+
+
+      <div class="accordion" id="hotelappAccordion">
+        <!-- About the team -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hotelappHeadingZero">
+            <button class="accordion-button d-flex justify-content-between" type="button" data-bs-toggle="collapse"
+              data-bs-target="#hotelappCollapseZero" aria-expanded="true"
+              aria-controls="hotelappCollapseZero">
+              About the Team
+            </button>
+          </h2>
+          <div id="hotelappCollapseZero" class="accordion-collapse collapse show"
+            aria-labelledby="hotelappHeadingZero" data-bs-parent="#hotelappAccordion">
+            <div class="accordion-body">
+              <p>
+                This project was developed collaboratively by a team of three as part of the Web Development 
+                module in the MSc Computer Science program, showcasing full-stack development skills and teamwork.
+              </p>
+              <!-- Project showcase -->
+              <div class="project-showcase container mt-4">
+                  <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-xl-3 align-items-stretch">
+
+                      <!-- Project Card 1 -->
+                      <div class="col d-flex">
+                          <div class="card-showcase shadow-sm border-0 rounded-5 flex-fill d-flex flex-column">
+                              <div class="card-body d-flex flex-column">
+                                  <!-- Heading section -->
+                                  <div class="d-flex flex-column justify-content-center text-center mb-3">
+                                    <h4 class="fw-bold mb-2 mt-2">Allen Abraham</h4>
+                                    <h6 class="text-muted mb-3">Lead on Front End</h6>
+                                  </div>  
+                                  <!-- <p class="card-text small text-muted mb-3">
+                                      Add text.
+                                  </p> -->
+                                  <ul class="list-unstyled text-start flex-fill mt-1 mb-1">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Setup project structure
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Implement responsive design
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Develop homepage with information
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Email & Notification System
+                                    </li>
+                                                                        <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Reporting & Admin Features
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Build payment input form
+                                    </li>
+                                  </ul>
+                                  <!-- Button container -->
+                                  <div class="mt-auto d-flex justify-content-center flex-wrap gap-2 pt-3">
+                                      <a href="https://www.linkedin.com/in/allenabraham01" target="_blank"
+                                        rel="noopener" class="btn btn-outline-primary btn-sm me-2" 
+                                          aria-label="link to Allen Abraham profile"><strong>Linkedin Profile</strong>
+                                      </a>                                       
+                                  </div>
+                              </div>
+                          </div>    
+                      </div>
+
+                      <!-- Project Card 2 -->
+                      <div class="col d-flex">
+                          <div class="card-showcase shadow-sm border-0 rounded-5 flex-fill d-flex flex-column">
+                              <div class="card-body d-flex flex-column">
+                                  <!-- Heading section -->
+                                  <div class="d-flex flex-column justify-content-center text-center mb-3">                                
+                                    <h4 class="fw-bold mb-2 mt-2">Michael Denmead</h4>
+                                    <h6 class="text-muted mb-3">Lead on Server Side</h6>
+                                  </div>
+                                
+                                  <!-- <p class="card-text small text-muted mb-3">
+                                      Add text.
+                                  </p> -->
+                                  <ul class="list-unstyled text-start flex-fill mt-1 mb-1">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Set up Node.js server
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Connect to PostgreSQL database
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Develop API endpoints
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Implement booking logic
+                                    </li>
+                                                                        <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Develop payment functionality
+                                    </li>
+                                  </ul>
+                                  <!-- Button container -->
+                                  <div class="mt-auto d-flex justify-content-center flex-wrap gap-2 pt-3">
+                                      <a href="https://www.linkedin.com/in/mdenmead" target="_blank"
+                                        rel="noopener" class="btn btn-outline-primary btn-sm me-2" 
+                                          aria-label="link to Michael Denmead profile"><strong>Linkedin Profile</strong>
+                                      </a>                                     
+                                  </div>
+                              </div>
+                          </div>    
+                      </div>
+                      <!-- Project Card 3 -->
+                      <div class="col d-flex col-md-12">
+                          <div class="card-showcase shadow-sm border-0 rounded-5 flex-fill d-flex flex-column">
+                              <div class="card-body d-flex flex-column">
+                                  <!-- Heading section -->
+                                  <div class="d-flex flex-column justify-content-center text-center mb-3">                                
+                                    <h4 class="fw-bold mb-2 mt-2">Kris Kilsby</h4>
+                                    <h6 class="text-muted mb-3">Lead on Systems Implementation</h6>
+                                  </div>
+                                  <!-- <p class="card-text small text-muted mb-3">
+                                      Add text.
+                                  </p> -->
+                                  <ul class="list-unstyled text-start flex-fill mt-1 mb-1">
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Create booking page with date selection
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Create housekeeping dashboard
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Develop functionality for modifying existing bookings
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Security & Data Protection
+                                    </li>
+                                                                        <li>
+                                        <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Deployment & Finalisation
+                                    </li>
+                                  </ul>
+                                  <!-- Button container -->
+                                  <div class="mt-auto d-flex justify-content-center flex-wrap gap-2 pt-3">
+                                      <a href="https://www.linkedin.com/in/kriskilsby" target="_blank"
+                                        rel="noopener" class="btn btn-outline-primary btn-sm me-2" 
+                                          aria-label="link to Kris Kilsby profile"><strong>Linkedin Profile</strong>
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>    
+                      </div>
+
+                  </div>
+              </div>
+              <!-- End project showcase -->
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- About the Project & Purpose -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hotelappHeadingOne">
+            <button class="accordion-button d-flex justify-content-between collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#hotelappCollapseOne" aria-expanded="false"
+              aria-controls="hotelappCollapseOne">
+              About the Project & Purpose
+            </button>
+          </h2>
+          <div id="hotelappCollapseOne" class="accordion-collapse collapse"
+            aria-labelledby="hotelappHeadingOne" data-bs-parent="#hotelappAccordion">
+            <div class="accordion-body">
+              <p>
+                The <strong>Crown Hotel</strong> web application is a full-stack project developed for a Web Development module in the MSc Computer Science program. 
+                It demonstrates a complete hotel management system for both guests and staff.
+              </p>
+              <ul>
+                <li>Allow customers to explore hotel facilities and local attractions.</li>
+                <li>Check room availability, make bookings, and receive confirmations.</li>
+                <li>Enable staff to check guests in/out, update room status, and manage housekeeping.</li>
+                <li>Generate occupancy and revenue reports for management.</li>
+                <li>Mobile-friendly, responsive, and optimised for usability and efficiency.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Functional & Technical Requirements -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hotelappHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#hotelappCollapseTwo" aria-expanded="false"
+              aria-controls="hotelappCollapseTwo">
+              Functional & Technical Requirements
+            </button>
+          </h2>
+          <div id="hotelappCollapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="hotelappHeadingTwo" data-bs-parent="#hotelappAccordion">
+            <div class="accordion-body">
+            
+              <p>
+                The system supports customers, reception staff, housekeeping, and management through dedicated functionality:
+              </p>
+              <ul>
+                <li><strong>Customers:</strong> View hotel info, book rooms, input payment details, receive confirmation.</li>
+                <li><strong>Reception Staff:</strong> Check guests in/out, update room status, process payments.</li>
+                <li><strong>Housekeeping:</strong> View rooms needing cleaning, update status.</li>
+                <li><strong>Additional Features:</strong> Modify bookings, generate occupancy/revenue reports.</li>
+              </ul>
+
+              <p>
+                Technical stack:
+              </p>
+              <ul>
+                <li><strong>Frontend:</strong> HTML5, CSS, JavaScript, Bootstrap 5, DataTables.</li>
+                <li><strong>Backend:</strong> Node.js with Express framework.</li>
+                <li><strong>Database:</strong> PostgreSQL.</li>
+                <li><strong>Tools:</strong> GitHub, VS Code, Trello.</li>
+                <li><strong>Security:</strong> Input validation, secure handling of payment data.</li>
+                <li><strong>Responsive Design:</strong> Mobile-first, CSS Grid & Flexbox, touch-friendly interactions.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Frontend, Visualisation & Performance -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hotelappHeadingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#hotelappCollapseFour" aria-expanded="false"
+              aria-controls="hotelappCollapseFour">
+              Frontend, Visualisation & Performance
+            </button>
+          </h2>
+          <div id="hotelappCollapseFour" class="accordion-collapse collapse"
+            aria-labelledby="hotelappHeadingFour" data-bs-parent="#hotelappAccordion">
+            <div class="accordion-body">
+              <p>
+                The frontend offers a responsive, interactive interface built with <strong>Bootstrap</strong> and JavaScript.
+              </p>
+              <ul>
+                <li>Staff applications include Reception, Housekeeping, and Management dashboards with intuitive layouts.</li>
+                <li>Interactive elements include booking forms, room status updates, and occupancy reports.</li>
+                <li>Filtering and navigation across modules is optimised for smooth performance.</li>
+                <li>Fully responsive design and accessibility considerations integrated throughout.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+   <!-- <div id="footer-placeholder"></div> -->
+  <%- include ('components/footer') %>
+
+    <script>
+    // Demo login animation and automatic login
+    function demoLogin() {
+      const overlay = document.getElementById("demoLoginOverlay");
+      overlay.classList.remove("d-none");
+
+      const btn = event.currentTarget;
+      let username = "demo_user";
+
+      if (btn.dataset.target.includes("reception")) username = "receptionist";
+      else if (btn.dataset.target.includes("housekeeping")) username = "housekeeper";
+      else if (btn.dataset.target.includes("management")) username = "manager";
+
+      const password = "Demo123!";
+      const userField = document.getElementById("demoUserType");
+      const passField = document.getElementById("demoPassType");
+
+      let i = 0;
+
+      // Type username
+      const typeUser = setInterval(() => {
+        userField.textContent = username.slice(0, i);
+        i++;
+        if (i > username.length) {
+          clearInterval(typeUser);
+          let j = 0;
+
+          // Type password bullets
+          const typePass = setInterval(() => {
+            passField.textContent = "•".repeat(j);
+            j++;
+            if (j > password.length) {
+              clearInterval(typePass);
+
+              // After typing animation, POST to /login
+              setTimeout(async () => {
+                try {
+                  const response = await fetch('/crown-hotel/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                  });
+
+                  if (response.redirected) {
+                    // Navigate to the URL your server redirected to
+                    window.location.href = response.url;
+                  } else {
+                    console.error('❌ Demo login failed');
+                    overlay.classList.add("d-none");
+                  }
+                } catch (err) {
+                  console.error('❌ Error during demo login fetch', err);
+                  overlay.classList.add("d-none");
+                }
+              }, 600);
+            }
+          }, 100); // Adjust typing speed here
+        }
+      }, 100); // Adjust typing speed here
+    }
+
+    // Attach click listeners to demo buttons
+    document.querySelectorAll(".launch-hotel-btn").forEach(btn => {
+      btn.addEventListener("click", demoLogin);
+    });
+  </script>
+
+
+
+</body>
+
+</html>

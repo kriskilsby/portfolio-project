@@ -1,0 +1,274 @@
+<!-- crown-hotel reception-detail ejs -->
+
+<%- include('header', { title: 'Booking Details'}) %>
+<%- include('../partials/navbar-staff') %>
+
+<main class="container my-4 flex-grow-1 reception-details mt">
+  <h2 class="mb-4">Edit Booking - Ref <%= booking.b_ref %></h2>
+
+  <% if (req.query.updated) { %>
+    <div class="alert alert-success">Booking updated successfully!</div>
+  <% } %>
+  <% if (req.query.error) { %>
+    <div class="alert alert-danger">Failed to update booking. Please try again.</div>
+  <% } %>
+  <% if (req.query.extraError) { %>
+    <div class="alert alert-danger"><%= req.query.extraError %></div>
+  <% } %>
+  <% if (req.query.extraAdded) { %>
+    <div class="alert alert-success">Extra added successfully!</div>
+  <% } %>
+
+  <!-- Main Booking Update Form -->
+  <form method="POST" action="/crown-hotel/staff/reception/booking/<%= booking.b_ref %>/update" class="reception-form">
+
+    <!-- Customer Details -->
+    <h4>Customer Details</h4>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="c_name" value="<%= booking.c_name %>" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="c_email" value="<%= booking.c_email %>" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <input type="text" class="form-control" name="c_address" value="<%= booking.c_address || '' %>" required>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Card Type</label>
+        <select class="form-control" name="c_cardtype" required>
+          <option value="V" <%= booking.c_cardtype === 'V' ? 'selected' : '' %>>Visa</option>
+          <option value="MC" <%= booking.c_cardtype === 'MC' ? 'selected' : '' %>>MasterCard</option>
+          <option value="A" <%= booking.c_cardtype === 'A' ? 'selected' : '' %>>Amex</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Card Expiry (MM/YY)</label>
+        <input type="text" class="form-control" name="c_cardexp" value="<%= booking.c_cardexp %>" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Card Number</label>
+        <input type="text" class="form-control" name="c_cardno" value="<%= booking.c_cardno %>" required>
+      </div>
+    </div>
+
+    <!-- Booking Summary -->
+    <h3 class="mt-4">Booking Summary</h3>
+    <table class="table table-bordered w-auto">
+      <tbody>
+        <tr>
+          <th>Total Booking Cost for Rooms (£):</th>
+          <td><span id="room-cost"><%= bookingTotal %></span></td>
+        </tr>
+        <tr>
+          <th>Total Extras Cost (£):</th>
+          <td><span id="extras-cost"><%= extrasTotal %></span></td>
+        </tr>
+        <tr>
+          <th>Final Payment Amount (£):</th>
+          <td>
+            <strong>
+              <span id="final-cost">
+                <% if (booking.b_paid) { %>
+                  <%= Number(booking.b_payment).toFixed(2) %>
+                <% } else { %>
+                  <%= (bookingTotal + extrasTotal).toFixed(2) %>
+                <% } %>
+              </span>
+            </strong>
+            <% if (booking.b_paid) { %>
+              <span class="badge bg-success ms-2">Paid</span>
+            <% } %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Rooms on This Booking table -->
+    <input type="hidden" id="booking-id" value="<%= booking.b_ref %>">
+    <h3 class="mt-4">Rooms on This Booking</h3>
+    <div class="table-responsive mt-4">
+      <table id="relatedRoomsTable" class="table table-striped display nowrap" style="width:100%">
+        <thead>
+          <tr>
+            <th>Room No</th>
+            <th>Room Type</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Guests</th>
+            <th>Nights</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Populated dynamically by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Room Details -->
+    <h4 class="mt-4">Room Details</h4>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Room Number</label>
+        <select id="room-selector" class="form-control" name="room">
+          <option value="" disabled>Select Room</option>
+          <% rooms.forEach(room => { %>
+            <option value="<%= room.r_no %>" <% if (room.r_no === booking.r_no) { %> selected <% } %>>
+              <%= room.r_no %> - <%= room.r_class %>
+            </option>
+          <% }) %>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Check-In Date</label>
+        <input type="text" class="form-control" name="checkin" id="reception-checkin" value="<%= booking.check_in %>" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Check-Out Date</label>
+        <input type="text" class="form-control" name="checkout" id="reception-checkout" value="<%= booking.check_out %>" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Number of Nights</label>
+        <input type="number" class="form-control" id="nights" value="<%= booking.nights %>" readonly>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Number of Guests</label>
+        <select id="guests-selector" class="form-control" name="guests">
+          <option value="1" <% if (booking.guests === 1) { %> selected <% } %>>1 Guest</option>
+          <option value="2" <% if (booking.guests === 2) { %> selected <% } %>>2 Guests</option>
+        </select>
+      </div>
+    </div>
+
+     <!-- Save changes to record button -->   
+    <div class="d-flex justify-content-between mt-4">
+      <button type="submit" class="btn btn-primary me-2 px-4 py-2">Save Changes</button>
+      <a href="/crown-hotel/staff/reception" class="btn btn-secondary ms-2 px-4 py-2">Back</a>
+    </div>
+  </form>
+
+
+  <!-- Extras table for booking reference, including add/delete record to PostgreSQL Extras table -->
+  <h3 class="mt-4">Extras</h3>
+  <% if (extras && extras.length > 0) { %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Cost (£)</th>
+          <th>Added At</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% extras.forEach(extra => { %>
+          <tr>
+            <td><%= extra.description %></td>
+            <td><%= Number(extra.e_cost).toFixed(2) %></td>
+            <td><%= new Date(extra.added_at).toLocaleString() %></td>
+            <td>
+              <form action="/crown-hotel/staff/reception/extras/delete" method="POST" onsubmit="return confirm('Remove this extra?');">
+                <input type="hidden" name="e_id" value="<%= extra.e_id %>" style="display:inline;">
+                <button type="submit" class="btn btn-delete">🗑 Remove</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    
+  <% } else { %>
+    <p><em>No extras have been added to this booking.</em></p>
+  <% } %>
+
+  <!-- Add Extra Form -->
+  <h3 class="mt-4">Add Extra</h3>
+  <form action="/crown-hotel/staff/reception/extras/add" method="POST" class="reception-form" id="add-extra-form">
+    <input type="hidden" name="b_ref" value="<%= booking.b_ref %>">
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" name="description" id="description" required>
+    </div>
+    <div>
+      <label for="e_cost">Cost (£):</label>
+      <input type="number" name="e_cost" id="e_cost" step="0.01" required>
+    </div>
+    <button type="submit">Add Extra</button>
+  </form>
+
+  <!-- Payment Section Form -->
+  <% if (autoCheckoutAndPay || canProcessPayment) { %>
+    <form action="/crown-hotel/staff/reception/take-payment" method="POST" class="mt-4" id="payment-form"
+          data-cost="<%= booking.b_cost %>"
+          data-extras="<%= extras.reduce((sum, e) => sum + parseFloat(e.e_cost || 0), 0) %>">
+      <input type="hidden" name="b_ref" value="<%= booking.b_ref %>">
+      <!-- <button type="submit" class="btn <%= autoCheckoutAndPay ? 'btn-success' : 'btn-primary' %>"> -->
+      <button type="submit" class="btn btn-payment">
+        <%= autoCheckoutAndPay ? 'Take Payment and Check-Out' : '💳 Take Payment' %>
+      </button>
+    </form>
+  <% } else if (req.query.paid) { %>
+    <div class="alert alert-success mt-3">Payment recorded successfully!</div>
+  <% } else { %>
+    <p class="mt-3">This booking is not ready for payment yet.</p>
+  <% } %>
+
+  
+</main>
+
+<!-- JavaScript Payment Section (Could not get this to work without inline code) -->
+<script>
+  const paymentForm = document.querySelector('#payment-form');
+  if (paymentForm) {
+    paymentForm.addEventListener('submit', function(event) {
+      // Calculate total cost (room cost + extras)
+      const totalCost = parseFloat(paymentForm.dataset.cost) + 
+                        parseFloat(paymentForm.dataset.extras);
+
+      // Confirm payment
+      if (!confirm(`Confirm payment of £${totalCost.toFixed(2)}?`)) {
+        event.preventDefault();  // Prevent form submission if user cancels
+      }
+    });
+  }
+</script>
+
+<!-- jQuery and DataTables -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<!-- DataTables Responsive CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+
+<!-- DataTables Responsive JS -->
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+<!-- Custom Dashboard JS -->
+<script src="/crown-hotel/staff/js/reception-detail.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/crown-hotel/staff/js/reception-calendar.js" defer></script>
+
+
+<%- include('../partials/footer-staff') %>
+

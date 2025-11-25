@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('public/partials/head') %>
+</head>
+
+<body class="d-none">
+    <!-- Navbar -->
+    <%- include('public/partials/navbar') %>
+
+        <!-- Hero Section -->
+    <section id="home" class="text-white text-center">
+        <div class="container">
+        <h1 class="hero-script">Discover Effortless Luxury</h1>
+        <a href="booking" class="btn btn-hero">Book Your Stay</a>
+    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p class="text-center">The Crown Hotel is an independent paradise of luxury and style, conveniently located near the hospital and research park. With 32 double or twin rooms, in both standard and superior options—we can adapt your stay to your unique needs. Aside from our relaxing rooms, you'll discover a well-equipped gym, a friendly bar, and a restaurant serving outstanding, locally produced food. Our three versatile event rooms provide an ideal location for meetings and special occasions. In the heart of the City of Stories, every guest who stays with us shapes Norwich's unique story. Whether you're here for work or pleasure, let The Crown Hotel be your next chapter of luxury and relaxation.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="gym" class="text-decoration-none">
+                        <div class="card border-0 shadow-sm">
+                            <div class="ratio ratio-4x3">
+                                <picture>
+                                    <source srcset="resources/smallscreen/index/gym4x3-sml.webp" media="(max-width: 992px)">
+                                    <source srcset="resources/largescreen/index/gym4x3-lrg.webp" media="(min-width: 993px)">
+                                    <img src="resources/largescreen/index/gym4x3-lrg.webp" class="img-fluid" alt="Gym" loading="lazy" width="640" height="480">
+                                </picture>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5">Gym</h3>
+                                <p>A fully equipped fitness space to meet all your goals</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="bar" class="text-decoration-none">
+                        <div class="card border-0 shadow-sm">
+                            <div class="ratio ratio-4x3">
+                                <picture>
+                                    <source srcset="resources/smallscreen/index/bar4x3-sml.webp" media="(max-width: 992px)">
+                                    <source srcset="resources/largescreen/index/bar4x3-lrg.webp" media="(min-width: 993px)">
+                                    <img src="resources/largescreen/index/bar4x3-lrg.webp" class="img-fluid" alt="Bar" loading="lazy" width="640" height="480">
+                                </picture>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5">Bar</h3>
+                                <p>Premium drinks hand crafted by our expert mixologists</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="restaurant" class="text-decoration-none">
+                        <div class="card border-0 shadow-sm">
+                            <div class="ratio ratio-4x3">
+                                <picture>
+                                    <source srcset="resources/smallscreen/index/restaurant4x3-sml.webp" media="(max-width: 992px)">
+                                    <source srcset="resources/largescreen/index/restaurant4x3-lrg.webp" media="(min-width: 993px)">
+                                    <img src="resources/largescreen/index/restaurant4x3-lrg.webp" class="img-fluid" alt="Restaurant" loading="lazy" width="640" height="480">
+                                </picture>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5">Restaurant</h3>
+                                <p>Delicious meals from locally sourced and fresh ingredients</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="conference" class="text-decoration-none">
+                        <div class="card border-0 shadow-sm">
+                            <div class="ratio ratio-4x3">
+                                <picture>
+                                    <source srcset="resources/smallscreen/index/conference4x3-sml.webp" media="(max-width: 992px)">
+                                    <source srcset="resources/largescreen/index/conference4x3-lrg.webp" media="(min-width: 993px)">
+                                    <img src="resources/largescreen/index/conference4x3-lrg.webp" class="img-fluid" alt="Conference" loading="lazy" width="640" height="480">
+                                </picture>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5">Event Rooms</h3>
+                                <p>Spacious rooms for holding all special occasions and events</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer loads dynamically -->
+    <%- include('public/partials/footer') %>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+
+</body>
+</html>

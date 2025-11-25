@@ -378,7 +378,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log('🛠️ Modal handler installed and ready');
 
+  // ----------------------------------------------------------------------
+  // ###########  AUTO TYPING SIMULATED LOGIN HANDLING  ###########
+  // ----------------------------------------------------------------------
 
+  // function demoLogin(targetUrl) {
+  //   // Show animation overlay
+  //   const overlay = document.getElementById("demoLoginOverlay");
+  //   overlay.classList.remove("d-none");
+
+  //   // Determine username for animation based on URL
+  //   let username = "demo_user";
+  //   if (targetUrl.includes("reception")) username = "receptionist";
+  //   else if (targetUrl.includes("housekeeping")) username = "housekeeper";
+  //   else if (targetUrl.includes("management")) username = "manager";
+
+  //   const password = "Demo123!";
+  //   const userField = document.getElementById("demoUserType");
+  //   const passField = document.getElementById("demoPassType");
+
+  //   let i = 0;
+
+  //   // Type username
+  //   const typeUser = setInterval(() => {
+  //     userField.textContent = username.slice(0, i);
+  //     i++;
+
+  //     if (i > username.length) {
+  //       clearInterval(typeUser);
+  //       let j = 0;
+
+  //       // Type password bullets
+  //       const typePass = setInterval(() => {
+  //         passField.textContent = "•".repeat(j);
+  //         j++;
+
+  //         if (j > password.length) {
+  //           clearInterval(typePass);
+
+  //           // Open the staff app after short delay
+  //           setTimeout(() => {
+  //             window.open(targetUrl, "_blank", "noopener");
+  //             overlay.classList.add("d-none");
+  //             userField.textContent = "";
+  //             passField.textContent = "";
+  //           }, 600);
+  //         }
+  //       }, 70);
+  //     }
+  //   }, 70);
+  // }
 });
 
 

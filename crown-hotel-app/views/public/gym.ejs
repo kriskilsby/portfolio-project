@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('public/partials/head', { title: title }) %>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <%- include('public/partials/navbar') %>
+
+    <!-- Conference Section -->
+    <section id="gym" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Gym & Sports Facilities</h2>
+            <p class="text-center lead">Elite facilities. Energised body. Clear mind.</p>
+
+            <!-- Gym (Carousel with text beside it) -->
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="row d-flex flex-column flex-md-row align-items-center">
+                        <div class="col-12 col-md-6">
+                            <div id="gymCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <!-- First Carousel Item -->
+                                    <div class="carousel-item active">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_gym_sml.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_gym_lrg.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_gym_lrg.jpg" class="d-block w-100 object-fit-cover" alt="Luxury Gym" loading="eager" width="630" height="420">
+                                        </picture>
+                                    </div>
+    
+                                    <!-- Second Carousel Item -->
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_gym_running_women_sml.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_gym_running_women_lrg.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_gym_running_women_lrg.jpg" class="d-block w-100 object-fit-cover" alt="Running" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+    
+                                    <!-- Third Carousel Item -->
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_gym_weights_man_sml.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_gym_weights_man_lrg.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_gym_weights_man_lrg.jpg" class="d-block w-100 object-fit-cover" alt="Weights" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#gymCarousel" data-bs-slide="prev" aria-label="Previous">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#gymCarousel" data-bs-slide="next" aria-label="Next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 text-center text-md-start p-3 p-md-4">
+                            <h4 class="text-left mb-4">The Gym</h4>
+                            <h5 class="mb-3">Premier Fitness Experience</h5>
+                            <p>Push your limits in our fully equipped gym, designed to elevate your workout experience with cutting-edge equipment and a serene, inspiring ambiance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pool (Carousel with text beside it - flipped layout) -->
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="row d-flex flex-column flex-md-row w-100">
+                        <!-- Text (LEFT on desktop) -->
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-end text-end p-3 p-md-4 order-md-1">
+                                <div class="text-wrapper" style="max-width: 500px;">
+                                    <h4 class="mb-4">Indoor Pool</h4>
+                                    <h5 class="mb-3">Dive into Luxury</h5>
+                                    <p>A serene oasis where countryside charm meets elegant relaxation. Unwind by our heated pool and let the peaceful views soothe your senses.</p>
+                                </div>
+                            </div>
+
+                        <!-- Carousel (RIGHT on desktop) -->
+                        <div class="col-12 col-md-6 order-md-2">
+                            <div id="poolCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <!-- First Carousel Item -->
+                                    <div class="carousel-item active">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_luxury_pool_sml1.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_luxury_pool_lrg1.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_luxury_pool_lrg1.jpg" class="d-block w-100 object-fit-cover" alt="Pool-side" loading="eager" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                    <!-- Second Carousel Item -->
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_pool_swimmer_sml.webp" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_pool_swimmer_lrg.webp" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_pool_swimmer_lrg.webp" class="d-block w-100 object-fit-cover" alt="Swimming" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                    <!-- Third Carousel Item -->
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_luxury_pool_sml2.webp" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_luxury_pool_lrg2.webp" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_luxury_pool_lrg2.webp" class="d-block w-100 object-fit-cover" alt="Pool at night" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#poolCarousel" data-bs-slide="prev" aria-label="Previous">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#poolCarousel" data-bs-slide="next" aria-label="Next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Spa (Carousel with text beside it) -->
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="row d-flex flex-column flex-md-row align-items-center">
+                        <div class="col-12 col-md-6">
+                            <div id="spaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <!-- First Carousel Item -->
+                                    <div class="carousel-item active">  
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_spa_bath_women_sml.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_spa_bath_women_lrg.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_spa_bath_women_lrg.jpg" class="d-block w-100 object-fit-cover" alt="Luxury Spa" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                    <!-- Second Carousel Item -->
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_spa_towel_sml.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_spa_towel_lrg.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_spa_towel_lrg.jpg" class="d-block w-100 object-fit-cover" alt="Spa Treatments" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                    <!-- Third Carousel Item -->
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="resources/smallscreen/facilities/hotel_spa_massage_women_sml.jpg" media="(max-width: 992px)">
+                                            <source srcset="resources/largescreen/facilities/hotel_spa_massage_women_lrg.jpg" media="(min-width: 993px)">
+                                            <img src="resources/largescreen/facilities/hotel_spa_massage_women_lrg.jpg" class="d-block w-100 object-fit-cover" alt="Relaxing Massage" loading="lazy" width="630" height="420">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#spaCarousel" data-bs-slide="prev" aria-label="Previous">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#spaCarousel" data-bs-slide="next" aria-label="Next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 text-center text-md-start p-3 p-md-4">
+                            <h3 class="text-left mb-4">Luxury Spa</h3>
+                            <h5 class="mb-3">Unwind in pure luxury.</h5>
+                            <p>From peaceful spa baths to expert massages and nourishing facials, experience pure relaxation in our world-class wellness retreat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include('public/partials/footer') %>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+
+</body>
+</html>

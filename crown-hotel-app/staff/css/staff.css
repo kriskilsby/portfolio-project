@@ -1,0 +1,305 @@
+/* Font */
+* {
+  font-family: 'Roboto', serif;
+}
+
+/* Reception Dashboard Layout */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+main.container {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  /* max-width: 1200px; */
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* DataTables Layout */
+.dataTables_wrapper {
+  margin-top: 20px;
+}
+
+table.dataTable thead th {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  margin: 2px 0;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.actions-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Table Controls */
+.dataTables_filter {
+  margin-bottom: 15px;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .dataTables_filter {
+    padding-right: 10px;
+  }
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+  font-weight: bold;
+}
+
+.dataTables_length select {
+  margin-left: 5px;
+}
+
+/* Clickable Table Rows */
+tr.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+tr.clickable-row:hover {
+  font-weight: 550;
+}
+
+/* Management Dashboard */
+.report-section {
+  margin-top: 2rem;
+}
+
+#incomeTable tfoot th,
+#occupancyTable tfoot th {
+  text-align: center;
+}
+
+#bookingTable td:nth-child(4) {
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 150px;
+}
+
+/* Dashboard Buttons */
+.dashboard-btn {
+  background-color: #A4436B;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Reception Details Page Form */
+main.container form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+}
+
+form h3, form h4 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #5e7495;
+  font-size: 1.25rem;
+}
+
+input, select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 16px; 
+}
+
+/* Focus state on inputs */
+input:focus, select:focus {
+  border-color: #5e7495;
+  box-shadow: 0 0 5px rgba(94, 116, 149, 0.5);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #5e7495;
+}
+
+/* Section title styling */
+form h3, form h4 {
+  color: #5e7495;
+  font-size: 1.5rem; /* Slightly larger size */
+  margin-bottom: 18px;
+}
+
+/* Add space between elements within the form */
+input, select, label {
+  margin-bottom: 15px;
+}
+
+
+/* Table in Details Page */
+.reception-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.reception-details th,
+.reception-details td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  background-color: #f7f8fa; /* Slightly lighter background for header */
+  color: #5e7495; /* Use the same color as headings */
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+td form {
+  display: inline-block;       /* prevents extra space */
+  margin: 0 !important;                   /* remove default spacing */
+  padding: 0 !important;
+  background: none;            /* inherit background from table cell */
+}
+
+
+/* Alternating row colors for better readability */
+.reception-details tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light gray background for odd rows */
+}
+
+.reception-details tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White background for even rows */
+}
+
+/* Add hover effect for rows */
+.reception-details tbody tr:hover {
+  background-color: #e8e8e8; /* Highlight row on hover */
+  cursor: pointer;
+}
+
+/* Form Buttons */
+.reception-form button,
+.reception-form .btn {
+  background-color: #5e7495;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  /* margin-top: 10px; */
+  transition: background-color 0.3s ease;
+}
+
+.reception-form button:hover,
+.reception-form .btn:hover {
+  background-color: #4d6583;
+}
+
+/* Danger and Submit Buttons for Additional Payments */
+.reception-form .btn-danger,
+.reception-form button[type="submit"]:not(.btn-primary):not(.btn-secondary) {
+  background-color: #b65646;
+}
+
+.reception-form .btn-danger:hover {
+  background-color: #a14c3e; /* Slightly darker for hover */
+}
+
+/* Delete button styling */
+.btn-delete {
+  font-size: 0.9rem;           /* slightly larger text */
+  padding: 4px 10px;           /* shorter width and comfortable height */
+  border-radius: 12px;         /* more rounded corners */
+  background-color: #e74c3c;   /* nice red for delete */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;   /* darker red on hover */
+  transform: scale(1.05);      /* subtle hover grow effect */
+}
+
+.btn-delete:active {
+  transform: scale(0.95);      /* pressed effect */
+}
+
+
+/* Alert for Completing */
+.alert {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Specific alert colors */
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Primary action / payment button */
+.btn-payment {
+  width: 100%;                   /* fills the form width */
+  padding: 12px 0;               /* taller, comfortable height */
+  font-size: 1.1rem;             /* slightly bigger text */
+  font-weight: 600;
+  border-radius: 16px;           /* rounded corners */
+  background: linear-gradient(145deg, #28a745, #2ecc71); /* bright green gradient */
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-payment:hover {
+  background: linear-gradient(145deg, #218838, #27ae60); /* slightly darker on hover */
+  transform: translateY(-2px);  /* subtle lift */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-payment:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "crown-hotel",
+  "version": "1.0.0",
+  "description": "Welcome to the Disciples Team GitHub Repository! 🚀\r This is the GitHub repository for the Disciples Team as we build out the Crown Hotel Project - a fully functional hotel booking system.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "pg": "^8.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelDenmead/crown-hotel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichaelDenmead/crown-hotel/issues"
+  },
+  "homepage": "https://github.com/MichaelDenmead/crown-hotel#readme",
+  "devDependencies": {
+    "critical": "^7.2.1"
+  }
+}

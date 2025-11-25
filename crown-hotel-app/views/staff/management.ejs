@@ -1,0 +1,109 @@
+<!-- management.ejs script -->
+
+<%- include('../partials/header', { title: 'Management Dashboard' }) %>
+<%- include('../partials/navbar-staff') %>
+
+
+<main class="container my-4 flex-grow-1">
+  <h2 class="mb-4">Hotel Management Dashboard</h2>
+  <p class="lead">Please select the report you wish to view using the drop-down selection.</p>  
+
+  <a href="/crown-hotel/staff/messages" class="dashboard-btn m-2">
+    Contact Messages
+    <% if (messageCount > 0) { %>
+      <span class="badge bg-danger"><%= messageCount %></span>
+    <% } %>
+  </a>
+
+  <!-- Dropdown to select report -->
+  <div class="mb-3">
+    <label for="reportSelect" class="form-label">Select Report:</label>
+    <select id="reportSelect" class="form-select w-auto">
+      <option value="">-- Choose a report --</option>
+      <option value="occupancy">Weekly Occupancy</option>
+      <option value="income">Weekly Income</option>
+    </select>
+  </div>
+
+  <!-- Week input shared between reports -->
+  <div class="mb-3">
+    <label for="weekPicker" class="form-label">Select Week:</label>
+    <input type="week" id="weekPicker" class="form-control w-auto d-inline-block" />
+    <button id="fetchReport" class="dashboard-btn ms-2">📊 Fetch Report</button>
+  </div>
+
+  <div id="reportWeekRange" style="font-weight:bold; margin-bottom:10px;"></div>
+
+  
+  <!-- Occupancy Table -->
+    <div id="occupancyReport" class="report-section" style="display: none;">
+        <h4>Weekly Occupancy Report</h4>
+        <div class="table-responsive">
+        <table id="occupancyTable" class="table table-striped" style="width: 100%;">
+            <thead class="table-dark">
+            <tr>
+                <th>Room No</th>
+                <th>Room Type</th>
+                <th>Days Occupied</th>
+                <th>Total Available</th>
+                <th>Occupancy %</th>
+            </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                <th colspan="2" style="text-align:right">Totals:</th>
+                <th id="totalDaysOccupied">0</th>
+                <th id="totalAvailable">0</th>
+                <th id="totalOccupancyPercentage">0%</th>
+                </tr>
+            </tfoot>
+            <tbody></tbody>
+        </table>
+        </div>
+    </div>
+
+
+  <!-- Income Table -->
+  <div id="incomeReport" class="report-section" style="display: none;">
+    <h4>Weekly Income Report</h4>
+    <div class="table-responsive">
+      <table id="incomeTable" class="table table-striped" style="width: 100%;">
+        <thead class="table-dark">
+          <tr>
+            <th>Date</th>
+            <th>Booking Ref</th>
+            <th>Room Revenue</th>
+            <th>Extras</th>
+            <th>Total Income</th>
+          </tr>
+        </thead>
+        <tfoot>
+            <tr>
+              <th colspan="2" style="text-align:right">Totals:</th>
+              <th id="totalRoomRev"></th>
+              <th id="totalExtras">£0.00</th>
+              <th id="totalIncome"></th>
+            </tr>
+          </tfoot>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+
+<!-- jQuery and DataTables (for sorting, searching, pagination) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<!-- DataTables Responsive CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+
+<!-- DataTables Responsive JS -->
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+
+<!-- Custom JS for management dashboard functionality -->
+<script src="/crown-hotel/staff/js/management.js"></script>
+
+<%- include('../partials/footer-staff') %>

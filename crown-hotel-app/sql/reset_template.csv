@@ -1,0 +1,208 @@
+﻿r_no,b_ref,ci_offsett,co_offsett,Paid,demo_status
+101,101,0,2,TRUE,Paid
+102,103,0,7,FALSE,Due to Checkout
+102,183,7,10,FALSE,Checkin today
+103,118,0,5,TRUE,Paid
+103,159,5,8,FALSE,Remain Occupied
+103,161,8,11,FALSE,Future Booking
+104,107,0,7,FALSE,Checked out
+104,171,7,10,FALSE,Checkin today
+104,119,10,11,FALSE,Future Booking
+104,194,11,14,FALSE,Future Booking
+104,133,14,15,FALSE,Future Booking
+104,174,15,18,FALSE,Future Booking
+105,108,0,1,TRUE,Paid
+105,117,1,6,TRUE,Paid
+105,160,6,9,FALSE,Remain Occupied
+105,170,9,12,FALSE,Future Booking
+106,100,0,8,FALSE,Remain Occupied
+106,124,8,12,FALSE,Future Booking
+106,135,12,13,FALSE,Future Booking
+106,240,13,16,FALSE,Future Booking
+107,102,0,1,TRUE,Paid
+107,121,1,10,FALSE,Remain Occupied
+107,219,10,13,FALSE,Future Booking
+107,217,13,16,FALSE,Future Booking
+108,104,0,7,FALSE,Due to Checkout
+108,243,7,9,FALSE,Checkin today
+108,127,9,10,FALSE,Future Booking
+108,234,10,13,FALSE,Future Booking
+201,106,0,1,TRUE,Paid
+201,143,1,4,TRUE,Paid
+201,195,4,7,FALSE,Due to Checkout
+201,199,7,10,FALSE,Checkin today
+201,207,10,13,FALSE,Future Booking
+202,130,0,1,TRUE,Paid
+202,154,1,4,TRUE,Paid
+202,126,4,10,FALSE,Remain Occupied
+202,193,10,13,FALSE,Future Booking
+202,109,13,16,FALSE,Future Booking
+203,129,0,1,TRUE,Paid
+203,111,1,8,FALSE,Remain Occupied
+203,172,8,11,FALSE,Future Booking
+204,105,0,7,FALSE,Due to Checkout
+204,242,7,11,FALSE,Checkin today
+204,147,11,14,FALSE,Future Booking
+204,176,14,17,FALSE,Future Booking
+204,196,17,20,FALSE,Future Booking
+204,210,20,23,FALSE,Future Booking
+204,230,23,26,FALSE,Future Booking
+205,148,0,3,TRUE,Paid
+206,120,0,6,TRUE,Paid
+206,213,6,9,FALSE,Remain Occupied
+206,215,9,12,FALSE,Future Booking
+206,233,12,15,FALSE,Future Booking
+207,153,0,3,TRUE,Paid
+207,185,3,6,TRUE,Paid
+207,238,6,9,FALSE,Remain Occupied
+208,175,0,3,TRUE,Paid
+208,221,3,6,TRUE,Paid
+208,235,6,9,FALSE,Remain Occupied
+209,184,0,3,TRUE,Paid
+209,214,3,6,TRUE,Paid
+210,150,0,3,TRUE,Paid
+210,162,3,6,TRUE,Paid
+210,201,6,9,FALSE,Remain Occupied
+210,232,9,12,FALSE,Future Booking
+211,110,0,7,FALSE,Checked out
+211,182,7,10,FALSE,Checkin today
+211,112,10,17,FALSE,Future Booking
+212,122,0,1,TRUE,Paid
+212,114,1,8,FALSE,Remain Occupied
+212,125,8,12,FALSE,Future Booking
+301,115,0,5,TRUE,Paid
+301,156,5,8,FALSE,Remain Occupied
+301,166,8,11,FALSE,Future Booking
+301,220,11,14,FALSE,Future Booking
+302,116,0,5,TRUE,Paid
+302,142,5,8,FALSE,Remain Occupied
+303,131,0,2,TRUE,Paid
+303,223,2,4,TRUE,Paid
+303,231,4,7,FALSE,Due to Checkout
+304,132,0,2,TRUE,Paid
+304,158,2,4,TRUE,Paid
+304,224,4,7,FALSE,Due to Checkout
+305,134,0,1,TRUE,Paid
+305,177,1,4,TRUE,Paid
+305,137,4,7,FALSE,Due to Checkout
+305,239,7,10,FALSE,Checkin today
+306,164,0,1,TRUE,Paid
+306,165,1,2,TRUE,Paid
+308,163,0,1,TRUE,Paid
+308,197,1,2,TRUE,Paid
+309,128,0,1,TRUE,Paid
+309,113,1,2,TRUE,Paid
+309,138,2,3,TRUE,Paid
+310,123,0,1,TRUE,Paid
+310,204,1,2,TRUE,Paid
+311,227,0,1,TRUE,Paid
+312,136,0,7,FALSE,Due to Checkout
+305,139,10,11,FALSE,Future Booking
+309,139,10,11,FALSE,Future Booking
+203,140,26,29,FALSE,Future Booking
+204,140,26,29,FALSE,Future Booking
+309,140,26,29,FALSE,Future Booking
+104,141,18,19,FALSE,Future Booking
+305,141,18,19,FALSE,Future Booking
+309,141,18,19,FALSE,Future Booking
+201,144,13,16,FALSE,Future Booking
+304,144,13,16,FALSE,Future Booking
+102,145,10,13,FALSE,Future Booking
+205,145,10,13,FALSE,Future Booking
+107,146,16,19,FALSE,Future Booking
+208,146,16,19,FALSE,Future Booking
+209,146,16,19,FALSE,Future Booking
+205,149,3,6,TRUE,Paid
+308,149,3,6,TRUE,Paid
+303,151,7,10,FALSE,Checkin today
+308,151,7,10,FALSE,Checkin today
+103,152,16,19,FALSE,Future Booking
+201,152,16,19,FALSE,Future Booking
+207,152,16,19,FALSE,Future Booking
+103,155,19,22,FALSE,Future Booking
+206,155,19,22,FALSE,Future Booking
+303,155,19,22,FALSE,Future Booking
+108,157,13,16,FALSE,Future Booking
+205,157,13,16,FALSE,Future Booking
+212,167,12,15,FALSE,Future Booking
+307,167,12,15,FALSE,Future Booking
+101,168,8,11,FALSE,Future Booking
+302,168,8,11,FALSE,Future Booking
+311,168,8,11,FALSE,Future Booking
+207,169,19,22,FALSE,Future Booking
+301,169,19,22,FALSE,Future Booking
+202,173,16,19,FALSE,Future Booking
+210,173,16,19,FALSE,Future Booking
+306,173,16,19,FALSE,Future Booking
+201,178,16,19,FALSE,Future Booking
+205,178,16,19,FALSE,Future Booking
+102,179,16,19,FALSE,Future Booking
+105,179,16,19,FALSE,Future Booking
+106,179,16,19,FALSE,Future Booking
+108,180,19,22,FALSE,Future Booking
+309,180,19,22,FALSE,Future Booking
+202,181,19,22,FALSE,Future Booking
+212,181,19,22,FALSE,Future Booking
+105,186,22,25,FALSE,Future Booking
+309,186,22,25,FALSE,Future Booking
+102,187,22,25,FALSE,Future Booking
+210,187,22,25,FALSE,Future Booking
+212,187,22,25,FALSE,Future Booking
+106,188,29,32,FALSE,Future Booking
+203,188,29,32,FALSE,Future Booking
+309,188,29,32,FALSE,Future Booking
+101,189,11,14,FALSE,Future Booking
+308,189,11,14,FALSE,Future Booking
+301,190,14,17,FALSE,Future Booking
+305,190,14,17,FALSE,Future Booking
+102,191,13,16,FALSE,Future Booking
+311,191,13,16,FALSE,Future Booking
+203,192,16,19,FALSE,Future Booking
+311,192,16,19,FALSE,Future Booking
+212,198,15,18,FALSE,Future Booking
+309,198,15,18,FALSE,Future Booking
+201,200,19,22,FALSE,Future Booking
+209,200,19,22,FALSE,Future Booking
+206,202,25,28,FALSE,Future Booking
+210,202,25,28,FALSE,Future Booking
+308,202,25,28,FALSE,Future Booking
+208,203,19,22,FALSE,Future Booking
+308,203,19,22,FALSE,Future Booking
+205,205,22,25,FALSE,Future Booking
+208,205,22,25,FALSE,Future Booking
+205,206,6,9,FALSE,Remain Occupied
+307,206,6,9,FALSE,Remain Occupied
+106,208,22,25,FALSE,Future Booking
+301,208,22,25,FALSE,Future Booking
+303,208,22,25,FALSE,Future Booking
+107,209,25,28,FALSE,Future Booking
+211,209,25,28,FALSE,Future Booking
+301,209,25,28,FALSE,Future Booking
+202,211,22,25,FALSE,Future Booking
+304,211,22,25,FALSE,Future Booking
+203,212,29,32,FALSE,Future Booking
+309,212,29,32,FALSE,Future Booking
+104,216,28,31,FALSE,Future Booking
+206,216,28,31,FALSE,Future Booking
+205,218,25,28,FALSE,Future Booking
+207,218,25,28,FALSE,Future Booking
+310,218,25,28,FALSE,Future Booking
+206,222,31,34,FALSE,Future Booking
+307,222,31,34,FALSE,Future Booking
+207,225,31,34,FALSE,Future Booking
+308,225,31,34,FALSE,Future Booking
+204,226,34,37,FALSE,Future Booking
+307,226,34,37,FALSE,Future Booking
+108,228,29,32,FALSE,Future Booking
+204,228,29,32,FALSE,Future Booking
+306,228,29,32,FALSE,Future Booking
+101,229,22,25,FALSE,Future Booking
+206,229,22,25,FALSE,Future Booking
+305,229,22,25,FALSE,Future Booking
+207,236,28,31,FALSE,Future Booking
+301,236,28,31,FALSE,Future Booking
+311,236,28,31,FALSE,Future Booking
+202,237,25,28,FALSE,Future Booking
+302,237,25,28,FALSE,Future Booking
+108,241,32,35,FALSE,Future Booking
+203,241,32,35,FALSE,Future Booking

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Booking Confirmation | Crown Hotel</title>
+  <link rel="stylesheet" href="/crown-hotel/css/styles.css">
+    
+  <%- include('public/partials/head', { title: title }) %>
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <%- include('public/partials/navbar') %>
+
+  <div class="container mt-5 text-center">
+    <h1 class="mb-3">Booking Confirmed</h1>
+    <p class="lead">Thank you for booking with <strong>Crown Hotel</strong>!</p>
+    <p>Your reservation details are below and have been sent to your email.</p>
+
+    <div class="card shadow p-4 my-4 mx-auto" style="max-width: 700px;">
+      <h4 class="mb-3" style="color: #A4436B;">Booking Summary</h4>
+      <div id="bookingDetails">
+        <p>Loading booking information...</p>
+      </div>
+    </div>
+
+    <a href="/crown-hotel" class="btn btn-primary mb-5" style="background-color: #A4436B; border-color: #A4436B;">
+      Back to Home
+    </a>
+  </div>
+
+  <!-- <div id="footer"></div> -->
+      <!-- Footer -->
+    <%- include('public/partials/footer') %>
+
+  <script src="/crown-hotel/js/components.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const bookingRef = urlParams.get('bookingRef');
+      const container = document.getElementById("bookingDetails");
+
+      const roomLabels = {
+        'std_d': 'Standard Double',
+        'std_t': 'Standard Twin',
+        'sup_d': 'Superior Double',
+        'sup_t': 'Superior Twin'
+      };
+
+      const formatDate = (dateStr) => {
+        return new Date(dateStr).toLocaleDateString('en-GB', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+      };
+
+      if (!bookingRef) {
+        container.innerHTML = "<p class='text-danger'>No booking reference found.</p>";
+        return;
+      }
+
+      try {
+        const res = await fetch(`/crown-hotel/api/booking/${bookingRef}`);
+        const data = await res.json();
+
+        if (!res.ok) {
+          container.innerHTML = `<p class="text-danger">${data.message || 'Unable to fetch booking details.'}</p>`;
+          return;
+        }
+
+        // If multiple rooms booked, handle array:
+        if (Array.isArray(data)) {
+          const bookingSummary = `
+            <p><strong>Booking Reference:</strong> ${data[0].b_ref}</p>
+            <p><strong>Guest:</strong> ${data[0].c_name} (${data[0].c_email})</p>
+            <p><strong>Dates:</strong> ${formatDate(data[0].check_in)} to ${formatDate(data[0].check_out)} (${data[0].nights} nights)</p>
+            <h5 class="mt-4 mb-2">Rooms Booked:</h5>
+            <ul class="list-unstyled">
+              ${data.map(room => `
+                <li><strong>${roomLabels[room.r_class] || room.r_class}</strong> (Room No: ${room.r_no || 'N/A'}) - Guests: ${room.guests}</li>
+              `).join('')}
+            </ul>
+          `;
+          container.innerHTML = bookingSummary;
+        } else {
+          // Single room fallback (older bookings)
+          container.innerHTML = `
+            <p><strong>Booking Reference:</strong> ${data.b_ref}</p>
+            <p><strong>Guest:</strong> ${data.c_name} (${data.c_email})</p>
+            <p><strong>Room:</strong> ${roomLabels[data.r_class] || data.r_class} (Room No: ${data.r_no || 'N/A'})</p>
+            <p><strong>Dates:</strong> ${formatDate(data.check_in)} to ${formatDate(data.check_out)} (${data.nights} nights)</p>
+            <p><strong>Guests:</strong> ${data.guests}</p>
+          `;
+        }
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = `<p class="text-danger">There was an error loading your booking.</p>`;
+      }
+    });
+  </script>
+    
+
+</body>
+</html>

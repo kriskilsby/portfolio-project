@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Book Your Stay | Crown Hotel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preload -->
+  <link rel="preload" href="/crown-hotel/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="/crown-hotel/css/styles.css" as="style">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/crown-hotel/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/crown-hotel/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- JS -->
+  <script src="/crown-hotel/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/crown-hotel/js/components.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+
+
+
+<body>
+
+  <!-- <div id="navbar"></div> -->
+    <!-- Navbar -->
+  <%- include('public/partials/navbar') %>
+
+  <div id="main-content" class="pb-0">
+
+    <div id="booking" class="mb-5">
+      <div class="container mt-5">
+        <!-- Intro Section -->
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="mb-3">Book Your Stay</h1>
+            <p class="lead">Experience luxury and comfort at <strong>Crown Hotel</strong>. Secure your perfect getaway today.</p>
+          </div>
+        </div>
+
+        <!-- Marketing message -->
+        <div class="row justify-content-center my-4">
+          <div class="col-md-4 text-center">
+            <h4>Luxury Rooms</h4>
+            <p>Elegant decor, king-sized beds, and city views.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h4>Relax & Unwind</h4>
+            <p>Exclusive spa & wellness experiences for guests.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h4>Fine Dining</h4>
+            <p>Michelin-starred dining and curated wine selections.</p>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-lg p-4">
+              <h2 class="mb-3 text-center" style="color: #A4436B;">Reservation Details</h2>
+              <div id="errorMessage" class="alert alert-danger text-center d-none"></div>
+
+              <form id="bookingForm">
+                <div id="availabilityFields">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="checkin" class="form-label">Check-in Date</label>
+                      <input type="text" class="form-control" id="checkin" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="checkout" class="form-label">Check-out Date</label>
+                      <input type="text" class="form-control" id="checkout" required>
+                    </div>
+                  </div>
+
+                  <div id="roomSelectionArea" class="my-3"></div>
+
+                  <button type="button" class="btn btn-primary w-100 mt-3" id="checkAvailabilityBtn" style="background-color: #A4436B;">
+                    Confirm Availability
+                  </button>
+                </div>
+
+                <div id="bookingFields" class="d-none">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="customerName" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="customerName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 mb-3">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" required>
+                    </div>
+                  </div>
+
+                  <h5 class="mt-4">Payment Details</h5>
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <label for="cardType" class="form-label">Card Type</label>
+                      <select class="form-control" id="cardType" required>
+                        <option value="" disabled selected>Select card type</option>
+                        <option value="V">Visa</option>
+                        <option value="MC">Mastercard</option>
+                        <option value="A">Amex</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="cardNumber" class="form-label">Card Number</label>
+                      <input type="text" class="form-control" id="cardNumber" pattern="\d{16}" maxlength="16" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="cardExpiry" class="form-label">Expiry Date</label>
+                      <input type="month" class="form-control" id="cardExpiry" required>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-success w-100 mt-3" style="background-color: #28a745;">Confirm Booking</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-4 text-muted text-center">
+          Need assistance? <a href="contact" class="text-decoration-none text-primary">Contact us</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="footer"></div> -->
+    <!-- Footer loads dynamically -->
+  <%- include('public/partials/footer') %>
+
+
+  <script>
+    console.log("Booking page script loaded.");
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      let checkinPicker = flatpickr("#checkin", { dateFormat: "Y-m-d", minDate: "today" });
+      let checkoutPicker = flatpickr("#checkout", { dateFormat: "Y-m-d", minDate: "today" });
+
+      const checkinEl = document.getElementById("checkin");
+      const checkoutEl = document.getElementById("checkout");
+      const roomSelectionArea = document.getElementById("roomSelectionArea");
+
+      // Fetch available room types
+      async function loadAvailableRoomTypes() {
+        console.log("loadAvailableRoomTypes fired", checkinEl.value, checkoutEl.value);
+        const checkIn = checkinEl.value;
+        const checkOut = checkoutEl.value;
+        if (!checkIn || !checkOut) return;
+        console.log("Loading available room types for", checkIn, "to", checkOut);
+
+        try {
+          // const res = await fetch("/api/available-room-types", {
+          const res = await fetch("/crown-hotel/api/available-room-types", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ checkInDate: checkIn, checkOutDate: checkOut })
+          });
+          const types = await res.json();
+
+          roomSelectionArea.innerHTML = "";
+          types.forEach(({ r_class, total_rooms }) => {
+            const labelMap = {
+              'std_d': 'Standard Double',
+              'std_t': 'Standard Twin',
+              'sup_d': 'Superior Double',
+              'sup_t': 'Superior Twin'
+            };
+            roomSelectionArea.innerHTML += `
+              <div class="mb-3">
+                <label class="form-label">${labelMap[r_class] || r_class} (Available: ${total_rooms})</label>
+                <input type="number" class="form-control room-quantity" min="0" max="${total_rooms}" data-room-type="${r_class}" value="0">
+              </div>
+            `;
+          });
+        } catch (err) {
+          console.error("⚠️ Failed to load available room types:", err);
+        }
+      }
+
+      checkinEl.addEventListener("change", loadAvailableRoomTypes);
+      checkoutEl.addEventListener("change", loadAvailableRoomTypes);
+
+      document.getElementById("checkAvailabilityBtn").addEventListener("click", () => {
+        const selectedRooms = Array.from(document.querySelectorAll(".room-quantity"))
+          .filter(input => parseInt(input.value) > 0)
+          .map(input => ({
+            roomType: input.dataset.roomType,
+            quantity: parseInt(input.value)
+          }));
+
+        if (selectedRooms.length === 0) {
+          alert("Please select at least one room.");
+          return;
+        }
+
+        window.selectedRooms = selectedRooms; // store globally
+        document.getElementById("availabilityFields").classList.add("d-none");
+        document.getElementById("bookingFields").classList.remove("d-none");
+      });
+
+      document.getElementById("bookingForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const errorBox = document.getElementById("errorMessage");
+        errorBox.classList.add("d-none");
+
+        const payload = {
+          customerName: document.getElementById("customerName").value,
+          email: document.getElementById("email").value,
+          address: document.getElementById("address").value,
+          cardType: document.getElementById("cardType").value,
+          cardNumber: document.getElementById("cardNumber").value,
+          cardExpiry: document.getElementById("cardExpiry").value,
+          checkInDate: checkinEl.value,
+          checkOutDate: checkoutEl.value,
+          guests: document.getElementById("guests")?.value || 1,
+          selectedRooms: window.selectedRooms
+        };
+
+        // const res = await fetch("/api/book", {
+        const res = await fetch("/crown-hotel/api/book", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await res.json();
+        if (res.ok) {
+          // window.location.href = `/confirmation.html?bookingRef=${result.bookingRef}`;
+          window.location.href = `/crown-hotel/confirmation?bookingRef=${result.bookingRef}`;
+        } else {
+          errorBox.textContent = result.message || "Something went wrong.";
+          errorBox.classList.remove("d-none");
+        }
+      });
+    });
+  </script>
+
+   
+
+    <!-- Scripts -->
+    <!-- <script src="js/components.js"></script> -->
+     <script src="/crown-hotel/js/components.js"></script>
+
+</body>
+</html>
