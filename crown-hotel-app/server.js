@@ -84,7 +84,7 @@ app.get("/restaurant", (req, res) => res.render("public/restaurant", { title: "R
 app.get("/bar", (req, res) => res.render("public/bar", { title: "Bar" }));
 app.get("/gym", (req, res) => res.render("public/gym", { title: "Gym" }));
 app.get("/conference", (req, res) => res.render("public/conference", { title: "Conference" }));
-app.get("/outandabout", (req, res) => res.render("public/outandabout", { title: "Out & About" }));
+app.get("/outandabout", (req, res) => res.render("public/outAndAbout", { title: "Out & About" }));
 app.get("/contact", (req, res) => res.render("public/contact", { title: "Contact" }));
 app.get("/confirmation", (req, res) => res.render("public/confirmation", { title: "Confirmation" }));
 
