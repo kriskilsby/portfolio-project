@@ -45,3 +45,12 @@
 <script src="/crown-hotel/staff/js/housekeeping.js"></script>
 
 <%- include('../partials/footer-staff') %>
+
+<script>
+  // Force back button to always go to /launch-hotel
+  window.history.pushState(null, '', window.location.href);
+
+  window.addEventListener('popstate', function(event) {
+    window.location.href = '/launch-hotel';
+  });
+</script>

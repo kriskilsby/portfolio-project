@@ -171,83 +171,8 @@
                     </div>
                 </div>
             </div>
-
-                <!-- Second card -->
-                <!-- <div class="col-12 col-md-6 mb-4">
-                    <div class="card border-0 shadow-sm">
-                        <div id="kkMSc" class="carousel carousel-dark  carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#kkMSc" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <% 
-                                const slides2 = [
-                                { file: 'info-vis-1', alt: 'Slide 1' },
-                                { file: 'stork-1', alt: 'Slide 2' },
-                                { file: 'database-min-01', alt: 'Slide 3' }
-                                ]; 
-                                slides2.forEach((slide, index) => { 
-                                %>
-                                    <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
-                                        <picture>
-                                        <source 
-                                            srcset="
-                                            /images/responsive/<%= slide.file %>-400.webp 400w,
-                                            /images/responsive/<%= slide.file %>-800.webp 800w,
-                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
-                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
-                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
-                                            "
-                                            sizes="(max-width: 576px) 100vw, 
-                                                    (max-width: 768px) 80vw,
-                                                    (max-width: 1200px) 45vw, 
-                                                    30vw"
-                                            type="image/webp"
-                                        >
-                                        <source 
-                                            srcset="
-                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
-                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
-                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
-                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
-                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
-                                            "
-                                            sizes="(max-width: 576px) 100vw, 
-                                                    (max-width: 768px) 80vw,
-                                                    (max-width: 1200px) 45vw, 
-                                                    30vw"
-                                            type="image/jpeg"
-                                        >
-                                        <img 
-                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
-                                            class="d-block w-100" 
-                                            alt="<%= slide.alt %>" 
-                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
-                                        >
-                                        </picture>
-                                    </div>
-                                <% }) %>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#kkMSc" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#kkMSc" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body text-center position-relative">
-                            <a href="profile#eduCollapseUEA" class="stretched-link" aria-label="View MSc Computing Science in profile"></a>
-                            <h5 class="card-title">MSc Computing Science</h5>
-                            <p class="card-text">
-                                A description about the course I have been studying, the modules I have completed, and the skills I have gained.  
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        
+            
+            <!-- Second card -->
             <div class="col-12 col-md-6 mb-4">
                 <div class="card border-0 shadow-sm">
                     <div id="kkMSc" class="carousel carousel-dark  carousel-fade" data-bs-ride="carousel">
@@ -515,6 +440,7 @@
                         </button>
                     </div>
                     <div class="card-body text-center">
+                        <a href="/launch-hotel" class="stretched-link" aria-label="View MSc Computing Science in profile"></a>
                         <h5 class="card-title">Group Project - The Crown Hotel</h5>
                         <p class="card-text">
                             A group project for Website Development, where we built a fictional hotel booking and staff management web application.

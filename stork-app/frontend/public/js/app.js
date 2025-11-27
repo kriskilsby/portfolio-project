@@ -748,19 +748,19 @@ function updateClusterDataTable(filteredPoints) {
           }
         }
       },
-      {
-        extend: 'pdf',
-        exportOptions: {
-          columns: ':visible, :hidden',
-          format: {
-            body: function(data) {
-              if (!data) return '';
-              const match = data.match && data.match(/href="([^"]+)"/);
-              return match ? match[1] : String(data);
-            }
-          }
-        }
-      },
+      // {
+      //   extend: 'pdf',
+      //   exportOptions: {
+      //     columns: ':visible, :hidden',
+      //     format: {
+      //       body: function(data) {
+      //         if (!data) return '';
+      //         const match = data.match && data.match(/href="([^"]+)"/);
+      //         return match ? match[1] : String(data);
+      //       }
+      //     }
+      //   }
+      // },
       {
         extend: 'print',
         exportOptions: {
@@ -1121,7 +1121,7 @@ function updateBirdYearSummaryTable(metric = currentMetric, valueType = 'Cluster
       buttons: [
         {extend: 'csv', exportOptions: { columns: ':visible, :hidden' }},
         {extend: 'excel', exportOptions: { columns: ':visible, :hidden' }},
-        {extend: 'pdf', exportOptions: { columns: ':visible, :hidden' }},
+        // {extend: 'pdf', exportOptions: { columns: ':visible, :hidden' }},
         'print'
       ]
     });

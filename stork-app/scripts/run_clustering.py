@@ -1,7 +1,9 @@
+# run_clustering.py
 from dotenv import load_dotenv
 import sys
 import os
 import json
+from pathlib import Path
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans, DBSCAN
@@ -24,15 +26,39 @@ def log(msg):
     print(msg, file=log_buffer)
 
 # Add services to path for import
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend', 'app', 'services')))
-import database  #  Your working DB connection helper
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend', 'app', 'services')))
+# import database  #  Your working DB connection helper
 
 # Absolute path to your backend .env file
-dotenv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend', '.env'))
-load_dotenv(dotenv_path)
+# dotenv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend', '.env'))
+# load_dotenv(dotenv_path)
+
+# Always load stork-app/backend/.env explicitly
+# BASE_DIR = Path(__file__).resolve().parents[2]  # stork-app/backend/
+# ENV_FILE = BASE_DIR / ".env"
+
+# load_dotenv(ENV_FILE)
+
+# ----------------------------
+# Correct .env path for stork-app backend
+# ----------------------------
+BASE_DIR = Path(__file__).resolve().parent.parent / 'backend'
+ENV_FILE = BASE_DIR / ".env"
+load_dotenv(dotenv_path=ENV_FILE, override=True)
+
+print(f"[DEBUG] Loaded .env from: {ENV_FILE}", file=sys.stderr)
+print(f"[DEBUG] DB_NAME: {os.getenv('DB_NAME')}", file=sys.stderr)
+
+# ----------------------------
+# Add path to import your DB module
+# ----------------------------
+SERVICES_DIR = BASE_DIR / 'app' / 'services'
+sys.path.append(str(SERVICES_DIR))
+import database  # working DB connection helper
 
 # Debug: Print loaded env vars
-print(f".env path: {dotenv_path}", file=sys.stderr)
+# print(f".env path: {dotenv_path}", file=sys.stderr)
+print(f".env path: {ENV_FILE}", file=sys.stderr)
 print("Loaded environment variables:", file=sys.stderr)
 print("DB_USER =", os.getenv("DB_USER"), file=sys.stderr)
 print("DB_PASSWORD =", "SET" if os.getenv("DB_PASSWORD") else "NOT SET", file=sys.stderr)

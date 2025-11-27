@@ -5,34 +5,19 @@ const path = require('path');
 const os = require('os');
 const router = express.Router();
 
-
 router.get('/', (req, res) => {
   const scriptPath = path.join(__dirname, '../../scripts/get_metadata.py');
   const pythonWorkingDir = path.join(__dirname, '../../');
 
-  // Dynamically set Python interpreter path
-  const pythonPath =
-    os.platform() === 'win32'
-      // ? path.join(process.cwd(), 'venv', 'Scripts', 'python.exe')
-      ? path.join(__dirname, '../../../venv/Scripts/python.exe')
-      : '/root/portfolio/venv/bin/python';
+  // Use the correct venv for Windows or Linux
+  const pythonPath = os.platform() === 'win32'
+    ? "C:\\Users\\krist\\OneDrive\\Projects\\portfolio\\venv\\Scripts\\python.exe"
+    : "/root/portfolio/venv/bin/python";
 
-  console.log('[DEBUG] Running python script with:');
+  console.log('[DEBUG] Running Python metadata script:');
   console.log('  pythonPath:', pythonPath);
   console.log('  scriptPath:', scriptPath);
   console.log('  cwd:', pythonWorkingDir);
-
-  // const python = spawn(
-  //   'C:\\Users\\krist\\OneDrive\\UEA Folder\\Dissertation\\stork_project\\venv\\Scripts\\python.exe',
-  //   [scriptPath],
-  //   { cwd: pythonWorkingDir }
-  // );
-
-  // const python = spawn(
-  //   '/root/portfolio/venv/bin/python',
-  //   [scriptPath],
-  //   { cwd: pythonWorkingDir }
-  // );
 
   const python = spawn(pythonPath, [scriptPath], { cwd: pythonWorkingDir });
 
@@ -40,17 +25,24 @@ router.get('/', (req, res) => {
   let errorOutput = '';
 
   python.stdout.on('data', (data) => {
+    console.log('[Python stdout]', data.toString());
     result += data.toString();
   });
 
   python.stderr.on('data', (data) => {
+    console.error('[Python stderr]', data.toString());
     errorOutput += data.toString();
-    console.error('[Python stderr]', errorOutput);
+  });
+
+  python.on('error', (err) => {
+    console.error('[Spawn error]', err);
+    res.status(500).json({ error: 'Failed to start Python script', details: err });
   });
 
   python.on('close', (code) => {
+    console.log('[Python exit code]', code);
+
     if (code !== 0) {
-      console.error('[Python exit code]', code);
       return res.status(500).json({
         error: 'Python script failed',
         code,
@@ -72,4 +64,3 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
-// export default router;

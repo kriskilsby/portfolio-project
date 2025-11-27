@@ -1,3 +1,4 @@
+# database.py
 '''
 ##################################################################
 Step 2: Connect to DB and write pandas DataFrame to PostgreSQL
@@ -21,8 +22,14 @@ from sqlalchemy import create_engine, inspect
 from sqlalchemy.engine.url import URL
 
 # --- Load Environment Variables ---
-env_path = Path(__file__).resolve().parents[2] / '.env'
-load_dotenv(dotenv_path=env_path)
+# env_path = Path(__file__).resolve().parents[2] / '.env'
+# load_dotenv(dotenv_path=env_path)
+
+# Always load stork-app/backend/.env explicitly
+BASE_DIR = Path(__file__).resolve().parents[2]  # stork-app/backend/
+ENV_FILE = BASE_DIR / ".env"
+
+load_dotenv(ENV_FILE)
 
 DB_CONFIG = {
     "user": os.getenv("DB_USER"),
