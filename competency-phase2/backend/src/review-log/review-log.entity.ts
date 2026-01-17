@@ -1,0 +1,65 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  JoinColumn,
+  CreateDateColumn,
+} from 'typeorm';
+import { Employee } from '../employees/employee.entity';
+
+@Entity({ name: 'reviewLog' })
+export class ReviewLog {
+  @PrimaryGeneratedColumn()
+  rl_id: number;
+
+  // 🔗 Employee who owns the record
+  @ManyToOne(() => Employee, { nullable: false })
+  @JoinColumn({ name: 'e_id' })
+  employee: Employee;
+
+  // Table being updated (employee, qualifications, cpd, etc.)
+  @Column({ length: 50 })
+  table_name: string;
+
+  // Primary key of updated record
+  @Column()
+  record_id: number;
+
+  // Column / field updated
+  @Column({ length: 50 })
+  section: string;
+
+  @Column({ type: 'nvarchar', nullable: true })
+  old_value: string | null;
+
+  @Column({ type: 'nvarchar', nullable: true })
+  new_value: string | null;
+
+  // Who made the update (employee.norseid or manager.norseid)
+  @Column({ length: 50 })
+  updated_by: string;
+
+  // When update happened
+  @CreateDateColumn({ type: 'datetime2' })
+  updated_at: Date;
+
+  // Who reviewed the change
+  @Column({ type: 'nvarchar', length: 50, nullable: true })
+  review_by: string | null;
+
+  // When review happened
+  @Column({ type: 'datetime2', nullable: true })
+  review_at: Date | null;
+
+  // Pending / Reviewed
+  @Column({ length: 20, default: 'Pending' })
+  review_status: string;
+
+  // Optional notes
+  @Column({ type: 'nvarchar', nullable: true })
+  comment: string | null;
+
+  @Column({ length: 20, default: 'temp' })
+  data_origin: string;
+}

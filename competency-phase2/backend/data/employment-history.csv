@@ -1,0 +1,532 @@
+e_id,eh_company,eh_location,eh_role,eh_start,eh_end,data_origin
+144,Norwyn Holdings,UK,Infrastructure Engineer,2019,2025,demo
+144,Linfield Holdings,UK,Civil Engineer,2013,2019,demo
+144,Rivershaw Group,UK,Structural Engineer,2009,2013,demo
+144,Greenstead Advisory,UK,Project Engineer,2005,2009,demo
+144,Alderstone Collective,UK,Senior Infrastructure Engineer,2002,2005,demo
+62,Nordwick Consulting,UK,Chartered Building Surveyor,2022,,demo
+62,Foxleigh Associates,UK,Chartered Building Surveyor,2019,2022,demo
+62,Nordwick Consulting,UK,Chartered Building Surveyor,2015,2019,demo
+62,Ashbury Strategic Services,UK,Chartered Building Surveyor,2003,2015,demo
+62,Oxleigh Group,UK,Chartered Building Surveyor,1999,2003,demo
+62,Greywood Partners,UK,Chartered Building Surveyor,1991,1999,demo
+72,Nordwick Consulting,UK,Senior Chartered Architectural Technologist,2017,,demo
+72,Harmont Group,UK,Senior Chartered Architectural Technologist,2012,2017,demo
+72,Oxleigh Group,UK,Senior Chartered Architectural Technologist & Project Manager,2007,2012,demo
+72,Denbridge Advisory,UK,Senior Technician – Associate – Associate Director - Director,2001,2007,demo
+72,Stonewell Management,UK,Senior Technician,1996,2001,demo
+59,Nordwick Consulting,UK,Team leader / Associate Architect,2016,,demo
+59,Helston & Clarke,UK,Senior Architect,2015,2016,demo
+59,Merrifield Holdings,UK,Team Leader,2014,2015,demo
+59,Hillbeck Group,UK,Architect,2012,2014,demo
+59,Wayford Consulting,UK,Architect,2004,2012,demo
+116,Nordwick (Central),Central UK,Interior Designer,2019,,demo
+116,Brinkham Advisory,UK,Junior Interior Designer,2016,2019,demo
+113,Nordwick Consulting,UK,Associate Director of Electrical Engineering,2021,,demo
+113,Nordwick Consulting,UK,Associate Electrical Engineer,2013,2021,demo
+113,Nordwick Consulting,UK,Senior Electrical Engineer,2006,2013,demo
+113,Nordwick Consulting,UK,Electrical Engineer,2003,2006,demo
+113,Sutton & Langley,UK,Electrical Engineer,1995,2003,demo
+134,Nordwick (Central),Central UK,Senior Electrical Engineer,2019,,demo
+134,Thorncrest Services,UK,Building Services Engineer,2013,2019,demo
+134,Nordwick (Central),Central UK,Senior Electrical Engineer,2009,2013,demo
+134,Devoncrest Ltd,UK,Senior Electrical Technician,1999,2009,demo
+134,BoundaryPoint Surveying,UK,Electrician,1993,1999,demo
+134,Ashwell & Co.,UK,Electrician,1989,1993,demo
+134,Ashwell & Co.,UK,Apprentice Electrician,1984,1989,demo
+56,Nordwick (North),North UK,Senior Chartered Architect,2021,,demo
+56,LandMark Asset Solutions,UK,Associate,2016,2020,demo
+56,SiteSpan Developments,UK,Team Lead/BIM Lead,2015,2016,demo
+56,Crestline Property Services,UK,Associate,2012,2015,demo
+56,Geowise Land Consultancy,UK,Director,1999,2016,demo
+56,BuildPoint Services,UK,Project Architect,1997,1999,demo
+112,Nordwick Consulting,UK,Senior Interior Designer,2016,2025,demo
+112,Nordwick Consulting,UK,Interior Designer,2014,2016,demo
+112,Nordwick Consulting,UK,Buildings & Energy Officer,2012,2014,demo
+112,Devoncrest Ltd,UK,Landscape Technician,2009,2012,demo
+112,MeasuredWorks Ltd,UK,Designer,2006,2009,demo
+112,Ridgepath Construction,UK,Interior Designer,2003,2006,demo
+124,Elevate Property Group,UK,Senior Project Manager,2011,2014,demo
+124,Faircrest Solutions,UK,Operations Manager,2008,2011,demo
+124,SurveySphere UK,UK,UK Client Project Manager,2004,2008,demo
+124,TerraCore Developments,UK,Associate Project Manager,2002,2004,demo
+124,ProBuild Estates Ltd,UK,Project Manager,1998,2002,demo
+124,LandCraft Consultancy,UK,Architect,1994,1998,demo
+124,Lindale Partners,UK,Architect,1991,1994,demo
+137,Devoncrest Ltd,UK,Risk & Compliance Surveyor,2022,2023,demo
+137,Nordwick (Central),Central UK,Risk & Compliance Consultant,2014,2022,demo
+137,Nordwick (Central),Central UK,CDM Coordinator,2004,2014,demo
+137,Nordwick (Central),Central UK,Building Surveyor,2002,2004,demo
+137,AxisLand Surveying,UK,CAD Design Draftsman,1995,2002,demo
+137,Devoncrest Ltd,UK,Technical Officer,1993,1995,demo
+137,UrbanParcel Property,UK,Structural Eng. Technician,1989,1993,demo
+145,Nordwick (London),"London, UK","Associate Architect, Senior Architect & Architect",2013,,demo
+145,Stratum Survey Services,UK,Project Architect,2002,2012,demo
+145,Bluebeam Estates,UK,Assistant Architect,1996,2002,demo
+146,Nordwick (London),"London, UK",Architectural Assistant (Part II),2018,,demo
+146,Groundstone Developments,UK,Architectural Assistant (Part II) Intern,2017,2017,demo
+146,Pinnacle Survey Group,UK,Architectural Assistant (Part I),2013,2015,demo
+101,Nordwick (Central),Central UK,Associate Architect,2022,,demo
+101,Alderwick Consultancy,UK,Associate Architect,2022,2022,demo
+101,Arcstone Property,UK,Senior Architect,2021,2022,demo
+101,Nordwick (Central),Central UK,Chartered Architect,2014,2021,demo
+101,Marlowe Strategic Services,UK,Chartered Architect,2006,2013,demo
+147,Nordwick (Central),Central UK,Associate Director – Quantity Surveying,2025,,demo
+147,Buildwise Contractors,UK,Associate Director,2017,2024,demo
+147,FieldMark Surveying,UK,Associate,2000,2017,demo
+147,Silvergate Plc,UK,Trainee Surveyor,1998,2000,demo
+147,Pathway Developments,UK,Trainee Surveyor,1995,1999,demo
+117,Nordwick (Central),Central UK,Senior Associate Quantity Surveyor,2018,,demo
+117,Eastbridge Services,UK,Health & Safety Adviser,2016,2018,demo
+117,Northvale Strategic,UK,CDM Consultant / Quantity Surveyor,2014,2016,demo
+117,EstateLogic Ltd,UK,CDM Co-ordinator,2010,2014,demo
+117,Northvale Strategic,UK,Quantity Surveyor,1999,2010,demo
+148,Nordwick (London),"London, UK",Senior Interior Designer /Design Project Manager,2023,,demo
+148,Nordwick (London),"London, UK",Senior Interior Designer,2007,2023,demo
+148,FoundationPoint UK,UK,Interior Designer/ Architectural Assistant,1992,2007,demo
+119,Nordwick (Central),Central UK,Electrical Engineer,2023,,demo
+119,Aldenbury Group,UK,Approved Electrician,2016,2023,demo
+119,Brickford Construction,UK,Approved Electrician,2013,2016,demo
+119,Aldenbury Group,UK,Approved Electrician,2001,2013,demo
+100,Nordwick Consulting,UK,Associate Electrical Engineer,2022,,demo
+100,Nordwick Consulting,UK,Senior Electrical Engineer,2019,2022,demo
+100,Nordwick Consulting,UK,Electrical engineer,2016,2019,demo
+100,Northline Property,UK,Approved Electrician,2014,2016,demo
+100,Struktura Group,UK,Approved Electrician,2012,2014,demo
+100,GroundGrid Surveying,UK,Approved Electrician,2008,2012,demo
+100,Buildwise Solutions,UK,Approved Electrician,2001,2008,demo
+100,PropertyCore Services,UK,Installation / Maintenance Engineer,1994,2001,demo
+100,EstateWorks Consultancy,UK,Apprentice Electrician,1992,1994,demo
+149,Nordwick (Central),Central UK,Graduate Mechanical Engineer,2024,,demo
+149,TopoPoint UK,UK,Business Development roles out with the engineering sector,2007,2024,demo
+150,Nordwick (Central),Central UK,Associate Director: Energy and Carbon,2015,,demo
+150,Nordwick (Central),Central UK,Strategic Buildings Carbon Manager,2010,2015,demo
+150,Norwyn Holdings,UK,Environmental Leader (Europe),2007,2010,demo
+150,Norwyn Holdings,UK,Business Systems Manager,2004,2007,demo
+150,BuildQuest Developments,UK,Site Agent and Business Systems Manager,1997,2004,demo
+150,Measura Land Services,UK,Engineering inspector,1995,1997,demo
+150,Gridstone Surveyors,UK,Highways Technician,1994,1995,demo
+15,Nordwick (Central),Central UK,Associate Mechanical Engineer,2021,,demo
+15,Nordwick (Central),Central UK,Senior Mechanical Engineer,2019,2021,demo
+15,UrbanBound Property,UK,Senior Mechanical Engineer,2015,2019,demo
+15,Struktive Construction,UK,Intermediate Mechanical Engineer,2013,2015,demo
+15,TerraGuided Surveyors,UK,Mechanical Section Engineer,2010,2013,demo
+15,BlueGate Asset Services,UK,Site Engineer/ Section Engineer,2007,2010,demo
+13,Nordwick (Central),Central UK,Director – Building Services Engineering,2014,,demo
+13,Nordwick (Central),Central UK,Associate Director - Building Services Engineering,2012,2014,demo
+13,Nordwick (Central),Central UK,Senior Mechanical Engineer,2006,2014,demo
+13,BuildRoute Consultancy,UK,Senior Mechanical Engineer,2006,2006,demo
+13,EstateFlow UK,UK,Mechanical Engineer,1999,2006,demo
+151,Nordwick Consulting,UK,Project Manager,2023,,demo
+151,Nordwick Consulting,UK,Consultant,2022,2023,demo
+151,Nordwick Consulting,UK,Graduate Consultant,2021,2022,demo
+152,Nordwick (Central),Central UK,Snr Electrical Design Engineer,2013,,demo
+152,GeoTrace Surveying,UK,Snr Consulting Engineer,2010,2013,demo
+152,ElevationWorks Ltd,UK,Snr Consulting Engineer,2008,2010,demo
+152,EstateCrest Group,UK,Snr Design Engineer/PM,2004,2008,demo
+152,FieldSpan Land Services,UK,Project Engineer/Developer,2000,2004,demo
+152,BuildApex UK,UK,Design Engineer (to Intermediate),1995,2000,demo
+153,Nordwick (Central),Central UK,Electrical Engineer,2004,,demo
+153,LocusLand Surveyors,UK,Contracts Engineer,1980,2004,demo
+74,Nordwick (North),North UK,Manager - Quantity Surveying,2022,,demo
+74,Nordwick (North),North UK,Quantity Surveyor,2019,2022,demo
+74,Ridgeway Estates,UK,Senior Quantity Surveyor,2001,2019,demo
+74,StructaCore Developments,UK,Quantity Surveyor,1996,2001,demo
+74,Maplebrook Services,UK,Assistant Quantity Surveyor,1993,1996,demo
+85,Nordwick (Central),Central UK,Senior Architect,2021,,demo
+85,Cranford Advisory,UK,Senior Architect,2016,2021,demo
+85,Wynstead Solutions,UK,Architect,2011,2016,demo
+85,Prestonford Ltd,UK,Architectural Assistant (Part II) & Architect,2006,2011,demo
+85,Blackridge Operations,UK,Architectural Assistant (Part I),2003,2005,demo
+154,Nordwick (Central),Central UK,Clerk of Works,2024,,demo
+154,Oakcliffe Services,UK,Senior Site Manager,2019,2024,demo
+154,Ravenmere Solutions,UK,Senior Site Manager,2015,2019,demo
+154,Millbrook Associates,UK,Site Manager,2012,2015,demo
+99,Nordwick (Central),Central UK,Senior Structural Engineer,2022,,demo
+99,Nordwick (Central),Central UK,Structural Engineer,2017,2022,demo
+99,Broadcrest Group,UK,Graduate Structural Engineer,2016,2017,demo
+99,Havenford Services,UK,Technical Professional,2013,2016,demo
+109,Nordwick (Central),Central UK,Apprentice Structural Engineer,2019,,demo
+115,Nordwick Consulting,UK,Graduate Structural Engineer,2023,,demo
+125,Nordwick (Central),Central UK,Associate Director Structural Engineering,2016,,demo
+125,Parkline Enterprises,UK,Principal Structural Engineer,2016,2018,demo
+125,Riverview Operations,UK,Principal Structural Engineer,2013,2016,demo
+125,Langmere Solutions,UK,Senior Structural Engineer,2013,2016,demo
+125,Elmway Group,UK,Senior Structural Engineer,2008,2013,demo
+125,Fairview Services,UK,Structural Engineer,2001,2008,demo
+125,Waymark Associates,UK,Structural Engineer,1999,2001,demo
+125,Sandcliffe Solutions,UK,Project Engineer,1998,1999,demo
+125,Claremont Group,UK,Graduate Structural Engineer,1997,1998,demo
+68,Nordwick (North),North UK,Senior Chartered Quantity Surveyor,2017,,demo
+68,Nordwick (North),North UK,Senior Quantity Surveyor,2012,2017,demo
+68,Lindale Partners,UK,Group Quantity Surveyor,2007,2012,demo
+68,Lindale Partners,UK,Senior Quantity Surveyor,2004,2007,demo
+68,Lindale Partners,UK,Quantity Surveyor,1995,2004,demo
+70,Nordwick (North),North UK,Quantity Surveyor,2012,,demo
+70,Greenholm Enterprises,UK,Capital Allowances Surveyor,2011,2012,demo
+70,Wentworth Advisory,UK,Quantity Surveyor,1996,2011,demo
+155,Nordwick (North),North UK,Clerk Of Works,2004,,demo
+155,Nordwick (North),North UK,Clerk Of Works,1985,2004,demo
+155,Blackthorne Advisory,UK,Senior site manager,1981,1985,demo
+155,Blackthorne Advisory,UK,Joiner & Multi trade supervisor,1977,1982,demo
+155,Newhaven Operations,UK,Apprentice Joiner,1973,1977,demo
+155,Redshore Solutions,UK,Apprentice Joiner,1971,1973,demo
+97,Nordwick (Central),Central UK,Associate Surveyor,2024,,demo
+97,Nordwick (Central),Central UK,Contracts Consultant,2021,2024,demo
+97,Nordwick (Central),Central UK,Senior Quantity Surveyor,2018,2021,demo
+97,Nordwick (Central),Central UK,Quantity Surveyor,2015,2018,demo
+97,Bluecrest Ltd,UK,Clerk of Works,2009,2015,demo
+97,Casterton Services,UK,Assistant Quantity Surveyor,2008,2009,demo
+97,Wentworth Advisory,UK,Assistant Quantity Surveyor,2005,2008,demo
+79,Nordwick (Central),Central UK,Building Surveyor,2023,,demo
+79,Greywood Partners,UK,Architectural Assistant (Part II),2022,2023,demo
+79,Ashwood Enterprises,UK,Architectural Assistant (Part II),2021,2022,demo
+63,Nordwick (North),North UK,Senior Quantity Surveyor,2019,,demo
+63,Nordwick (North),North UK,Quantity Surveyor,2017,2019,demo
+63,Cranley Group,UK,Quantity Surveyor,2015,2017,demo
+63,Nordwick (North),North UK,Asst/Quantity Surveyor,2004,2015,demo
+63,Whitehall Operations,UK,Trainee/Assistant Quantity Surveyor,1996,2004,demo
+58,Nordwick (Central),Central UK,Associate Director - Architecture,2024,,demo
+58,Nordwick (Central),Central UK,Associate Architect/Team Leader,2014,2024,demo
+58,Nordwick (Central),Central UK,Senior Architect,2013,2014,demo
+58,Nordwick (Central),Central UK,Architect,2012,2013,demo
+58,Cranford Advisory,UK,Architect,2011,2012,demo
+58,Brookgate Associates,UK,Architect/Arch Assistant Part II,2006,2017,demo
+58,Brookgate Associates,UK,Architectural Assistant Part I,2003,2004,demo
+58,Blackwood Services,UK,Work Experience,2002,2003,demo
+156,Nordwick (North),North UK,Quantity Surveyor,2025,,demo
+156,Northridge Ltd,UK,Assistant Quantity Surveyor,2023,2024,demo
+156,Longwood Group,UK,Assistant Quantity Surveyor,2023,2023,demo
+156,Brookmere Associates,UK,Assistant Quantity Surveyor,2021,2023,demo
+157,Daybridge Enterprises,UK,Teacher of English,2007,2014,demo
+157,Clearford Services,UK,Project Manager,2014,2018,demo
+157,Nordwick (London),"London, UK",Project Management,2018,,demo
+3,Nordwick (South),South UK,Associate Director,2009,,demo
+3,Nordwick (Central),Central UK,Senior Electrical Eng/Team Leader,2003,2009,demo
+3,Hazelgate Group,UK,Electrical Engineer,2001,2002,demo
+3,Elmshore Solutions,UK,Technician,1996,2001,demo
+158,Nordwick Consulting,UK,Electrical Engineer,2022,,demo
+158,Nordwick Consulting,UK,Assistant Building Services Engineer,2004,2022,demo
+158,Willowbrook Services,UK,CAD Technician,2003,2004,demo
+132,Nordwick (Central),Central UK,Project Manager,2021,,demo
+132,Alderline Enterprises,UK,Project Manager,2020,2021,demo
+132,Pinecrest Group,UK,Project Coordinator,2017,2019,demo
+132,Meadowgate Associates,UK,Project Administrator,2015,2017,demo
+159,Nordwick (London),"London, UK",Associate Director of Quantity Surveying,2016,,demo
+159,Stonehill Services,UK,Head of Quantity @ Building Surveying,2006,2016,demo
+159,Riverside Holdings,UK,Senior Quantity Surveyor,1997,2006,demo
+159,Norwyn Holdings,UK,Quantity Surveyor/Estimator,1982,1997,demo
+159,Oakford Operations,UK,Quantity Surveyor/Estimator,1977,1982,demo
+160,Nordwick (London),"London, UK",Senior Mechanical Services Design Engineer,2019,,demo
+160,Cranebrook Solutions,UK,Senior Design Engineer,2018,2019,demo
+160,Lincrest Group,UK,Senior Design Engineer,2017,2018,demo
+160,Northgate Services,UK,Senior Design Engineer,2016,2017,demo
+161,Nordwick (Central),Central UK,Project Manager,2004,,demo
+161,Rivermount Partners,UK,QS/PM,2000,2004,demo
+161,Downwood Associates,UK,Quantity Surveyor,1998,2000,demo
+161,Rivermount Partners,UK,Assistant Quantity Surveyor,1995,1997,demo
+162,Nordwick (Central),Central UK,Quantity Surveyor,2007,,demo
+163,Nordwick (Central),Central UK,Senior Quantity Surveyor,2019,,demo
+163,Hazelway Solutions,UK,Senior Quantity Surveyor,2015,2019,demo
+163,Ashford Enterprises,UK,Managing Quantity Surveyor,2014,2015,demo
+163,Windale Operations,UK,Senior Estimator,2013,2014,demo
+163,Brookpoint Group,UK,Senior Estimator,2009,2013,demo
+163,Highfield Services,UK,Senior Estimator,2000,2009,demo
+163,Moorland Solutions,UK,Senior Quantity Surveyor,1998,2000,demo
+163,Neovara Systems,UK,Senior Quantity Surveyor,1990,1998,demo
+16,Nordwick (London),London UK,Senior Architect,2023,,demo
+16,Stratifyx Consultants,UK,Associate,2019,2023,demo
+16,Altura Insight,UK,Associate Director,2003,2019,demo
+16,Vexaro Data Group,UK,Architectural Assistant,2002,2003,demo
+16,Quantixa Analytics,UK,Job Captain,1998,2002,demo
+122,Nordwick Consulting,UK,Associate Interior Designer,2014,,demo
+122,UK University,UK,Lecturer (HPL) Interior Design,2018,2023,demo
+122,UK University,UK,Flexible Tutor Interior Design,2023,,demo
+122,Optivance UK,UK,Senior Interior Designer,2012,2014,demo
+122,Nordwick (Central),Central UK,Interior Design Manager,2008,2012,demo
+164,Nordwick (Central),Central UK,Building Surveyor/Architectural Technician,2025,,demo
+164,Nexora Group,UK,Building Surveyor/Architectural Technologist,2024,2025,demo
+164,Lumora Analytics,UK,Building Surveyor,2023,2024,demo
+164,Fluxion Services,UK,Repairs Officer (PO2),2015,2023,demo
+165,Nordwick (London),"London, UK",Senior Quantity Surveyor,2021,,demo
+165,Datacrest Consulting,UK,Senior Quantity Surveyor,2019,2021,demo
+165,Innovara Solutions,UK,Senior Quantity Surveyor,2016,2019,demo
+165,Altius Strategy Group,UK,Senior Quantity Surveyor,2013,2016,demo
+165,Eastbridge Services,UK,Senior Quantity Surveyor,2005,2012,demo
+165,Syntera Insight,UK,Project Surveyor,2001,2004,demo
+165,AxionData UK,UK,Quantity Surveyor,2000,2001,demo
+165,Stratiform Analytics,UK,Tender and Site QS,1998,1999,demo
+165,Ovantis Consultants,UK,Project Executive,1996,1998,demo
+11,Nordwick (London),London UK,Associate Director - Architect,2017,,demo
+11,Nordwick (London),"London, UK",Senior Associate - Architect,2012,2017,demo
+11,Marlowe Strategic Services,UK,Associate Architect,2007,2012,demo
+11,Trinitech Services,UK,Senior Architect,2003,2007,demo
+11,Brackenmere Group,UK,Director,1996,2002,demo
+11,Brackenmere Group,UK,Associate & Project Architect,1991,1996,demo
+4,Nordwick (Central),Central UK,Chartered Architect,2011,,demo
+4,Haversham Partners,UK,Chartered Architect,2009,2010,demo
+4,Haversham Partners,UK,Architectural Assistant (Part II),2007,2009,demo
+4,Haversham Partners,UK,Architectural Assistant (Part I),2005,2006,demo
+5,Nordwick (Central),Central UK,Architectural Technologist,2017,,demo
+5,Optiline Intelligence,UK,Architectural Technologist,2014,2017,demo
+167,Nordwick (London),UK,Architectural Assistant (Part II),2023,,demo
+167,Nordwick (London),UK,Architectural Assistant (Part I),2022,2023,demo
+167,Nordwick (London),UK,Architectural Assistant (Part I),2019,2020,demo
+168,Nordwick (Central),Central UK,Building Surveyor,2020,,demo
+168,Nordwick (Central),Central UK,Building Surveyor (Asbestos Management),2013,2020,demo
+168,Nordwick (Central),Central UK,Facilities Officer,2000,2013,demo
+168,Devoncrest Ltd,UK,"Land Surveyor, Technical Draughtswoman, Admin Assistant",1989,2000,demo
+140,Nordwick Consulting,UK,Chartered Architect,2023,,demo
+140,Nordwick Consulting,UK,Chartered Surveyor,2019,2023,demo
+140,Nordwick Consulting,UK,Building Surveyor,2003,2019,demo
+140,Dashpoint Solutions,UK,Trainee Building Surveyor,2002,2003,demo
+89,Nordwick (North),North UK,Chartered Architect,2020,,demo
+89,Vizionyx Ltd,UK,Architectural Assistant (Part II),2017,2020,demo
+89,Techspire Consulting,UK,Architectural Assistant (Part II),2015,2017,demo
+89,Novaform Digital,UK,Architectural Assistant (Part I),2013,2014,demo
+169,Nordwick Consulting,UK,Clerk Of Works,2019,,demo
+169,Calderstone Advisory,UK,Site Manager,2017,2019,demo
+169,Quantalogic Group,UK,Contracts Manager,2014,2017,demo
+169,Stratosera Solutions,UK,Project Manager,2010,2014,demo
+169,Intellivex Systems,UK,Project Manager,2008,2009,demo
+169,Calderstone Advisory,UK,Contracts Manager,2001,2008,demo
+169,Captrix Analytics,UK,Site manager,1990,2001,demo
+169,Nexvue Services,UK,Trainee Site manager,1990,1992,demo
+170,Nordwick (Central),Central UK,Associate Landscape Architect,2025,,demo
+170,Nordwick (London),UK,Associate Landscape Architect,2020,2025,demo
+170,Statara Consulting,UK,Senior Landscape Architect,2019,2020,demo
+170,Codenex Systems,UK,Associate Landscape Architect,2014,2019,demo
+170,Infinium Insight,UK,Project Landscape Architect,2013,2014,demo
+170,TectraData UK,UK,Landscape Architect,2012,2013,demo
+170,AnalytiCore Consultants,UK,Landscape Architect,2012,2012,demo
+170,Vertaxa Solutions,UK,Landscape Architect,2011,2011,demo
+170,Optivox Group,UK,Landscape Architect,2004,2010,demo
+139,Nordwick (Central),Central UK,Associate Director Building Surveying,2023,,demo
+139,Nordwick (Central),Central UK,Building Surveyor,2016,2023,demo
+139,Nordwick (Central),Central UK,Facilities Manager – Scottow Enterprise Park,2013,2016,demo
+139,Nordwick (Central),Central UK,Facilities Management Officer,2004,2013,demo
+171,Nordwick (Central),Central UK,Building Surveyor,2025,,demo
+171,Nordwick (London),UK,Building Surveyor,2021,2025,demo
+171,Quantisera Ltd,UK,Building Surveyor,2020,2021,demo
+171,Alloydix Systems,UK,Building Surveyor,2019,2020,demo
+171,Novexria Consulting,UK,Building Surveyor,2018,2019,demo
+171,Syntri Logic,UK,Building Surveyor,2017,2019,demo
+171,Datametric UK,UK,Assistant Building Surveyor,2017,2017,demo
+171,GenerateIQ Solutions,UK,Assistant Building Surveyor,2014,2017,demo
+171,Ultivara Systems,UK,Carpenter & Joiner,2004,2017,demo
+6,Nordwick (Central),Central UK,Associate Director,2025,,demo
+6,Nordwick (London),UK,Associate Director,2017,2025,demo
+6,Nordwick (London),UK,Chartered Building Surveyor,2015,2017,demo
+6,Greenfall Advisory,UK,Building Surveyor,2015,2015,demo
+6,Nordwick (Central),Central UK,Building Surveyor,2012,2015,demo
+172,Nordwick (Central),Central UK,Senior Project Manager,2023,,demo
+172,Axentro Analytics,UK,Senior Architect,2021,2023,demo
+172,IntegraData Group,UK,Project Architect,2020,2021,demo
+172,Dynamicsight Ltd,UK,Part II & Architect,2016,2020,demo
+172,Elevion Strategy,UK,Part I,2012,2013,demo
+173,Nordwick (Central),Central UK,Senior Building Surveyor,2025,,demo
+173,Nordwick (London),UK,Senior Building Surveyor,2016,2025,demo
+173,Greenfall Advisory,UK,Building Surveyor,2015,2016,demo
+173,Analysion Consultancy,UK,Architectural Technician,2003,2015,demo
+173,Nuvera Systems,UK,Property Surveyor,1996,2003,demo
+103,Nordwick Consulting,UK,Engineer,2023,,demo
+103,Techline Insight,UK,Engineer,2020,2023,demo
+103,Northcrest Partners,UK,Senior Technician,2020,2020,demo
+103,Northcrest Partners,UK,Technician,2018,2020,demo
+103,Northcrest Partners,UK,Assistant / Junior Technician,2017,2018,demo
+103,Northcrest Partners,UK,Apprentice / Trainee,2015,2017,demo
+105,Trivion Services,UK,Trainee Mechanical Estimator,2002,2003,demo
+105,Denwick Solutions,UK,Trainee Mechanical Estimator before progressing to Mechanical Design Engineer,2003,2007,demo
+105,Nordwick (Central),Central UK,Mechanical Design Engineer progressing to Senior Mechanical Design Engineer,2007,,demo
+141,Nordwick (Central),Central UK,Associate – Building Services Engineering Manager,2023,,demo
+141,Nordwick (Central),Central UK,Senior Building Services Engineer,2018,2023,demo
+141,Nordwick (Central),Central UK,Building Services Engineer,2004,2018,demo
+141,Valnor Group,UK,Mechanical Services Contracts Manager,1996,2004,demo
+141,Solbreck Consulting,UK,Mechanical Services Engineer,1993,1996,demo
+141,Haverin Services,UK,Mechanical Services Engineer,1991,1993,demo
+141,Bankmore Consulting,UK,Mechanical Services Design Engineer,1990,1991,demo
+81,Nordwick Consulting,UK,Associate Architect,2015,,demo
+81,Nordwick (North),North UK,Project Architect / Associate Architect,2008,2015,demo
+81,Coldham Group,UK,Architectural Assistant (PartI and Part II),2003,2008,demo
+55,Nordwick (North),North UK,Chartered Quantity Surveyor,2024,,demo
+55,Newthorpe Services,UK,Senior Cost Manager,2023,2024,demo
+55,Westmere Holdings,UK,Project Cost Consultant,2021,2023,demo
+55,Westmere Holdings,UK,Assistant Cost Consultant,2020,2021,demo
+55,Westmere Holdings,UK,Graduate Cost Consultant,2018,2020,demo
+93,Nordwick (North),North UK,Architectural Technician,2016,,demo
+93,Nordwick (North),North UK,Senior Architectural Assistant,2004,2016,demo
+93,Welland Partners,UK,"Model Maker, Architectural Assistant",1988,2004,demo
+93,Fairbrook Ltd,UK,Model Maker,1983,1988,demo
+174,Nordwick (Central),Central UK,Project Manager,2022,,demo
+174,Nordwick (London),London UK,"Building Services Engineer, Assistant BSE.",2013,2022,demo
+174,Highgate Consulting,UK,"Residential Manager, Senior Practitioner, Team Leader",2003,2013,demo
+175,Nordwick (Central),Central UK,Associate Director - Consulting,2014,,demo
+175,Nordwick (Central),Central UK,Associate Director - Operations,2011,2014,demo
+175,Nordwick (Central),Central UK,DfE Contract Manager,2008,2011,demo
+175,Devoncrest Ltd,UK,Capital Project Manager,2005,2008,demo
+175,Devoncrest Ltd,UK,Principal Finance Officer,2003,2005,demo
+175,Devoncrest Ltd,UK,School Support Finance Manager,1999,2003,demo
+66,Nordwick (North),North UK,Senior Building Surveyor,2012,,demo
+66,Crowthorne Services,UK,Regional Building Surveyor,2004,2012,demo
+66,Millhaven Group,UK,Building Surveyor /Clerk of Works (Temporary),2004,2004,demo
+66,Darlington Systems,UK,Technical Officer / Building Surveyor (Temporary),2003,2004,demo
+66,Rudgate Solutions,UK,Condition Surveyor,2002,2003,demo
+66,Linshaw Consulting,UK,Carpenter/Joiner/Shopfitter,1987,2002,demo
+176,Nordwick Consulting,UK,Associate Quantity Surveyor,2025,,demo
+176,Nordwick (London),UK,Associate Quantity Surveyor,2019,2025,demo
+176,Eastbridge Services,UK,Associate,2016,2019,demo
+176,Rawson Group,UK,Partner,2007,2016,demo
+176,Faircrest Solutions,UK,Associate Director,2001,2007,demo
+176,Hawkin Services,UK,Senior Cost Consultant,2000,2001,demo
+176,Silvergate Plc,UK,Principal Surveyor,1994,2000,demo
+176,Penford Solutions,UK,Project Surveyor,1987,1994,demo
+177,Nordwick (Central),Central UK,Quantity Surveyor,2024,,demo
+177,Stonemark Ltd,UK,Quantity Surveyor,2001,2023,demo
+177,Kendale Services,UK,Housing Manager,1995,2001,demo
+177,Linrock Group,UK,Graduate Quantity Surveyor,1989,1992,demo
+177,Birkby Consulting,UK,Student Quantity Surveyor,1987,1988,demo
+178,Nordwick (Central),Central UK,Building Surveyor,2016,,demo
+178,Northwell Solutions,UK,Maintenance Surveyor,2016,2016,demo
+178,Eastwell Operations,UK,Planned Responsive Voids Surveyor,2011,2015,demo
+178,Southcrest Consulting,UK,Building Estates Support Co-ordinator,2002,2011,demo
+178,Westlyn Services,UK,Maintenance Surveyor,2000,2002,demo
+178,Westford & Denton,UK,Planned Maintenance Surveyor,1992,2000,demo
+94,Nordwick (Central),Central UK,Chartered Architect,2014,,demo
+94,Calderwick Group,UK,Architectural Assistant (Part II) / Project Architect,2012,2014,demo
+94,Steadford Group,UK,Architectural Assistant (Part II),2011,2012,demo
+94,Stonebrook UK,UK,Architectural Assistant (Part II),2010,2013,demo
+94,Steadford Group,UK,Architectural Assistant (Part I),2007,2008,demo
+135,Nordwick (Central),Central UK,Assistant Project Manager,2022,,demo
+135,Ribston Associates,UK,Delivery Office Manager (DM4),2001,2022,demo
+135,Weybridge Solutions,UK,Inspection Technician,1993,2001,demo
+75,Nordwick (North),North UK,Senior Building Surveyor,2023,,demo
+75,Nordwick (North),North UK,Building Surveyor,2021,2023,demo
+75,Nordwick (North),North UK,Graduate Building Surveyor,2020,2021,demo
+75,Nordwick (North),North UK,Trainee Building Surveyor,2018,2020,demo
+64,Nordwick (Central),Central UK,Part 2 Architectural Assistant,2022,,demo
+64,Penthorpe Services,UK,Part 1 Architectural Assistant,2020,2022,demo
+179,Nordwick (North),North UK,Assistant Quantity Surveyor,2025,,demo
+179,Greyfell Consulting,UK,Assistant Quantity Surveyor,2023,2025,demo
+179,Branford Group,UK,Trainee Quantity Surveyor,2021,2022,demo
+180,Nordwick Consulting,UK,Structural Technician,2019,,demo
+180,Crestborne Solutions,UK,Structural Technician,2017,2019,demo
+180,Nordwick Consulting,UK,Structural Technician,2014,2017,demo
+180,Nordwick (London),"London, UK",Structural Technician,2010,2014,demo
+180,Nordwick (North),North UK,Surveyor,2004,2010,demo
+181,Nordwick (North),North UK,Part 2 Architectural Assistant,2024,,demo
+181,Elmbury Solutions,UK,Part 2 Architectural Assistant,2022,2024,demo
+181,Elmbury Solutions,UK,Architectural Assistant (Summer Temp),2021,2021,demo
+181,Elmbury Solutions,UK,Part 1 Architectural Assistant,2018,2020,demo
+73,Nordwick (North),North UK,Architect,2019,,demo
+73,Evershaw Ltd,UK,Part 2 architectural assistant and architect,2013,2019,demo
+73,Westrovia Services,UK,Part 2 architectural assistant,2012,2013,demo
+73,Norham Consulting,UK,Part 2 architectural assistant,2011,2013,demo
+73,Selgarth Associates,UK,Part 1 architectural assistant,2008,2009,demo
+57,Nordwick (North),North UK,Architectural Technician,2020,,demo
+57,Markridge Group,UK,Architectural Technician,2018,2019,demo
+182,Nordwick (Central),Central UK,Technical Support Assistant,2019,,demo
+182,Lintonwell Services,UK,Business Support Assistant,2018,2019,demo
+182,Fairbank Consulting,UK,Business Support Assistant,2014,2018,demo
+182,Millgate Solutions,UK,Area Manager Logistics,2003,2013,demo
+51,Nordwick (South),South UK,Chartered Building Surveyor,2022,,demo
+51,Nordwick (South),South UK,Chartered Building Surveyor,2012,2022,demo
+51,Nordwick (South),South UK,Building Surveyor,2009,2012,demo
+51,Nordwick (South),South UK,Assistant Building Surveyor,2007,2009,demo
+51,Stanhill Group,UK,Trainee Building Surveyor,2006,2007,demo
+183,Nordwick (South),South UK,Associate Engineer,2025,,demo
+183,Elliston Rowe Ltd,UK,Resident Engineer,2024,2025,demo
+183,Oxenford Services,UK,Principal Engineer,2022,2024,demo
+183,Elliston Rowe Ltd,UK,Senor Structural Engineer,2021,2022,demo
+183,Ashmere Consulting,UK,Structural Design Engineer,2021,,demo
+24,Nordwick (South),South UK,Senior Architectural Technician,2018,,demo
+24,Newcroft Group,UK,Architectural Technician,2015,2018,demo
+24,Whitton Solutions,UK,Architectural Assistant,2013,2014,demo
+50,Bramwell Services,UK,Architectural Assistant,1990,1996,demo
+50,Loxley Group,UK,Architectural Assistant,1996,2003,demo
+50,Nordwick (South),South UK,Architectural Technician,2003,,demo
+48,Nordwick (South),South UK,Senior Architectural Technician,2009,,demo
+48,Alderwick & Moss,UK,Architectural Technician,2004,2009,demo
+49,Duncrest Holdings,UK,Senior Architectural Technician,2023,,demo
+49,Duncrest Holdings,UK,Junior Architectural Technician,2018,2021,demo
+49,Fairburn Consulting Group,UK,Architectural Technician,2021,2023,demo
+49,Nordwick (South),South UK,CAD Technician,2017,2018,demo
+166,Nordwick (North),North UK,Mechanical Engineer,2025,,demo
+166,Redhaven Partners,UK,MEP Consultant,2024,2025,demo
+166,Northbridge Advisory,UK,Technical Associate Director,2005,2024,demo
+166,Casterly Holdings,UK,Senior Engineer,2000,2005,demo
+88,Nordwick (North),North UK,Architectural Technician,2015,,demo
+88,Hallcroft Consulting,UK,Architectural Technician,1979,,demo
+184,Nordwick (Central),Central UK,Associate Director—Planning,2024,,demo
+184,Nordwick (Central),Central UK,Senior Planning Consultant,2006,2024,demo
+184,Westford & Denton,UK,Planning Officer (Planning Policy),2005,2006,demo
+184,Devoncrest Ltd,UK,Planning Officer (Development Control),2001,2005,demo
+184,Bristow & Whitaker,UK,Planning Assistant (Development Control),2001,2001,demo
+185,Nordwick (North),North UK,Landscape Architect,2020,,demo
+185,Lindale Partners,UK,Senior Landscape Architect,1992,2012,demo
+185,Elmhurst Strategic,UK,Assistant Landscape Architect,1992,1992,demo
+185,Denholm Advisory,UK,Landscape Assistant,1989,1990,demo
+78,Nordwick (North),North UK,Building Surveying Manager,2023,,demo
+78,Nordwick (North),North UK,Senior Building Surveyor,2016,2023,demo
+78,Brimley Strategic Services,UK,Contract Senior Building Surveyor,2014,2016,demo
+78,Kingswell Associates,UK,Project Manager,2013,2014,demo
+78,Hartwell Group,UK,Senior Building Surveyor,2002,2012,demo
+78,Hartwell Group,UK,Contract Building Surveyor,2000,2002,demo
+78,Brockley Consulting,UK,Contract Building Surveyor,1999,2000,demo
+78,Brimley Strategic Services,UK,Architectural Technician,1986,1999,demo
+186,Nordwick (Central),Central UK,Planning Consultant,2022,,demo
+186,Nordwick (Central),Central UK,Graduate Planning Consultant,2020,2022,demo
+80,Nordwick (North),North UK,Residential Lead Commercial,2020,,demo
+80,Nordwick (North),North UK,QS Team Manager,2017,2020,demo
+80,Nordwick (North),North UK,Chartered/Senior QS,2014,2017,demo
+80,Kentford Advisory,UK,Short Term Business Development,2014,2014,demo
+80,Mortimer Hill Group,UK,Contracting Team Lead,2012,2014,demo
+80,Wentworth Advisory,UK,M&E Quantity Surveyor,2004,2012,demo
+80,Kentford Advisory,UK,Ventilation Systems manufacture/installation,2000,2004,demo
+187,Nordwick (Central),Central UK,Associate Managing Consultant,2021,,demo
+187,Redvine Consultants,UK,Programme Manager,2020,2021,demo
+187,Redvine Consultants,UK,Senior Transformation Advisor,2017,2020,demo
+187,Redvine Consultants,UK,Transformation Advisor,2016,2017,demo
+188,Nordwick (Central),Central UK,Land Surveyor,1998,,demo
+114,Claremont Advisory,UK,CAD CAM Manager,1980,2002,demo
+114,Devoncrest Ltd,UK,Highway DesignTechnician,2002,2007,demo
+114,Hadley & Co.,UK,Highway Design Engineer,2007,2015,demo
+114,Nordwick (Central),Central UK,Associate Director - Civil Engineering,2015,,demo
+189,Nordwick (South),South UK,Senior Quantity Surveyor.,2025,,demo
+189,Cranford Hill Partners,UK,Associate Director.,2021,2025,demo
+189,Weatherby Strategic Services,UK,Associate Director.,2000,2021,demo
+189,Whitwood Management,UK,Quantity Surveyor.,1995,2000,demo
+189,Ashwick Advisory,UK,Assistant Quantity Surveyor.,1993,1994,demo
+189,Greenford Analytics,UK,Part Time Technical Drawing Assistant.,1989,1991,demo
+123,Thornton & Vale,UK,Lead Architectural Designer,2014,2021,demo
+123,Birchglen Associates,UK,Associate Architect,2007,2014,demo
+123,Birchglen Associates,UK,Architectural Assistant,2004,2007,demo
+104,Nordwick (Central),Central UK,Architect,2022,,demo
+104,Arlingford Consulting,UK,Architect / Part III Architectural Assistant,2019,2022,demo
+104,Bramcote Advisory,UK,Part I Architectural Assistant,2016,2017,demo
+104,Redford & Rowe,UK,Part I Architectural Assistant,2015,2016,demo
+190,Nordwick (Central),Central UK,Assistant Land Surveyor,2022,,demo
+190,Ellingwood Group,UK,Night Receptionist,2020,2022,demo
+190,Westlawn Partners,UK,Business Admin and Accounts Assistant,2019,2020,demo
+191,Nordwick (Central),Central UK,Land Surveyor,2016,,demo
+191,EstateLine Services,UK,Assistant Land Surveyor,2014,2016,demo
+108,Nordwick Consulting,UK,Senior Chartered Architect,2023,,demo
+108,Crestford Property Group,UK,"Project Architect, Architect",2019,2023,demo
+108,MeasureRight Surveying,UK,"Architect, Architectural Assistant Part II / III",2013,2018,demo
+108,LandPoint Associates,UK,Architectural Designer,2011,2011,demo
+192,Nordwick Consulting,UK,Valuation Assistant,2023,,demo
+192,Nordwick (Central),Central UK,Project Manager,2023,2023,demo
+192,BuiltForm Solutions,UK,Higher Executive Officer,2021,2023,demo
+192,EstateVision Consultancy,UK,Site Manager,2017,2020,demo
+192,PrimeBuild Services,UK,Project Manager,2015,2017,demo
+193,Nordwick (London),"London, UK",Director of Bld Surveying & Projects,2019,2022,demo
+193,Nordwick (London),"London, UK",Associate Project Manager,2017,2019,demo
+193,Nordwick (London),"London, UK",Programme Manager,2008,2017,demo
+193,Nordwick (London),"London, UK",Planned Maintenance- T/Leader,2007,2008,demo
+193,GroundPeak Developments,UK,Building Surveyor,1989,2007,demo
+193,UrbanShape Property,UK,Apprentice to Building Surveying,1978,1989,demo
+194,Nordwick (Central),Central UK,Senior CAD Technician,2022,,demo
+194,Nordwick (Central),Central UK,CAD Technician,2014,2022,demo
+194,TerraVista Survey Group,UK,Draughtsman,2012,2014,demo
+194,Nordwick (Central),Central UK,CAD Technician,2002,2012,demo
+136,Nordwick (Central),Central UK,Architectural Assistant,2023,,demo
+136,Alderwick Consultancy,UK,Architectural Assistant,2018,2023,demo

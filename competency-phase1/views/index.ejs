@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competency App – Phase 1</title>
+
+   <!-- =================== CSS =================== -->
+
+   <!-- Bootstrap CSS (latest stable 5.3.8) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous">
+
+  <!-- Stork-app custom styles -->
+  <link rel="stylesheet" href="/competency-phase1/css/competency-phase1.css"/>
+
+  <!-- Leaflet + Map plugins -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Include DataTables + Buttons CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+
+  <!-- Portfolio navbar/footer styles -->
+  <link rel="stylesheet" href="/css/styles.css"/>
+    <!-- backend\public\css\styles.css -->
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Inline CSS to fix Leaflet z-index issues -->
+  <style>
+    .navbar { position: relative; z-index: 1001; }
+    #map { z-index: 0 !important; }
+    .leaflet-control-container { z-index: 400 !important; }
+  </style>
+
+</head>
+
+<body>
+  
+
+  <!-- Navbar portfolio version-->
+  <%- include ('components/navbar') %>
+
+    <!-- Main Content -->
+    <main>
+
+
+      <!-- NEW SECTION BELOW -->
+      <section class="competency-accordion-section bg-light">
+        <div class="container px-2 px-md-3">
+          <!-- competency Overview Section -->
+          <h2 class="px-3 mb-2">Competency App – Phase 1 (Microsoft Azure Cloud Platform)</h2>
+          <p class="px-3 mb-4">
+            This page demonstrates a cloud-deployed competency data platform built entirely on the
+            <strong>Microsoft Azure technology stack</strong>.
+            Employee data is retrieved from a <strong>NestJS API hosted on Azure App Service</strong>,
+            backed by an <strong>Azure SQL Database</strong> populated using <strong>Azure Data Factory</strong>.
+          </p>
+
+          <!-- Technology Stack Overview -->
+          <div class="tech-stack-summary px-3 mb-4 ms-2">
+            <h5 class="fw-semibold mb-3">Technology Stack (Phase 1)</h5>
+            <ul class="list-inline small mb-0 ms-2">
+              <li class="list-inline-item mb-1">
+                <strong>Frontend:</strong> HTML, EJS, JavaScript, Bootstrap 5, jQuery, DataTables
+              </li><br>
+              <li class="list-inline-item mb-1">
+                <strong>Backend API:</strong> NestJS (Node.js, TypeScript), TypeORM
+              </li><br>
+              <li class="list-inline-item mb-1">
+                <strong>Data Platform:</strong> Azure SQL Database, Azure Data Factory, Azure Blob Storage
+              </li><br>
+              <li class="list-inline-item">
+                <strong>Cloud & DevOps:</strong> Azure App Service (Linux), GitHub Actions (CI/CD)
+              </li>
+            </ul>
+          </div>
+
+            <p class="small text-muted ms-3 mt-2">
+              Phase 1 focuses on cloud deployment, data ingestion, and API integration.
+            </p>
+
+          <div class="accordion" id="competencyappAccordion">
+            <!-- Overview -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="competencyappHeadingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#competencyappCollapseOne" aria-expanded="true"
+                  aria-controls="competencyappCollapseOne">
+                  About the Project
+                </button>
+              </h2>
+              <div id="competencyappCollapseOne" class="accordion-collapse collapse"
+                aria-labelledby="competencyappHeadingOne" data-bs-parent="#competencyappAccordion">
+                <div class="accordion-body">
+                  <p>
+                    The <strong>Competency App</strong> is a full-stack web application designed to
+                    demonstrate practical experience with <strong>Microsoft Azure cloud services</strong>
+                    and modern backend development.
+                  </p>
+
+                  <p>
+                    Phase 1 focuses on deploying a production-style data pipeline and API, rather than
+                    advanced user interface features. Employee competency and experience data is ingested,
+                    stored, and exposed via a secure REST API, then consumed by a lightweight frontend for
+                    exploration and validation.
+                  </p>
+
+                  <p>
+                    Key objectives of this phase include:
+                  </p>
+
+                  <ul>
+                    <li>Deploying a scalable <strong>NestJS API</strong> to Azure App Service</li>
+                    <li>Integrating with <strong>Azure SQL Database</strong> using TypeORM</li>
+                    <li>Ingesting structured data via <strong>Azure Data Factory</strong></li>
+                    <li>Demonstrating secure, cross-origin access from a separate frontend application</li>
+                  </ul>
+
+                  <p class="mb-0">
+                    Subsequent phases extend this foundation with richer frontend interaction,
+                    search, and analytics features.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- System Architecture -->
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="competencyappHeadingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#competencyappCollapseTwo" aria-expanded="false"
+                  aria-controls="competencyappCollapseTwo">
+                  System Architecture
+                </button>
+              </h2>
+              <div id="competencyappCollapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="competencyappHeadingTwo" data-bs-parent="#competencyappAccordion">
+                <div class="accordion-body">
+                  <p>
+                    This Competency App combines a <strong>Python data-processing backend</strong> with a 
+                    <strong>JavaScript-based interactive frontend</strong>, connected through a 
+                    <strong>Node.js/Express</strong> server.
+                  </p>
+                  <ul>
+                    <li><strong>Backend:</strong> Python handles data transformation, clustering, and metric evaluation.</li>
+                    <li><strong>Frontend:</strong> Built using HTML, CSS, JavaScript, Bootstrap, and Leaflet.js for interactive maps.</li>
+                    <li><strong>Database:</strong> PostgreSQL stores cleaned and preprocessed GPS data.</li>
+                  </ul>
+                  <p>
+                    The architecture was designed for write sokme detail.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Backend Processing -->
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="competencyappHeadingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#competencyappCollapseThree" aria-expanded="false"
+                  aria-controls="competencyappCollapseThree">
+                  Backend Processing
+                </button>
+              </h2>
+              <div id="competencyappCollapseThree" class="accordion-collapse collapse"
+                aria-labelledby="competencyappHeadingThree" data-bs-parent="#competencyappAccordion">
+                <div class="accordion-body">
+                  <p>
+                    The backend uses <strong>Python scripts</strong> for data preprocessing, clustering, and evaluation.
+                  </p>
+                  <ul>
+                    <li>Preprocessing cleans raw CSV datasets, calculates metrics such as distance and heading, and loads them into PostgreSQL.</li>
+                    <li>Users can select <strong>HDBSCAN</strong>, <strong>DBSCAN</strong>, or <strong>K-Means</strong> for clustering, with results returned in <strong>GeoJSON</strong> format.</li>
+                    <li>Each clustering run logs its input size, parameters, runtime, and resulting cluster count, enabling reproducibility and comparison.</li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Frontend & Visualisation -->
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="competencyappHeadingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#competencyappCollapseFour" aria-expanded="false"
+                  aria-controls="competencyappCollapseFour">
+                  Frontend & Visualisation
+                </button>
+              </h2>
+              <div id="competencyappCollapseFour" class="accordion-collapse collapse"
+                aria-labelledby="competencyappHeadingFour" data-bs-parent="#competencyappAccordion">
+                <div class="accordion-body">
+                  <p>
+                    The frontend provides a responsive, interactive interface built with <strong>Leaflet.js</strong> and <strong>Bootstrap</strong>.
+                  </p>
+                  <ul>
+                    <li>Interactive map visualises stork trajectories and clustering results.</li>
+                    <li>Filters allow selection by individual, year, month, time slot, and distance.</li>
+                    <li>A <strong>time-slider animation</strong> feature replays movement patterns across weeks or months, with colour-coded legends for easy interpretation.</li>
+                    <li>Optimised for desktop, tablet, and mobile with accessibility considerations throughout.</li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Add data if required. -->
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="competencyappHeadingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#competencyappCollapseFive" aria-expanded="false"
+                  aria-controls="competencyappCollapseFive">
+                  Add data if required.
+                </button>
+              </h2>
+              <div id="competencyappCollapseFive" class="accordion-collapse collapse"
+                aria-labelledby="competencyappHeadingFive" data-bs-parent="#competencyappAccordion">
+                <div class="accordion-body">
+                  <p>
+                    Add data if required.
+                  </p>
+                  <ul>
+                    <li>Add data if required.</li>
+                    <li>Add data if required.</li>
+                    <li>Add data if required.</li>
+                  </ul>
+                  <p>
+                    Add data if required..
+                  </p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- <p class="mt-4 ms-4">
+            This page demonstrates live data flowing from an Azure SQL database,
+            through a NestJS API hosted on Azure App Service, into a lightweight frontend.
+            Data is ingested via Azure Data Factory.
+          </p> -->
+
+        <div class="alert alert-secondary mt-4">
+          This page demonstrates live data flowing from an <strong>Azure SQL Database</strong>,
+          through a <strong>NestJS API hosted on Azure App Service</strong>,
+          into a lightweight frontend application.
+          Data ingestion is handled using <strong>Azure Data Factory</strong>.
+        </div>
+
+      </div>
+
+        
+
+      </section>
+ 
+
+      <!-- <div class="container mt-0 pt-0">
+        <section id="hero-top" class="text-center py-5 position-relative">
+
+          <h1 class="display-2 fw-bold mb-3">Competency App Phase 1</h1>
+          <p class="display-6" style="opacity: 0.9;">A tool designed to visualise competency data.</p>
+
+        </section>
+      </div> -->
+
+   
+ 
+
+      <section id="competency-table-section" class="container my-4 mb-1 mt-2">
+        <div class="main-card card shadow-sm border-0 rounded">
+          <div id="table-card" class="card-body">
+            <label for="table-card-title" class="form-label fw-bold deferred-tooltip" data-bs-toggle="tooltip"
+              data-bs-placement="top" data-bs-html="true"
+              data-title-html="Provide decription of the competency details table here.">
+              <h5 class="form-h5 mb-2 mt-2">Employee Competency Summary</h5>
+            </label>
+            <div class="table-responsive">
+              <table id="competencyTable" class="display table table-striped table-bordered" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job</th>
+                    <th>Legal Entity</th>
+                    <th>Discipline</th>
+                    <th>Projects</th>
+                    <th>Qualifications</th>
+                    <th>CPD</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- DataTables will populate this -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+  
+        </div>
+      </section>
+
+    </main>
+
+    <%- include ('components/footer') %>
+
+    <!-- Core Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+      crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+
+    <!-- Your App (must come last so it can use everything above) -->
+     <!-- maybe add a competency css file -->
+    <!-- <script type="module" src="/stork-app/js/app.js"></script> -->
+
+    <!-- Portfolio navbar functionality -->
+    <script src="/competency-phase1/js/competency-phase1.js"></script>
+
+
+</body>
+
+</html>

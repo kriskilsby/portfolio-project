@@ -327,56 +327,57 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalTitle = document.getElementById('imageModalLabel');
 
   if (!imageModalEl || !modalImage || !modalTitle) {
-    console.error('❌ Modal elements not found in DOM');
-    return;
+    // Modal is optional and not used on all pages
+    console.debug('ℹ️ No image modal found, skipping modal setup');
+  } else {
+
+    const preloadImage = (url) => new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = url;
+    });
+
+    const handleModalClick = async (e) => {
+      const btn = e.target.closest('.modal-enlarge-btn');
+      if (!btn) return;
+
+      const src = btn.dataset.imageSrc;
+      const alt = btn.dataset.imageAlt || 'Expanded image';
+      if (!src) return;
+
+      // console.log('🖼️ Enlarge button clicked:', src);
+
+      try {
+        const loadedImg = await preloadImage(src);
+        modalImage.src = loadedImg.src;
+        modalImage.alt = alt;
+        modalTitle.textContent = alt;
+
+        // Apply inert to all siblings outside modal for accessibility
+        const siblings = Array.from(document.body.children).filter(el => el !== imageModalEl);
+        siblings.forEach(el => el.setAttribute('inert', ''));
+
+        const modalInstance = bootstrap.Modal.getInstance(imageModalEl) || new bootstrap.Modal(imageModalEl);
+
+        // Remove inert when modal closes
+        const removeInert = () => {
+          siblings.forEach(el => el.removeAttribute('inert'));
+          imageModalEl.removeEventListener('hidden.bs.modal', removeInert);
+        };
+        imageModalEl.addEventListener('hidden.bs.modal', removeInert);
+
+        modalInstance.show();
+        // console.log('🔔 Modal opened successfully');
+      } catch (err) {
+        console.error('❌ Failed to load image:', src, err);
+      }
+    };
+
+    document.body.addEventListener('click', handleModalClick);
+
+    console.debug('🛠️ Modal handler installed');
   }
-
-  const preloadImage = (url) => new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = reject;
-    img.src = url;
-  });
-
-  const handleModalClick = async (e) => {
-    const btn = e.target.closest('.modal-enlarge-btn');
-    if (!btn) return;
-
-    const src = btn.dataset.imageSrc;
-    const alt = btn.dataset.imageAlt || 'Expanded image';
-    if (!src) return;
-
-    console.log('🖼️ Enlarge button clicked:', src);
-
-    try {
-      const loadedImg = await preloadImage(src);
-      modalImage.src = loadedImg.src;
-      modalImage.alt = alt;
-      modalTitle.textContent = alt;
-
-      // Apply inert to all siblings outside modal for accessibility
-      const siblings = Array.from(document.body.children).filter(el => el !== imageModalEl);
-      siblings.forEach(el => el.setAttribute('inert', ''));
-
-      const modalInstance = bootstrap.Modal.getInstance(imageModalEl) || new bootstrap.Modal(imageModalEl);
-
-      // Remove inert when modal closes
-      const removeInert = () => {
-        siblings.forEach(el => el.removeAttribute('inert'));
-        imageModalEl.removeEventListener('hidden.bs.modal', removeInert);
-      };
-      imageModalEl.addEventListener('hidden.bs.modal', removeInert);
-
-      modalInstance.show();
-      console.log('🔔 Modal opened successfully');
-    } catch (err) {
-      console.error('❌ Failed to load image:', src, err);
-    }
-  };
-
-  document.body.addEventListener('click', handleModalClick);
-
-  console.log('🛠️ Modal handler installed and ready');
 
   // ----------------------------------------------------------------------
   // ###########  AUTO TYPING SIMULATED LOGIN HANDLING  ###########

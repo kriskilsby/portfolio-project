@@ -1,0 +1,691 @@
+e_id,q_type,q_name,q_institution,q_year,data_origin
+102,Academic,BTEC Building Services Design,UK College,2004,demo
+102,Academic,AutoCAD City & Guilds,UK College,1996,demo
+120,Professional,Chartered Member of the Institute of Architectural Technologist MCIAT,N/A,2007,demo
+142,Professional,MCIOB,N/A,2024,demo
+142,Academic,BSC (Hons) Building Surveying,UK University,2001,demo
+128,Professional,Chartered Member of the Chartered Institute of Architectural Technologists (MCIAT),N/A,2014,demo
+128,Academic,Building Surveying (BSc Degree),UK University,2007,demo
+130,Academic,ONC Mechanical Engineering,UK College,2004,demo
+130,Academic,HNC Building Services Engineering,UK College,2006,demo
+130,Academic,HND Building Services Engineering,UK College,2007,demo
+130,Professional,CIBSE - LCEA / LCC,N/A,2024,demo
+140,Academic,NVQ Lv 5 Construction Project Management,UK School/College,2008,demo
+140,Academic,HNC Building Studies,UK College,2005,demo
+140,Academic,NC Building Studies,UK College,2003,demo
+3,Academic,HND Building Services,UK College,1996,demo
+3,Professional,BS 7671 2008 : selection/erection/verification of electrical installations -City & Guild,N/A,2008,demo
+3,Academic,C&G Electronics and AutoCAD,UK College,1994,demo
+3,Professional,Technical member of the IET - TMIET,N/A,2007,demo
+3,Professional,CSCS – Professionally Qualified Person - Construction Skills Certification Scheme,N/A,2021,demo
+126,Academic,BSc (Hons) Architectural Technology,UK University,2007,demo
+126,Academic,BA Architecture,UK University,2011,demo
+126,Academic,MArch,UK University,2015,demo
+139,Academic,BTEC Award – Gypsy and Traveller Site Management,UK School/College,2007,demo
+139,Academic,BA Hons Fine Art ,UK University,2001,demo
+63,Academic,BSc Quantity Surveying,UK University,2006,demo
+63,Academic,450 RICS study hours,UK College,2008,demo
+63,Professional,NEC4 Project Manager Accreditation,N/A,2025,demo
+83,Academic,OND Technology,UK College,1977,demo
+83,Academic,HND Mechanical,UK College,1980,demo
+83,Academic,Polytechnic Certificate in Building Services,UK College,1982,demo
+83,Professional,Associate Member CIBSE (1994),N/A,1994,demo
+84,Academic,BTEC HNC Electrical Engineering.,UK College,1997,demo
+84,Academic,BTEC ONC Electrical Engineering,UK College,1994,demo
+84,Academic,City & Guilds Part 1 & 2  Electronic/Electrical servicing,UK College,1994,demo
+84,Academic,City & Guilds  2382 Electrical Installation BS7671,UK College,2019,demo
+84,Professional,Full Member of the IET (Institue of Engineering & Technolgy) ,N/A,2010,demo
+93,Professional,Chartered Institute of Architectural Technologists – TCIAT Member,N/A,2009,demo
+93,Professional,Chartered Institute of Architectural Technologists – ACIAT Member,N/A,2025,demo
+141,Academic,BTEC Construction ,UK College,1991,demo
+141,Academic,BTEC ONC Building Services Engineering,UK School/College,1993,demo
+131,Academic,BSc(Hons) Architectural Computer Aided Technology,UK University,2005,demo
+131,Academic,HNC Construction,UK College,2007,demo
+131,Professional,MCIAT accreditation,N/A,2016,demo
+52,Academic,BTEC Higher National Cert Civil Engineering,UK College,1982,demo
+52,Professional,Graduate Member of the Institution of civil engineers (GMICE) ,N/A,2015,demo
+13,Academic,BEng (Hons) Building Services Engineering (1st Class),UK University,2003,demo
+13,Professional,Chartered Engineer,N/A,2009,demo
+13,Academic,CIBSE Low Carbon Consultant,UK College,2010,demo
+35,Professional,MCIOB,N/A,1984,demo
+35,Academic,ONC,UK College,1982,demo
+35,Academic,HNC ,UK College,1980,demo
+36,Academic,BSc Hons,UK University,2000,demo
+37,Academic,"BSc (Hons) Rural Estate Management,",UK University,1998,demo
+37,Professional,MRICS,N/A,2000,demo
+37,Professional,FAAV,N/A,2001,demo
+51,Academic,MSc Surveying,UK College,2009,demo
+51,Academic,BSc (Hons) Chemistry,UK University,2005,demo
+51,Professional,Construction Skills Certification Scheme – Professionally Qualified Person,N/A,2023,demo
+51,Professional,Royal Institution of Chartered Surveyors – Member,N/A,2012,demo
+105,Academic,BTEC National Certificate in Building Services Engineering,UK College,2004,demo
+105,Academic,Higher National Certificate HNC in Building Services Engineering,UK University,2006,demo
+105,Academic,Higher National Diploma HND in Building Services Engineering,UK University,2007,demo
+105,Professional,CIBSE Certified Low Carbon Energy Assessor (LCEA) levels 4 and 5,N/A,2023,demo
+87,Academic,"BA (Hons) Architecture
+Hull School of Architecture",UK University,1996,demo
+87,Academic,"B(Arch) Architecture
+Universtiy of Lincolnshire and Humberside",UK University,1999,demo
+48,Academic,Higher National Certificate Construction,UK College,2008,demo
+48,Academic,National Certificate Construction,UK College,2006,demo
+77,Academic,BA (Hons) Architectural Studies Newcastle ,UK University,1997,demo
+77,Academic,BArch ,UK University,2002,demo
+77,Professional,Associaton for Project Management / Introductory Certificate,N/A,2004,demo
+77,Professional,APS - The Principle Designer,N/A,2022,demo
+61,Academic,Level 7 NVQ Diploma in Construction Senior Management,UK College,2018,demo
+61,Other,Temporary Works Co-ordinator,UK College,2019,demo
+4,Academic,Architecture Postgraduate Diploma Professional Practice,UK University,2007,demo
+4,Academic,BA (Hons) Architecture,UK University,2005,demo
+4,Professional,Royal Institute of British Architects – Chartered Member,N/A,2009,demo
+4,Professional,Architects Registration Board Registration,N/A,2009,demo
+30,Academic,B Eng (Hons),UK University,2000,demo
+30,Academic,"C Eng,",UK University,2011,demo
+30,Professional,MCIBSE,N/A,2011,demo
+68,Academic,BTEC Diploma Construction,UK College,1990,demo
+68,Academic,BSc (Hons) Quantity Surveying,UK University,1994,demo
+68,Professional,Royal Institution of Chartered Surveyors – chartered member,N/A,2007,demo
+88,Academic,HNC Building Studies (BIAT),UK School/College,1981,demo
+88,Academic,City and Guilds - AutoCAD - AEC,UK School/College,1998,demo
+95,Academic,BTEC ONC Electrical Building Services,UK College,1989,demo
+95,Academic,BTEC HNC Electrical Building Services,UK College,1991,demo
+95,Academic,BEng(HON) Electrical & Electronic Engineering (Building services),UK University,1994,demo
+95,Professional,"C&G 2400 design, testing and verification",N/A,1996,demo
+95,Professional,RRFSO Risk Assessment & Audit,N/A,2010,demo
+95,Professional,"LIA Understanding Legislation, Design, Risk Assessment & the importance of competence",N/A,2021,demo
+111,Academic,BSc Building Surveying,UK University,1992,demo
+111,Professional,MRICS,N/A,1995,demo
+111,Academic,HNC Building Studies,UK College,1988,demo
+122,Academic,BA Hons Interior Design ,UK University,2001,demo
+122,Academic,HND Interior Design ,UK University,1999,demo
+122,Professional,Registered Interior Designer:  British Institute of Interior Design ,N/A,2021,demo
+122,Professional,Associate Fellow:  HEA (Higher Education Academy) ,N/A,2023,demo
+90,Academic,MEng (Hons) Building Services Engineering,UK University,2013,demo
+90,Academic,Bachelors in Mechanical Engineering,UK University,1997,demo
+90,Academic,HND,UK College,2010,demo
+66,Academic,MSc in the Conservation of the Historic Environment,UK University,2007,demo
+66,Academic,BSc (Hons) Building Surveying,UK University,1999,demo
+66,Academic,BTEC Building Studies,UK College,1996,demo
+66,Academic,City & Guilds AutoCAD AEC,UK College,1996,demo
+66,Academic,City & Guilds Advanced Craft Carpentry and Joinery,UK College,1990,demo
+66,Professional,CIEH Level 2 Certificate in Fire Safety Principles,N/A,2011,demo
+66,Academic,NCFE Level 2 Certificate in Equality & Diversity,UK College,2011,demo
+66,Academic,NCFE Intermediate Certificate in Occupational Health & Safety,UK College,2009,demo
+66,Professional,Chartered Association of Building Engineers: Chartered Fellow (C.BuildE FCABE),N/A,2016,demo
+66,Professional,Chartered Institute of Building: Chartered Construction Manager (MCIOB),N/A,2016,demo
+6,Academic,BSc (Hons) Building Surveying,UK University,2012,demo
+6,Professional,Royal Institute of Chartered Surveyors – Chartered Member,N/A,2015,demo
+46,Academic,NEBOSH Level 6 Diploma in Occupational Health & Safety (Credit),UK College,2009,demo
+46,Academic,NEBOSH Level 6 National Diploma in Environmental Management (Distinction),UK College,2010,demo
+46,Academic,EDEXCEL Level 5 BTEC Professional Award & Diploma in Management Studies,UK College,2007,demo
+46,Academic,NVQ Level 4 Award in Preparing to Teach in the Life Long Learning Sector (PTLLLS),UK College,2002,demo
+46,Academic,NEBOSH Level 3 Certificate in Fire Safety & Risk Management with Distinction,UK College,2010,demo
+46,Academic,NEBOSH Level 3 Certificate in Construction Health & Safety with Credit,UK College,2010,demo
+46,Professional,Management of Asbestos,N/A,2010,demo
+58,Academic,Architecture Postgraduate Diploma Professional Practice,UK University,2008,demo
+58,Academic,Graduate Diploma in Architecture (DipArch),UK University,2006,demo
+58,Academic,"Architectural Design & Management, BA(Hons)",UK University,2003,demo
+58,Professional,Royal Institute of British Architects – Chartered Member,N/A,2009,demo
+58,Professional,Architects Registration Board Registration,N/A,2009,demo
+11,Academic,Construction Management Postgraduate Diploma,UK University,1998,demo
+11,Academic,Professional Practice ,UK University,1992,demo
+11,Academic,Post Graduate Diploma Architecture,UK University,1991,demo
+11,Academic,BSc (Hons) Architecture ,UK University,1987,demo
+92,Academic,"Architectural Design and Management, UNN, BA (Hons)",UK University,1997,demo
+92,Academic,Graduate Diploma in Architecture,UK College,2000,demo
+92,Academic,"Postgraduate Diploma in Architectural Professional Practice, LMU",UK University,2003,demo
+92,Professional,IOSH Managing Safely Course,N/A,2022,demo
+92,Professional,APS Course in The Principal Designer Role,N/A,2017,demo
+19,Academic,BSc (Hons) Building Surveying,UK University,1999,demo
+19,Academic,BTEC HNC (Building Studies),UK College,1996,demo
+19,Academic,BTEC HNC (Civil Engineering),UK College,1993,demo
+101,Academic,Post Graduate Certificate in Architectural Practice (RIBA Part 3),UK University,2003,demo
+101,Academic,Diploma in Architecture (RIBA Part 2),UK University,2001,demo
+101,Academic,BA (Hons) Degree in Architecture (RIBA Part 1),UK School/College,1992,demo
+124,Academic,BA (Hons) Architecture,UK University,1985,demo
+124,Academic,Graduate Diploma Architecture,UK University,1989,demo
+124,Academic,RIBA Pt 3 - Proffessional Studies,UK University,1990,demo
+124,Professional,Association of Project Management – APMP Qualification,N/A,2011,demo
+110,Academic,BTEC National Certifcate in Building Services,UK College,2004,demo
+110,Academic,HNC - Building Services,UK College,2006,demo
+110,Academic,HND - Building Services,UK College,2007,demo
+110,Professional,CIBSE - Low Carnon Energy Assessor,N/A,2029,demo
+113,Academic,BSc (HONS) Construction Management,UK University,2020,demo
+113,Academic,HND in Construction and the Built Environment (Building Services Engineering) ,UK College,2018,demo
+113,Academic,HNC in Construction and the Built Environment (Building Services Engineering) ,UK College,2017,demo
+113,Professional," Level 4, Design, and Verification of Electrical Installations ",N/A,2015,demo
+113,Professional,"Level 3, Certificate in Inspection, testing and certification of Electrical Installations ",N/A,2007,demo
+113,Professional,"Level 3, Certificate in Inspection and testing of Electrical Equipment ",N/A,2007,demo
+113,Professional,"Level 3, Certificate in Requirments for Electrical Installations (16th to 17th Edition Update to BS 7671) ",N/A,2008,demo
+113,Professional,"Level 3 Installing and Commissioning Electrotechnical Systems, Electrical Theory Part 1 & Part 2, ",N/A,2004,demo
+113,Professional,IET Membership MIET ,N/A,2023,demo
+113,Professional,EMA Membership Confirmation Affiliate* Level,N/A,2022,demo
+7,Academic,BA (Hons) Architecture,UK University,2011,demo
+7,Academic,MArch Pg Dip,UK University,2014,demo
+7,Academic,Postgraduate Dimploma in Architectural Professional Practice,UK University,2016,demo
+94,Academic,Architecture Postgraduate Diploma Professional Practice,UK School/College,2013,demo
+94,Academic,Master of Architecture,UK School/College,2010,demo
+94,Academic,BA (Hons) Architecture,UK School/College,2007,demo
+70,Academic,BSc (Hons) Quantity Surveying (class 2:1),UK University,2001,demo
+121,Academic,BA Hons Architecture,UK University,2007,demo
+121,Academic,PG Dip Architecture,UK College,2014,demo
+121,Professional,PG Cert Professional Practice in Architecture,N/A,2016,demo
+112,Academic,BA (hons) Interior Design ,UK University,2003,demo
+114,Academic,ONC Civil Engineering,UK College,2004,demo
+114,Academic,HNC Civil Engineering ,UK College,2006,demo
+114,Academic,HND Civil Engineering ,UK College,2007,demo
+114,Professional,Member of The Chartered Institution of Highways & Transportation ,N/A,2005,demo
+114,Professional,"Incorporated Engineer, Member of the (CIHT) Chartered Institution of Highways & Transportation (Includes membership of The Engineering Council)",N/A,2009,demo
+81,Academic,MArch Master in Architecture,UK University,2011,demo
+81,Academic,Dip. Arch Architecture International,UK University,2008,demo
+81,Academic,BA (Hons) Architecture International,UK University,2005,demo
+129,Academic,Msc Civil Engineering ,UK University,2006,demo
+129,Academic,Bsc Civil Engineering ,UK University,2001,demo
+129,Professional,Member of the Institute Of Highway Engineers,N/A,2013,demo
+97,Academic,BSc Hons Quantity Surveying,UK University,2010,demo
+97,Professional,Associate Member of the Institute of Civil Engineers,N/A,2022,demo
+97,Professional,Licentiate Institute of Clerk of Works and Construction Inspectorate,N/A,2014,demo
+97,Professional,NEC 4 Project Manager Accreditation,N/A,2022,demo
+106,Academic,BA Hons Archaeology 2019 ,UK University,2019,demo
+106,Academic,APM Project Fundamentals Qualification PFQ 2021,UK College,2021,demo
+106,Academic,APM Project Management Qualification PMQ 2024 - Pending ,UK College,2024,demo
+106,Professional,CIOB Chartered Institute of Building Student Membership ,N/A,2024,demo
+125,Professional,Institution of Structural Engineers – Chartered Member ( MIStructE ) ,N/A,2008,demo
+125,Academic,BEng (Hons) Civil Engineering,UK University,1997,demo
+59,Academic,BA (Hons) Architecture,UK University,1998,demo
+59,Academic,Bachelor of Architecture,UK University,2001,demo
+59,Academic,Professional Diploma in Architecture,UK School/College,2004,demo
+100,Professional,FireQual Level 3 Fundamentals of the recommendations for Fire Detection and Fire Alarm Systems in Non-Domestic Buildings,N/A,2025,demo
+100,Professional,"City & Guilds 2369 Level 4, Design, and Verification of Electrical Installations",N/A,2019,demo
+100,Professional,"City & Guilds 2382 Level 3, Certificate in the requirements for Electrical installations (18th Edition update to BS 7671 2018)",N/A,2019,demo
+100,Professional,City & Guilds 2382 Level 3 Certificate in the Requirements for Electrical Installations (17th edition update to BS 7671 2008),N/A,2009,demo
+100,Professional,"City & Guilds 2391 Level 3 Certificate in Inspection, Testing and Certification of Electrical Installations",N/A,2009,demo
+100,Professional,City & Guilds 2360 Course C Electrical Installation Work,N/A,1998,demo
+100,Professional,City & Guilds 2360 Part 1&2 Electrical Installation Work,N/A,1996,demo
+12,Academic,BSc Hons Building Surveying,UK University,1996,demo
+12,Professional,MRICS,N/A,2002,demo
+12,Professional,Licenced RICS APC Assessor,N/A,2010,demo
+118,Academic,Higher National Certifcate IN Building Services Engineering,UK College,2004,demo
+118,Academic,Higher National Diploma IN Building Services Engineering,UK College,2005,demo
+82,Academic,BTEC HNC Electrical Building Services,UK College,1979,demo
+76,Professional,"Associate of Science in Architectural Studies
+City University of Hong Kong",N/A,2007,demo
+76,Academic,"BA (Hons) in Architecture
+University of Greenwich",UK University,2008,demo
+76,Academic,Master of Architecture (international),UK University,2015,demo
+34,Academic,BSc(Hons),UK University,2004,demo
+34,Academic,MICE,UK College,2011,demo
+34,Academic,I Eng,UK University,2011,demo
+34,Academic, HND Civil Eng & CAD,UK College,2002,demo
+127,Professional,Incorporated Civil Engineer,N/A,1999,demo
+5,Academic,MSc Architectural Technology & Design ,UK University,2014,demo
+5,Academic,BSc Building Surveying,UK University,2013,demo
+5,Academic,Diploma in Professional Practice,UK University,2013,demo
+99,Academic,MEng (Hons) Civil Engineering,UK University,2013,demo
+78,Academic,ONC Building Studies,UK School/College,1988,demo
+78,Academic,HNC Building Studies,UK School/College,1990,demo
+78,Academic,BSc(Hons) Architectural Studies,UK University,1994,demo
+78,Professional,Royal Institute of Chartered Surveyors – Chartered Member,N/A,1998,demo
+117,Academic,Certificate in Construction Health & Safety,UK College,2008,demo
+117,Academic,BSc (Hons) Quantity Surveying,UK University,1996,demo
+117,Professional,Member of the Royal Institution of Chartered Surveyors,N/A,2020,demo
+24,Academic,"1st Class, BSc (Hons) in ArchitecturalTechnology & Design.",UK University,2015,demo
+24,Professional,Chartered Institute of Architectural Technology (CIAT) – Associate Member,N/A,2015,demo
+24,Professional,Certified PassivHaus Designer ,N/A,2024,demo
+75,Academic,BSc (Hons) Building Surveying,UK University,2020,demo
+75,Professional,APS Accredited – Principle Designer CDM 2015,N/A,2022,demo
+75,Professional,CITB H&S Test (CSCS Card),N/A,2023,demo
+75,Professional,Association for Project Safety – Associate Member,N/A,2022,demo
+62,Academic,"BSc (Hons) Building Surveying, Leeds Metropolitan University",UK University,2008,demo
+62,Professional,Royal Institution of Chartered Surveyors - MRICS,N/A,2011,demo
+62,Academic,MA Conservation Studies (Historic Buildings),UK University,2017,demo
+62,Professional,Institute of Historic Building Conservation – Full Member,N/A,2020,demo
+69,Academic,Arcitecture BA (Hons),UK University,2014,demo
+69,Academic,Master in Architecture (MArch),UK University,2018,demo
+71,Academic,MEng (Hons) Structural Engineering,UK University,1999,demo
+71,Professional,Member of the Institue of Structural Engineers (MIStructE),N/A,2005,demo
+71,Professional,Chartered Engineer (Engineering Council Registration) Ceng,N/A,2005,demo
+71,Professional,IOSH Managing Safely Course,N/A,2022,demo
+71,Professional,APS Course in The Principal Designer Role,N/A,2017,demo
+107,Academic,HND Civil Engineering,UK College,2008,demo
+60,Academic,BEng (Hons) Building Services,UK University,2021,demo
+60,Academic,BTEC HNC Building Services,UK College,2011,demo
+60,Academic,BTEC ONC Building Services,UK College,2009,demo
+28,Academic,HNC Building Services,UK College,1995,demo
+28,Professional,MCIBSE,N/A,2022,demo
+74,Academic,BSc (Hons) Quantity Surveying,UK University,2000,demo
+74,Professional,NEC4: ECC Project Manager Accreditation,N/A,2021,demo
+74,Professional,Royal Institution of Chartered Surveyors,N/A,2004,demo
+73,Academic,Master of Architecture,UK University,2014,demo
+73,Academic,Post Graduate Diploma in Architecture ,UK University,2011,demo
+73,Academic,BA(Hons) Architecture,UK University,2008,demo
+73,Professional,Registered with the Architects Registration Board (ARB),N/A,2015,demo
+73,Professional,Admitted to RIBA ,N/A,2016,demo
+67,Academic,BA (Hons) in Architecture,UK University,2015,demo
+67,Academic,MArch in Architecture,UK University,2019,demo
+67,Professional,"PG Dip in Architectural Professional Practice,
+",N/A,2021,demo
+67,Professional,APS - The Principle Designer,N/A,2022,demo
+109,Academic,BSc (Hons) Civil Engineering,UK University,2023,demo
+116,Academic,BA Hons Interior Design – First Class,UK University,2019,demo
+15,Academic,MEng (Hons) Mechanical Engineering ,UK University,2007,demo
+15,Professional,Chartered Engineer,N/A,2018,demo
+15,Academic,CIBSE Low Carbon Consultant,UK College,2021,demo
+133,Academic,BArch Architecture ,UK University,2018,demo
+133,Academic,BEng Building Services Engineering ,UK University,2024,demo
+47,Academic,"BSc  (Hons),",UK University,2019,demo
+47,Professional,"Student MRICS, ",N/A,2020,demo
+47,Professional,Probationary Member CAAV,N/A,2020,demo
+32,Professional,MRICS,N/A,2022,demo
+32,Academic,MSc Building Surveying,UK University,2014,demo
+32,Academic,BA (Hons) Business Studies,UK University,2008,demo
+80,Professional,ICE – NEC Project Manager,N/A,2021,demo
+80,Professional,RICS – Membership Status ,N/A,2011,demo
+80,Academic,BSC.(Hons). Quantity Surveying,UK University,2009,demo
+80,Academic,HNC Construction Studies,UK College,2006,demo
+80,Academic,BTEC National Award Construction,UK College,2004,demo
+80,Professional,RICS – Carbon Management in Real Estate Course Tutor ,N/A,2010,demo
+89,Academic,Postgraduate Diploma in Architectural Professional Practice,UK University,2019,demo
+89,Academic,Master of Architecture,UK University,2017,demo
+89,Academic,BA (Hons) Architecture,UK School/College,2013,demo
+89,Professional,Royal Institute of British Architects – Chartered Member,N/A,2019,demo
+89,Professional,Architects Registration Board Registration,N/A,2019,demo
+57,Academic,1st Class Hons. BSc Architectural Technology,UK University,2020,demo
+9,Professional,"Part3, Architecture, PG Cert",N/A,2020,demo
+9,Professional,"Part 2, Architecture, BArch",N/A,2011,demo
+9,Professional,"Part 1, Architecture, BA Hons",N/A,2008,demo
+10,Academic,BArch(Hons),UK University,2004,demo
+10,Academic,DipArch,UK University,2007,demo
+10,Professional,RIBA Part III,N/A,2014,demo
+29,Academic,BSc (Hons) Building Surveying,UK University,1998,demo
+29,Academic,MA Planning & Sustainability,UK University,2009,demo
+29,Professional,MRICS,N/A,2002,demo
+96,Academic,Architecture BA Hons (LMU),UK University,2001,demo
+96,Academic,HND Architectural Technology,UK College,1997,demo
+96,Other,ND Construction ,UK College,1995,demo
+132,Academic,PRINCE2 – Practitioner Project Management,UK College,2017,demo
+132,Professional,APM Fundamentals,N/A,2022,demo
+98,Academic,BEng/Meng(Hons) Civil and Structural Engineering,UK University,2012,demo
+123,Academic,Master of Architecture,UK University,2004,demo
+123,Academic,Bachelor of Science in Architecture,UK University,2003,demo
+123,Professional,Architectural Registration Board (NCARB) - USA,N/A,2013,demo
+40,Academic,Bachelor of Engineering in Polymer and Textile Engineering. (Upper Division),UK University,2013,demo
+40,Academic,Level 6 International Diploma in Safety Engineering,UK College,2021,demo
+40,Professional,Nebosh Level 3 International General Certificate in Occupational Health and Safety (Credit),N/A,2021,demo
+40,Professional,"IFE Level 3 Certificate in Fire Science, Operations. Fire Safety and Management",N/A,2021,demo
+40,Professional,Fire Safety Management and Fire Risk Assessment,N/A,2022,demo
+40,Professional,ISO45001:208 Lead Auditor,N/A,2021,demo
+26,Academic,HNC Plant Engineering,UK College,1988,demo
+26,Academic,HNC Electrical Building Services,UK College,2001,demo
+26,Professional,Registered with the Engineering Council as an Incorporated Engineer.,N/A,1999,demo
+26,Professional,CIBSE Low Carbon Consultant,N/A,2022,demo
+26,Professional,Member of the Society of Operations Engineers,N/A,2000,demo
+33,Academic,BSc (Hons) Construction Management & Environment,UK University,1999,demo
+33,Professional,(MAPM) Member Association of Project Management,N/A,2006,demo
+33,Professional,CPMA Association for Project Management,N/A,2006,demo
+33,Professional,Nebosh National Cert,N/A,2006,demo
+38,Academic,MA Diploma in Landscape Architecture,UK University,2006,demo
+38,Professional,Chartered Member of the  Landscape Institute,N/A,2013,demo
+39,Academic,BA Hons Arch,UK University,1999,demo
+39,Academic,Pg Dip Arch,UK University,2004,demo
+43,Professional,AssocRICS (Geomatics),N/A,2021,demo
+49,Academic,BA (Hons) Architectural Technology and the Environment,UK University,2017,demo
+50,Academic,BA Degree in Architecture (RIBA Part 1).,UK University,1994,demo
+50,Academic,Diploma in Architecture (RIBA Part 2).,UK University,1996,demo
+50,Academic,Post Graduate Certificate in Professional Architectural Studies.,UK University,1996,demo
+85,Academic,Architecture Postgraduate Diploma Professional Practice,UK University,2008,demo
+85,Academic,Graduate Diploma in Architecture,UK University,2006,demo
+85,Academic,BA (Hons) Architecture,UK University,2003,demo
+85,Professional,Royal Institute of British Architects – Chartered Member,N/A,2017,demo
+1,Professional,MRICS ,N/A,2012,demo
+1,Academic,MSc Building Surveying ,UK University,2010,demo
+1,Academic,BSc Construction,UK University,1998,demo
+1,Professional,NEBOSH Certificate in Fire Safety,N/A,2023,demo
+1,Other,CSCS Health and Safety Awareness for professionals,UK College,2019,demo
+1,Professional,RICS BIM Management,N/A,2017,demo
+104,Academic,Advanced Diploma (Part III),UK School/College,2021,demo
+104,Academic,M(Arch) Architecture (Part II),UK University,2019,demo
+104,Academic,Ba(Hons) Architecture (Part I),UK University,2014,demo
+64,Academic,BSc (Hons) Architecture,UK University,2019,demo
+64,Academic,Master of Architecture,UK University,2022,demo
+135,Academic,8 GCSE’s A-D Grade,UK School/College,1992,demo
+135,Academic,Btec National Diploma – Sports Science,UK College,1993,demo
+135,Other,APM Project Fundamentals Qualification,UK College,2022,demo
+135,Other,Prince2 Foundation Level,UK College,2023,demo
+135,Other,Microsoft Project Basics,UK College,2023,demo
+135,Other,Prince2 Practitioner Level,UK College,2024,demo
+135,Other,"CITB – Health, Safety and Environment for Managers and Professionals",UK College,2024,demo
+135,Professional,Association for Project Management (APM) Associate Membership,N/A,2024,demo
+21,Academic,Level 3 - T Level (Design Surveying and Planning) ,UK College,2022,demo
+21,Academic,UCEM - Level 6 Bsc (Hons) Building Surveying,UK College,2025,demo
+134,Academic,HNC Electrical & Electronic Engineering,UK College,1999,demo
+134,Academic,ONC Electrical & Electronic Engineering,UK College,1997,demo
+134,Professional,Course C - Electrical Installation Work,N/A,1991,demo
+134,Professional,Member of the Institute of Engineering & Technology (MIET) ,N/A,2000,demo
+134,Professional,Level 3 Award in the Requirements for Electrical Installations BS7671:2018,N/A,2019,demo
+72,Academic,HND Building Studies - Architectural Technology,UK School/College,1987,demo
+72,Academic,BA (Hons) Architecture,UK University,1994,demo
+72,Academic,MSc Sustainable Architecture,UK University,2009,demo
+72,Professional,BREEAM Accredited Professional,N/A,2014,demo
+72,Professional, MCIAT,N/A,2016,demo
+16,Academic,Professional Part 3 Examination,UK School/College,2007,demo
+16,Academic,Bachelor of Architecture (Hons),UK University,1997,demo
+16,Academic,Bachelor of Architectural Studies,UK University,1995,demo
+18,Academic,BSc(Hons) Civil Engineering,UK University,2024,demo
+18,Academic,FdSc Civil Engineering,UK College,2022,demo
+18,Academic,HNC Civil Engineering,UK College,2020,demo
+18,Professional,Advanced Apprenticeship Bench Joinery,N/A,2013,demo
+8,Academic,Degree in Architecture,UK University,1996,demo
+8,Professional,ARB registration,N/A,2017,demo
+8,Professional,RIBA registration,N/A,2023,demo
+103,Academic,Highway Engineering (HNC),UK College,2021,demo
+103,Academic,BTEC Level 2 Engineering (Diploma),UK College,2013,demo
+103,Academic,Level 3 – Business (QCF),UK School/College,2014,demo
+14,Academic,BA (Hons) Architecture (RIBA Part 1),UK University,2010,demo
+14,Academic,MArch Architecture (RIBA Part 2),UK University,2013,demo
+14,Professional,Final Examination in Professional Practice (RIBA Part 3),N/A,2016,demo
+2,Academic,BSc Building Surveying,UK University,2025,demo
+2,Professional,EPC Domesti Energy Assessor,N/A,2013,demo
+2,Professional,AssocRICS,N/A,2024,demo
+25,Academic,HND Electrical & Electronics Engineering,UK College,2019,demo
+25,Academic,HNC Electronic Systems,UK College,2020,demo
+25,Professional,"FIA Fire Alarm Fundamentals
+BS 5839-1 Non Domestic                      ",N/A,2023,demo
+119,Professional,Level 3 – Electrical Installations (17th to 18th Edition Update to BS 7671 2018) (2382),N/A,2020,demo
+119,Professional,"Level 3 – Inspection, Testing & Certification of Electrical Installations (2391)",N/A,2010,demo
+119,Professional,Level 3 – Electrical Installations (16th to 17th Edition Update to BS 7671 2008) (2382),N/A,2008,demo
+119,Professional,Level 3 – Inspection & Testing of Electrical Equipment (2377),N/A,2007,demo
+119,Professional,Level 3 – NVQ Electrotechnical Services - Electrical Installation (Building & Structures) (2356),N/A,2007,demo
+119,Professional,Achievement Measurement 2 (AM2),N/A,2007,demo
+119,Professional,Advanced Apprenticeship Electrotechnical Services Installation (Buildings & Structures),N/A,2006,demo
+119,Professional,Level 3 – Electrical Installations Part 2 (2360),N/A,2004,demo
+119,Professional,Level 2 – NVQ Installing Electrotechnical Systems (2355),N/A,2004,demo
+119,Professional,Level 2 – Electrical Installations Part 1 (2360),N/A,2003,demo
+138,Professional,MCIOB,N/A,2012,demo
+138,Academic,NVQ5 Construction project Management ,UK College,2008,demo
+108,Academic,"Postgraduate Diploma in Architectural Practice and Management - Class. Distinction, PGDip Arch",UK University,2018,demo
+108,Academic,"Master of Architecture - Class. Merit, March ARB / RIBA Part II",UK University,2016,demo
+108,Academic,"Bachelor of Architecture - Class. 2:1, BA (Hons) ARB / RIBA Part I",UK University,2013,demo
+115,Academic,Bachelor’s Degree – Civil Engineering,UK University,2023,demo
+55,Academic,MSc Quantity Surveying and Commercial Management,UK University,2018,demo
+55,Academic,BA (Hons) Architecture,UK University,2010,demo
+55,Professional,Royal Institution of Chartered Surveyors – Chartered Member,N/A,2023,demo
+91,Academic,"BSc (Hons) Building Surveying, Sheffield Hallam University",UK University,2015,demo
+137,Academic,HNC Civil Engineering,UK College,1993,demo
+137,Professional,NVQ5 Construction Contracts Management,N/A,2004,demo
+137,Professional,NEBOSH Construction Certificate,N/A,2006,demo
+137,Professional,P405 Management of Asbestos in Buildings,N/A,2005,demo
+137,Professional,P402 Asbestos Surveying,N/A,2019,demo
+137,Professional,P400 Asbestos foundation module,N/A,2022,demo
+137,Professional,P900 Control of legionella in domestic H&CW,N/A,2022,demo
+137,Professional,P901 Management & control of H&CW,N/A,2023,demo
+79,Academic,BA (Hons) Building Surveying,UK University,2021,demo
+22,Academic,BSc,UK University,1986,demo
+22,Professional,MRICS,N/A,1989,demo
+22,Professional,Registered Valuer,N/A,2024,demo
+23,Academic,BSc (Hons) Surveying & Mapping Sciences,UK University,1985,demo
+23,Professional,MRICS,N/A,1992,demo
+27,Professional,TIFFire,N/A,2013,demo
+27,Professional,CMaPS,N/A,2015,demo
+27,Academic,ONC & HNC Building Construction,UK College,1993,demo
+27,Professional,NEBOSH Construction,N/A,2012,demo
+27,Professional,NEBOSH General Cert,N/A,2014,demo
+27,Academic,NVQ Level 6 Diploma in Occupational Health and Safety Practice,UK College,2021,demo
+27,Professional,RMaPS Examinations,N/A,2015,demo
+27,Professional,CertIOSH,N/A,2021,demo
+42,Professional,FRICS,N/A,1998,demo
+14,Professional,ARB Registered,N/A,2025,demo
+143,Academic,BTEC ONC in Civil Engineering,UK College,1992,demo
+143,Academic,BTEC HNC in Civil Engineering,UK College,1994,demo
+143,Academic,"MSc in Occupational H&S, Management and Law (Distinction)",UK University,2008,demo
+143,Academic,NEBOSH Diploma - Part 1,UK College,2006,demo
+143,Professional,MICE ,N/A,1998,demo
+143,Academic,IEng,UK University,1998,demo
+144,Professional,Chartered Engineer (CEng) - ICE,N/A,2020,demo
+144,Academic,Bachelor of Engineering (BEng) - Civil Engineering,UK University,2015,demo
+144,Academic,Master of Science (MSc) - Structural Engineering,UK College,2017,demo
+144,Professional,Project Management Professional (PMP),N/A,2021,demo
+144,Professional,Institution of Civil Engineers (ICE) Membership,N/A,2018,demo
+72,Professional,Incorporated Membership of the Association of Project Safety (IMaPS),N/A,2017,demo
+59,Professional,Registered with the Architects Registration Board (ARB),N/A,2003,demo
+59,Professional,PAS 2035 Retrofit Designer,N/A,2022,demo
+116,Professional,Associate Member BIID ,N/A,2020,demo
+134,Professional,Registered with the Engineering Council - Incorporated Engineer,N/A,2020,demo
+134,Professional,236 Part 1 – Electrical Installation Work,N/A,1998,demo
+134,Professional,236 Part 2 – Electrical Installation Work,N/A,1989,demo
+56,Academic,PG Certificate in Advanced Architectural Research,UK University,2016,demo
+56,Academic,RIBA Part III,UK University,1989,demo
+56,Academic,PG Diploma in Architecture,UK University,1988,demo
+56,Academic,BA (Hons) Architecture,UK School/College,1985,demo
+56,Professional,Registered with   the Architects Registration Board (ARB),N/A,1989,demo
+56,Professional,Member of the Royal Institute of British Architects,N/A,1997,demo
+137,Academic,ONC Civil Engineering,UK College,1991,demo
+137,Academic,First Certificate in Construction,UK College,1989,demo
+145,Academic,Examen in Professional Practice & RIBA Part III Exemption ,UK University,2004,demo
+145,Academic,Diploma in Architecture and RIBA Part II Exemption,UK University,2000,demo
+145,Academic,BA (Hon) and RIBA Part I Exemption,UK University,1996,demo
+145,Professional,Arb Member,N/A,2005,demo
+145,Professional,RIBA Member/ Charted Practice,N/A,2005,demo
+146,Academic,RIBA Architecture Postgraduate Diploma Professional Practice,UK University,2023,demo
+146,Academic,RIBA Master of Architecture,UK University,2017,demo
+146,Academic,BA (Hons) Interior Design and Environmental Architecture,UK University,2013,demo
+146,Professional,Royal Institute of British Architects – Student Member,N/A,2018,demo
+101,Professional,Royal institute of British Architects,N/A,2003,demo
+101,Professional,Architects Registration Board,N/A,2003,demo
+147,Academic,BSc (Hons) Quantity Surveying,UK University,2002,demo
+147,Academic,BTEC HNC Building Studies,UK College,1999,demo
+147,Academic,BTEC National Certificate Building Studies,UK College,1997,demo
+147,Professional,Member of the Royal Institution of Chartered Surveyors,N/A,2004,demo
+148,Academic,BA (Hons) Interior Design,UK University,1991,demo
+148,Academic,MA Landscape Architecture (completion 2026),UK University,2026,demo
+148,Professional,Chartered Society of Designers MCSD ,N/A,2010,demo
+148,Professional,Prince 2 ,N/A,2005,demo
+148,Professional,Construction Skills Certification Scheme (CSCS),N/A,1995,demo
+119,Academic,HNC – Building Services Engineering Senior Technician,UK School/College,2026,demo
+100,Academic,HNC in Construction and the Built Environment (Building Services Engineering),UK University,2019,demo
+149,Academic,BEng (Hons) Building Services Engineering,UK University,2020,demo
+149,Academic,HND Mechanical Engineering ,UK College,2018,demo
+150,Academic,OND Building Studies,UK College,1987,demo
+150,Academic,BSc. (Hons) Building Engineering ,UK School/College,1992,demo
+150,Academic,MSc. Civil Engineering,UK University,1993,demo
+150,Academic,MA Environmental Law,UK University,2006,demo
+15,Professional,Chartered Institution of Building Services Engineers – Member,N/A,2018,demo
+13,Professional,Chartered Institution of Building Services Engineers – Member,N/A,2009,demo
+151,Academic,Master of Research (MRes) Environmental Science,UK University,2019,demo
+151,Academic,BSc (with Hons),UK University,2021,demo
+151,Professional,PRINCE2 Foundation,N/A,2024,demo
+151,Professional,PRINCE 2 Practitioner,N/A,2024,demo
+152,Academic,Advanced Manufacturing Technology (Electrical Engineering) HNC,UK College,1997,demo
+152,Academic,Electrical Engineering ONC,UK College,1995,demo
+152,Professional,Incorporated Engineer  -   MIET  -  Institute of Engineering and Technology,N/A,2004,demo
+153,Academic,HNC Electrical Engineering,UK College,1985,demo
+153,Academic,"Level 3 certificate in Design, Erection & Verification of Electrical Installations",UK School/College,2006,demo
+153,Academic,Level 3 certificate in the Requirements for Electrical Installations,UK School/College,2008,demo
+153,Professional,Institute of Engineering & Technology – Incorporated Member,N/A,2009,demo
+153,Professional,British Research Institute – BREEAM Accredited Professional,N/A,2009,demo
+153,Professional,   CIBSE – Level 5 Low Carbon Energy Assessor,N/A,2012,demo
+153,Professional,The Association of Energy Engineers - Certified Measurement and Verification    Professional,N/A,2020,demo
+85,Professional,Architects Registration Board Registration,N/A,2008,demo
+154,Professional,Clerk of Works (Member status) ,N/A,2024,demo
+154,Academic,Construction Site Manager L6 NVQ,UK School/College,2019,demo
+154,Academic,Temp works Co-ordinator                                             ,UK School/College,2022,demo
+154,Professional,Degree in Education and Professional development    University of Huddersfield ,N/A,2014,demo
+154,Professional,Member of the institute of Clerk of Works and Construction Inspectorate                           ,N/A,2024,demo
+154,Professional,Assessor for issuing of NVQ Qualifications L 1 -2 -3                  ,N/A,2013,demo
+99,Professional,Institution of Civil Engineers – Chartered Member (MICE #65483342),N/A,2024,demo
+99,Professional,Engineering Council UK – Chartered Member (CEng),N/A,2025,demo
+109,Professional,Institute of Civil Engineers – Graduate Member GMICE ,N/A,2023,demo
+115,Professional,Graduate Membership of Institution of Structural Engineers (ISTRUCTE) Membership Number: 072012601,N/A,2023,demo
+125,Professional,Engineering Council UK – Chartered Member ( CEng )  ,N/A,2008,demo
+155,Academic,City & guilds carpentry & joinery,UK College,1975,demo
+155,Professional,Member of the Institute of Clerk of Works and Construction inspectorate ICWCI       ID= 7170,N/A,2007,demo
+155,Professional,Upgraded to Fellow ,N/A,2017,demo
+79,Professional,RICS APC Enrolment ,N/A,2023,demo
+156,Academic,BSc (Hons) Quantity Surveying,UK University,2023,demo
+156,Professional,Royal Institute of Charted Surveyors – Candidate Member (Enrolled in 2024) ,N/A,2024,demo
+157,Academic,BA English Literature,UK University,2006,demo
+157,Professional,GTP Teacher of English,N/A,2007,demo
+3,Professional,BS 5839-1 Fundamentals in FD&A UNITS 1&2 - Fire Industry Association,N/A,2025,demo
+158,Academic,BTEC HND Building Studies (Architectural Technology),UK University,2003,demo
+159,Academic,10 “O” Levels,UK School/College,1975,demo
+159,Academic,2 “A” Levels,UK School/College,1977,demo
+159,Professional,Prince 2 Practitioner,N/A,2012,demo
+160,Academic,BEng Building Services Engineering,UK University,2007,demo
+160,Academic,HNC Building Services Engineering,UK University,2003,demo
+160,Academic,BSc Construction Management,UK University,2000,demo
+160,Academic,National Diploma in Construction Studies,UK College,1995,demo
+160,Professional,CIBSE Chartered Institute of Building Services Engineers,N/A,2007,demo
+161,Academic,Diploma in BIM Management,UK University,2016,demo
+161,Academic,MSc Project Management,UK University,2010,demo
+161,Academic,BSc (Hons) Quantity Surveying,UK University,1994,demo
+161,Professional,MRICS – Member of the Royal Institution of Chartered Surveyors,N/A,2000,demo
+162,Academic,Post Graduate Diploma in Surveying,UK College,2010,demo
+162,Academic,BA (Hons) Accounting and Finance,UK University,2007,demo
+162,Professional,MRICS – Member of the Royal Institution of Chartered Surveyors,N/A,2013,demo
+163,Academic,Quantity Surveying degree,UK University,1986,demo
+163,Professional,Royal Institution of Chartered Surveyors – MRICS,N/A,1991,demo
+16,Professional,Royal Institute of British Architects – Chartered Member,N/A,2007,demo
+16,Professional,ARB Registration,N/A,2007,demo
+164,Academic,Master’s of Building Surveying  ,UK University,2022,demo
+164,Professional,Chartered Institute of Architectural Technologists – Associate Member,N/A,2024,demo
+165,Academic,MSc in Construction Management,UK University,2000,demo
+165,Academic,Diploma in Quantity Surveying ,UK College,1997,demo
+165,Academic,Diploma in Technology (Building),UK College,1996,demo
+165,Professional,Membership of the Royal Institution of Chartered Surveyors (MRICS),N/A,2004,demo
+165,Professional,RICS Assessor,N/A,2015,demo
+11,Professional,Royal Institute of British Architects – Chartered Member,N/A,1992,demo
+11,Professional,Architects Registration Board Registration,N/A,1992,demo
+5,Professional,Chartered Institute of Architectural Technologists (CIAT) – Member,N/A,2014,demo
+167,Academic,Master of Architecture ,UK University,2023,demo
+167,Academic,BA (Hons) Architecture,UK University,2019,demo
+168,Academic,"Diploma in Building Surveying, DipSurv",UK College,2000,demo
+168,Academic,P405 Management if Asbestos in Buildings,UK College,2013,demo
+168,Professional,Royal Institution of Chartered Surveyors – AssocRICS,N/A,1998,demo
+140,Professional,Royal Institution of Chartered Surveyors – Chartered Member,N/A,2019,demo
+140,Professional,Chartered Institute of Building – Chartered Member ,N/A,2011,demo
+89,Professional,Association for Project Safety – Associate Member,N/A,2023,demo
+169,Academic,C.I.O.B Site Management ,UK College,1991,demo
+169,Academic,Bridge Course to H.N.C,UK College,1988,demo
+169,Other,Licentiate City & Guilds 600 series,UK College,1987,demo
+169,Other,C.I.T.B Site Manager’s Certificate ,UK College,2003,demo
+169,Other,C.I.T.B Advanced Bricklaying,UK College,1986,demo
+169,Other,C.I.T.B Scaffold Awareness,UK College,2013,demo
+169,Other,NHBC Traffic Management course,UK College,2002,demo
+169,Other,Rail Track PICOW,UK College,1997,demo
+169,Other,Personal Track Safety,UK College,1997,demo
+169,Other,4 day First Aid certificate,UK College,2016,demo
+169,Professional,C.S.C.S card holder Platinum and Black,N/A,2011,demo
+170,Professional,Chartered Member (CMLI),N/A,2012,demo
+170,Academic,Masters in Landscape Architecture,UK University,2003,demo
+170,Academic,"BA in Public, Urban & Environmental Affairs",UK University,2000,demo
+139,Academic,NVQ5 Construction Project Management,UK School/College,2010,demo
+139,Professional,Chartered Institute of Building – Chartered Member,N/A,2013,demo
+171,Academic,BSc (Hons) Building Surveying,UK University,2017,demo
+171,Academic,Wood Occupations NVQ Level 3 ,UK College,2007,demo
+171,Professional,RICS APC Candidate,N/A,2025,demo
+172,Academic,Architecture Postgraduate Diploma Professional Practice,UK University,2019,demo
+172,Academic,Master of Architecture,UK University,2015,demo
+172,Academic,BA (Hons) Architecture,UK University,2012,demo
+172,Professional,Architects Registration Board Registration,N/A,2019,demo
+173,Academic,Ordinary National Certificate (ONC) in Building Studies,UK College,1988,demo
+173,Academic,Higher National Certificate (HNC) in Building Studies,UK College,1990,demo
+173,Professional,Royal Institution of Chartered Surveyors – Associate Member Diploma,N/A,1998,demo
+103,Professional,IHE Engineering Technician (EngTech),N/A,2023,demo
+103,Professional,CSCS Car – Professionally Qualified Person,N/A,2023,demo
+103,Professional,MHFA England Mental Health First Aider,N/A,2021,demo
+103,Professional,ICE Quest Technician Scholarship,N/A,2017,demo
+141,Academic,BTEC HNC Building Services Engineering ,UK School/College,1995,demo
+81,Professional,Royal Institute of British Architects – Chartered Member,N/A,2011,demo
+81,Professional,Architects Registration Board Registration,N/A,2011,demo
+55,Professional,NEC4: ECC Project Manager Accreditation,N/A,2025,demo
+174,Academic,BEng (Hons) - Building Services Engineering ,UK University,2019,demo
+174,Academic,HND – Building Services Engineering,UK University,2017,demo
+174,Academic,HNC – Building Services Engineering ,UK University,2016,demo
+174,Academic,"Diploma, Electrical Installations ",UK College,2014,demo
+174,Academic,"NVQ L4, Health & Social Care (Children & Young People. ",UK College,2012,demo
+174,Professional,APM PFQ,N/A,2025,demo
+174,Professional,Associate Member of APM ,N/A,2023,demo
+174,Professional,Affiliate Member of CIBSE,N/A,2019,demo
+175,Academic,BTEC National Certificate – Business & Finance,UK College,1983,demo
+175,Academic,HNC – Business & Finance,UK College,1988,demo
+175,Professional,Certificate in Management,N/A,1995,demo
+175,Professional,Association of Accounting Technicians,N/A,1999,demo
+175,Professional,Association for Project Management – Associate Member,N/A,2017,demo
+66,Professional,Royal Institution of Chartered Surveyors: Associate Member (AssocRICS),N/A,2010,demo
+66,Professional,Institute of Historic Building Conservation: Full Member (IHBC),N/A,2018,demo
+66,Professional,Association for Project Safety: Certified Member (CMaPS),N/A,2012,demo
+176,Professional,Member of the Royal Institute of Chartered Surveyors,N/A,1990,demo
+176,Professional,Member of the Chartered Institute of Builders,N/A,1995,demo
+177,Academic,MSc in Business Economics,UK University,1994,demo
+177,Academic,BSc in Quantity Surveying,UK School/College,1989,demo
+178,Academic,BTEC Higher National in Building Studies,UK College,1993,demo
+178,Academic,BTEC National in Building Studies,UK College,1991,demo
+178,Academic,"GCSES – Grade C - Eng Lit, Eng Lang, Maths, IT, French History, Physics",UK School/College,1988,demo
+94,Professional,Royal Institute of British Architects – Chartered Member,N/A,2013,demo
+94,Professional,Architects Registration Board Registration,N/A,2013,demo
+94,Professional,ILM Level 3 – Leadership and Management ,N/A,2011,demo
+64,Other,Construction Skills Certification Scheme (CSCS),UK College,2025,demo
+179,Academic,BSc Quantity Surveying & Commercial Management,UK University,2023,demo
+179,Professional,Royal Institute of Charted Surveyors – Candidate Member (Enrolled in 2024),N/A,2024,demo
+180,Academic,EDEXCEL L3 BTEC NC in Civil Engineering,UK College,2009,demo
+180,Academic,GNVQ Advanced in IT,UK College,1997,demo
+181,Academic,Master of Architecture,UK University,2022,demo
+181,Academic,BSc (Hons) Architecture,UK University,2018,demo
+181,Professional,Royal Institute of British Architects – Student Member,N/A,2019,demo
+57,Professional,CSCS Certification,N/A,2024,demo
+182,Academic,6 ‘O’ Levels,UK School/College,1983,demo
+183,Academic,BSc(Hons) Civil Engineering & CAD,UK University,2006,demo
+49,Professional,Chartered Institute of Architectural Technologists – Associate Member,N/A,2024,demo
+166,Academic,Bachelor of Engineering in Building Services Engineering,UK University,2000,demo
+166,Professional,Corporate member of Building Services Operation and Maintenance Executives Society (MBSOMES)  ,N/A,2017,demo
+166,Professional,Corporate member of Hong Kong Institute of Real Estate Administrators (MHIREA),N/A,2018,demo
+166,Professional,Certificate of Registration of Electrical Worker C0 (Hong Kong),N/A,2021,demo
+166,Professional,Property Management Practitioner (Tier 1) in Hong Kong,N/A,2022,demo
+88,Professional,Construction Skills Certification Scheme (CSCS) ,N/A,2023,demo
+184,Academic,"BA Hons, Geography",UK University,1998,demo
+184,Academic,"Masters, Town and Country Planning ",UK University,2006,demo
+184,Professional,Member of the Royal Town Planning Institute,N/A,2007,demo
+185,Academic,Diploma Landscape Architecture,UK School/College,1991,demo
+185,Academic,BA (Hons) Landscape Design,UK School/College,1989,demo
+185,Professional,Chartered Member of The Landscape Institute,N/A,1996,demo
+186,Academic,MSc Planning,UK University,2019,demo
+186,Academic,BSc (Hons) Geography,UK University,2018,demo
+186,Professional,Royal Town Planning Institute – Chartered Member,N/A,2022,demo
+187,Academic,BA Hons Undergraduate Degree in Psychology and Applied Sociology,UK University,2008,demo
+187,Professional,Institute of Leadership and Management Level 5,N/A,2018,demo
+187,Professional,Managing Successful Programmes Foundation Certificate in Programme Management,N/A,2022,demo
+187,Professional,Prince 2 Foundation and Practitioner Certificate in Project Management,N/A,2023,demo
+187,Professional,Association of Project Management: Associate Member,N/A,2021,demo
+188,Academic,HNC Building Studies,UK College,2003,demo
+188,Professional,Royal Institute of British Architects – Associate Member,N/A,2022,demo
+114,Professional,Affiliated member of the (CMI) Chartered Management Institute (lapsed),N/A,2013,demo
+189,Academic,"BTEC National Diploma; Architecture, Civil Engineering & Surveying Studies. ",UK College,1991,demo
+189,Academic,"BSc (Hons) Degree, Quantity Surveying (2:1).",UK University,1995,demo
+189,Professional,Member of the Royal Institution of Chartered Surveyors (MRICS).,N/A,2009,demo
+189,Professional,Member of the Association of Project Safety (IMaPS).,N/A,2009,demo
+104,Professional,ARB,N/A,2021,demo
+104,Professional,RIBA ,N/A,2021,demo
+104,Professional,First Aider,N/A,2022,demo
+104,Professional,Mental Health First Aider,N/A,2025,demo
+190,Academic,Level 3 Engineering Diploma ,UK College,2019,demo
+191,Academic,Bachelor’s degree in Geomatics Engineering and Topography,UK University,2015,demo
+191,Academic,GIS Specialist,UK University,2014,demo
+191,Academic,"HNC in Development of Town-Planning, Projects and Topographic Operations",UK School/College,2009,demo
+191,Professional,Royal Institute of Chartered Surveyors – AssocRICS,N/A,2019,demo
+108,Professional,Chartered member of the Royal Institute of British Architects,N/A,2018,demo
+108,Professional,Architects Registration Board,N/A,2018,demo
+192,Academic,Higher National Diploma – Construction Management,UK College,2020,demo
+192,Academic,BTEC Extended Diploma - Construction,UK College,2015,demo
+192,Professional,CSCS – Academic/Manager,N/A,2025,demo
+193,Academic,Chartered Institute of Building  - Part 2,UK College,1993,demo
+193,Academic,Chartered Institute of Building  - Part 1,UK College,1992,demo
+193,Academic,HNC Building Studies,UK College,1990,demo
+193,Academic,ONC Building Studies,UK College,1988,demo
+193,Academic,BTEC Level 4 Professional Diploma in Fire Risk Assessment,UK College,2010,demo
+193,Academic,Asbestos P402 & P405 Qualifications,UK College,2006,demo
+193,Professional,Fellow of the Chartered Institute of Building,N/A,2010,demo
+193,Professional,Member of the Association of Project Managers,N/A,2015,demo
+193,Professional,MFPW Surveyor,N/A,2019,demo
+194,Academic,City & Guilds Computer Aided Draughting using AutoCAD,UK College,1994,demo
+194,Academic,BTEC National Diploma in Design (Graphic Design),UK College,1990,demo
+136,Academic,Diploma in Architecture,UK College,2025,demo
+136,Academic,Architecture BA (Hons),UK University,2018,demo

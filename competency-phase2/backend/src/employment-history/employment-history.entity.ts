@@ -1,0 +1,55 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  ManyToOne,
+  JoinColumn,
+  Check,
+} from 'typeorm';
+
+import { Employee } from '../employees/employee.entity';
+
+@Entity({ name: 'employment_history' })
+@Check(`eh_start BETWEEN 1950 AND 2100`)
+@Check(`eh_end BETWEEN 1950 AND 2100 OR eh_end IS NULL`)
+@Check(`eh_end IS NULL OR eh_end >= eh_start`)
+export class EmploymentHistory {
+  @PrimaryGeneratedColumn()
+  eh_id: number;
+
+  // 🔗 Employee FK
+  @ManyToOne(() => Employee, { nullable: false })
+  @JoinColumn({ name: 'e_id' })
+  employee: Employee;
+
+  @Column({ length: 100 })
+  eh_company: string;
+
+  @Column({ length: 100 })
+  eh_location: string;
+
+  @Column({ length: 100 })
+  eh_role: string;
+
+  @Column({ type: 'int' })
+  eh_start: number;
+
+  @Column({ type: 'int', nullable: true })
+  eh_end: number | null;
+
+  @CreateDateColumn({ type: 'datetime2' })
+  eh_addDate: Date;
+
+  @CreateDateColumn({ type: 'datetime2' })
+  eh_eReview: Date;
+
+  @Column({ type: 'datetime2', nullable: true })
+  eh_mReview: Date | null;
+
+  @Column({ type: 'bit', default: true })
+  eh_active: boolean;
+
+  @Column({ length: 20, default: 'temp' })
+  data_origin: string;
+}

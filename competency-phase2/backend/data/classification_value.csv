@@ -1,0 +1,64 @@
+ct_id,type_name,data_origin
+1,Accounting & Admin,demo
+1,Building Survey,demo
+1,Coastal,demo
+1,Condition Survey,demo
+1,Highways,demo
+1,Land Survey,demo
+1,Landscape Design,demo
+1,Planning Advice,demo
+1,Rates Bills,demo
+1,Topographical Survey,demo
+1,Town Centre Improvements,demo
+1,Valuation,demo
+1,Vetting,demo
+2,Agricultural Barn,demo
+2,Dockyard,demo
+2,Factory,demo
+2,Glasshouse,demo
+3,Heritage,demo
+3,Modular,demo
+3,Passivhaus,demo
+3,Renewable Energy,demo
+4,Alterations,demo
+4,Conversion,demo
+4,Demolition,demo
+4,Expansion,demo
+4,Extension,demo
+4,New Build,demo
+4,Refurbishment,demo
+4,Remodelling,demo
+4,Renovation,demo
+4,Restoration,demo
+5,Local Authority,demo
+5,Police,demo
+6,Architectural Lead,demo
+6,Surveying,demo
+7,Higher,demo
+7,Primary,demo
+7,Secondary,demo
+7,SEMH,demo
+7,SEN,demo
+7,SEND,demo
+7,SRB,demo
+7,SRP,demo
+8,Fire Compliance,demo
+8,Nuclear,demo
+9,High,demo
+10,ACM Removal,demo
+10,Environmental,demo
+10,Landfill,demo
+10,Net-zero-carbon,demo
+10,Offshore Wind,demo
+10,Replacement Windows,demo
+10,Toilet Refurbishment,demo
+10,Underpinning,demo
+11,Drone Survey,demo
+12,Residential,demo
+12,Care,demo
+12,MOD,demo
+12,Public Building,demo
+12,Education,demo
+12,Day Care,demo
+12,Office Building,demo
+12,Commercial,demo
