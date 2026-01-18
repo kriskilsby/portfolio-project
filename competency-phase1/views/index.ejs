@@ -72,7 +72,7 @@
                 <strong>Frontend:</strong> HTML, EJS, JavaScript, Bootstrap 5, jQuery, DataTables
               </li><br>
               <li class="list-inline-item mb-1">
-                <strong>Backend API:</strong> NestJS (Node.js, TypeScript), TypeORM
+                <strong>Backend API:</strong> NestJS (Node.js, TypeScript), TypeORM — deployed to Azure App Service
               </li><br>
               <li class="list-inline-item mb-1">
                 <strong>Data Platform:</strong> Azure SQL Database, Azure Data Factory, Azure Blob Storage
@@ -83,9 +83,9 @@
             </ul>
           </div>
 
-            <p class="small text-muted ms-3 mt-2">
-              Phase 1 focuses on cloud deployment, data ingestion, and API integration.
-            </p>
+          <p class="small text-muted ms-3 mt-2">
+            Phase 1 focuses on cloud deployment, data ingestion, and API integration.
+          </p>
 
           <div class="accordion" id="competencyappAccordion">
             <!-- Overview -->
@@ -97,7 +97,7 @@
                   About the Project
                 </button>
               </h2>
-              <div id="competencyappCollapseOne" class="accordion-collapse collapse"
+              <div id="competencyappCollapseOne" class="accordion-collapse collapse show" 
                 aria-labelledby="competencyappHeadingOne" data-bs-parent="#competencyappAccordion">
                 <div class="accordion-body">
                   <p>
@@ -121,7 +121,7 @@
                     <li>Deploying a scalable <strong>NestJS API</strong> to Azure App Service</li>
                     <li>Integrating with <strong>Azure SQL Database</strong> using TypeORM</li>
                     <li>Ingesting structured data via <strong>Azure Data Factory</strong></li>
-                    <li>Demonstrating secure, cross-origin access from a separate frontend application</li>
+                    <li>Demonstrating secure, cross-origin (CORS) access from a separate frontend application</li>
                   </ul>
 
                   <p class="mb-0">
@@ -247,7 +247,7 @@
 
         <div class="alert alert-secondary mt-4">
           This page demonstrates live data flowing from an <strong>Azure SQL Database</strong>,
-          through a <strong>NestJS API hosted on Azure App Service</strong>,
+          through a <strong>NestJS API hosted on Azure</strong>,
           into a lightweight frontend application.
           Data ingestion is handled using <strong>Azure Data Factory</strong>.
         </div>
@@ -276,8 +276,8 @@
           <div id="table-card" class="card-body">
             <label for="table-card-title" class="form-label fw-bold deferred-tooltip" data-bs-toggle="tooltip"
               data-bs-placement="top" data-bs-html="true"
-              data-title-html="Provide decription of the competency details table here.">
-              <h5 class="form-h5 mb-2 mt-2">Employee Competency Summary</h5>
+              data-bs-title="This provides a summary of employee competencies, providing a count of each of the main tables.">
+              <h5 class="form-h5 mb-2 mt-4">Employee Competency Summary</h5>
             </label>
             <div class="table-responsive">
               <table id="competencyTable" class="display table table-striped table-bordered" style="width:100%">

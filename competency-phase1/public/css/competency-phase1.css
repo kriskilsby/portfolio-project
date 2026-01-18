@@ -7,6 +7,7 @@ h1 {
 
 #competencyTable {
   margin-top: 1rem;
+  padding-top: 1rem;
 }
 
     
@@ -1366,21 +1367,21 @@ background #CBCAE8 */
    Table Styling
 ------------------------------ */
 #clusterTable {
-  background-color: #fdfdfd !important; /* slightly softer off-white */
+  /* background-color: #fdfdfd !important; 
 }
 
 #birdYearTable {
   background-color: #fdfdfd !important; 
-  margin-bottom: 0 !important; /* remove space under table */
-}
+  margin-bottom: 0 !important;
+} */
 
 
 
 /* -----------------------------
    Map Link Button
 ------------------------------ */
-.cluster-btn {
-  background-color: #3A2F51;   /* dark purple/navy */
+/* .cluster-btn {
+  background-color: #3A2F51;   
   color: #ffffff;
   border: none;
   padding: 4px 10px;
@@ -1391,9 +1392,9 @@ background #CBCAE8 */
 }
 
 .cluster-btn:hover {
-  background-color: #57477A;   /* lighter hover */
+  background-color: #57477A;  
   color: #ffffff;
-}
+} */
 
 /* -----------------------------
    Export Buttons (CSV, Excel, PDF, Print)
@@ -1417,14 +1418,46 @@ background #CBCAE8 */
 /* -----------------------------
    Search Input
 ------------------------------ */
-.dataTables_filter input {
-  background-color: #fdfdfd !important;   /* matches table */
+/* .dataTables_filter input {
+  background-color: #fdfdfd !important;  
   border: 1px solid #ccc !important;
   border-radius: 6px !important;
   padding: 4px 8px !important;
   font-size: 14px;
   color: #3A2F51 !important;
+} */
+
+/* #competencyTable_wrapperdataTables_wrapper .dataTables_filter input {
+  background-color: #fdfdfd !important;  
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  font-size: 14px;
+  color: #3A2F51 !important;
+} */
+
+/* #competencyTable_wrapper.dataTables_wrapper .dataTables_filter input {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #3A2F51;
+} */
+
+#competencyTable_wrapper.dataTables_wrapper .dataTables_filter input[type="search"] {
+    background-color: #fdfdfd !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+    font-size: 14px !important;
+    color: #3A2F51 !important;
+    margin-left: 0 !important; /* optional */
+    appearance: none; /* for Safari/Chrome */
+    -webkit-appearance: none;
 }
+
+
 
 .dataTables_filter input:focus {
   border-color: #3A2F51  !important;
@@ -1480,14 +1513,14 @@ background #CBCAE8 */
 /* -----------------------------
    Optional: Adjust table header
 ------------------------------ */
-#clusterTable thead th,
+/* #clusterTable thead th,
 #birdYearTable thead th {
-  background-color: #e6e6e6; /* same subtle grey */
+  background-color: #e6e6e6; 
   color: #3A2F51;
   border-bottom: 2px solid #ccc;
   padding: 6px;
 }
-/* Force both tables to render the same interior style */
+
 #clusterTable, #birdYearTable {
   background-color: #fdfdfd !important;
   border-collapse: collapse;
@@ -1497,13 +1530,13 @@ background #CBCAE8 */
   height: auto !important;
   min-height: 0 !important;
   margin-bottom: 0 !important;
-}
+} */
 
 
-#clusterTable td, #birdYearTable td {
-  background-color: #fdfdfd; /* ensures cells cover card bg */
+/* #clusterTable td, #birdYearTable td {
+  background-color: #fdfdfd; 
   color: #3A2F51;
-}
+} */
 /* -----------------------------
    Optional: Scrollbar for long tables
 ------------------------------ */
@@ -1515,9 +1548,9 @@ background #CBCAE8 */
 /* -----------------------------
    Tooltip for Map Buttons
 ------------------------------ */
-.cluster-btn[title] {
+/* .cluster-btn[title] {
   cursor: pointer;
-}
+} */
 
 /* -----------------------------
    Styles for Summary Table
@@ -1588,38 +1621,7 @@ background #CBCAE8 */
   color: #fff !important;
 }
 
-    /* ======================================
-
-        STORK APP NAVBAR FIXES SECTION
-
-    ====================================== */
-
-/* Fix navbar stacking & scroll behavior specific to Stork app */
-/* Navbar always on top */
-.navbar.fixed-top {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000 !important;
-  /* padding-bottom: 0 !important;
-  padding-top: 0 !important; */
-}
-
-/* Prevent content overlap under navbar */
-main {
-  margin-top: 70px;
-}
-
-/* Keep map + controls below */
-#map {
-  z-index: 0 !important;
-  position: relative;
-}
-.leaflet-control-container {
-  z-index: 400 !important;
-}
-
+  
 
 
 
