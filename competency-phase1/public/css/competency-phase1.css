@@ -10,6 +10,10 @@ h1 {
   padding-top: 1rem;
 }
 
+.competency-container {
+  padding-top: 4vh !important;
+}
+
     
     
     /* ======================================================
@@ -94,6 +98,9 @@ h1 {
 @media (max-width: 768px) {
   .navbar-d1-slot {
     display: none;
+  }
+  .dataTables_wrapper {
+    overflow-x: auto;
   }
 }
 
