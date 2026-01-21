@@ -70,9 +70,6 @@ h1 {
   font-size: clamp(1.4rem, 1.2vw + 0.4rem, 1.6rem) !important; /* slightly larger than nav links */
   font-weight: 500 !important;
   transition: font-size 0.3s ease, color 0.3s ease !important;
-  /* margin-right: 1rem !important; */
-  /* padding-top: .3125rem !important;
-  padding-bottom: .3125rem !important; */
 }
 
 .navbar-brand {
@@ -1069,16 +1066,6 @@ background #CBCAE8 */
 
 
 
-
-    /* ======================================
-
-                NAV BAR SECTION
-
-    ====================================== */
-
-  /* all removed old not used  */
-
-
     /* ======================================
 
           MAP AND LEGEND SECTION
@@ -1108,20 +1095,13 @@ background #CBCAE8 */
 @media (min-width: 1400px) {
   #main-container {
     margin-right: 1rem;
-    /* margin-left: 1rem; */
   }
 }
 
 #map-div {
-  /* border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  */
   padding-right: 0;
   padding-left: 0.5rem;
 }
-
-/* #legend .rounded {
-  border-radius: 1rem  
-} */
 
 
 #map-card {
@@ -1147,8 +1127,6 @@ background #CBCAE8 */
   border-radius: 1rem !important;
   min-height: 600px;
   overflow: hidden !important;
-  /* margin-left: 0 !important; */
-  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
 }
 
 /* Base flex properties for #legend and #year-legend (the direct parents of items) */
@@ -1233,9 +1211,6 @@ background #CBCAE8 */
   #map-controls {
     flex-direction: column;
     align-items: flex-start;
-    /* padding: 0 1rem; 
-    width: 100%;
-    box-sizing: border-box; */
   }
 
 /* kk colour */
@@ -1371,39 +1346,6 @@ background #CBCAE8 */
 
 
 /* -----------------------------
-   Table Styling
------------------------------- */
-#clusterTable {
-  /* background-color: #fdfdfd !important; 
-}
-
-#birdYearTable {
-  background-color: #fdfdfd !important; 
-  margin-bottom: 0 !important;
-} */
-
-
-
-/* -----------------------------
-   Map Link Button
------------------------------- */
-/* .cluster-btn {
-  background-color: #3A2F51;   
-  color: #ffffff;
-  border: none;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
-}
-
-.cluster-btn:hover {
-  background-color: #57477A;  
-  color: #ffffff;
-} */
-
-/* -----------------------------
    Export Buttons (CSV, Excel, PDF, Print)
 ------------------------------ */
 .dt-button {
@@ -1422,35 +1364,7 @@ background #CBCAE8 */
   color: #fff !important;
 }
 
-/* -----------------------------
-   Search Input
------------------------------- */
-/* .dataTables_filter input {
-  background-color: #fdfdfd !important;  
-  border: 1px solid #ccc !important;
-  border-radius: 6px !important;
-  padding: 4px 8px !important;
-  font-size: 14px;
-  color: #3A2F51 !important;
-} */
 
-/* #competencyTable_wrapperdataTables_wrapper .dataTables_filter input {
-  background-color: #fdfdfd !important;  
-  border: 1px solid #ccc !important;
-  border-radius: 6px !important;
-  padding: 4px 8px !important;
-  font-size: 14px;
-  color: #3A2F51 !important;
-} */
-
-/* #competencyTable_wrapper.dataTables_wrapper .dataTables_filter input {
-  background-color: #fdfdfd;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 4px 8px;
-  font-size: 14px;
-  color: #3A2F51;
-} */
 
 #competencyTable_wrapper.dataTables_wrapper .dataTables_filter input[type="search"] {
     background-color: #fdfdfd !important;
@@ -1517,47 +1431,15 @@ background #CBCAE8 */
   box-shadow: 0 0 0 2px rgba(58, 47, 81, 0.2);
 }
 
+
 /* -----------------------------
-   Optional: Adjust table header
------------------------------- */
-/* #clusterTable thead th,
-#birdYearTable thead th {
-  background-color: #e6e6e6; 
-  color: #3A2F51;
-  border-bottom: 2px solid #ccc;
-  padding: 6px;
-}
-
-#clusterTable, #birdYearTable {
-  background-color: #fdfdfd !important;
-  border-collapse: collapse;
-}
-
-#birdYearTable_wrapper {
-  height: auto !important;
-  min-height: 0 !important;
-  margin-bottom: 0 !important;
-} */
-
-
-/* #clusterTable td, #birdYearTable td {
-  background-color: #fdfdfd; 
-  color: #3A2F51;
-} */
-/* -----------------------------
-   Optional: Scrollbar for long tables
+   Scrollbar for long tables
 ------------------------------ */
 .dataTables_scrollBody {
   max-height: 400px !important;
   overflow-y: auto !important;
 }
 
-/* -----------------------------
-   Tooltip for Map Buttons
------------------------------- */
-/* .cluster-btn[title] {
-  cursor: pointer;
-} */
 
 /* -----------------------------
    Styles for Summary Table
@@ -1631,7 +1513,6 @@ background #CBCAE8 */
   
 
 
-
     /* ======================================
 
       LEAVE BELOW .hide AT VERY BOTTOM OF CSS
@@ -1643,5 +1524,3 @@ background #CBCAE8 */
 .hide {
   display: none !important;
 }
-
-

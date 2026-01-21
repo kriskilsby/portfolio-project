@@ -18,9 +18,6 @@ const storkMetadata = require('../stork-app/frontend/routes/metadata');
 // Crown Hotel app (Node/Express project)
 const crownHotelApp = require('../crown-hotel-app/server');
 
-// Competency Phase 1 router (we will mount it cleanly)
-// const competencyPhase1Router = require('./routes/competencyPhase1');
-
 
 // ----------------------------
 // View engine setup
@@ -35,12 +32,7 @@ const storkViews = path.join(storkAppPath, 'views');
 const storkPublic = path.join(storkAppPath, 'public');
 
 
-
-// const competencyPhase1Views = path.join(__dirname, '../competency-phase1/views');
-
-
 // Set main views (Portfolio + Stork)
-// This allows includes like <%- include('components/navbar') %> to work in either app
 app.set('views', [portfolioViews, storkViews]);
 app.set('view engine', 'ejs');
 
@@ -52,7 +44,6 @@ app.set('view engine', 'ejs');
 // Static files for Portfolio
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Stork app static files (served under /stork-app)
 
 // Serve static assets for Stork app under /stork-app
 app.use('/stork-app', express.static(storkPublic));
@@ -66,15 +57,12 @@ app.use('/competency-phase1', express.static(path.join(__dirname, '../competency
 // ----------------------------
 app.use('/crown-hotel', crownHotelApp);   // All Crown Hotel routes are now under /crown-hotel
 
-// app.use('/', crownHotelApp);   // Mount Crown Hotel at root
-
 
 
 // ----------------------------
 // Stork App Setup
 // ----------------------------
 
-// Mount Stork API routes under /stork-app/api
 app.use('/stork-app/api/cluster', storkCluster);
 app.use('/stork-app/api/metadata', storkMetadata);
 app.get('/stork-app', (req, res) => {
@@ -89,8 +77,6 @@ app.use('/', indexRouter);
 // Competency Phase 1 App Setup
 // ----------------------------
 
-// Competency Phase 1 app
-// app.use('/competency-phase1', competencyPhase1Router);
 
 app.get('/competency-phase1', (req, res) => {
   res.render(path.join(__dirname, '../competency-phase1/views/index.ejs'), {
@@ -98,10 +84,6 @@ app.get('/competency-phase1', (req, res) => {
     page: 'competency-phase1'
   });
 });
-
-
-
-
 
 
 // ----------------------------

@@ -4,15 +4,6 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 
-
-// Example content for search demo
-// const allContent = [
-//   { title: 'Profile', description: 'About my skills and experience', url: '/profile' },
-//   { title: 'Stork Movement Explorer', description: 'Data clustering project', url: '/stork-app' },
-//   { title: 'Hotel Project', description: 'Group development project [coming soon]', url: '/' },
-//   { title: 'Competency Database', description: 'Database design project [coming soon]', url: '/' },
-// ];
-
 // Home page
 router.get('/', (req, res) => {
   res.render('index', { title: 'Kris Kilsby Portfolio', page: 'index' });
@@ -28,17 +19,6 @@ router.get('/profile', (req, res) => {
 router.get('/launch-hotel', (req, res) => {
   res.render('launch-hotel', { page: 'launch-hotel', title: 'Launch Hotel App' });
 });
-
-
-// Crownhotel launch page
-// router.get('/crown-hotel', (req, res) => {
-//   res.render('crown-hotel', { page: 'index', title: 'Crown Hotel Website' });
-// });
-
-// Temporary test page (for modal debugging) NOW REMOVED
-// router.get('/doesthiswork', (req, res) => {
-//   res.render('doesthiswork', { page: 'doesthiswork', title: 'doesthiswork' });
-// });
 
 
 // ------------------------

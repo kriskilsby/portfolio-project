@@ -340,13 +340,6 @@
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-                    <!-- <div class="card-body text-center">
-                        <h5 class="card-title">Stork Migration Explorer</h5>
-                        <p class="card-text">
-                            My MSc Computing Science dissertation project — an interactive tool for exploring stork movement data.
-                        </p>
-                        <a href="/stork-app"  target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="View the Stork App"></a>
-                    </div> -->
 
                     <div class="card-body text-center position-relative">
                         <a href="/stork-app" target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="View the Stork App"></a>
@@ -452,22 +445,6 @@
 
     </section>
 
-    <!-- <section style="background: yellow; min-height: 200px;">
-        
-        <div class="container-fluid position-relative">
-                <h2 class="test-title" style="color: black; font-size: 2rem;">Is This Showing?</h2>
-            <button 
-            type="button" 
-            class="btn btn-dark position-absolute top-0 end-0 m-3 modal-enlarge-btn"
-            data-image-src="/images/responsive/stork-1-1200.jpg"
-            data-image-alt="Stork Movement Data Map Slide 2"
-            aria-label="View large image of Stork Movement Data Map Slide 2">
-            <i class="bi bi-arrows-fullscreen"></i>
-            </button>
-        </div> 
-        
-    </section> -->
-
     <!-- Modal -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -486,48 +463,11 @@
         </div>
     </div>
 
-    <!-- Bootstrap bundle (with Popper) -->
-    <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
-
-    <!-- Your modal logic -->
-    <!-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('✅ DOM fully loaded for modal test');
-
-        const imageModal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-
-        if (!imageModal || !modalImage) {
-        console.error('❌ imageModal or modalImage not found in DOM');
-        return;
-        }
-
-        console.log('✅ Found modal elements, attaching listener...');
-
-        imageModal.addEventListener('show.bs.modal', event => {
-        const button = event.relatedTarget;
-        const src = button?.getAttribute('data-image-src');
-        const alt = button?.getAttribute('data-image-alt') || 'Expanded image';
-
-        console.log('🖼️ Modal triggered with src:', src);
-        modalImage.src = src;
-        modalImage.alt = alt;
-        });
-    });
-    </script> -->
+  
 
 
-    <!-- <div id="footer-placeholder"></div> -->
+    <!-- footer -->
     <%- include ('components/footer') %>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
-    
-    <!-- <script src="/js/main.js"></script> -->
-
-    <!-- <script>
-        document.documentElement.classList.remove("no-js");
-    </script> -->
 
 
 
