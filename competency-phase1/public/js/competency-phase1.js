@@ -5,7 +5,8 @@ $(document).ready(function () {
     var table = $('#competencyTable').DataTable({
         ajax: {
             // url: 'https://competencyapp-api.azurewebsites.net/employees', // Older Azure API endpoint
-            url: 'http://46.101.40.132:3001/employees', // New Digital Ocean API endpoint
+            // url: 'http://46.101.40.132:3001/employees', // New Digital Ocean API endpoint
+            url: '/api/employees',  // proxy will forward to DO API
             dataSrc: '', // JSON array returned by API
         },
         columns: [
