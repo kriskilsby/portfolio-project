@@ -10,6 +10,9 @@ const outputDir = path.join(__dirname, "backend", "public", "images", "responsiv
 // Define responsive sizes (widths)
 const sizes = [400, 800, 1200, 1600, 2400]; // you can adjust/remove 2400
 
+// Force flag (run as: node generateImages.js --force)
+const force = process.argv.includes("--force");
+
 // Ensure output directory exists
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
@@ -22,7 +25,10 @@ const originals = fs.readdirSync(inputDir).map(file =>
 
 // Step 2: cleanup responsive folder (remove orphans)
 fs.readdirSync(outputDir).forEach(file => {
-  const baseName = file.split("-")[0]; // everything before the first "-"
+  const ext = path.extname(file);
+  const nameWithoutExt = path.basename(file, ext);
+  const baseName = nameWithoutExt.replace(/-\d+$/, ""); // remove "-400", "-800", etc.
+
   if (!originals.includes(baseName)) {
     const filePath = path.join(outputDir, file);
     fs.unlinkSync(filePath);
@@ -44,22 +50,34 @@ fs.readdirSync(inputDir).forEach(file => {
   }
 
   sizes.forEach(width => {
-    // JPEG version
+    // JPEG output
     const jpegOutputPath = path.join(outputDir, `${baseName}-${width}.jpg`);
-    sharp(inputPath)
-      .resize({ width, withoutEnlargement: true })
-      .jpeg({ quality: 80 })
-      .toFile(jpegOutputPath)
-      .then(() => console.log(`✅ Created ${jpegOutputPath}`))
-      .catch(err => console.error(`❌ Error with ${jpegOutputPath}`, err));
+    if (force || !fs.existsSync(jpegOutputPath)) {
+      sharp(inputPath)
+        .resize({ width, withoutEnlargement: true })
+        .jpeg({ quality: 80 })
+        .toFile(jpegOutputPath)
+        .then(() => console.log(`✅ Created ${jpegOutputPath}`))
+        .catch(err => console.error(`❌ Error with ${jpegOutputPath}`, err));
+    } else {
+      console.log(`⏩ Skipped existing file: ${jpegOutputPath}`);
+    }
 
-    // WebP version
+    // WebP output (preserves transparency)
     const webpOutputPath = path.join(outputDir, `${baseName}-${width}.webp`);
-    sharp(inputPath)
-      .resize({ width, withoutEnlargement: true })
-      .webp({ quality: 80 })
-      .toFile(webpOutputPath)
-      .then(() => console.log(`✅ Created ${webpOutputPath}`))
-      .catch(err => console.error(`❌ Error with ${webpOutputPath}`, err));
+    if (force || !fs.existsSync(webpOutputPath)) {
+      sharp(inputPath)
+        .resize({ width, withoutEnlargement: true })
+        .webp({ quality: 80 })
+        .toFile(webpOutputPath)
+        .then(() => console.log(`✅ Created ${webpOutputPath}`))
+        .catch(err => console.error(`❌ Error with ${webpOutputPath}`, err));
+    } else {
+      console.log(`⏩ Skipped existing file: ${webpOutputPath}`);
+    }
   });
+
+
 });
+
+console.log(force ? "⚡ Force mode: all images regenerated." : "⚡ Normal mode: skipped existing files.");

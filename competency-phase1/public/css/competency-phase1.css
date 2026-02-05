@@ -1,6 +1,9 @@
+/* -------------------------------------
 
-    
-    
+          COMPETENCY-PHASE1 CUSTOM STYLES
+
+    ----------------------------------------------------- */
+
 h1 {
   font-weight: 600;
 }
@@ -14,7 +17,157 @@ h1 {
   padding-top: 4vh !important;
 }
 
-    
+
+/* Ensure the carousel takes up the full width of its column */
+#AzureBackend {
+    width: 100%;
+    margin: 0;
+}
+
+/* Force the image to cover the container area */
+#AzureBackend .carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* This prevents gaps if images have slightly different sizes */
+}
+
+/* Move indicators back inside the image area */
+#AzureBackend .carousel-indicators {
+    bottom: 10px; /* Moves them from the 'outside' to 10px above the bottom edge */
+    margin-bottom: 0;
+}
+
+/* If the indicators are too large, scale them down */
+#AzureBackend .carousel-indicators [button] {
+    width: 30px;
+    height: 3px;
+}
+
+/* Main container */
+.competency-carousel {
+  height: 100%;
+  min-height: 320px;
+  max-height: 420px;
+  flex: 1;
+}
+
+/* Ensure carousel fills column */
+.competency-carousel .carousel-inner,
+.competency-carousel .carousel-item {
+  height: 100%;
+}
+
+/* Make images behave */
+.competency-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keep indicators inside image */
+.competency-carousel .carousel-indicators {
+  bottom: 0.5rem;
+}
+
+/* Arrow icons */
+.competency-carousel .carousel-control-prev-icon,
+.competency-carousel .carousel-control-next-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-size: 100% 100%;
+  filter: invert(1);        /* makes arrows white + visible */
+}
+
+.competency-carousel .carousel-control-prev,
+.competency-carousel .carousel-control-next {
+  position: absolute;        /* important */
+  top: 50%;                  /* centre vertically */
+  bottom: auto;              /* ← THIS fixes the stretching */
+  transform: translateY(-50%);
+  margin: 0;                 /* kill global carousel margins */
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0; 
+  background-size: 70% 70%;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 50%;
+}
+
+/* Position them inside the image */
+.competency-carousel .carousel-control-prev {
+  left: 10px;
+}
+
+.competency-carousel .carousel-control-next {
+  right: 10px;
+}
+
+.competency-carousel .carousel-control-prev-icon:hover,
+.competency-carousel .carousel-control-next-icon:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.competency-carousel .carousel-fade .carousel-item {
+  transition: opacity 1.2s ease-in-out;
+}
+
+.competency-carousel .carousel-indicators [data-bs-target] {
+  width: 50px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.55); 
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.competency-carousel .carousel-indicators {
+  bottom: 0px;                        /* spacing from image bottom */
+  background: rgba(0, 0, 0, 0.25);     /* soft translucent bar */
+  border-radius: 20px;                 /* rounded container */
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;                            /* space between indicators */
+}
+
+.competency-carousel .carousel-indicators .active {
+  background: linear-gradient(90deg, #7FA6B8 0%, #A4C4D4 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 80px;                        
+  height: 8px;
+  opacity: 1;
+}
+
+.competency-carousel .carousel-item .btn {
+  z-index: 10;
+}
+
+/* ------------------------------
+   Responsive Image Modal
+--------------------------------*/
+
+#imageModal .modal-dialog {
+  display: table;               /* allows horizontal centering */
+  width: auto;                  /* shrink to fit content */
+  max-width: 1600px;            /* natural image width */
+  margin: 80px auto 80px auto;  /* vertical spacing, adjust 80px for fixed navbar */
+}
+
+#imageModal .modal-content {
+  display: inline-block;         /* shrink-wrap the modal to image */
+  background-color: #fff;        /* ensures header/footer are visible */
+  border-radius: 0.5rem;         /* optional styling */
+  overflow: hidden;              /* prevent overflow if image is slightly larger */
+}
+
+#imageModal img {
+  display: block;
+  max-width: 100%;               /* scale down if viewport < image width */
+  height: auto;
+}
+
     
     /* ======================================================
 
@@ -603,130 +756,6 @@ h1 {
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125) !important;
 }
 
-    
-    /* ======================================================
-
-          ORIGINAL STORK APP STYLES SECTION
-
-    ========================================================= */    
-    
-    /* ======================================
-
-          MEDIA QUERIES SECTION
-
-    ====================================== */
-
-/* For screen sizes under 1200px */
-@media (max-width: 1200px) {
-  .hero-stork-img {
-    max-height: 8rem;
-    right: -2rem;
-    bottom: -3rem;
-  }
-}
-
-/* For screen sizes under 992px */
-@media (max-width: 992px) {
-.legend-container {
-    min-height: auto !important;
-    /* padding: 0.5rem; */
-  }
-
-#map-div {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-  #legend, #year-legend {
-    flex-direction: row !important; 
-    flex-wrap: wrap; 
-    justify-content: flex-start; 
-    gap: 8px; 
-    padding: 10px; 
-  }
-
-  
-  /* Style the individual legend items to take roughly half the width */
-  #legend > div, 
-  #year-legend > div {
-    flex: 1 1 calc(50% - 4px) !important; 
-    max-width: calc(50% - 4px) !important; 
-    word-break: break-all; 
-  }
-
-  
-  .legend-item {
-    flex-wrap: wrap; /* Ensures content within the item wraps */
-  }
-
- .color-box {
-    width: 0.75rem;
-    height: 0.75rem;
-  }
-}
-
-/* For screen sizes under 768px */
-@media (max-width: 768px) {
-  #main-container {
-    flex-direction: column;
-    height: 70vh;
-    margin: 1rem;
-  }
-  .hero-stork-img {
-    max-height: 6rem;
-    right: -1rem;
-    bottom: -2rem;
-  }
-  #hero-top {
-    max-width: 90% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .legend-container { /* If you need this specific override here, keep it */
-     min-height: auto !important;
-  }
-}
-
-/* For screen sizes under 576px */
-@media (max-width: 576px) {
-  #legend, #year-legend {
-    font-size: 12px;
-    padding: 5px;
-    gap: 6px; 
-    flex-direction: column !important; 
-    flex-wrap: nowrap !important; 
-  }
-
-  /* Ensure items take full width to stack properly */
-  #legend > div,
-  #year-legend > div {
-    flex: 1 1 100% !important; 
-    max-width: 100% !important; 
-  }
-
-  .legend-item {
-    flex: 1 1 100%; 
-    max-width: 100%; 
-  }
-
- .color-box {
-    width: 0.75rem;
-    height: 0.75rem;
-  }
-  
-  #play-animation-section img {
-    max-height: 3rem;
-    bottom: -1rem;
-  }
-  .hero-stork-img {
-    max-height: 4rem;
-    right: 0;
-    bottom: -1rem;
-  }
-}
-
-
-
-
 
     /* ======================================
 
@@ -734,11 +763,6 @@ h1 {
 
     ====================================== */
 
-
-#cluster-legend-container {
-  overflow-wrap: break-word;
-  max-width: 100%;
-}
 
 h6.legend-label-text {
   margin-left: 1rem;
@@ -756,12 +780,6 @@ body {
 
 html, body {
   overflow-x: hidden;
-}
-
-.leaflet-container {
-  width: 100% !important;
-  max-width: 100vw;
-  overflow: hidden;
 }
 
 
@@ -856,449 +874,6 @@ p.filterform-p {
   min-height: 25px !important;
 }
 
-    /* ======================================
-
-              HERO SECTION
-
-    ====================================== */
-
-  #hero-top {
-  background-color:#C66489;
-  color: #F9F9F9;
-  padding-top: 2rem !important;
-  padding-bottom: 4rem !important;
-  /* padding-left: 1rem;
-  padding-right: 1rem; */
-  border-radius: 1rem;
-  margin: 1rem auto;
-  /* margin: 1rem 1rem; */
-  max-width: 85%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  /* overflow: hidden; */
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-  .hero-stork-img {
-  max-height: 10rem;
-  transition: max-height 0.4s ease, right 0.4s ease, bottom 0.4s ease;
-}
-
-
-    /* ======================================
-
-          ANIMATION SLIDER SECTION
-
-    ====================================== */
-
-div#time-animation-controls {
-  /* margin-top: 0 !important; */
-  margin-bottom: 0 !important;
-}
-
-/* text #201A2D
-background #CBCAE8 */
-#sliderSection {
-  background-color: #A4A1D6;
-  color: #3A2F51;
-  font-weight: 600;
-  padding: 0rem 1rem 0.5rem 1rem !important;
-  margin: 0px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* KK checked OK */
-#speedSelect {
-  padding: 0.375rem 0.75rem;
-  height: 2rem;
-  width: 7rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  line-height: normal;
-  background-color: #F9F9F9 !important;
-  color: #3A2F51 !important;
-}
-
-.slider-detail {
-  margin-bottom: 0.5rem;
-}
-
-#playButton {
-  padding: 0.375rem 0.375rem;
-  height: 2.25rem;
-  width: 5rem;
-  font-size: 0.9rem;
-  line-height: normal; 
-  transition: opacity 0.3s ease, filter 0.3s ease !important; 
-  opacity: 1;  
-  cursor: pointer; 
-}
-
-#playButton.disabled, 
-#playButton:disabled {
-  opacity: 0.4;        
-  cursor: not-allowed;   
-  filter: grayscale(50%); 
-}
-
-#time-label {
-  color: #3A2F51 !important;
-}
-
-#time-animation-controls {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-#time-slider {
-  width: 30%;
-  margin-bottom: 0.5rem !important;
-}
-
-#sliderSection .form-label,
-#sliderSection label,
-#sliderSection .form-check-label {
-  color: #3A2F51;
-  font-weight: 600;
-}
-
-#sliderSection .form-select,
-#sliderSection .btn,
-#sliderSection .form-check-input {
-  border-radius: 0.5rem;
-}
-
-#sliderSection .form-select {
-  background-color: #343a40;
-  color: #3A2F51;
-  border: 1px solid #F9F9F9;
-}
-
-#sliderSection .form-check-input:checked {
-  background-color: #ad3939;
-  border-color: #F9F9F9;
-}
-
-#sliderSection .form-check-input:focus,
-#sliderSection .form-select:focus {
-  box-shadow: 0 0 0 0.2rem rgba(249, 249, 249, 0.5);
-}
-
-/* Time slider colour per year */
-#time-slider::-webkit-slider-runnable-track {
-  height: 6px;
-  border-radius: 4px;
-}
-#time-slider::-moz-range-track {
-  height: 6px;
-  border-radius: 4px;
-}
-
-.play-img {
-  position: relative;
-  height: 6vh; 
-}
-
-.play-stork-img {
-  position: absolute;
-  bottom: 0rem;
-  right: 0.0rem;
-  max-height: 100%;
-  height: auto;
-  width: auto;
-  pointer-events: none;
-}
-
-
-    /* ======================================
-
-              MOVING LOADING SECTION
-
-    ====================================== */
-
-#loading-section {
-  opacity: 1;
-  transition: opacity 1.0s ease;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-#loading-section.fade-out {
-  opacity: 0;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-#stork-spinner {
-  width: 50px;
-  height: 50px;
-  animation: bounce 1.0s ease-in-out infinite;
-}
-
-    /* ======================================
-
-          CLUSTERING FORM SECTION
-
-    ====================================== */
-
-#cluster-section {
-  margin-top: 0 !important;
-  background-color: #F9F9F9 !important;
-}
-
-/* Setup for the main clustering form box */
-  #clusteringForm {
-  background-color: #A1D6BF;
-  color: #3A2F51;
-  padding: 0rem 1rem 1rem 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-
-
-    /* ======================================
-
-          MAP AND LEGEND SECTION
-
-    ====================================== */
-
-#map {
-  min-height: 600px;
-  width: 100%;
-  border-radius: 1rem !important;
-  margin-bottom: 0 !important;
-  z-index: 0 !important;
-}
-
-#map {
-  flex: 1;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 0.75rem;
-}
-
-.leaflet-control-container {
-  z-index: 400 !important; /* default is 800, lower keeps it below navbar */
-}
-
-/* Optional: give a max-width to prevent map overflow on huge screens */
-@media (min-width: 1400px) {
-  #main-container {
-    margin-right: 1rem;
-  }
-}
-
-#map-div {
-  padding-right: 0;
-  padding-left: 0.5rem;
-}
-
-
-#map-card {
-  padding: 16px 16px 0px 16px;
-}
-
-.legend-item.selected-cluster {
-  background-color: #A1D6BF !important;
-  border-left: 4px solid #333;
-  padding-left: 4px;
-}
-
-.legend-item:hover {
-  background-color: #c8e8d5;
-}
-
-/* Styles for the main legend card container */
-.legend-container {
-  background-color: #A1D6BF;
-  padding: 1rem 0.5rem !important;
-  max-height: 100%;
-  overflow-y: auto;
-  border-radius: 1rem !important;
-  min-height: 600px;
-  overflow: hidden !important;
-}
-
-/* Base flex properties for #legend and #year-legend (the direct parents of items) */
-/* Styles for the actual list of legend items (inside the card) */
-#legend, #year-legend {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  max-width: 100%;
-  width: 100%;
-  overflow-x: auto;
-  word-wrap: break-word;
-  margin-right: 10px;
-  padding: 10px;
-  padding-bottom: 0.75rem;
-  font-family: sans-serif;
-  font-size: 14px;
-  overflow-y: auto;
-  /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
-}
-
-.legend-item {
-  flex-wrap: wrap;
-  word-break: break-word;
-}
-
-/* Base flex properties for individual legend items (all direct div children) */
-#legend > div,
-#year-legend > div {
-    display: flex;
-    align-items: center;
-    gap: 6px; 
-    padding-bottom: 0.0rem;
-    flex-wrap: wrap; 
-}
-
-
-.color-box {
-  flex-shrink: 0;
-  width: 1rem;
-  height: 1rem;
-  display: inline-block;
-  border: 1px solid #666;
-  border-radius: 3px;
-}
-
-
-.btn, .form-select, .form-control {
-  transition: all 0.3s ease-in-out !important;
-}
-.btn:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-}
-
-
-#map-controls label {
-  font-weight: 600;
-}
-
-#main-container {
-  display: flex;
-  height: 80vh;
-  margin: 0 1rem 1rem 1rem; 
-  box-sizing: border-box;
-}
-
-
-
-/* Default styling */
-#map-controls {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  padding: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-  #map-controls {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-/* kk colour */
-#map-section {
-  background-color: #F9F9F9;
-  color: #3A2F51;
-  margin-bottom: 0.5em !important;
-  padding: 0 0px;
-}
-
-.container my-4 {
-  background-color: #6ca63e;
-}
-
-#mapFiltersForm {
-  /* padding: 32px; */
-  background-color: #D3D6A1;
-  color: #3A2F51;
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: 0rem 0rem 0rem 0rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-    /* ======================================
-
-        OTHER BUTTONS & FILTERS SECTION
-
-    ====================================== */
-
-/* Shared base for clustering/clear buttons */
-.btn-clustering-style {
-  min-height: 2.4rem;
-  height: auto;
-  width: 100%;
-  white-space: normal;
-  /* padding: 0.375rem 0.75rem; */
-  font-weight: 600;
-  border-radius: 0.4rem;
-  text-align: center;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-
-
-.btn-custom-warning {
-  background-color: #726FB4 !important;
-  color: #fff !important;
-  border: 1px solid #726FB4 !important;
-}
-
-#clearAllFilters {
-  white-space: normal;
-  width: 100%;
-  min-height: 2.4rem;
-  height: auto;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
-}
-
-.btn-custom-warning:hover,
-.btn-custom-warning:focus {
-  background-color: #5C59A3 !important;
-  border-color: #5C59A3 !important;
-  color: #fff !important;
-}
-
-
-/* Filter months buttons */  
-.uniform-btn {
-  width: 55px !important;
-  height: 35px !important;
-  border-radius: 0.5rem !important; 
-  margin-bottom: 1px !important; 
-  text-align: center !important;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-/* Filter time-slot buttons */  
-.uniform-btn-wide {
-  width: 120px !important;
-  height: 35px !important;
-  border-radius: 0.9rem !important;
-  margin-bottom: 1px !important;
-  text-align: center !important;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
 
     /* ======================================
 
@@ -1323,48 +898,6 @@ background #CBCAE8 */
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   overflow-x: auto;
 }
-
-/* Setup for the summary table card */
-  #summary-table-card {
-  background-color: #D3D6A1 !important;
-  color: #3A2F51;
-  padding: 0rem 1rem 0.5rem 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-/* Setup for the chart table card */
-  #chart-card {
-  background-color: #A4A1D6 !important;
-  color: #3A2F51;
-  padding: 0rem 1rem 1rem 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  margin-top: 0.5rem;
-}
-
-
-
-/* -----------------------------
-   Export Buttons (CSV, Excel, PDF, Print)
------------------------------- */
-.dt-button {
-  background-color: #3A2F51 !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 6px !important;
-  padding: 6px 12px !important;
-  margin: 0 4px !important;
-  font-size: 13px !important;
-  transition: background-color 0.2s ease;
-}
-
-.dt-button:hover {
-  background-color: #57477A !important;
-  color: #fff !important;
-}
-
-
 
 #competencyTable_wrapper.dataTables_wrapper .dataTables_filter input[type="search"] {
     background-color: #fdfdfd !important;
@@ -1441,77 +974,6 @@ background #CBCAE8 */
 }
 
 
-/* -----------------------------
-   Styles for Summary Table
------------------------------- */
-
-/* Button group consistency */
-.btn-group .btn {
-  border-radius: 0.5rem !important;
-  font-size: 0.9rem !important;
-  padding: 0.4rem 0.8rem !important;
-  margin: 0 10px !important;
-}
-
-/* Dropdown style */
-#largeThreshold {
-  border-radius: 0.5rem !important;
-  background-color: #fdfdfd !important; /* same off-white as tables */
-  border: 1px solid #ccc !important;
-  color: #3A2F51 !important;
-}
-
-/* Hover/active states */
-.btn-outline-primary:hover,
-.btn-outline-success:hover,
-.btn-outline-info:hover {
-  opacity: 0.9 !important;
-}
-
-.metric-toggle {
-  background-color: #6c5ce7 !important; /* vivid purple */
-  color: #fff !important;
-  font-weight: 600 !important;
-  border: none !important;
-  padding: 0.5rem 1rem !important;
-  transition: background-color 0.2s ease !important;
-}
-
-.metric-toggle:hover {
-  background-color: #5a4bd1 !important; /* darker on hover */
-  color: #fff !important;
-}
-
-.metric-toggle.active {
-  background-color: #3A2F51 !important; /* your SME deep purple */
-  color: #fff !important;
-  box-shadow: 0 0 0 0.2rem rgba(58, 47, 81, 0.4) !important; /* subtle glow */
-}
-
-/* -----------------------------
-   Button Styles for Charts
------------------------------- */
-
-.chart-value-toggle {
-  background-color: #fff !important;         
-  color: #4B0082 !important;                
-  border: 2px solid #4B0082 !important;     
-  font-weight: 600 !important;
-  transition: all 0.2s ease-in-out !important;
-}
-
-.chart-value-toggle:hover {
-  background-color: #4B0082 !important;
-  color: #fff !important;                    
-}
-
-.chart-value-toggle.active {
-  background-color: #4B0082 !important;
-  color: #fff !important;
-}
-
-  
-
 
     /* ======================================
 
@@ -1523,4 +985,9 @@ background #CBCAE8 */
 /* Hide utility class */
 .hide {
   display: none !important;
+}
+
+.card-showcase {
+  border-radius: var(--bs-border-radius-xxl) !important; /* same as rounded-5 */
+  overflow: hidden;  /* ensures inner .card-body respects the rounding */
 }

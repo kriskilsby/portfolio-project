@@ -355,16 +355,55 @@ document.addEventListener("DOMContentLoaded", () => {
         modalTitle.textContent = alt;
 
         // Apply inert to all siblings outside modal for accessibility
-        const siblings = Array.from(document.body.children).filter(el => el !== imageModalEl);
-        siblings.forEach(el => el.setAttribute('inert', ''));
+        // const siblings = Array.from(document.body.children).filter(el => el !== imageModalEl);
+        // siblings.forEach(el => el.setAttribute('inert', ''));
+
+        // ------------------------------------------------------------------
+        // ✅ BOOTSTRAP-SAFE INERT HANDLING
+        // ------------------------------------------------------------------
+        // console.log('🔐 Applying inert to non-modal elements for accessibility');
+        let inertElements = Array.from(document.body.children).filter(el => {
+          return (
+            el !== imageModalEl &&
+            !el.classList.contains('modal-backdrop') &&
+            !el.classList.contains('modal') &&
+            !el.matches('script') &&
+            !el.matches('style')
+          );
+        });
+        
+        // 🔎 DEBUG LINE: show full array - comment out when not required
+        // console.log('🧱 inertElements array:', inertElements);
+
+        // 🔎 DEBUG BLOCK: detailed inspection - comment out when not required
+        // inertElements.forEach(el => {
+        //   console.log(
+        //     '➡️ Inert target:',
+        //     {
+        //       tag: el.tagName,
+        //       id: el.id || '(no id)',
+        //       classes: el.className || '(no classes)',
+        //       containsModal: el.contains(imageModalEl)
+        //     }
+        //   );
+        // });
+        
+        inertElements.forEach(el => el.setAttribute('inert', ''));
+
 
         const modalInstance = bootstrap.Modal.getInstance(imageModalEl) || new bootstrap.Modal(imageModalEl);
 
         // Remove inert when modal closes
+        // const removeInert = () => {
+        //   siblings.forEach(el => el.removeAttribute('inert'));
+        //   imageModalEl.removeEventListener('hidden.bs.modal', removeInert);
+        // };
+ 
         const removeInert = () => {
-          siblings.forEach(el => el.removeAttribute('inert'));
+          inertElements.forEach(el => el.removeAttribute('inert'));
           imageModalEl.removeEventListener('hidden.bs.modal', removeInert);
         };
+
         imageModalEl.addEventListener('hidden.bs.modal', removeInert);
 
         modalInstance.show();
@@ -375,6 +414,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     document.body.addEventListener('click', handleModalClick);
+
+    // ----------------------------------------------------------------------
+    // ✅ Accessibility: ensure focus leaves modal before aria-hidden applied
+    // ----------------------------------------------------------------------
+    imageModalEl.addEventListener('hidden.bs.modal', () => {
+      document.body.focus();
+    });
 
     console.debug('🛠️ Modal handler installed');
   }

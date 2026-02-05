@@ -4,6 +4,26 @@ require('dotenv').config({ path: __dirname + '/.env' });
 
 const app = express();
 
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+// ----------------------------
+// Local development API proxy
+// ----------------------------
+// In development, the frontend runs on port 3000 and the Nest backend runs on port 3001.
+// To avoid CORS issues and keep the frontend code identical to production,
+// we proxy all requests starting with /api to the backend on port 3001.
+// In production, Nginx handles the routing, so this block is not used.
+if (process.env.NODE_ENV !== 'production') {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: 'http://localhost:3001',
+      changeOrigin: true,
+    })
+  );
+}
+
+
 // ----------------------------
 // Routers and apps
 // ----------------------------
@@ -38,7 +58,7 @@ app.set('view engine', 'ejs');
 
 
 // ----------------------------
-// Static files setup
+// Static routes
 // ----------------------------
 
 // Static files for Portfolio

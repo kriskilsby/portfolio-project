@@ -88,3 +88,13 @@ Thumbs.db
 run-all.sh
 stork-app/frontend/routes/test_cluster.js
 
+# Do NOT ignore responsive images — track them normally
+# backend/public/images/responsive/*
+
+# But allow Git to track specific ones (if added manually)
+# You can un-ignore specific files using `git add -f` when needed
+
+
+# Keep original images tracked
+# backend/public/images/original/*
+

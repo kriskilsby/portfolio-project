@@ -14,7 +14,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
         crossorigin="anonymous">
 
-  <!-- Stork-app custom styles -->
+  <!-- Competency-app (previously Stork-app) custom styles -->
   <link rel="stylesheet" href="/competency-phase1/css/competency-phase1.css"/>
 
   <!-- Leaflet + Map plugins -->
@@ -30,8 +30,9 @@
   <link rel="stylesheet" href="/css/styles.css"/>
     <!-- backend\public\css\styles.css -->
   
-  <!-- Fonts -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <!-- Inline CSS to fix Leaflet z-index issues -->
   <style>
@@ -41,10 +42,11 @@
   </style>
 
   <script defer data-domain="kriskilsby.com" src="https://analytics.kriskilsby.com/js/script.js"></script>
+  
 
 </head>
 
-<body>
+<body tabindex="-1">
   
 
   <!-- Navbar portfolio version-->
@@ -58,23 +60,25 @@
       <section class="competency-accordion-section bg-light">
         <div class="competency-container container px-2 px-md-3">
           <!-- competency Overview Section -->
-          <h2 class="px-3 mb-4">Competency App – Phase 1 (Microsoft Azure Cloud Platform)</h2>
+          <h2 class="px-3 mb-4">Initial Goal: Microsoft Azure Cloud Experience</h2>
           <p class="px-3 mb-4">
-            This page demonstrates a cloud-deployed competency data platform built using a
-            <strong>Microsoft-aligned technology stack</strong>.
-            Core infrastructure and data services are provided by <strong>Microsoft Azure</strong>,
-            while application development and delivery, follow modern cloud engineering practices.
+            The original goal of <strong>Competency App – Phase 1</strong> was to gain hands-on experience designing 
+            and deploying a backend system using a <strong>Microsoft-aligned cloud architecture</strong>, suitable for real-world 
+            enterprise environments.
           </p>
           <p class="px-3 mb-4">
-            Employee data is retrieved from a <strong>TypeScript-based NestJS API</strong>, 
-            deployed to <strong>Azure App Service</strong>, backed by an <strong>Azure SQL</strong> database,
-            populated via <strong>Azure Data Factory</strong>. The platform is designed to reflect a production-style 
-            cloud environment, with a clear separation between data ingestion, API services, and frontend consumption.
+            Development was carried out using <strong>Microsoft-backed tooling</strong>, including <strong>Visual Studio Code</strong> and <strong>TypeScript</strong>, alongside 
+            <strong>NestJS</strong>, <strong>GitHub</strong>, and <strong>Azure cloud services</strong>. This ensured close alignment with a modern Microsoft-centric development 
+            workflow from local development through to production deployment.
+          </p> 
+           <p class="px-3 mb-4">
+            Over an intensive development period of approximately three weeks, the project focused on building, deploying, 
+            and operating a production-style data platform rather than prioritising advanced frontend features.
           </p>          
 
           <!-- Technology Stack Overview -->
           <div class="tech-stack-summary px-3 mb-4 ms-2">
-            <h5 class="fw-semibold mb-3">Technology Stack (Phase 1)</h5>
+            <h5 class="fw-semibold mb-3">Technology Stack (Phase 1 Azure)</h5>
             <ul class="list-inline small mb-0 ms-2">
               <li class="list-inline-item mb-1">
                 <strong>Frontend:</strong> HTML, EJS, JavaScript, Bootstrap 5, jQuery, DataTables
@@ -96,66 +100,611 @@
           </p>
 
           <div class="accordion" id="competencyappAccordion">
-            <!-- Overview -->
+             <!-- Architecture (Azure Implementation) -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="competencyappHeadingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                   data-bs-target="#competencyappCollapseOne" aria-expanded="true"
                   aria-controls="competencyappCollapseOne">
-                  About the Project
+                  Phase 1 Architecture (Azure Implementation)
                 </button>
               </h2>
               <div id="competencyappCollapseOne" class="accordion-collapse collapse show" 
                 aria-labelledby="competencyappHeadingOne" data-bs-parent="#competencyappAccordion">
                 <div class="accordion-body">
-                  <p>
-                    The <strong>Competency App</strong> is a full-stack web application designed to
-                    demonstrate practical experience with <strong>Microsoft cloud services</strong>
-                    and modern backend development.
-                  </p>
 
-                  <p>
-                    Phase 1 focuses on deploying a production-style data pipeline and API, rather than
-                    advanced user interface features. Employee competency and experience data is ingested,
-                    stored, and exposed via a secure REST API, then consumed by a lightweight frontend for
-                    exploration and validation purposes.
-                  </p>
+                  <div class="accordion-text flex-fill text-center text-lg-start">
+                    <h4 class="fw-bold mb-4 mt-2">Phase 1 Architecture (Azure Implementation)</h4>                  
+                    <p>
+                      The Phase 1 architecture followed a clear separation of concerns:
+                    </p>
+                    <ul class="list-unstyled ms-2">
+                      <li><i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                        A <strong>NestJS (TypeScript) backend API</strong> deployed to <strong>Azure App Service (Linux)</strong></li>
+                      <li><i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                        A cloud-hosted <strong>Azure SQL Database</strong> accessed via <strong>TypeORM</strong></li>
+                      <li><i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                        Data ingestion and transformation handled using <strong>Azure Data Factory</strong></li>
+                      <li><i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                        A lightweight frontend hosted separately and consuming the API securely</li>
+                    </ul>
 
-                  <p>
-                    Key objectives of this phase include:
-                  </p>
+                    <p>
+                      Deployment was automated using GitHub Actions, with a CI/CD workflow responsible for 
+                      building and deploying the backend to Azure App Service on each push to the main branch. 
+                      This ensured repeatable, version-controlled deployments consistent with modern cloud 
+                      engineering practices.
+                    </p>
+                    <p>
+                      As the frontend and backend were deployed independently, Cross-Origin Resource Sharing (CORS) configuration 
+                      was required to allow secure API access from the frontend application. This reflected a common production 
+                      scenario where services are decoupled rather than deployed as a single monolithic application.
+                    </p>
+                  </div>
 
-                  <ul>
-                    <li>Deploying a scalable <strong>NestJS API</strong> to Azure App Service</li>
-                    <li>Integrating with <strong>Azure SQL Database</strong> using TypeORM</li>
-                    <li>Ingesting structured data via <strong>Azure Data Factory</strong></li>
-                    <li>Demonstrating secure, cross-origin (CORS) access from a separate frontend application</li>
-                  </ul>
 
-                  <p class="mb-0">
-                    Subsequent phases extend this foundation with richer frontend interaction,
-                    search, and analytics features.
-                  </p>
+                
+ 
+                  
+
+                  <!-- Project showcase -->
+                  <div class="project-showcase mt-4">
+                      <div class="row g-4 align-items-center">
+
+                        <!-- Project Card 1 -->
+                        <div class="col-12 col-lg-4">
+                            <div class="card-showcase shadow-sm border-0 rounded-5 h-100">
+                                <div class="card-body link-card d-flex flex-column justify-content-center align-items-center text-center p-4">
+                                    <h5 class="card-title mb-2">Competency App Phase 1</h5>
+                                    <p class="card-text small text-muted mb-2 mt-2">
+                                        A backend cloud deployment of employee competency data, initially hosted on Microsoft Azure services,
+                                        and later migrated to a self-managed DigitalOcean environment.
+                                    </p>
+                                    <!-- Button container -->
+                                    <div class="d-flex justify-content-center flex-wrap gap-2 mt-2">
+                                        <a href="https://github.com/kriskilsby/competency-app" target="_blank" rel="noopener" class="btn btn-outline-primary btn px-3 py-2" 
+                                        aria-label="View Azure Backend on GitHub">
+                                            View GitHub Azure Backend
+                                        </a>
+                                        <a href="https://github.com/kriskilsby/competency-app-postgres" target="_blank" rel="noopener" class="btn btn-outline-secondary btn px-3 py-2"
+                                            aria-label="View DigitalOcean Backend on GitHub">
+                                            View GitHub DigitalOcean Backend
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <!-- End project showcase -->
+
+                        <!-- Start of Carousel -->
+                        <div class="col-12 col-lg-8 d-flex">
+                        <div id="AzureBackend" class="carousel slide carousel-dark carousel-fade shadow-sm rounded-3 overflow-hidden competency-carousel" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#AzureBackend" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                <button type="button" data-bs-target="#AzureBackend" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#AzureBackend" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#AzureBackend" data-bs-slide-to="3"></button>
+                                <button type="button" data-bs-target="#AzureBackend" data-bs-slide-to="4"></button>
+                            </div>
+                            <div class="carousel-inner"> 
+                                <% 
+                                const slidesAzure = [
+                                { file: '1-azure', alt: 'Azure API Deployment - The NestJS backend API successfully deployed on Azure App Service, showing a green tick.' },
+                                { file: '2-azure-sql-1', alt: 'Azure SQL Database - Database dashboard showing storage usage and basic database metrics for the competency data.' },
+                                { file: '3-azure-dashboard-1', alt: 'Azure Resource Overview - High-level Azure dashboard displaying all resources deployed for Phase 1 of the Competency App' },
+                                { file: '4-github-1', alt: 'CI/CD Workflow - GitHub Actions workflow automatically building and deploying the backend API to Azure on each push.' },
+                                { file: '5-azure-subscription-1', alt: 'Azure Costs - Subscription dashboard showing current and forecasted costs, explaining the motivation to migrate.' }
+                                ]; 
+                                slidesAzure.forEach((slide, index) => { 
+                                %>
+                                    <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                        <div class="position-relative">
+                                            <picture>
+                                            <source 
+                                                srcset="
+                                                /images/responsive/<%= slide.file %>-400.webp 400w,
+                                                /images/responsive/<%= slide.file %>-800.webp 800w,
+                                                /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                                /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                                /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                                "
+                                                sizes="(max-width: 576px) 100vw, 
+                                                        (max-width: 768px) 80vw,
+                                                        (max-width: 1200px) 45vw, 
+                                                        30vw"
+                                                type="image/webp"
+                                            >
+                                            <source 
+                                                srcset="
+                                                /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                                /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                                /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                                /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                                /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                                "
+                                                sizes="(max-width: 576px) 100vw, 
+                                                        (max-width: 768px) 80vw,
+                                                        (max-width: 1200px) 45vw, 
+                                                        30vw"
+                                                type="image/jpeg"
+                                            >
+                                            <img 
+                                                src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                                class="d-block w-100 h-100" 
+                                                alt="<%= slide.alt %>" 
+                                                loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                            >
+                                            </picture>
+
+                                          <button 
+                                                type="button" 
+                                                class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                                data-image-src="/images/responsive/<%= slide.file %>-1600.jpg" 
+                                                data-image-alt="<%= slide.alt %>"
+                                                aria-label="View large image of <%= slide.alt %>">
+                                                <i class="bi bi-arrows-fullscreen"></i> 
+                                            </button>
+
+                                        </div>    
+                                    </div>
+                                <% }) %>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#AzureBackend" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#AzureBackend" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                      </div> 
+                        <!-- End of carousel -->
+                      </div>
+                    
+                  </div>                        
 
                 </div>
               </div>
+            </div> 
+            <!-- End of Architecture (Azure Implementation) -->
+             
+            <!-- TEMPLATE -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="comP1workedWell">
+
+                    <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#comCollapseworkedWell" aria-expanded="false"
+                        aria-controls="#comCollapseworkedWell">
+                        <span class="flex-grow-1 text-start">What Worked Well on Azure</span>
+                        <!-- <span class="date text-white text-end ms-3">if needed</span> -->
+                    </button>
+
+                </h2>
+                
+                <div id="comCollapseworkedWell" class="accordion-collapse collapse" aria-labelledby="comP1workedWell"
+                    data-bs-parent="#competencyappAccordion">
+
+                    <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                        <!-- <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
+                            <img src="/images/logos/chessy-logo.png" alt="xxxaddname"
+                                class="img-fluid" style="max-height: 200px; width: auto" />
+                        </picture>  -->
+
+                        <div class="accordion-text flex-fill text-center text-lg-start">
+                            <h4 class="fw-bold mb-4 mt-2">What Worked Well on Azure</h4>
+                            <!-- <h6 class="text-muted mb-3">available if needed</h6> -->
+                            <!-- <h5 class="fw-bold mb-4">title-if-needed</h5> -->
+
+                            <p>
+                                From a functional and architectural perspective, the Azure-based implementation worked as intended:
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>The backend API deployed cleanly and remained stable under normal usage.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>GitHub Actions provided reliable automated CI/CD deployments.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Azure SQL integrated seamlessly with the application layer.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>The frontend successfully consumed live data through secure API endpoints.
+                                </li>
+                            </ul>
+                            <p>
+                                One operational limitation encountered was Azure App Service’s tendency to scale down or idle under low usage. To mitigate this, 
+                                a small <strong>NestJS module</strong> was introduced to <strong>periodically ping</strong> the <strong>Azure SQL database</strong>, ensuring the backend remained responsive.
+                            </p>
+                            <p>
+                                While effective, this approach felt inefficient relative to the ongoing platform cost, and highlighted a mismatch between the project’s 
+                                scale and the pricing model of the managed cloud environment.
+                            </p>                                                        
+                        </div>    
+                    </div>
+                </div>
             </div>
 
+            <!-- TEMPLATE -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="comP2whyMigration">
+
+                    <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#comCollapsewhyMigration" aria-expanded="false"
+                        aria-controls="#comCollapsewhyMigration">
+                        <span class="flex-grow-1 text-start">Why a Migration Was Considered</span>
+                        <!-- <span class="date text-white text-end ms-3">xxx</span> -->
+                    </button>
+
+                </h2>
+                
+                <div id="comCollapsewhyMigration" class="accordion-collapse collapse" aria-labelledby="comP2whyMigration"
+                    data-bs-parent="#competencyappAccordion">
+
+                    <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                        <!-- <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
+                            <img src="/images/logos/chessy-logo.png" alt="xxxaddname"
+                                class="img-fluid" style="max-height: 200px; width: auto" />
+                        </picture>  -->
+
+                        <div class="accordion-text flex-fill text-center text-lg-start">
+                            <h4 class="fw-bold mb-4 mt-2">Why a Migration Was Considered</h4>
+                            <!-- <h6 class="text-muted mb-3">available if needed</h6> -->
+                            <!-- <h5 class="fw-bold mb-4">title-if-needed</h5> -->
+
+                            <p>
+                                Despite the technical success of the Azure deployment, the platform proved <strong>disproportionately 
+                                expensive</strong> relative to the size and purpose of the project.
+                            </p>
+                             <p>
+                                Additionally, much of the operational behaviour of the system was handled automatically by managed 
+                                services, limiting visibility into:
+                            </p>                           
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Process lifecycle management.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Environment configuration.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Network boundaries and request flow.
+                                </li>
+                            </ul>
+                            <p>
+                                Rather than abandoning the project, this created an opportunity to explore an alternative hosting 
+                                model while preserving the same architectural principles and application behaviour.
+                            </p>                            
+                        </div>    
+                    </div>
+                </div>
+            </div>            
+
+            <!-- TEMPLATE -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="comP3selfManagedCloud">
+
+                    <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#comCollapseselfManagedCloud" aria-expanded="false"
+                        aria-controls="#comCollapseselfManagedCloud">
+                        <span class="flex-grow-1 text-start">Migration to DigitalOcean - Self-Managed Cloud Platform</span>
+                        <!-- <span class="date text-white text-end ms-3">xxx</span> -->
+                    </button>
+
+                </h2>
+                
+                <div id="comCollapseselfManagedCloud" class="accordion-collapse collapse" aria-labelledby="comP3selfManagedCloud"
+                    data-bs-parent="#competencyappAccordion">
+
+                    <div class="accordion-body">
+                        <!-- <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
+                            <img src="/images/logos/chessy-logo.png" alt="xxxaddname"
+                                class="img-fluid" style="max-height: 200px; width: auto" />
+                        </picture>  -->
+
+                        <div class="accordion-text flex-fill text-center text-lg-start">
+                            <h4 class="fw-bold mb-4 mt-2">Migration to a Self-Managed Cloud Platform</h4>
+                            <!-- <h6 class="text-muted mb-3">available if needed</h6> -->
+                            <!-- <h5 class="fw-bold mb-4">title-if-needed</h5> -->
+
+                            <p>
+                                Following the Azure phase, the backend API and database were migrated to a <strong>self-managed cloud environment</strong>.
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>The <strong>NestJS backend API</strong> and <strong>PostgreSQL database</strong> are hosted on <strong>DigitalOcean</strong>.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>The <strong>frontend application</strong> continues to be hosted independently on <strong>Hetzner</strong>.
+                            </ul>
+                            <p>
+                                This preserved a distributed, production-style architecture with clear separation between frontend delivery, 
+                                backend services, and data storage, while significantly reducing operational costs.
+                            </p>
+
+                        </div> 
+                        <!-- Deployment Architecture Overview  -->
+                        <div class="architecture-panel mb-4 mt-4">
+
+                          <h5 class="fw-semibold mb-3">
+                            Deployment Architecture Overview
+                          </h5>
+
+                          <div class="row g-3 text-center align-items-stretch">
+
+                            <!-- Frontend -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                  <h6 class="fw-semibold">Frontend</h6>
+                                  <p class="small mb-1">HTML, EJS, Bootstrap, jQuery</p>
+                                  <p class="small text-muted mb-0">Hosted on Hetzner</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Nginx -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                  <h6 class="fw-semibold">Nginx Reverse Proxy</h6>
+                                  <p class="small mb-1">HTTPS Termination</p>
+                                  <p class="small text-muted mb-0">API Routing /api/*</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Backend -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                  <h6 class="fw-semibold">NestJS API</h6>
+                                  <p class="small mb-1">Node.js / TypeScript</p>
+                                  <p class="small text-muted mb-0">DigitalOcean VPS (PM2)</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Database -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                              <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                  <h6 class="fw-semibold">PostgreSQL</h6>
+                                  <p class="small mb-1">Relational Data Store</p>
+                                  <p class="small text-muted mb-0">DigitalOcean Managed DB</p>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <p class="small text-muted mt-3 mb-0">
+                            Requests flow from the frontend through an Nginx reverse proxy which handles HTTPS termination,
+                            forwards API traffic to a private NestJS backend service, and connects securely to PostgreSQL.
+                          </p>
+                        </div>                       
+
+
+
+                        <!-- Tecjh Stack Section -->
+                        <!-- Technology Stack Overview -->
+                        <div class="tech-stack-summary px-3 mb-4 ms-2">
+                          <h5 class="fw-semibold mb-3">Final DigitalOcean Deployment (Post-Migration)</h5>
+                          <ul class="list-inline small mb-0 ms-2">
+                            <li class="list-inline-item mb-1">
+                              <strong>Frontend:</strong> HTML, EJS, JavaScript, Bootstrap 5, jQuery, DataTables  – Hetzner hosted
+                            </li><br>
+                            <li class="list-inline-item mb-1">
+                              <strong>Reverse Proxy:</strong> Nginx – HTTPS termination & API routing
+                            </li><br>
+                            <li class="list-inline-item mb-1">
+                              <strong>Backend API:</strong> NestJS (Node.js, <strong>TypeScript</strong>), TypeORM, PM2 – DigitalOcean VPS
+                            </li><br>
+                            <li class="list-inline-item mb-1">
+                              <strong>Database:</strong> PostgreSQL & PGadmin4 – DigitalOcean Managed Database
+                            </li><br>
+                            <li class="list-inline-item">
+                              <strong>CI/CD:</strong> GitHub Actions automated deployments
+                            </li>
+                          </ul>
+                        </div>
+
+                        <p class="small text-muted ms-3 mt-2">
+                          <!-- Phase 1 focuses on ....could write some words. -->
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            
+             <!-- TEMPLATE -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="comP4whatChanged">
+
+                    <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#comCollapsewhatChanged" aria-expanded="false"
+                        aria-controls="#comCollapsewhatChanged">
+                        <span class="flex-grow-1 text-start">What Changed — and What Stayed the Same</span>
+                        <!-- <span class="date text-white text-end ms-3">xxx</span> -->
+                    </button>
+
+                </h2>
+                
+                <div id="comCollapsewhatChanged" class="accordion-collapse collapse" aria-labelledby="comP4whatChanged"
+                    data-bs-parent="#competencyappAccordion">
+
+                    <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                        <!-- <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
+                            <img src="/images/logos/chessy-logo.png" alt="xxxaddname"
+                                class="img-fluid" style="max-height: 200px; width: auto" />
+                        </picture>  -->
+
+                        <div class="accordion-text flex-fill text-center text-lg-start">
+                            <h4 class="fw-bold mb-4 mt-2">What Changed — and What Stayed the Same</h4>
+                            <!-- <h6 class="text-muted mb-3">available if needed</h6> -->
+                            <!-- <h5 class="fw-bold mb-4">title-if-needed</h5> -->
+                            <p>
+                                While the hosting platform changed, the core application architecture remained consistent.
+                            </p>
+                            <p>
+                                Preserved:
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>NestJS backend design and REST API contracts.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Database schema and access patterns.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Frontend behaviour and user experience.
+                                </li>
+                            </ul>
+                            <p>
+                                Changed:
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Infrastructure ownership and responsibility.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Deployment and process management.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Network configuration and security handling.
+                                </li>
+                            </ul>  
+                            <p>
+                                A key part of this transition involved configuring <strong>Nginx as a reverse proxy</strong>, responsible for <strong>HTTPS termination</strong> 
+                                and routing API requests securely to the backend service.
+                            </p>   
+                            <p>
+                                This ensured encrypted client communication while keeping the backend isolated from direct public access.
+                            </p>                                                                               
+                        </div>    
+                    </div>
+                </div>
+            </div>           
+
+            <!-- TEMPLATE -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="comP5lessonsLearned">
+
+                    <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#comCollapselessonsLearned" aria-expanded="false"
+                        aria-controls="#comCollapselessonsLearned">
+                        <span class="flex-grow-1 text-start">Key Technical Lessons Learned</span>
+                        <!-- <span class="date text-white text-end ms-3">xxx</span> -->
+                    </button>
+
+                </h2>
+                
+                <div id="comCollapselessonsLearned" class="accordion-collapse collapse" aria-labelledby="comP5lessonsLearned"
+                    data-bs-parent="#competencyappAccordion">
+
+                    <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                        <!-- <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
+                            <img src="/images/logos/chessy-logo.png" alt="xxxaddname"
+                                class="img-fluid" style="max-height: 200px; width: auto" />
+                        </picture>  -->
+
+                        <div class="accordion-text flex-fill text-center text-lg-start">
+                            <h4 class="fw-bold mb-4 mt-2">Key Technical Lessons Learned</h4>
+                            <!-- <h6 class="text-muted mb-3">available if needed</h6> -->
+                            <!-- <h5 class="fw-bold mb-4">title-if-needed</h5> -->
+
+                            <p>
+                                Operating the platform outside a fully managed cloud environment, surfaced several important real-world considerations:
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Environment variable handling across different process managers.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Database schema resolution and permission configuration.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Reverse proxy setup and HTTPS request flow.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>The practical differences between managed and self-managed infrastructure.
+                                </li>
+                            </ul>    
+                            <p>
+                                These challenges became apparent, through hands-on operation of the system, and provided practical insight into the responsibilities 
+                                typically handled automatically by managed cloud platforms.
+                            </p>
+
+                        </div>    
+                    </div>
+                </div>
+            </div>
+
+             <!-- TEMPLATE -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="comP6finalOutcome">
+
+                    <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#comCollapsefinalOutcome" aria-expanded="false"
+                        aria-controls="#comCollapsefinalOutcome">
+                        <span class="flex-grow-1 text-start">Final Outcome and Reflection</span>
+                        <!-- <span class="date text-white text-end ms-3">xxx</span> -->
+                    </button>
+
+                </h2>
+                
+                <div id="comCollapsefinalOutcome" class="accordion-collapse collapse" aria-labelledby="comP6finalOutcome"
+                    data-bs-parent="#competencyappAccordion">
+
+                    <div class="accordion-body d-flex flex-column flex-lg-row align-items-start">
+                        <!-- <picture class="accordion-img order-lg-2 ms-lg-3 mb-3 mb-lg-0 text-center">
+                            <img src="/images/logos/chessy-logo.png" alt="xxxaddname"
+                                class="img-fluid" style="max-height: 200px; width: auto" />
+                        </picture>  -->
+
+                        <div class="accordion-text flex-fill text-center text-lg-start">
+                            <h4 class="fw-bold mb-4 mt-2">Final Outcome and Reflection</h4>
+                            <!-- <h6 class="text-muted mb-3">available if needed</h6> -->
+                            <!-- <h5 class="fw-bold mb-4">title-if-needed</h5> -->
+
+                            <p>
+                               This phase of the project successfully achieved two distinct objectives:
+                            </p>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Demonstrating practical experience with Microsoft Azure cloud services and Microsoft-aligned development tooling.
+                                </li>
+                                <li>
+                                    <i class="bi bi-caret-right-fill me-2 icon-accent"></i>Applying critical engineering judgement to evaluate cost, control, and long-term suitability.
+                                </li>
+                            </ul>
+                            <p class="mt-3">
+                               The final outcome is a more transparent, cost-effective deployment that preserves the original architecture while providing deeper operational understanding.
+                            </p>
+                            <p>
+                               The project demonstrates not only the ability to deploy a cloud-based system, but also the ability to assess infrastructure decisions critically based on real-world constraints.
+                            </p>
+                            
+                        </div>    
+                    </div>
+                </div>
+            </div>           
+
+          <!-- End of main accordion div -->
           </div>
 
           <div class="alert alert-secondary mt-4">
-            This page demonstrates live data flowing from an <strong>Azure SQL Database</strong>,
+            The dataTable below demonstrates live data flowing from an <strong>Azure SQL Database</strong>,
             through a <strong>NestJS API hosted on Azure</strong>,
             into a lightweight frontend application.
-            Data ingestion is handled using <strong>Azure Data Factory</strong>.
+            Data ingestion is handled using <strong>Azure Data Factory</strong>. 
+            <em>This was later migrated to a self-managed cloud platform, but the data flow architecture remains the same</em>.
           </div>
 
         </div>
       </section>
  
 
-   
- 
+      
 
       <section id="competency-table-section" class="container my-4 mb-1 mt-2">
         <div class="main-card card shadow-sm border-0 rounded">
@@ -190,10 +739,31 @@
 
      
   
-        </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0">
+              <div class="modal-header border-0">
+                  <h5 class="modal-title" id="imageModalLabel">Image Title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+                  <img src="" id="modalImage" class="img-fluid" alt="Enlarged view">
+              </div>
+              <!-- <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div> -->
+          </div>
+      </div>
+  </div>
+ 
+
+
 
     <%- include ('components/footer') %>
 
