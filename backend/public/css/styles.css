@@ -1,16 +1,5 @@
 /* Import at the top of CSS */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;600&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@500&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@600;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
@@ -21,11 +10,6 @@ html {
 
 /* 🌍 Global Styles */
 * {
-    /* font-family: 'Inter', sans-serif; */
-    /* font-family: 'Source Sans 3', sans-serif; */
-    /* font-family: 'Nunito Sans', sans-serif; */
-    /* font-family: 'IBM Plex Sans', sans-serif;  */
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -33,12 +17,12 @@ html {
 }
 
 .position-relative.vh-100 {
-    height: 100vh; /* already vh-100, but this ensures no rounding issues */
+    height: 100vh; 
     min-height: 100vh;
 }
 
 
-/* Optional: adjust body text for readability */
+/* adjust body text for readability */
 body {
     font-size: 1.1rem; 
     line-height: 1.6;  
@@ -46,9 +30,6 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     height: 100%;
-    /* background-color: #F1F1F2; */
-    /* background-color: #A1D6E2; */
-    /* background-color: #1995AD; */
     background-color: #f8f9fa;
 }
 
@@ -74,7 +55,6 @@ body {
 }
 
 .navbar.scrolled {
-  /* background: #C4DFE6 !important; */
   background: #A1D6E2 !important;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -262,7 +242,6 @@ body {
   opacity: 0; /* start invisible */ 
   transform: translateY(20px) scale(1); /* slight rise effect */
   transition: opacity 1.5s ease, transform 1.5s ease, font-size 0.5s ease;
-  /* transition: opacity 2.0s ease, transform 2.0s ease, font-size 1.0s ease; */
 }
 
 .hero-d1.visible {
@@ -271,11 +250,8 @@ body {
 }
 
 .hero-d1.shrink {
-  /* font-size: clamp(2rem, 6vw, 4rem); 
-  opacity: 0;
-  transform: translateY(-35vh); */
-  font-size: clamp(1.2rem, 3vw, 1.8rem); /* fits nicely with navbar */
-  transform: translateY(0) scale(0.85);   /* slight shrink + settle */
+  font-size: clamp(1.2rem, 3vw, 1.8rem); 
+  transform: translateY(0) scale(0.85);   
   opacity: 1;                              /* stays visible */
   transition: 
     font-size 0.5s ease, 
@@ -290,10 +266,10 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1;
-  text-align: left; /* optional: makes it align with brand text instead of centered */
+  text-align: left; /* makes it align with brand text instead of centered */
 }
 
-/* Optional: adjust for mobile screens */
+/* adjust for mobile screens */
 @media (max-width: 768px) {
   .hero-d1.shrink {
     font-size: clamp(1rem, 4vw, 1.4rem);  /* smaller on small screens */
@@ -326,10 +302,9 @@ body {
 
 .hero-subtext {
   color: rgb(12, 29, 44);
-  /* font-size: 0.9rem;    */
   font-size: clamp(12px, 1.5vw, 18px);
   opacity: 0.8;        /* softer look */
-  font-style: italic;  /* optional */
+  font-style: italic;  
 }
 
 
@@ -345,33 +320,19 @@ body {
   margin: 0 auto;
   padding: 8vh 5vw;
   background-color: #1995AD;
-  /* opacity: 0;
-  transform: scale(0.85);
-  transition: opacity 4s ease, transform 4s ease;  */
 }
-
-/* Keep but split into two ans add extra */
-/* .about-intro.visible {
-  opacity: 1;
-  transform: scale(1);
-} */
 
 /* Added extra lines at end */
 .about-intro .about-title,
 .about-intro .about-text {
   font-family: "Kalam", cursive;
   color: white;
-  /* opacity: 0;   
-  transform: translateY(4vh); 
-  transition: opacity 1s ease, transform 1s ease;  */
 }
 
 /* NEW Title animates in first */
 .about-title.visible {
   opacity: 1;
   transform: scale(1);
-  /* transform: translateY(0);
-  transition-delay: 0.2s; */
 }
 
 /* keep as is */
@@ -401,39 +362,28 @@ body {
 .about-text.visible {
   opacity: 1;
   transform: scale(1);
-  /* transform: translateY(0);
-  transition-delay: 0.6s; */
 }
-
-
-/* keep as is */
-/* @media (max-width: 768px) {
-  .about-intro {
-    max-width: 90vw; 
-  }
-} */
 
 /* -------------------------------------- */
 /* Bootstrap Card specific styles */
 /* -------------------------------------- */
 
 .card {
-  /* background-color: #F2F2F2; */
-  /* background-color: #1995AD; */
-  /* background-color: #F1F1F2; */
-  background-color: #e0f0f7;
-  border-radius: 0.50rem; /* softer rounded corners */
-  overflow: hidden;       /* ensures carousel images follow the rounded shape */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* subtle shadow */
-  border: none; /* optional: removes Bootstrap’s default border */
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-  border-top: 4px solid #1995AD;
-  /* opacity: 0; 
-  transform: translateY(40px); 
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out; */
+  /* background-color: #e0f0f7; */
+  background-color: #f4f9fc; /* Slightly lighter version */
+  border-radius: 0.75rem; 
+  overflow: hidden;  
+  /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); */
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+  /* border: none; 
+  border-top: 4px solid #1995AD; */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 3px solid #1995AD;
   opacity: 1;
   transform: none;
-  transition: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* When scrolled into view */ 
@@ -443,9 +393,13 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  /* transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); */
+  transform: translateY(-4px);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.10),
+    0 4px 8px rgba(0, 0, 0, 0.06);
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease !important; */
 }
 
 .card-body {
@@ -454,7 +408,6 @@ body {
 }
 
 .card-title {
-  /* font-family: "Kalam", cursive; */
   font-size: 1.4rem;
   font-weight: 600;
   color: #153847;
@@ -469,9 +422,8 @@ body {
 }
 
 .card img {
-  border-radius: 0; /* keeps images flush with card edges */
+  border-radius: 0; 
   width: 100%;
-  /* height: 60vh; */
   object-fit: cover;
 }
 
@@ -485,10 +437,10 @@ body {
 }
 
 .carousel-img {
-  height: 600px;        /* pick a size that looks good */
+  height: 600px;
   width: 100%;
-  object-fit: contain;  /* keeps full image visible */
-  background-color: #000; /* optional, gives black bars around if needed */
+  object-fit: contain; 
+  background-color: #000;
 }
 
 
@@ -498,7 +450,6 @@ body {
   background-size: 90% 90%; /* slightly smaller arrows */
   color: #000;
   filter: invert(0.8) drop-shadow(0 0 1px rgba(0,0,0,0.4));
-  /* background-color: #000; */
 }
 
 .carousel-control-prev,
@@ -506,13 +457,10 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 50%; /* round buttons */
-  /* background: rgba(56, 127, 158, 0.2);  */
   top: 50%;
   transform: translateY(-50%);
   transition: background 0.6s ease, transform 0.6s ease;
   backdrop-filter: blur(6px);
-  /* background: rgba(255,255,255,0.4);
-  border: 1px solid rgba(255,255,255,0.25); */
   background: rgba(0, 0, 0, 0.3); /* brighter, more opaque */
   border: 1px solid rgba(255, 255, 255, 0.1); /* lighter border */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); /* adds subtle contrast on light images */
@@ -526,31 +474,23 @@ body {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* duplicate remove */
-/* .carousel-indicators [data-bs-target] {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(56,127,158,0.4);
-  transition: background-color 0.3s ease;
-} */
-/* .carousel-indicators .active {
-  background-color: #1995AD;
-} */
-
 .carousel-fade .carousel-item {
   transition: opacity 1.2s ease-in-out;
 }
 
 
-/* Overlay gradient for better caption readability */ 
-.carousel-item::before { 
+/* Overlay gradient for better caption readability: Add a overlay tint to every image */ 
+/* .carousel-item::before { 
   content: ""; 
   position: absolute; 
   inset: 0; 
-  background: linear-gradient(to bottom, rgba(0,0,0,0.10), rgba(0,0,0,0.20)); 
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.10)); 
   z-index: 1; 
-} 
+}  */
+
+.carousel-item::before {
+  display: none;
+}
 
 .carousel-caption { 
   z-index: 2; 
@@ -558,9 +498,9 @@ body {
 
 /* Maintain consistent carousel image aspect ratio */
 .carousel-inner {
-  aspect-ratio: 16 / 9; /* Adjust to your preferred ratio (e.g. 4/3 or 1/1 for square) */
-  /*overflow: hidden;      Ensures no overflow if cropping occurs */
+  aspect-ratio: 16 / 9; /* Adjust to preferred ratio (e.g. 4/3 or 1/1 for square) */
   overflow: visible; /* allow button to be visible and clickable */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* Ensure images fill the frame without stretching */

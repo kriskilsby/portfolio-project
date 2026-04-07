@@ -443,6 +443,193 @@
             </div>
         </div>
 
+        <!-- Third row -->
+        <div class="row">
+            <!-- Fifth card -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div id="kkPhase1" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kkPhase1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kkPhase1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kkPhase1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#kkPhase1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#kkPhase1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+                        </div>
+                         <div class="carousel-inner">
+                            <% 
+                            const slidesPhase1 = [
+                                { file: '1-azure', alt: 'Azure API Deployment - The NestJS backend API successfully deployed on Azure App Service, showing a green tick.' },
+                                { file: '2-azure-sql-1', alt: 'Azure SQL Database - Database dashboard showing storage usage and basic database metrics for the competency data.' },
+                                { file: '3-azure-dashboard-1', alt: 'Azure Resource Overview - High-level Azure dashboard displaying all resources deployed for Phase 1 of the Competency App' },
+                                { file: '4-github-1', alt: 'CI/CD Workflow - GitHub Actions workflow automatically building and deploying the backend API to Azure on each push.' },
+                                { file: '5-azure-subscription-1', alt: 'Azure Costs - Subscription dashboard showing current and forecasted costs, explaining the motivation to migrate.' }
+                            ]; 
+                            slidesPhase1.forEach((slide, index) => { 
+                            %>
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+
+                                       <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>    
+                                </div>
+                            <% }) %>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#kkPhase1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#kkPhase1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="card-body text-center position-relative">
+                        <a href="/competency-phase1" target="_blank" rel="noopener noreferrer" class="stretched-link" aria-label="Details to confirm"></a>
+                        <h5 class="card-title">Competency App Phase 1 - Deploy to Azure</h5>
+                        <p class="card-text">
+                            The first phase of the Competency App focused on deploying the application to Azure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sixth card -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div id="kkSkillTrack" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#kkSkillTrack" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#kkSkillTrack" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#kkSkillTrack" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#kkSkillTrack" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#kkSkillTrack" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                         <div class="carousel-inner">
+                            <% 
+                            const slidesSkillTrack = [
+                            { file: 'light-SkillTrack-01', alt: 'SkillTrack Dashboard page in light mode' },
+                            { file: 'dark-SkillTrack-02', alt: 'SkillTrack Dashboard page in dark mode' },
+                            { file: 'light-SkillTrack-03', alt: 'SkillTrack Employee Table in light mode' },
+                            { file: 'dark-SkillTrack-04', alt: 'SkillTrack Employee Table in dark mode' },
+                            { file: 'SkillTrack-logos-05', alt: 'SkillTrack logos and favicons being developed in Figma' }
+                            ]; 
+                            slidesSkillTrack.forEach((slide, index) => { 
+                            %> 
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+
+                                       <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>    
+                                </div>
+                            <% }) %>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#kkSkillTrack" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#kkSkillTrack" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="https://skills.kriskilsby.com/" class="stretched-link" aria-label="Details to confirm" target="_blank" rel="noopener noreferrer"></a>
+                        <h5 class="card-title">Competency App Phase 2 - SkillTrack</h5>
+                        <p class="card-text">
+                            The second phase of the Competency App focuses on developing the functionality and user features.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
     </section>
 
     <!-- Modal -->
