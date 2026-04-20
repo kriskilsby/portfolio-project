@@ -453,13 +453,21 @@
                           <input type="number" name="n_clusters" class="form-control" value="3" min="1">
                         </div>
                         <div class="mt-3 col-12 col-sm-7 col-md-6 col-lg-5">
-                          <input class="form-check-input" type="checkbox" name="auto_silhouette" id="auto_silhouette">
-                          <label for="auto_silhouette" class="form-check-label  fw-bold deferred-tooltip"
+                          <!-- Disabled auto silhouette as Nginx timeout after 60 seconds and this required longer and reduces performance -->
+                          <!-- <input class="form-check-input" type="checkbox" name="auto_silhouette" id="auto_silhouette"> -->
+                          <!-- <label for="auto_silhouette" class="form-check-label  fw-bold deferred-tooltip"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-title-html="If checked, the system will test between 2 to 20 clusters and 
-                              pick the best one automatically based on how well the groups separate.">
-                            <span class="method-label-text"> Auto Silhouette</span>
+                              pick the best one automatically based on how well the groups separate."> -->
+                            <!-- Added when disabled -->
+                            <input class="form-check-input" type="checkbox" name="auto_silhouette" id="auto_silhouette" disabled checked="false">
+                            <label for="auto_silhouette" class="form-check-label  fw-bold deferred-tooltip"
+                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-title-html="This option evaluates multiple cluster counts using silhouette scoring.
+                            In testing, it provided no improvement in clustering quality for this dataset and significantly increased processing time, so it has been disabled for performance reasons">
+
+                            <span class="method-label-text"> Auto Silhouette (disabled in demo)</span>
                           </label>
-                          <p>Use Silhouette Analysis to find the best number of clusters</p>
+                          <!-- <p>Use Silhouette Analysis to find the best number of clusters</p> -->
+                          <p class="text-muted opacity-75">Disabled in demo due to high computational cost</p>
                         </div>
                       </div>
                     </div>

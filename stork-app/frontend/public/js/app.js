@@ -2237,14 +2237,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("Params being sent:", params);
 
     // Add extra parameters based on method
+    // if (method === "kmeans") {
+    //   const autoSilhouette = formData.get("auto_silhouette") === "on";
+    //   if (autoSilhouette) {
+    //     params.auto_silhouette = true;
+    //   } else {
+    //     params.n_clusters = parseInt(formData.get("n_clusters"));
+    //   }
+    // }
+
+    // Forced off as this is disabled in demo
     if (method === "kmeans") {
-      const autoSilhouette = formData.get("auto_silhouette") === "on";
+      const autoSilhouette = false; // disabled in demo
+
       if (autoSilhouette) {
         params.auto_silhouette = true;
       } else {
         params.n_clusters = parseInt(formData.get("n_clusters"));
       }
     }
+    document.getElementById("auto_silhouette").checked = false;
 
     if (method === "dbscan") {
       params.eps = parseFloat(formData.get("eps"));
