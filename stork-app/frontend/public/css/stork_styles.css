@@ -587,6 +587,61 @@
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125) !important;
 }
 
+.card-showcase{
+  /* background-color: #F1F1F2; */
+  height: 100%;
+  /* display: flex !important; */
+  flex-direction: column;
+}
+
+.card-showcase .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem;
+}
+
+/* .card-showcase,
+.card-showcase .card-body,
+.card-showcase .link-card {
+    border-radius: 3rem !important;
+} */
+
+.card-showcase,
+.card-showcase .card-body,
+.card-showcase .link-card {
+    border-radius: var(--bs-border-radius-xxl) !important;
+}
+
+.card-showcase {
+    overflow: hidden;
+}
+
+.card-showcase ul {
+    flex-grow: 1; /* makes bullet-point area expand to fill space */
+}
+
+.st-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #153847;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0 !important;
+}
+
+.link-card h5 {
+  font-size: 1.2rem;
+}
+
+.link-card p {
+  font-size: 1rem;
+}
     
     /* ======================================================
 
@@ -755,6 +810,8 @@ html, body {
 
   .card-body {
     background-color: #F9F9F9 !important;
+    padding: 1.5rem;
+    position: relative;
   }
 
   .card-title {
