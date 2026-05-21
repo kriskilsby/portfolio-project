@@ -428,7 +428,7 @@ body {
 }
 
 /* -------------------------------------- */
-/* Bootstrap Carousel specific styles */
+/* Global Bootstrap Carousel specific styles */
 /* -------------------------------------- */
 
 .carousel-section {
@@ -478,16 +478,6 @@ body {
   transition: opacity 1.2s ease-in-out;
 }
 
-
-/* Overlay gradient for better caption readability: Add a overlay tint to every image */ 
-/* .carousel-item::before { 
-  content: ""; 
-  position: absolute; 
-  inset: 0; 
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.10)); 
-  z-index: 1; 
-}  */
-
 .carousel-item::before {
   display: none;
 }
@@ -498,8 +488,8 @@ body {
 
 /* Maintain consistent carousel image aspect ratio */
 .carousel-inner {
-  aspect-ratio: 16 / 9; /* Adjust to preferred ratio (e.g. 4/3 or 1/1 for square) */
-  overflow: visible; /* allow button to be visible and clickable */
+  /* aspect-ratio: 16 / 9;*/
+  overflow: visible; 
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -547,7 +537,112 @@ body {
   z-index: 10;
 }
 
+/* Keeps feature lists left-aligned while parent content is centred */
+.responsive-feature-list {
+    display: inline-block;
+    text-align: left;
+}
 
+
+/* -------------------------------------- */
+/* Files.ejs Bootstrap Carousel specific styles */
+/* -------------------------------------- */
+
+
+/* #photoCarouselSmall {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+} */
+
+/* Workbook-specific carousel */
+/* .workbook-carousel {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+} */
+
+/* Remove inherited Bootstrap/fixed heights */
+/* .workbook-carousel .carousel-inner,
+.workbook-carousel .carousel-item {
+    height: auto !important;
+    min-height: 0 !important;
+} */
+
+/* Let image control height naturally */
+/* .workbook-carousel .carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+} */
+
+/* Properly clip sliding images to rounded corners */
+/* .workbook-carousel,
+.workbook-carousel .carousel-inner,
+.workbook-carousel .carousel-item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+} */
+
+
+/* -------------------------------------- */
+/* file.ejs Workbook carousel */
+/* -------------------------------------- */
+
+.workbook-carousel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.workbook-carousel .carousel-inner,
+.workbook-carousel .carousel-item {
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.workbook-carousel .carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Smaller helper text */
+.disclaimer-text {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Better spacing on smaller screens */
+@media (max-width: 991.98px) {
+
+    .card-showcase {
+        margin-top: 1rem;
+    }
+
+}
+
+/* Centre workbook text content on tablet/mobile */
+@media (max-width: 991.98px) {
+
+    .workbook-text h4,
+    .workbook-text h5,
+    .workbook-text h6,
+    .workbook-text p {
+        text-align: center !important;
+    }
+
+    /* Keep feature list left aligned */
+    .workbook-text ul {
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+}
 
 /* -------------------------------------- */
 /* About Intro specific styles */
@@ -863,6 +958,27 @@ body {
 .hotel-links {
   padding-top: 8vh !important;
 }
+
+#accordion-right {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    max-width: 450px;
+}
+
+@media (max-width: 767px) {
+    #accordion-right {
+        position: static;
+        max-width: 100%;        
+    }
+}
+
+.link-card .disclaimer-text {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+
 
 
 /* -------------------------------------- */

@@ -20,6 +20,11 @@ router.get('/launch-hotel', (req, res) => {
   res.render('launch-hotel', { page: 'launch-hotel', title: 'Launch Hotel App' });
 });
 
+// Additional Files page
+router.get('/files', (req, res) => {
+  res.render('files', { page: 'files', title: 'Demonstration Files' });
+});
+
 
 // ------------------------
 // Search route

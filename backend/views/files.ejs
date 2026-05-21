@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html lang="en" class="no-js">
+
+<head>
+    <!-- Add Head component -->
+    <%- include ('components/head') %>
+    <title>Demonstration Files Page</title>
+</head>
+
+<body class="<%= page %>">
+    <!-- <body> -->
+    <header>
+        <!-- Navbar -->
+        <%- include ('components/navbar') %>
+
+            <section class="profile-header text-center pt-5 pb-2 bg-light mt-5">
+                <picture>
+                    <!-- WebP sources -->
+                    <source srcset="
+              /images/responsive/personal-01-c-400.webp   400w,
+              /images/responsive/personal-01-c-800.webp   800w,
+              /images/responsive/personal-01-c-1200.webp 1200w
+            " sizes="(max-width: 576px) 40vw,
+                        (max-width: 992px) 25vw,
+                        160px" type="image/webp" />
+
+                    <!-- JPEG fallback -->
+                    <source srcset="
+              /images/responsive/personal-01-c-400.jpg   400w,
+              /images/responsive/personal-01-c-800.jpg   800w,
+              /images/responsive/personal-01-c-1200.jpg 1200w
+            " sizes="(max-width: 576px) 40vw,
+                        (max-width: 992px) 25vw,
+                        160px" type="image/jpeg" />
+
+                    <!-- Default image -->
+                    <img src="/images/responsive/personal-01-c-800.jpg"
+                        class="rounded-circle mb-3 shadow-sm img-fluid" alt="Kristopher Kilsby portrait" width="160"
+                        height="160" loading="eager" />
+                </picture>
+
+                <h1 class="fw-bold">Kristopher Kilsby</h1>
+                <p class="lead text-muted px-1">
+                    MSc Computing Science | Excel Automation | Full-stack Development | Data Analysis
+                </p>
+                <!-- Contact links -->
+                <p class="contact-info mt-2 mb-0">
+                    <a href="mailto:kris.kilsby@gmail.com"><strong>kriskilsby@gmail.com</strong></a> |
+                    <a href="https://www.linkedin.com/in/kriskilsby" target="_blank"
+                        rel="noopener"><strong>LinkedIn</strong></a>
+                </p>
+            </section>
+    </header>
+
+    <!-- Intro section under hero -->
+    <section class="profile-intro text-center mt-4 py-0">
+        <div class="profile-container mx-auto text-center">
+            <h2 class="profile-title reveal-text mt-0">Welcome</h2>
+            <p class="profile-text reveal-text">
+                Explore some key Excel automation examples — from employee resource reporting, 
+                to an advanced energy analysis modelling tool. 
+            </p>
+        </div>
+    </section>
+
+    <!-- Entire Accordion Section -->
+    <section class="accordion-section bg-light">
+        <!-- <div class="container"> -->
+        <div class="container px-2 px-md-3">
+            
+            
+            <!-- File Download & Project Information Section -->
+            <h2 class="mt-5">Demonstration Files & Downloadables</h2>
+            <div class="accordion" id="fileAccordion">
+
+
+
+                <!-- PV Demand File section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="fileHeadingPV">
+
+                        <button class="accordion-button d-flex justify-content-between collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#fileCollapsePV" aria-expanded="false"
+                            aria-controls="fileCollapsePV">
+                            <span class="flex-grow-1 text-start">PV Demand and Generation Dashboard</span>
+
+                        </button>
+
+                    </h2>               
+
+                    <div id="fileCollapsePV" class="accordion-collapse collapse show" aria-labelledby="fileHeadingPV"
+                        data-bs-parent="#fileAccordion">
+                        <div class="accordion-body">
+
+                            <div class="row g-4 align-items-start">
+
+                                <!-- Text content (left side) -->
+                                <div class="col-12 col-lg-7 text-center text-lg-start workbook-text">
+
+                                    <h4 class="fw-bold mb-2 mt-2">PV Demand and Generation Dashboard</h4>
+                                    <h6 class="text-muted mb-3">Advanced Excel | VBA Automation | Data Analysis</h6>
+                                    <h5 class="fw-bold mb-4">Electrical Engineering, Norfolk, UK</h5>
+
+                                    <p>
+                                        An advanced Excel dashboard developed to analyse electricity demand, 
+                                        solar PV generation, and battery storage scenarios across multiple school buildings.
+                                        The workbook combines VBA automation, dynamic formulas, and interactive reporting
+                                        to support operational and energy efficiency analysis.
+                                    </p>
+
+                                    <p>
+                                        Users can import hourly demand and generation datasets, filter by school, 
+                                        month, or academic period, and simulate the effect of battery storage on 
+                                        peak demand and energy costs through interactive dashboard visualisations.
+                                    </p>
+
+                                    <h6 class="fw-bold mt-4 mb-3">Key Features</h6>
+
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                                            VBA-driven data import reset tools
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                                            Interactive demand and generation dashboard
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                                            Battery storage and load shifting simulations
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                                            Seasonal and operational filtering
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-caret-right-fill me-2 icon-accent"></i>
+                                            Energy cost and peak demand analysis
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+
+                                <!-- RIGHT COLUMN -->
+                                <!-- <div id="accordion-right" class="col-12 col-md-5"> -->
+                                <div class="col-12 col-lg-5">
+
+                                    <!-- Project showcase -->
+                                    <!-- <div class="project-showcase mt-4 mb-4 px-2 text-center text-md-start"> -->
+                                    <div class="card-showcase shadow-sm border-0 rounded-4 mb-4">
+
+                                        <!-- <div class="row justify-content-center g-3"> -->
+                                        <div class="card-body text-center">
+
+                                            <!-- Project Card 1 -->
+                                            <!-- <div class="col-12"> -->
+                                                <!-- <div class="card-showcase shadow-sm border-0 rounded-3 h-100">
+                                                    <div class="card-body link-card d-flex flex-column align-items-center text-center"> -->
+
+                                                        <h5 class="card-title mb-2">Demand & Generation Dashboard</h5>
+
+                                                        <p class="card-text small text-muted mb-3">
+                                                            A demonstration Excel workbook for analysing demand and generation data, 
+                                                            including advanced formula and VBA.
+                                                        </p>
+
+                                                        <p class="mt-2 mb-2 disclaimer-text">
+                                                            Download provided as a ZIP archive due to the workbook containing VBA macros.
+                                                        </p>
+
+                                                        <!-- Button container -->
+                                                         <!-- Link to Excel Workbook instead -->
+                                                        <div class="d-flex justify-content-center flex-wrap gap-2 mt-2">
+                                                            <a href="/files/PV Demand and Generation.zip" 
+                                                            class="btn btn-outline-primary btn-sm me-2" 
+                                                            aria-label="Download PV Demand and Generation Dashboard Excel Workbook" 
+                                                            download>
+                                                                Download Workbook
+                                                            </a>
+                                                            <!-- Link to Excel Workbook instead -->
+                                                            <!-- <a href="https://github.com/kriskilsby/storkproject" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm"
+                                                                aria-label="View project on GitHub">
+                                                                View on GitHub -->
+                                                            </a>
+                                                        </div>
+                                                        <p class="mt-3 disclaimer-text">
+                                                            This workbook is designed for Microsoft 365 and uses modern Excel functions and calculations.
+                                                            Some features may not operate correctly in older versions of Microsoft Excel.
+                                                        </p>
+
+
+                                                    <!-- </div>
+                                                </div>     -->
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                    <!-- End project showcase -->
+
+                                    <!-- Carousel (right side) -->
+                                    <div id="photoCarouselSmall"
+                                            class="carousel slide workbook-carousel shadow-sm"
+                                            data-bs-ride="carousel" data-bs-interval="4000">
+
+                                        <div class="carousel-inner shadow-sm">
+                                            <div class="carousel-item active">
+                                            <img src="/images/logos/PV-excelfile-01-800.webp" 
+                                                class="d-block w-100"
+                                                alt="PV Demand and Import image 1">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="/images/logos/PV-excelfile-02-800.webp" 
+                                                class="d-block w-100"
+                                                alt="PV Demand and Import image 2">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="/images/logos/PV-excelfile-03-800.webp" 
+                                                class="d-block w-100"
+                                                alt="PV Demand and Import image 3">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="/images/logos/PV-excelfile-04-800.webp" 
+                                                class="d-block w-100"
+                                                alt="PV Demand and Import image 4">
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#photoCarouselSmall" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                                data-bs-target="#photoCarouselSmall" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- New accordion item to add -->
+               
+                
+                
+                <!-- File Download & Project Information Section -->
+            </div>
+        
+            <!-- End of <div> for entire accordion section -->
+        </div>
+        <!-- End of <section> for entire accordion section -->
+    </section>
+
+    <!-- footer -->
+    <%- include ('components/footer') %>
+
+
+</body>
+
+</html>
