@@ -620,15 +620,107 @@
                         </button>
                     </div>
                     <div class="card-body text-center">
-                        <a href="https://skills.kriskilsby.com/" class="stretched-link" aria-label="Details to confirm" target="_blank" rel="noopener noreferrer"></a>
+                        <a href="https://www.skills.kriskilsby.com/" class="stretched-link" aria-label="Details to confirm" target="_blank" rel="noopener noreferrer"></a>
                         <h5 class="card-title">Competency App Phase 2 - SkillTrack</h5>
                         <p class="card-text">
                             The second phase of the Competency App focuses on developing the functionality and user features.
                         </p>
                     </div>
                 </div>
+            </div> 
+
+            <!-- Seventh card -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div id="fifaPredictor" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#fifaPredictor" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#fifaPredictor" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#fifaPredictor" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#fifaPredictor" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            
+                        </div>
+                         <div class="carousel-inner">
+                            <% 
+                            const slidesFifaPredictor = [
+                            { file: '00-fifa', alt: 'Fifa World Cup Predictor Icon' },
+                            { file: '01-fifa', alt: 'Fifa World Cup Predictor Dashboard Statistics' },
+                            { file: '02-fifa', alt: 'Fifa World Cup Predictor Prediction Team Prediction Accuracy' },
+                            { file: '03-fifa', alt: 'Fifa World Cup Predictor Matches' }
+                            ]; 
+                            slidesFifaPredictor.forEach((slide, index) => { 
+                            %> 
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="4000">
+                                    <div class="position-relative">
+                                        <picture>
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.webp 400w,
+                                            /images/responsive/<%= slide.file %>-800.webp 800w,
+                                            /images/responsive/<%= slide.file %>-1200.webp 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.webp 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.webp 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/webp"
+                                        >
+                                        <source 
+                                            srcset="
+                                            /images/responsive/<%= slide.file %>-400.jpg 400w,
+                                            /images/responsive/<%= slide.file %>-800.jpg 800w,
+                                            /images/responsive/<%= slide.file %>-1200.jpg 1200w,
+                                            /images/responsive/<%= slide.file %>-1600.jpg 1600w,
+                                            /images/responsive/<%= slide.file %>-2400.jpg 2400w
+                                            "
+                                            sizes="(max-width: 576px) 100vw, 
+                                                    (max-width: 768px) 80vw,
+                                                    (max-width: 1200px) 45vw, 
+                                                    30vw"
+                                            type="image/jpeg"
+                                        >
+                                        <img 
+                                            src="/images/responsive/<%= slide.file %>-800.jpg" 
+                                            class="d-block w-100" 
+                                            alt="<%= slide.alt %>" 
+                                            loading="<%= index === 0 ? 'eager' : 'lazy' %>"
+                                        >
+                                        </picture>
+
+                                       <button 
+                                            type="button" 
+                                            class="btn btn-outline-secondary position-absolute top-0 end-0 m-3 modal-enlarge-btn" 
+                                            data-image-src="/images/responsive/<%= slide.file %>-1200.jpg" 
+                                            data-image-alt="<%= slide.alt %>"
+                                            aria-label="View large image of <%= slide.alt %>">
+                                            <i class="bi bi-arrows-fullscreen"></i> 
+                                        </button>
+
+                                    </div>    
+                                </div>
+                            <% }) %>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#fifaPredictor" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#fifaPredictor" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="https://www.fifa.kriskilsby.com/" class="stretched-link" aria-label="Details to confirm" target="_blank" rel="noopener noreferrer"></a>
+                        <h5 class="card-title">Fifa World Cup Predictor</h5>
+                        <p class="card-text">
+                            A full-stack web application for predicting the outcomes of Fifa World Cup matches.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>        </button>
+
+        </div>        
+    <!-- </button> -->
 
     </section>
 
